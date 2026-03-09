@@ -4,14 +4,14 @@ Symbolic Mechanics is a multi-volume symbolic-computational theory of internal m
 
 It is designed as a deterministic, recursively expandable system rather than a collection of isolated essays or reflective psychological writing.
 
-[View Publications](./publications)
+[View Publications](./publications.md)
 
 ## Entry Points
 
-- [Volume I — Canonical Engine Kernel](./volume-01)  
+- [Volume I — Canonical Engine Kernel](./volume-01.md)  
   Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
 
-- [Volume II — Structural Encoding](./volume-02)  
+- [Volume II — Structural Encoding](./volume-02.md)  
   Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
 ## What this project is
