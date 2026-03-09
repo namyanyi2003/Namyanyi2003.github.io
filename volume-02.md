@@ -8,7 +8,7 @@
 
 ## Research Hook
 
-Many theories describe internal experience at the level of feeling, interpretation, or memory, but do not specify how symbolic material becomes structurally encoded inside a system in the first place.
+Many theories describe internal experience at the level of feeling, memory, or interpretation, but do not specify how symbolic material becomes structurally encoded inside a system in the first place.
 
 Volume II formalizes that missing conversion layer. It rewrites inner registration as structural encoding: the process by which incoming symbolic material is not merely felt or remembered, but fixed into organized internal form.
 
@@ -28,9 +28,9 @@ This volume is the first major expansion of the kernel.
 
 It matters because a system cannot accumulate patterned load unless symbolic material has first been encoded into stable internal structure. Volume II therefore supplies the missing bridge between event registration and all later architecture.
 
-Architecturally, this volume sits directly downstream of Volume I and upstream of later modules involving load, collapse, attraction, projection, shame-origin, and recovery. It gives the system memory-like structural continuity without reducing that continuity to ordinary narrative psychology.
+Architecturally, this volume sits directly downstream of Volume I and upstream of later modules involving load, collapse, attraction, projection, shame-origin, and recovery. It gives the system structural continuity without reducing that continuity to ordinary narrative psychology.
 
-Without Volume II, the kernel can process events.
+Without Volume II, the kernel can process events.  
 With Volume II, the system can retain form.
 
 ## Keywords
@@ -40,5 +40,5 @@ symbolic mechanics, structural encoding, symbolic inscription, internal organiza
 ## Access
 
 - [Read PDF](./Symbolic_Mechanics_Volume_II_Structural_Encoding.pdf)
-- [Back to Publications](./publications)
-- [Back to Home](./)
+- [Back to Publications](./publications.md)
+- [Back to Home](./README.md)
