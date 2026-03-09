@@ -12,8 +12,6 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 - [Volume II — Structural Encoding](./volume-02.md)  
   Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
-## Current Volumes
-
 ## System Positioning
 
 Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
