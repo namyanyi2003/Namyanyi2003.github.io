@@ -22,8 +22,8 @@ It introduces the minimal kernel from which all later layers expand, making it t
 
 The volume rewrites inner process as a closed symbolic system with fixed routing logic, load accumulation, rupture thresholds, and exit pathways. This converts what is often treated as interpretation or open-ended psychology into a deterministic processing architecture.
 
-Its central modelling object is the canonical event cycle itself:
-**Δ event input → seat binding (S) → load accumulation (L) → rupture threshold (R) → exit routing (Exit)**.
+Its central modelling object is the canonical event cycle itself:  
+**Δ event input → seat binding (S) → load accumulation (L) → rupture threshold (R) → exit routing (Exit)**
 
 ## Why this volume matters
 
@@ -31,11 +31,10 @@ This is the foundational kernel of the entire project.
 
 It is the volume that turns Symbolic Mechanics from a set of theoretical claims into a computable architecture. Every later volume depends on the engine first defined here, whether the later topic is attraction, boundary displacement, projection, blackout, shame-origin, or navigational recovery.
 
-Without Volume I, later volumes remain thematic expansions.
+Without Volume I, later volumes remain thematic expansions.  
 With Volume I, they become downstream modules of a single unified system.
 
-Architecturally, this volume functions as the upstream constraint on the rest of the series:
-it defines the invariant processing grammar that all subsequent expansions must preserve.
+Architecturally, this volume functions as the upstream constraint on the rest of the series: it defines the invariant processing grammar that all subsequent expansions must preserve.
 
 ## Keywords
 
@@ -43,6 +42,6 @@ symbolic mechanics, canonical engine kernel, deterministic symbolic system, symb
 
 ## Access
 
-- [Read PDF](./Symbolic_Mechanics_Volume_I_Canonical_Engine_Kernel.pdf)
+- [Read PDF file](./Symbolic_Mechanics_Volume_I_Canonical_Engine_Kernel.pdf)
 - [Back to Publications](./publications.md)
 - [Back to Home](./README.md)
