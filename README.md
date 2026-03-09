@@ -1,1 +1,5 @@
-# Namyanyi2003.github.io
+# Symbolic Mechanics
+
+A symbolic-computational theory of internal mechanics and relational dynamics.
+
+Author: A.N. Eidos
