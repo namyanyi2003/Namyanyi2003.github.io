@@ -6,10 +6,13 @@ It is designed as a deterministic, recursively expandable system rather than a c
 
 [View Publications](./publications)
 
-## Entry Point
+## Entry Points
 
 - [Volume I — Canonical Engine Kernel](./volume-01)  
   Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
+
+- [Volume II — Structural Encoding](./volume-02)  
+  Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
 ## What this project is
 
