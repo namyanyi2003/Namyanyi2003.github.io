@@ -9,10 +9,10 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 - [Volume I — Canonical Engine Kernel](./volume-01)  
   Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
 
-## Current Volumes
+- [Volume II — Structural Encoding](./volume-02)  
+  Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
-- Volume II — Structural Encoding  
-  Formalizes how symbolic material becomes structurally encoded inside the system, establishing the conversion layer between event registration and internal organization.
+## Current Volumes
 
 - Volume III — Shadow-Load Formation and Collapse Dynamics  
   Models how shadow-load forms, accumulates, destabilizes the system, and enters collapse conditions under sustained pressure.
