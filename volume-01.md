@@ -44,4 +44,4 @@ symbolic mechanics, canonical engine kernel, deterministic symbolic system, symb
 
 - [Read PDF file](./Symbolic_Mechanics_Volume_I_Canonical_Engine_Kernel.pdf)
 - [Back to Publications](./publications.md)
-- [Back to Home](./README.md)
+- [Back to Home](./index.md)
