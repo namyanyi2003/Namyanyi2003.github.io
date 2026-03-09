@@ -20,4 +20,4 @@ The project models internal process as a deterministic symbolic-computational sy
 
 ## Navigation
 
-- [Back to Home](./README.md)
+- [Back to Home](./index.md)
