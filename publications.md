@@ -6,22 +6,13 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 
 ## Core Entry Point
 
-- [Volume I — Canonical Engine Kernel](./volume-01)  
+- [Volume I — Canonical Engine Kernel](./volume-01.md)  
   Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
 
-- [Volume II — Structural Encoding](./volume-02)  
+- [Volume II — Structural Encoding](./volume-02.md)  
   Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
 ## Current Volumes
-
-- Volume III — Shadow-Load Formation and Collapse Dynamics  
-  Models how shadow-load forms, accumulates, destabilizes the system, and enters collapse conditions under sustained pressure.
-
-- Volume IV — Companion Module and Regenerative Exit Mechanics  
-  Defines the companion-module function and rewrites repair, soft return, and regenerative exit as structured system processes rather than vague emotional recovery.
-
-- Volume V — Boundary Dynamics and Displacement Mechanics  
-  Rewrites boundary failure as a mechanical problem of load transfer, displacement, and directional instability rather than a purely interpersonal or moral phenomenon.
 
 ## System Positioning
 
@@ -31,4 +22,4 @@ The project models internal process as a deterministic symbolic-computational sy
 
 ## Navigation
 
-- [Back to Home](./)
+- [Back to Home](./README.md)
