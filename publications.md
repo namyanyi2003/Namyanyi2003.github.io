@@ -10,7 +10,7 @@ The series is not structured as isolated essays. Each volume occupies a defined 
   Most theories of inner life describe meaning, affect, interpretation, or personality without specifying the irreducible engine through which internal events must actually pass. Volume I defines that missing kernel: the deterministic symbolic-computational loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
 
 - [Volume II — Structural Encoding](./volume-02.md)  
-  Many theories describe internal experience at the level of feeling, memory, or interpretation without specifying how symbolic material becomes structurally encoded inside a system in the first place. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable internal form.
+  Many theories describe feeling, memory, interpretation, or personality structure without specifying how symbolic material becomes durably inscribed inside a system at all. Volume II formalizes that missing layer by rewriting structural encoding as the bridge between event input and stable internal form.
 
 ## System Positioning
 
