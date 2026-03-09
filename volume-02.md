@@ -39,6 +39,6 @@ symbolic mechanics, structural encoding, symbolic inscription, internal organiza
 
 ## Access
 
-- [Read PDF](./Symbolic_Mechanics_Volume_II_Structural_Encoding.pdf)
+- [Read PDF file](./Symbolic_Mechanics_Volume_II_Structural_Encoding.pdf)
 - [Back to Publications](./publications.md)
-- [Back to Home](./README.md)
+- [Back to Home](./index.md)
