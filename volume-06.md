@@ -1,18 +1,16 @@
 # Symbolic Mechanics — Volume VI: Self-Existence Mechanics under Visibility Collapse
 
-**Series:** Symbolic Mechanics  
 **Volume:** VI  
-**Version:** v1.0  
-**Architectural Role:** Visibility-collapse and existence-compensation layer  
+**System Role:** Visibility-collapse and existence-compensation layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe confusion, indecision, emptiness, dissociation, or attention-seeking behaviour, but do not specify the mechanical condition under which a system loses the ability to sort symbolic weight in the first place.
+Most theories describe confusion, emptiness, or dissociation, but do not specify the mechanical condition under which symbolic weight becomes unreadable.
 
-Volume VI formalizes that missing layer. It rewrites sorting failure not as weak judgment, unstable preference, or vague psychological confusion, but as the structural consequence of visibility collapse inside a deterministic symbolic system.
+Volume VI formalizes that missing visibility-failure layer by modelling sorting collapse as the point at which the system loses the ability to compute symbolic relevance, hierarchy, and weight inside the chamber.
 
-Rather than treating existence-seeking behaviour as personality style, dependency, or emotional excess, this volume identifies the conditions under which symbolic weight becomes unreadable and the Self is forced to fall back on its own existence as the last remaining detectable signal.
+Rather than treating existence-seeking behaviour as personality style or emotional excess, this volume identifies the conditions under which the Self falls back on existence itself as the last remaining detectable signal.
 
 ## Overview
 
