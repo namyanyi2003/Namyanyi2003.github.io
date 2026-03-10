@@ -39,7 +39,9 @@ symbolic mechanics, structural encoding, symbolic inscription, internal retentio
 
 ## Access
 
-- [Read PDF file](./Symbolic_Mechanics_Volume_II_Structural_Encoding.pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-02.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
