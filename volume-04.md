@@ -39,7 +39,9 @@ symbolic mechanics, companion module, regenerative exit, recovery mechanics, con
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20IV_%20Companion%20Module%20and%20Regenerative%20Exit%20Mechanics%20(v1.0).pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-04.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
