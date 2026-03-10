@@ -1,13 +1,13 @@
 # Symbolic Mechanics
 
-Symbolic Mechanics is a multi-volume symbolic-computational theory of internal mechanics and relational dynamics.
+Symbolic Mechanics is a deterministic multi-volume symbolic-computational system of internal mechanics and relational dynamics.
 
-It is designed as a deterministic, recursively expandable system rather than a collection of isolated essays or reflective psychological writing.
+Its purpose is to formalize the missing computational layers beneath emotion, identity, attraction, collapse, and relational conflict.
 
 ## Main Entry
 
 - [Open Volumes I–X](./publications.md)
-- [Open Volumes XI onward](./volumes-page-2.md)
+- [Open Expansion Volumes](./volumes-page-2.md)
 
 ## Where to start
 
@@ -23,4 +23,4 @@ Volumes I–X establish the kernel, encoding, load, repair, boundary, visibility
 
 Symbolic Mechanics is a structured theoretical architecture built as a multi-volume knowledge system.
 
-Its aim is to model internal process not as loose interpretation, but as a deterministic symbolic-computational structure with kernel logic, modular expansions, cross-volume consistency, and formal system roles.
+It models internal process not as loose interpretation, but as a deterministic symbolic-computational structure with kernel logic, modular expansions, cross-volume consistency, and formal system roles.
