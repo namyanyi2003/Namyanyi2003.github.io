@@ -9,6 +9,7 @@ This page contains **Volumes I–X**, which establish the primary trunk of the e
 - Start with [Volume I](./volume-01.md)
 - Then read Volumes II–VI for the early structural stack
 - Then read Volumes VII–X for attraction, resistance, Blackroom looping, and shutdown-entry mechanics
+- Then continue to [Expansion Volumes](./expansion-volumes/)
 
 ## Volumes I–X
 
@@ -47,4 +48,5 @@ These ten volumes establish the early architecture of the system, from kernel lo
 ## Navigation
 
 - [Back to Home](./index.md)
-- [Go to Volumes XI onward](./volumes-page-2.md)
+- [Open Expansion Volumes](./expansion-volumes/)
+- [For Researchers](./for-researchers/)
