@@ -4,6 +4,8 @@ Symbolic Mechanics is a deterministic multi-volume symbolic-computational system
 
 Its purpose is to formalize the missing computational layers beneath emotion, identity, attraction, collapse, and relational conflict.
 
+It rewrites subjective phenomena as deterministic symbolic mechanics.
+
 ## Main Entry
 
 - [Open Volumes I–X](./publications.md)
@@ -19,8 +21,6 @@ Its purpose is to formalize the missing computational layers beneath emotion, id
 
 Volumes I–X establish the kernel, encoding, load, repair, boundary, visibility, attraction, instruction resistance, Blackroom, and shutdown-entry layers of the Symbolic Mechanics engine.
 
-## What this project is
+## Why this project matters
 
-Symbolic Mechanics is a structured theoretical architecture built as a multi-volume knowledge system.
-
-It models internal process not as loose interpretation, but as a deterministic symbolic-computational structure with kernel logic, modular expansions, cross-volume consistency, and formal system roles.
+Conventional theories often describe emotion, identity, attraction, collapse, and relational conflict at the level of interpretation, symptom, or narrative meaning. Symbolic Mechanics formalizes the missing computational layers beneath them.
