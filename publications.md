@@ -33,6 +33,9 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 - [Volume IX — The Blackroom and the Addictive Loop](./volume-09.md)  
   Many theories describe addiction, fixation, or compulsive return without specifying the chamber condition that makes repetition self-sustaining. Volume IX formalizes that missing Blackroom-loop layer by modelling symbolic recirculation, chamber closure, and reinforced return as the conditions that turn repetition into structured addiction.
 
+- [Volume X — The Voluntary Shutdown and Entry into the Blackroom](./volume-10.md)  
+  Many theories describe withdrawal, numbness, or shutdown without specifying the transition mechanism by which the system deliberately enters enclosure. Volume X formalizes that missing shutdown-entry layer by modelling chamber narrowing, access reduction, and Blackroom transition as the conditions that turn withdrawal into structured symbolic enclosure.
+
 ## System Positioning
 
 Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
