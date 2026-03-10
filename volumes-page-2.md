@@ -11,16 +11,16 @@ If you are new to the system, read in this order:
 3. Volumes VII–X
 4. Then continue here from **Volume XI onward**
 
-## System function of this page
+## Expansion layers
 
-This page is reserved for the next expansion layers after the first ten volumes.
-
-Use this page to continue the architecture beyond the primary trunk.
+These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, and projection-breakdown mechanics.
 
 ## Volumes XI onward
 
-- Volume XI — Coming next
-- Volume XII
+- [Volume XI — Boundary Opening and Intimacy Configuration](./volume-11.md)  
+  Most theories describe intimacy in emotional or attachment terms, but do not specify the boundary mechanics that determine whether relational access can open at all. Volume XI formalizes that missing intimacy layer by modelling **Visibility (V)**, **Spotlight (S)**, and **Δ** as the conditions that produce directional boundary opening, closure, and Return Load.
+
+- Volume XII — Coming next
 - Volume XIII
 - Volume XIV
 - Volume XV
@@ -34,3 +34,4 @@ Use this page to continue the architecture beyond the primary trunk.
 
 - [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
+- [For Researchers](./for-researchers.md)
