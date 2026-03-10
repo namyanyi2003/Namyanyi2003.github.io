@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** V  
 **Version:** v1.0  
-**Role in System:** Boundary-displacement and change-permission layer  
+**Architectural Role:** Boundary-displacement and change-permission layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, boundary dynamics, displacement mechanics, safe-proximity ra
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20V_%20Boundary%20Dynamics%20and%20Displacement%20Mechanics%20(v1.0).pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume IV](./volume-04.md)
+- [Next volume — Volume VI](./volume-06.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
