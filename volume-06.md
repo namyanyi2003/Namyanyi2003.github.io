@@ -10,7 +10,7 @@
 
 Many theories describe confusion, indecision, emptiness, dissociation, or attention-seeking behaviour, but do not specify the mechanical condition under which a system loses the ability to sort symbolic weight in the first place.
 
-Volume VI formalizes that missing layer. It rewrites sorting failure not as weak judgment, unstable preference, or vague psychological confusion, but as the structural consequence of **visibility collapse** inside a deterministic symbolic system.
+Volume VI formalizes that missing layer. It rewrites sorting failure not as weak judgment, unstable preference, or vague psychological confusion, but as the structural consequence of visibility collapse inside a deterministic symbolic system.
 
 Rather than treating existence-seeking behaviour as personality style, dependency, or emotional excess, this volume identifies the conditions under which symbolic weight becomes unreadable and the Self is forced to fall back on its own existence as the last remaining detectable signal.
 
