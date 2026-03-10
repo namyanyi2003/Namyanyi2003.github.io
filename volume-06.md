@@ -39,8 +39,9 @@ symbolic mechanics, visibility collapse, sorting failure, symbolic weight, exist
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VI_%20Self-Existence%20Mechanics%20under%20Visibility%20Collapse.pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-06.pdf)
 
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 ## Navigation
 
 - [Previous volume — Volume V](./volume-05.md)
