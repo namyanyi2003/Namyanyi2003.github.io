@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** III  
 **Version:** v1.0  
-**Role in System:** Early load-formation layer  
+**Architectural Role:** Early load-formation layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, shadow-load, load formation, collapse dynamics, deterministi
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20III_%20Shadow-Load%20Formation%20and%20Collapse%20Dynamics%20.pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume II](./volume-02.md)
+- [Next volume — Volume IV](./volume-04.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
