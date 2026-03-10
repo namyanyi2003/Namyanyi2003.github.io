@@ -17,6 +17,9 @@ It is designed as a deterministic, recursively expandable system rather than a c
 - [Volume III — Shadow-Load Formation and Collapse Dynamics](./volume-03.md)  
   Many theories describe distress, repression, or breakdown without specifying how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
 
+- [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
+  Many theories describe comfort, repair, or healing without specifying the system mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
+
 ## What this project is
 
 Symbolic Mechanics is a structured theoretical architecture built as a multi-volume knowledge system.
