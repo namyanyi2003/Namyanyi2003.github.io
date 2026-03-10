@@ -102,12 +102,12 @@ Together, these volumes establish the kernel, encoding, load, repair, boundary, 
 
 If you are new to the system:
 
-- Start with [Volume I — Canonical Engine Kernel](./volume-01.md)
-- Then read [Volumes I–X](./publications.md)
-- Then continue to [Expansion Volumes](./volumes-page-2.md)
+- Start with [Volume I — Canonical Engine Kernel](./../volume-01.md)
+- Then read [Volumes I–X](./../publications.md)
+- Then continue to [Expansion Volumes](./../expansion-volumes/)
 
 ## Navigation
 
-- [Back to Home](./index.md)
-- [Open Volumes I–X](./publications.md)
-- [Open Expansion Volumes](./volumes-page-2.md)
+- [Back to Home](./../index.md)
+- [Open Volumes I–X](./../publications.md)
+- [Open Expansion Volumes](./../expansion-volumes/)
