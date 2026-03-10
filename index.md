@@ -10,6 +10,7 @@ It rewrites subjective phenomena as deterministic symbolic mechanics.
 
 - [Open Volumes I–X](./publications.md)
 - [Open Expansion Volumes](./volumes-page-2.md)
+- [For Researchers](./for-researchers.md)
 
 ## Where to start
 
