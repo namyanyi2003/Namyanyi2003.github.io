@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** II  
 **Version:** v1.0  
-**Role in System:** First kernel expansion layer  
+**Architectural Role:** First kernel expansion layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, structural encoding, symbolic inscription, internal retentio
 ## Access
 
 - [Read PDF file](./Symbolic_Mechanics_Volume_II_Structural_Encoding.pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume I](./volume-01.md)
+- [Next volume — Volume III](./volume-03.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
