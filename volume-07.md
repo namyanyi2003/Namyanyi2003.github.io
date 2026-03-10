@@ -39,7 +39,9 @@ symbolic mechanics, attraction tension, attraction mechanics, symbolic pull, dua
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VII%20(Attraction%20Tension%20Mechanics).pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-07.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
