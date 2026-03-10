@@ -1,18 +1,16 @@
 # Symbolic Mechanics — Volume VIII: Instruction Resistance Mechanics
 
-**Series:** Symbolic Mechanics  
 **Volume:** VIII  
-**Version:** v0.1  
-**Architectural Role:** Instruction-resistance and anti-compliance layer  
+**System Role:** Instruction-resistance and anti-compliance layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe resistance to advice, refusal to change, oppositional behaviour, or failure to follow guidance, but do not specify the mechanical condition under which instruction itself becomes destabilizing inside a symbolic system.
+Most theories describe refusal, defensiveness, or failure to follow guidance, but do not specify the mechanics by which instruction itself becomes destabilizing.
 
-Volume VIII formalizes that missing layer. It rewrites instruction resistance not as stubbornness, poor attitude, low discipline, or simple fear of change, but as a structured system reaction in which externally introduced direction collides with existing symbolic load, internal hierarchy, and self-protective configuration.
+Volume VIII formalizes that missing anti-compliance layer by modelling instruction as a force that collides with existing symbolic load, internal hierarchy, and self-protective configuration inside the chamber.
 
-Rather than treating non-compliance as personality flaw or motivational weakness, this volume identifies the mechanics by which instruction becomes internally rejected, deflected, distorted, or rendered non-executable.
+Rather than treating non-compliance as personality flaw or motivational weakness, this volume identifies the mechanics by which guidance becomes internally rejected, deflected, distorted, or rendered non-executable.
 
 ## Overview
 
