@@ -20,6 +20,9 @@ It is designed as a deterministic, recursively expandable system rather than a c
 - [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
   Many theories describe comfort, repair, or healing without specifying the system mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
 
+- [Volume V — Boundary Dynamics and Displacement Mechanics](./volume-05.md)  
+  Many theories describe failed change as hesitation, fear, or low motivation without specifying the boundary mechanics that make movement structurally impossible. Volume V formalizes that missing displacement layer by modelling safe-proximity radius, counterforce, and boundary compression as the conditions that determine whether change is blocked, reversed, or permitted.
+
 ## What this project is
 
 Symbolic Mechanics is a structured theoretical architecture built as a multi-volume knowledge system.
