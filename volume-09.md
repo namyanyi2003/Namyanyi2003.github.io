@@ -1,9 +1,9 @@
-# Symbolic Mechanics — Volume IX: The Blackroom and the Addictive Loop
+# # Symbolic Mechanics — Volume IX: The Blackroom and the Addictive Loop
 
 **Series:** Symbolic Mechanics  
 **Volume:** IX  
 **Version:** v0.1  
-**Role in System:** Blackroom-loop and addictive recirculation layer  
+**Architectural Role:** Blackroom-loop and addictive recirculation layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, Blackroom, addictive loop, symbolic recirculation, chamber c
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20IX_%20The%20Blackroom%20and%20the%20Addictive%20Loop%20(v0.1).pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume VIII](./volume-08.md)
+- [Next volume — Volume X](./volume-10.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
