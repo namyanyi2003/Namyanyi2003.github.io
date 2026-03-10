@@ -20,8 +20,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XI — Boundary Opening and Intimacy Configuration](./volume-11.md)  
   Most theories describe intimacy in emotional or attachment terms, but do not specify the boundary mechanics that determine whether relational access can open at all. Volume XI formalizes that missing intimacy layer by modelling **Visibility (V)**, **Spotlight (S)**, and **Δ** as the conditions that produce directional boundary opening, closure, and Return Load.
 
-- Volume XII — Coming next
-- Volume XIII
+- [Volume XII — Boundary Parameters and the Mechanics of Intimacy](./volume-12.md)  
+  Most theories describe intimacy as feeling, attachment, or compatibility, but do not specify the fixed boundary parameters that determine whether entry is mechanically admissible. Volume XII formalizes that missing parameter layer by modelling **Visibility (V)**, **Spotlight sensitivity (S)**, and **Alarm threshold** as the steady-state conditions that govern adult intimacy entry.
+
+- Volume XIII — Coming next
 - Volume XIV
 - Volume XV
 - Volume XVI
