@@ -1,16 +1,14 @@
 # Symbolic Mechanics — Volume III: Shadow-Load Formation and Collapse Dynamics
 
-**Series:** Symbolic Mechanics  
 **Volume:** III  
-**Version:** v1.0  
-**Architectural Role:** Early load-formation layer  
+**System Role:** Early load-formation layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe distress, repression, fragmentation, or emotional overload, but do not specify how unresolved symbolic material becomes converted into accumulating internal pressure inside a deterministic system.
+Most theories describe distress, repression, or breakdown, but do not specify how unresolved symbolic material becomes accumulating internal burden.
 
-Volume III formalizes that missing layer. It rewrites shadow-load not as metaphor, mood, or vague unconscious residue, but as a structured load-forming process through which encoded symbolic material becomes pressure-bearing internal burden.
+Volume III formalizes that missing pressure layer by modelling shadow-load as the process through which encoded symbolic material becomes pressure-bearing internal burden inside a deterministic system.
 
 Rather than treating collapse as a sudden emotional event, this volume models the mechanics by which shadow-load forms, stabilizes, intensifies, and eventually drives the system toward rupture conditions.
 
