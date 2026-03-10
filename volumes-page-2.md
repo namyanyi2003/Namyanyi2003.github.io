@@ -23,8 +23,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XII — Boundary Parameters and the Mechanics of Intimacy](./volume-12.md)  
   Most theories describe intimacy as feeling, attachment, or compatibility, but do not specify the fixed boundary parameters that determine whether entry is mechanically admissible. Volume XII formalizes that missing parameter layer by modelling **Visibility (V)**, **Spotlight sensitivity (S)**, and **Alarm threshold** as the steady-state conditions that govern adult intimacy entry.
 
-- Volume XIII — Coming next
-- Volume XIV
+- [Volume XIII — Projection as the First Optical Event of Intimacy](./volume-13.md)  
+  Most theories describe projection as distortion, fantasy, or misreading, but do not specify the mechanical function projection serves at the beginning of intimacy. Volume XIII formalizes that missing projection-initiation layer by modelling projector activation, symbolic load compression, spotlight softening, and image-based entry as the conditions that allow early contact before full reality-testing is available.
+
+- Volume XIV — Coming next
 - Volume XV
 - Volume XVI
 - Volume XVII
