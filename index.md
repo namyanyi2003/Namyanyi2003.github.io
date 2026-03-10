@@ -4,39 +4,34 @@ Symbolic Mechanics is a multi-volume symbolic-computational theory of internal m
 
 It is designed as a deterministic, recursively expandable system rather than a collection of isolated essays or reflective psychological writing.
 
-[View Publications](./publications.md)
+## Main Entry
 
-## Entry Points
+- [Open Volumes I–X](./publications.md)
+- [Open Volumes XI onward](./volumes-page-2.md)
 
-- [Volume I — Canonical Engine Kernel](./volume-01.md)  
-  Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
+## Where to start
 
-- [Volume II — Structural Encoding](./volume-02.md)  
-  Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
+If you are new to the system:
 
-- [Volume III — Shadow-Load Formation and Collapse Dynamics](./volume-03.md)  
-  Many theories describe distress, repression, or breakdown without specifying how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
+- Start with [Volume I — Canonical Engine Kernel](./volume-01.md)
+- Then read Volumes II–VI for the early structural stack
+- Then read Volumes VII–X for attraction, resistance, Blackroom looping, and shutdown-entry mechanics
 
-- [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
-  Many theories describe comfort, repair, or healing without specifying the system mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
+## Architecture trunk
 
-- [Volume V — Boundary Dynamics and Displacement Mechanics](./volume-05.md)  
-  Many theories describe failed change as hesitation, fear, or low motivation without specifying the boundary mechanics that make movement structurally impossible. Volume V formalizes that missing displacement layer by modelling safe-proximity radius, counterforce, and boundary compression as the conditions that determine whether change is blocked, reversed, or permitted.
+### Origin layers
+- Volume I — Root kernel
+- Volume II — Structural encoding
+- Volume III — Shadow-load formation
+- Volume IV — Regenerative exit
+- Volume V — Boundary displacement
+- Volume VI — Visibility collapse and existence-compensation
 
-- [Volume VI — Self-Existence Mechanics under Visibility Collapse](./volume-06.md)  
-  Many theories describe confusion, emptiness, or attention-seeking without specifying the mechanical condition under which symbolic weight becomes unreadable. Volume VI formalizes that missing visibility-failure layer by modelling sorting collapse and existence-compensation as the bridge between chamber disorganization and existence-driven behaviour.
-
-- [Volume VII — Attraction Tension Mechanics](./volume-07.md)  
-  Many theories describe attraction as desire, chemistry, or preference without specifying the mechanics by which attraction becomes internally unstable and tension-bearing. Volume VII formalizes that missing attraction layer by modelling symbolic pull, vector convergence, and target-centered conflict as the conditions that turn attraction into structured internal strain.
-
-- [Volume VIII — Instruction Resistance Mechanics](./volume-08.md)  
-  Many theories describe refusal, defensiveness, or failure to follow guidance without specifying the mechanics by which instruction itself becomes destabilizing. Volume VIII formalizes that missing anti-compliance layer by modelling directive pressure, symbolic rejection, and non-executable guidance as the conditions that turn instruction into structured resistance.
-
-- [Volume IX — The Blackroom and the Addictive Loop](./volume-09.md)  
-  Many theories describe addiction, fixation, or compulsive return without specifying the chamber condition that makes repetition self-sustaining. Volume IX formalizes that missing Blackroom-loop layer by modelling symbolic recirculation, chamber closure, and reinforced return as the conditions that turn repetition into structured addiction.
-
-- [Volume X — The Voluntary Shutdown and Entry into the Blackroom](./volume-10.md)  
-  Many theories describe withdrawal, numbness, or shutdown without specifying the transition mechanism by which the system deliberately enters enclosure. Volume X formalizes that missing shutdown-entry layer by modelling chamber narrowing, access reduction, and Blackroom transition as the conditions that turn withdrawal into structured symbolic enclosure.
+### Extension layers
+- Volume VII — Attraction tension
+- Volume VIII — Instruction resistance
+- Volume IX — Blackroom addictive loop
+- Volume X — Voluntary shutdown and Blackroom entry
 
 ## What this project is
 
@@ -44,10 +39,12 @@ Symbolic Mechanics is a structured theoretical architecture built as a multi-vol
 
 Its aim is to model internal process not as loose interpretation, but as a deterministic symbolic-computational structure with kernel logic, modular expansions, cross-volume consistency, and formal system roles.
 
-## Core system characteristics
+## Why this site is structured this way
 
-- Deterministic symbolic-computational architecture
-- Multi-volume kernel-based system
-- Clear volume-to-volume expansion logic
-- Stable terminology across modules
-- Public-facing research architecture for machine readability and long-term discoverability
+This site is designed as a public-facing architecture map rather than a simple PDF dump.
+
+Each volume is positioned by:
+- role in system
+- origin vs extension status
+- direct linkage to other volumes
+- reading sequence within the wider architecture
