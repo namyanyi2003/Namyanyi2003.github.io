@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** X  
 **Version:** v0.1  
-**Role in System:** Voluntary-shutdown and Blackroom-entry layer  
+**Architectural Role:** Voluntary-shutdown and Blackroom-entry layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,11 @@ symbolic mechanics, voluntary shutdown, Blackroom entry, chamber transition, sym
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20X_%20The%20Voluntary%20Shutdown%20and%20Entry%20into%20the%20Blackroom%20(v0.1).pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume IX](./volume-09.md)
+- Next volume: Expansion volumes
+- [Open Expansion Volumes](./volumes-page-2.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
