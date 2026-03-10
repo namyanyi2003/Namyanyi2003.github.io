@@ -29,8 +29,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XIV — Projection Infrastructure and Reality-Breach Mechanics](./volume-14.md)  
   Most theories describe projection as fantasy or distortion, but do not specify the infrastructure that allows a projected world to remain stable once it has formed. Volume XIV formalizes that missing infrastructure layer by modelling placeholder stabilization, room darkening, reality-marker suppression, and breach conditions as the mechanics that sustain projection until contradiction penetrates the chamber.
 
-- Volume XV — Coming next
-- Volume XVI
+- [Volume XV — Projection Breakdown and Pressure Dynamics](./volume-15.md)  
+  Most theories describe disillusionment or relational shock as emotional correction, but do not specify the mechanics by which a projected world breaks down once contradiction accumulates inside it. Volume XV formalizes that missing breakdown layer by modelling contradiction pressure, infrastructure overload, and projection collapse as the sequence that turns reality breach into destabilizing chamber pressure.
+
+- Volume XVI — Coming next
 - Volume XVII
 - Volume XVIII
 - Volume XIX
