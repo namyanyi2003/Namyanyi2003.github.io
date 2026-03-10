@@ -25,3 +25,4 @@ Volumes I–X establish the kernel, encoding, load, repair, boundary, visibility
 ## Why this project matters
 
 Conventional theories often describe emotion, identity, attraction, collapse, and relational conflict at the level of interpretation, symptom, or narrative meaning. Symbolic Mechanics formalizes the missing computational layers beneath them.
+
