@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** I  
 **Version:** v1.0  
-**Role in System:** Root kernel  
+**Architectural Role:** Root kernel  
 **Status:** Canonical  
 
 ## Research Hook
@@ -43,5 +43,10 @@ symbolic mechanics, canonical engine kernel, deterministic symbolic system, symb
 ## Access
 
 - [Read PDF file](./Symbolic_Mechanics_Volume_I_Canonical_Engine_Kernel.pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- Previous volume: None
+- [Next volume — Volume II](./volume-02.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
