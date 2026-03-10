@@ -39,7 +39,9 @@ symbolic mechanics, instruction resistance, anti-compliance mechanics, guidance 
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VIII_%20Instruction%20Resistance%20Mechanics%20(v0.1).pdf.pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-08.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
