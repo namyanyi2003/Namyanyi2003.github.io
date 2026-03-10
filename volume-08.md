@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** VIII  
 **Version:** v0.1  
-**Role in System:** Instruction-resistance and anti-compliance layer  
+**Architectural Role:** Instruction-resistance and anti-compliance layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, instruction resistance, anti-compliance mechanics, guidance 
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VIII_%20Instruction%20Resistance%20Mechanics%20(v0.1).pdf.pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume VII](./volume-07.md)
+- [Next volume — Volume IX](./volume-09.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
