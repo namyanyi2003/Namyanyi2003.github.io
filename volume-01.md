@@ -1,16 +1,14 @@
 # Symbolic Mechanics — Volume I: Canonical Engine Kernel
 
-**Series:** Symbolic Mechanics  
 **Volume:** I  
-**Version:** v1.0  
-**Architectural Role:** Root kernel  
+**System Role:** Root kernel  
 **Status:** Canonical  
 
 ## Research Hook
 
-Most theories of inner life describe meaning, affect, interpretation, or personality, but do not specify the irreducible engine through which internal events must actually pass.
+Most theories describe inner life, but do not specify the irreducible engine through which internal events must actually pass.
 
-Volume I establishes the canonical kernel of Symbolic Mechanics: a deterministic symbolic-computational loop in which all internal events are processed through the invariant sequence **Δ → S → L → R → Exit**.
+Volume I formalizes that missing kernel by defining a deterministic symbolic-computational loop in which all internal events are processed through the invariant sequence **Δ → S → L → R → Exit**.
 
 Rather than beginning from narrative explanation, this volume begins from routing logic. It formalizes the minimum engine required to model how symbolic events enter a system, bind to structural position, accumulate load, approach rupture, and discharge through constrained exits.
 
