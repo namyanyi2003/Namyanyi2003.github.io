@@ -27,6 +27,9 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 - [Volume VII — Attraction Tension Mechanics](./volume-07.md)  
   Many theories describe attraction as desire, chemistry, or preference without specifying the mechanics by which attraction becomes internally unstable and tension-bearing. Volume VII formalizes that missing attraction layer by modelling symbolic pull, vector convergence, and target-centered conflict as the conditions that turn attraction into structured internal strain.
 
+- [Volume VIII — Instruction Resistance Mechanics](./volume-08.md)  
+  Many theories describe refusal, defensiveness, or failure to follow guidance without specifying the mechanics by which instruction itself becomes destabilizing. Volume VIII formalizes that missing anti-compliance layer by modelling directive pressure, symbolic rejection, and non-executable guidance as the conditions that turn instruction into structured resistance.
+
 ## System Positioning
 
 Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
