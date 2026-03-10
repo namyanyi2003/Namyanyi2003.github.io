@@ -44,4 +44,3 @@ symbolic mechanics, boundary dynamics, displacement mechanics, safe-proximity ra
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20V_%20Boundary%20Dynamics%20and%20Displacement%20Mechanics%20(v1.0).pdf)
 - [Back to Publications](./publications.md)
 - [Back to Home](./index.md)
-  
