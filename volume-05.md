@@ -39,7 +39,11 @@ symbolic mechanics, boundary dynamics, displacement mechanics, safe-proximity ra
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20V_%20Boundary%20Dynamics%20and%20Displacement%20Mechanics%20(v1.0).pdf)
+## Access
+
+- [Download PDF](/pdfs/symbolic-mechanics-volume-05.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
