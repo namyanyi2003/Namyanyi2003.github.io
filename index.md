@@ -9,8 +9,8 @@ It rewrites subjective phenomena as deterministic symbolic mechanics.
 ## Main Entry
 
 - [Open Volumes I–X](./publications.md)
-- [Open Expansion Volumes](./volumes-page-2.md)
-- [For Researchers](./for-researchers.md)
+- [Open Expansion Volumes](./expansion-volumes/)
+- [For Researchers](./for-researchers/)
 
 ## Where to start
 
@@ -25,4 +25,3 @@ Volumes I–X establish the kernel, encoding, load, repair, boundary, visibility
 ## Why this project matters
 
 Conventional theories often describe emotion, identity, attraction, collapse, and relational conflict at the level of interpretation, symptom, or narrative meaning. Symbolic Mechanics formalizes the missing computational layers beneath them.
-
