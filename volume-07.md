@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** VII  
 **Version:** v0.1  
-**Role in System:** Attraction-tension and dual-vector conflict layer  
+**Architectural Role:** Attraction-tension and dual-vector conflict layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, attraction tension, attraction mechanics, symbolic pull, dua
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VII%20(Attraction%20Tension%20Mechanics).pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume VI](./volume-06.md)
+- [Next volume — Volume VIII](./volume-08.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
