@@ -39,7 +39,9 @@ symbolic mechanics, Blackroom, addictive loop, symbolic recirculation, chamber c
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20IX_%20The%20Blackroom%20and%20the%20Addictive%20Loop%20(v0.1).pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-09.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
