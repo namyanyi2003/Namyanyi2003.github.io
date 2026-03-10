@@ -26,8 +26,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XIII — Projection as the First Optical Event of Intimacy](./volume-13.md)  
   Most theories describe projection as distortion, fantasy, or misreading, but do not specify the mechanical function projection serves at the beginning of intimacy. Volume XIII formalizes that missing projection-initiation layer by modelling projector activation, symbolic load compression, spotlight softening, and image-based entry as the conditions that allow early contact before full reality-testing is available.
 
-- Volume XIV — Coming next
-- Volume XV
+- [Volume XIV — Projection Infrastructure and Reality-Breach Mechanics](./volume-14.md)  
+  Most theories describe projection as fantasy or distortion, but do not specify the infrastructure that allows a projected world to remain stable once it has formed. Volume XIV formalizes that missing infrastructure layer by modelling placeholder stabilization, room darkening, reality-marker suppression, and breach conditions as the mechanics that sustain projection until contradiction penetrates the chamber.
+
+- Volume XV — Coming next
 - Volume XVI
 - Volume XVII
 - Volume XVIII
