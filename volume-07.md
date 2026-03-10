@@ -1,18 +1,16 @@
 # Symbolic Mechanics — Volume VII: Attraction Tension Mechanics
 
-**Series:** Symbolic Mechanics  
 **Volume:** VII  
-**Version:** v0.1  
-**Architectural Role:** Attraction-tension and dual-vector conflict layer  
+**System Role:** Attraction-tension and dual-vector conflict layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe attraction as desire, preference, chemistry, attachment style, or emotional pull, but do not specify the mechanical condition under which attraction becomes internally unstable, self-amplifying, and structurally conflictual.
+Most theories describe attraction as desire, chemistry, or preference, but do not specify the mechanics by which attraction becomes internally unstable and tension-bearing.
 
-Volume VII formalizes that missing layer. It rewrites attraction not as simple liking or emotional inclination, but as a tension-bearing symbolic configuration in which multiple internal vectors converge on the same object while carrying incompatible loads, projections, and directional demands.
+Volume VII formalizes that missing attraction layer by modelling attraction as a symbolic configuration in which multiple internal vectors converge on the same object while carrying incompatible loads, projections, and directional demands.
 
-Rather than treating attraction as mood or relationship preference, this volume identifies the mechanics by which attraction becomes a site of internal pressure, oscillation, and destabilizing symbolic strain.
+Rather than treating attraction as mood or relational inclination, this volume identifies the mechanics by which an attracting object becomes a site of internal pressure, oscillation, and destabilizing symbolic strain.
 
 ## Overview
 
