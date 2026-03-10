@@ -4,13 +4,16 @@ Symbolic Mechanics is a multi-volume symbolic-computational theory organized as 
 
 The series is not structured as isolated essays. Each volume occupies a defined role within a wider architecture, with Volume I functioning as the root kernel and later volumes expanding the system through additional layers, subsystems, and domain-specific mechanics.
 
-## Core Entry Points
+## Core Entry Point
 
 - [Volume I — Canonical Engine Kernel](./volume-01.md)  
-  Most theories of inner life describe meaning, affect, interpretation, or personality without specifying the irreducible engine through which internal events must actually pass. Volume I defines that missing kernel: the deterministic symbolic-computational loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
+  Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
 
 - [Volume II — Structural Encoding](./volume-02.md)  
-  Many theories describe feeling, memory, interpretation, or personality structure without specifying how symbolic material becomes durably inscribed inside a system at all. Volume II formalizes that missing layer by rewriting structural encoding as the bridge between event input and stable internal form.
+  Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
+
+- [Volume III — Shadow-Load Formation and Collapse Dynamics](./volume-03.md)  
+  Many theories describe distress, repression, or breakdown without specifying how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
 
 ## System Positioning
 
