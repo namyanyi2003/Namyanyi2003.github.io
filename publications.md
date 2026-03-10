@@ -30,6 +30,9 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 - [Volume VIII — Instruction Resistance Mechanics](./volume-08.md)  
   Many theories describe refusal, defensiveness, or failure to follow guidance without specifying the mechanics by which instruction itself becomes destabilizing. Volume VIII formalizes that missing anti-compliance layer by modelling directive pressure, symbolic rejection, and non-executable guidance as the conditions that turn instruction into structured resistance.
 
+- [Volume IX — The Blackroom and the Addictive Loop](./volume-09.md)  
+  Many theories describe addiction, fixation, or compulsive return without specifying the chamber condition that makes repetition self-sustaining. Volume IX formalizes that missing Blackroom-loop layer by modelling symbolic recirculation, chamber closure, and reinforced return as the conditions that turn repetition into structured addiction.
+
 ## System Positioning
 
 Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
