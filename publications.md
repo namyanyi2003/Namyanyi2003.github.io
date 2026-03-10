@@ -2,84 +2,47 @@
 
 Symbolic Mechanics is a multi-volume symbolic-computational theory organized as a deterministic kernel-based system.
 
-This page contains **Volumes I–X**, which establish the primary trunk of the early architecture: kernel, encoding, load, recovery, boundary, visibility collapse, attraction tension, instruction resistance, Blackroom looping, and voluntary shutdown.
+This page contains **Volumes I–X**, which establish the primary trunk of the early architecture: kernel, encoding, load, repair, boundary, visibility collapse, attraction tension, instruction resistance, Blackroom looping, and voluntary shutdown.
 
-If you are new to the system, the recommended starting point is:
+## Where to start
 
-- **Start with Volume I** for the root engine.
-- Then read **Volumes II–VI** for the core structural stack.
-- Then read **Volumes VII–X** for attraction, resistance, addictive looping, and shutdown-entry mechanics.
-
-## How to read this system
-
-- **Volume I** = root kernel
-- **Volumes II–VI** = early structural expansion layers
-- **Volumes VII–X** = conflict, enclosure, and shutdown-adjacent mechanics
-- **Volume XI onward** = next expansion page
+- Start with [Volume I](./volume-01.md)
+- Then read Volumes II–VI for the early structural stack
+- Then read Volumes VII–X for attraction, resistance, Blackroom looping, and shutdown-entry mechanics
 
 ## Volumes I–X
 
 - [Volume I — Canonical Engine Kernel](./volume-01.md)  
-  **Role:** Root kernel  
-  **Type:** Origin layer  
-  **Direct linkage:** Upstream of all later volumes  
-  Defines the irreducible engine **Δ → S → L → R → Exit** and establishes the core computational grammar of the entire system.
+  Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I formalizes that missing kernel by defining the deterministic loop **Δ → S → L → R → Exit**.
 
 - [Volume II — Structural Encoding](./volume-02.md)  
-  **Role:** First kernel expansion layer  
-  **Type:** Origin layer  
-  **Direct linkage:** Follows Volume I; upstream of Volumes III–X  
-  Formalizes how symbolic input becomes durably encoded into internal structure.
+  Most theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
 - [Volume III — Shadow-Load Formation and Collapse Dynamics](./volume-03.md)  
-  **Role:** Early load-formation layer  
-  **Type:** Origin layer  
-  **Direct linkage:** Follows Volume II; upstream of Volumes IV–X  
-  Formalizes how encoded material becomes accumulating internal burden and collapse-capable pressure.
+  Most theories describe distress, repression, or breakdown without specifying how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
 
 - [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
-  **Role:** Early recovery and regenerative-exit layer  
-  **Type:** Origin layer  
-  **Direct linkage:** Responds to Volume III; upstream of relational recovery mechanics  
-  Formalizes repair-compatible exit and continuity restoration without destructive rupture.
+  Most theories describe comfort, repair, or healing without specifying the system mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
 
 - [Volume V — Boundary Dynamics and Displacement Mechanics](./volume-05.md)  
-  **Role:** Boundary-displacement and change-permission layer  
-  **Type:** Origin layer  
-  **Direct linkage:** Follows Volumes III–IV; upstream of intimacy/projection boundary mechanics  
-  Formalizes safe-proximity radius, counterforce, and the mechanics that determine whether change is blocked, reversed, or permitted.
+  Most theories describe failed change as hesitation, fear, or low motivation without specifying the boundary mechanics that make movement structurally impossible. Volume V formalizes that missing displacement layer by modelling safe-proximity radius, counterforce, and boundary compression as the conditions that determine whether change is blocked, reversed, or permitted.
 
 - [Volume VI — Self-Existence Mechanics under Visibility Collapse](./volume-06.md)  
-  **Role:** Visibility-collapse and existence-compensation layer  
-  **Type:** Origin layer  
-  **Direct linkage:** Follows Volume V; upstream of obsession, fixation, and symbolic fallback structures  
-  Formalizes sorting failure, symbolic unreadability, and fallback into existence-compensation.
+  Most theories describe confusion, emptiness, or attention-seeking without specifying the mechanical condition under which symbolic weight becomes unreadable. Volume VI formalizes that missing visibility-failure layer by modelling sorting collapse and existence-compensation as the bridge between chamber disorganization and existence-driven behaviour.
 
 - [Volume VII — Attraction Tension Mechanics](./volume-07.md)  
-  **Role:** Attraction-tension and dual-vector conflict layer  
-  **Type:** Extension layer  
-  **Direct linkage:** Builds on Volumes III, V, and VI; upstream of Volumes VIII–X  
-  Formalizes attraction as a tension-bearing symbolic configuration rather than simple desire or preference.
+  Most theories describe attraction as desire, chemistry, or preference without specifying the mechanics by which attraction becomes internally unstable and tension-bearing. Volume VII formalizes that missing attraction layer by modelling symbolic pull, vector convergence, and target-centered conflict as the conditions that turn attraction into structured internal strain.
 
 - [Volume VIII — Instruction Resistance Mechanics](./volume-08.md)  
-  **Role:** Instruction-resistance and anti-compliance layer  
-  **Type:** Extension layer  
-  **Direct linkage:** Builds on Volumes V–VII; upstream of Volumes IX–X  
-  Formalizes why externally valid instruction becomes destabilizing and mechanically non-executable.
+  Most theories describe refusal, defensiveness, or failure to follow guidance without specifying the mechanics by which instruction itself becomes destabilizing. Volume VIII formalizes that missing anti-compliance layer by modelling directive pressure, symbolic rejection, and non-executable guidance as the conditions that turn instruction into structured resistance.
 
 - [Volume IX — The Blackroom and the Addictive Loop](./volume-09.md)  
-  **Role:** Blackroom-loop and addictive recirculation layer  
-  **Type:** Extension layer  
-  **Direct linkage:** Builds on Volumes VII–VIII; upstream of Volume X  
-  Formalizes sealed symbolic recirculation and the chamber condition that turns repetition into structured addiction.
+  Most theories describe addiction, fixation, or compulsive return without specifying the chamber condition that makes repetition self-sustaining. Volume IX formalizes that missing Blackroom-loop layer by modelling symbolic recirculation, chamber closure, and reinforced return as the conditions that turn repetition into structured addiction.
 
 - [Volume X — The Voluntary Shutdown and Entry into the Blackroom](./volume-10.md)  
-  **Role:** Voluntary-shutdown and Blackroom-entry layer  
-  **Type:** Extension layer  
-  **Direct linkage:** Builds on Volume IX; bridge into later enclosure-dependent mechanics  
-  Formalizes deliberate chamber narrowing, access reduction, and intentional entry into symbolic enclosure.
+  Most theories describe withdrawal, numbness, or shutdown without specifying the transition mechanism by which the system deliberately enters enclosure. Volume X formalizes that missing shutdown-entry layer by modelling chamber narrowing, access reduction, and Blackroom transition as the conditions that turn withdrawal into structured symbolic enclosure.
 
 ## Navigation
 
 - [Back to Home](./index.md)
-- [Go to Volumes XI+](./volumes-page-2.md)
+- [Go to Volumes XI onward](./volumes-page-2.md)
