@@ -1,18 +1,16 @@
-# # Symbolic Mechanics — Volume IX: The Blackroom and the Addictive Loop
+# Symbolic Mechanics — Volume IX: The Blackroom and the Addictive Loop
 
-**Series:** Symbolic Mechanics  
 **Volume:** IX  
-**Version:** v0.1  
-**Architectural Role:** Blackroom-loop and addictive recirculation layer  
+**System Role:** Blackroom-loop and addictive recirculation layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe addiction, fixation, compulsive return, emotional dependency, or repetitive self-damaging behaviour, but do not specify the internal chamber condition that makes closed-loop recirculation become mechanically self-sustaining.
+Most theories describe addiction, fixation, or compulsive return, but do not specify the chamber condition that makes repetition self-sustaining.
 
-Volume IX formalizes that missing layer. It rewrites the addictive loop not as weak will, pleasure-seeking, or simple attachment excess, but as a structured Blackroom condition in which the system enters a sealed recirculating environment and repeatedly routes itself through the same symbolic chamber for regulation, stimulation, and temporary stabilization.
+Volume IX formalizes that missing Blackroom-loop layer by modelling a sealed symbolic environment in which the system repeatedly routes itself through the same chamber for regulation, stimulation, and temporary stabilization.
 
-Rather than treating addiction as only substance use, habit, or emotional dependence, this volume identifies the mechanics by which a closed internal room becomes self-reinforcing and increasingly difficult to exit.
+Rather than treating addiction as only habit, craving, or dependency, this volume identifies the mechanics by which a closed internal room becomes self-reinforcing and progressively harder to exit.
 
 ## Overview
 
