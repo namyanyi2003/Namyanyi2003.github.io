@@ -3,7 +3,7 @@
 **Series:** Symbolic Mechanics  
 **Volume:** VI  
 **Version:** v1.0  
-**Role in System:** Visibility-collapse and existence-compensation layer  
+**Architectural Role:** Visibility-collapse and existence-compensation layer  
 **Status:** Canonical  
 
 ## Research Hook
@@ -42,5 +42,10 @@ symbolic mechanics, visibility collapse, sorting failure, symbolic weight, exist
 ## Access
 
 - [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VI_%20Self-Existence%20Mechanics%20under%20Visibility%20Collapse.pdf)
-- [Back to Publications](./publications.md)
+
+## Navigation
+
+- [Previous volume — Volume V](./volume-05.md)
+- [Next volume — Volume VII](./volume-07.md)
+- [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
