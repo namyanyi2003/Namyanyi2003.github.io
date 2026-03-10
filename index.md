@@ -1,12 +1,10 @@
-# Symbolic Mechanics
+# Publications
 
-Symbolic Mechanics is a multi-volume symbolic-computational theory of internal mechanics and relational dynamics.
+Symbolic Mechanics is a multi-volume symbolic-computational theory organized as a deterministic kernel-based system.
 
-It is designed as a deterministic, recursively expandable system rather than a collection of isolated essays or reflective psychological writing.
+The series is not structured as isolated essays. Each volume occupies a defined role within a wider architecture, with Volume I functioning as the root kernel and later volumes expanding the system through additional layers, subsystems, and domain-specific mechanics.
 
-[View Publications](./publications.md)
-
-## Entry Points
+## Core Entry Point
 
 - [Volume I — Canonical Engine Kernel](./volume-01.md)  
   Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
@@ -32,16 +30,15 @@ It is designed as a deterministic, recursively expandable system rather than a c
 - [Volume VIII — Instruction Resistance Mechanics](./volume-08.md)  
   Many theories describe refusal, defensiveness, or failure to follow guidance without specifying the mechanics by which instruction itself becomes destabilizing. Volume VIII formalizes that missing anti-compliance layer by modelling directive pressure, symbolic rejection, and non-executable guidance as the conditions that turn instruction into structured resistance.
 
-## What this project is
+- [Volume IX — The Blackroom and the Addictive Loop](./volume-09.md)  
+  Many theories describe addiction, fixation, or compulsive return without specifying the chamber condition that makes repetition self-sustaining. Volume IX formalizes that missing Blackroom-loop layer by modelling symbolic recirculation, chamber closure, and reinforced return as the conditions that turn repetition into structured addiction.
 
-Symbolic Mechanics is a structured theoretical architecture built as a multi-volume knowledge system.
+## System Positioning
 
-Its aim is to model internal process not as loose interpretation, but as a deterministic symbolic-computational structure with kernel logic, modular expansions, cross-volume consistency, and formal system roles.
+Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
 
-## Core system characteristics
+The project models internal process as a deterministic symbolic-computational system with stable terminology, explicit mechanics, and formal upstream/downstream relations between volumes.
 
-- Deterministic symbolic-computational architecture
-- Multi-volume kernel-based system
-- Clear volume-to-volume expansion logic
-- Stable terminology across modules
-- Public-facing research architecture for machine readability and long-term discoverability
+## Navigation
+
+- [Back to Home](./index.md)
