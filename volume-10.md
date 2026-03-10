@@ -39,7 +39,9 @@ symbolic mechanics, voluntary shutdown, Blackroom entry, chamber transition, sym
 
 ## Access
 
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20X_%20The%20Voluntary%20Shutdown%20and%20Entry%20into%20the%20Blackroom%20(v0.1).pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-10.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
 
 ## Navigation
 
