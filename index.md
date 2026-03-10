@@ -1,46 +1,38 @@
-# Symbolic Mechanics — Volume VI: Self-Existence Mechanics under Visibility Collapse
+# Publications
 
-**Series:** Symbolic Mechanics  
-**Volume:** VI  
-**Version:** v1.0  
-**Role in System:** Visibility-collapse and existence-compensation layer  
-**Status:** Canonical  
+Symbolic Mechanics is a multi-volume symbolic-computational theory organized as a deterministic kernel-based system.
 
-## Research Hook
+The series is not structured as isolated essays. Each volume occupies a defined role within a wider architecture, with Volume I functioning as the root kernel and later volumes expanding the system through additional layers, subsystems, and domain-specific mechanics.
 
-Many theories describe confusion, indecision, emptiness, dissociation, or attention-seeking behaviour, but do not specify the mechanical condition under which a system loses the ability to sort symbolic weight in the first place.
+## Core Entry Point
 
-Volume VI formalizes that missing layer. It rewrites sorting failure not as weak judgment, unstable preference, or vague psychological confusion, but as the structural consequence of **visibility collapse** inside a deterministic symbolic system.
+- [Volume I — Canonical Engine Kernel](./volume-01.md)  
+  Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
 
-Rather than treating existence-seeking behaviour as personality style, dependency, or emotional excess, this volume identifies the conditions under which symbolic weight becomes unreadable and the Self is forced to fall back on its own existence as the last remaining detectable signal.
+- [Volume II — Structural Encoding](./volume-02.md)  
+  Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
 
-## Overview
+- [Volume III — Shadow-Load Formation and Collapse Dynamics](./volume-03.md)  
+  Many theories describe distress, repression, or breakdown without specifying how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
 
-This volume defines the visibility-collapse and existence-compensation layer of Symbolic Mechanics.
+- [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
+  Many theories describe comfort, repair, or healing without specifying the system mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
 
-If Volume V explains how boundary dynamics govern movement permission, then Volume VI explains what happens when the symbolic chamber loses enough visibility that weight, hierarchy, and symbolic relevance can no longer be computed. In system terms, this volume moves from boundary-governed displacement to perceptual-symbolic failure of sorting.
+- [Volume V — Boundary Dynamics and Displacement Mechanics](./volume-05.md)  
+  Many theories describe failed change as hesitation, fear, or low motivation without specifying the boundary mechanics that make movement structurally impossible. Volume V formalizes that missing displacement layer by modelling safe-proximity radius, counterforce, and boundary compression as the conditions that determine whether change is blocked, reversed, or permitted.
 
-The volume formalizes visibility collapse as a convergent mechanical condition produced by shadow overload, parental-signal decay, atmospheric distortion, and chronic reliance on delayed-discharge dynamics. Under these conditions, symbolic objects may still exist, but the Self can no longer reliably detect boundaries, weight gradients, or priority structure.
+- [Volume VI — Self-Existence Mechanics under Visibility Collapse](./volume-06.md)  
+  Many theories describe confusion, emptiness, or attention-seeking without specifying the mechanical condition under which symbolic weight becomes unreadable. Volume VI formalizes that missing visibility-failure layer by modelling sorting collapse and existence-compensation as the bridge between chamber disorganization and existence-driven behaviour.
 
-Its central modelling objects are visibility collapse, sorting failure, weight unreadability, and the three-tier progression of existence-compensation through which the Self stabilizes itself when symbolic processing can no longer operate.
+- [Volume VII — Attraction Tension Mechanics](./volume-07.md)  
+  Many theories describe attraction as desire, chemistry, or preference without specifying the mechanics by which attraction becomes internally unstable and tension-bearing. Volume VII formalizes that missing attraction layer by modelling symbolic pull, vector convergence, and target-centered conflict as the conditions that turn attraction into structured internal strain.
 
-## Why this volume matters
+## System Positioning
 
-This volume is the first major visibility-failure layer of the system.
+Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
 
-It matters because a deterministic architecture cannot explain collapse fully if it only models load, recovery, and boundary mechanics. It must also specify the condition under which symbolic weight becomes unreadable, ranking becomes impossible, and the Self is forced to anchor to existence itself rather than meaning.
+The project models internal process as a deterministic symbolic-computational system with stable terminology, explicit mechanics, and formal upstream/downstream relations between volumes.
 
-Architecturally, this volume sits downstream of load formation, collapse pressure, regenerative continuity, and boundary instability, and upstream of later modules involving obsession, symbolic fixation, attachment escalation, projection distortion, and deeper compensatory structures. It provides the missing bridge between chamber disorganization and existence-driven behaviour.
+## Navigation
 
-Without Volume VI, the system can model burden and instability.  
-With Volume VI, the system can explain why symbolic importance disappears, why sorting fails, and why the Self begins to seek proof of existence instead of symbolic orientation.
-
-## Keywords
-
-symbolic mechanics, visibility collapse, sorting failure, symbolic weight, existence compensation, existence confirmation, deterministic symbolic system, symbolic-computational theory, chamber fog, weight unreadability, self-anchoring, dissociative compensation, downstream architecture, relational dynamics
-
-## Access
-
-- [Read PDF file](./Symbolic%20Mechanics%20%E2%80%94%20Volume%20VI_%20Self-Existence%20Mechanics%20under%20Visibility%20Collapse.pdf)
-- [Back to Publications](./publications.md)
 - [Back to Home](./index.md)
