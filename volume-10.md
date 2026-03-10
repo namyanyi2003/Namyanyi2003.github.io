@@ -1,18 +1,16 @@
 # Symbolic Mechanics — Volume X: The Voluntary Shutdown and Entry into the Blackroom
 
-**Series:** Symbolic Mechanics  
 **Volume:** X  
-**Version:** v0.1  
-**Architectural Role:** Voluntary-shutdown and Blackroom-entry layer  
+**System Role:** Voluntary-shutdown and Blackroom-entry layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe withdrawal, emotional numbing, detachment, avoidance, or shutdown as passive collapse, burnout, or defensive retreat, but do not specify the mechanical threshold at which the system actively chooses enclosure over continued symbolic exposure.
+Most theories describe withdrawal, numbness, or shutdown, but do not specify the transition mechanism by which the system deliberately enters enclosure.
 
-Volume X formalizes that missing layer. It rewrites voluntary shutdown not as mere exhaustion, refusal, or disappearance, but as a structured system decision in which the chamber deliberately narrows processing, cuts external entry, and moves into Blackroom-compatible conditions in order to prevent further destabilization.
+Volume X formalizes that missing shutdown-entry layer by modelling voluntary shutdown as a structured chamber transition in which access is reduced, external entry is cut, and the system moves into Blackroom-compatible containment.
 
-Rather than treating shutdown as only absence, this volume identifies the mechanics by which withdrawal becomes an internally organized transition into sealed symbolic containment.
+Rather than treating shutdown as only absence or retreat, this volume identifies the mechanics by which withdrawal becomes an internally organized move into sealed symbolic enclosure.
 
 ## Overview
 
