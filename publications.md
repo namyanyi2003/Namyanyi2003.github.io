@@ -15,6 +15,9 @@ The series is not structured as isolated essays. Each volume occupies a defined 
 - [Volume III — Shadow-Load Formation and Collapse Dynamics](./volume-03.md)  
   Many theories describe distress, repression, or breakdown without specifying how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
 
+- [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
+  Many theories describe comfort, repair, or healing without specifying the system mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
+
 ## System Positioning
 
 Symbolic Mechanics should be read as a unified architecture with a root kernel, expansion volumes, cross-volume consistency, and recursively extendable modelling capacity.
