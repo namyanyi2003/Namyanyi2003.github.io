@@ -1,16 +1,14 @@
 # Symbolic Mechanics — Volume II: Structural Encoding
 
-**Series:** Symbolic Mechanics  
 **Volume:** II  
-**Version:** v1.0  
-**Architectural Role:** First kernel expansion layer  
+**System Role:** First kernel expansion layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Many theories describe feeling, memory, interpretation, or personality structure, but do not specify how symbolic material becomes durably inscribed inside a system at all.
+Most theories describe feeling, memory, or interpretation, but do not specify how symbolic material becomes durably fixed into internal structure.
 
-Volume II formalizes that missing layer. It rewrites internal registration as **structural encoding**: the system process through which symbolic input is not merely experienced, remembered, or narrated, but converted into stable internal form.
+Volume II formalizes that missing conversion layer by modelling **structural encoding** as the process through which symbolic input is not merely experienced or remembered, but converted into stable internal form.
 
 Rather than treating inner structure as residue, impression, or psychological description, this volume identifies the encoding mechanism that makes later system continuity possible.
 
