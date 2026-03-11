@@ -13,7 +13,7 @@ If you are new to the system, read in this order:
 
 ## Expansion layers
 
-These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, post-projection alarm governance, and shame-origin architecture.
+These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, post-projection alarm governance, shame-origin architecture, and clown-engine staging.
 
 ## Volumes XI onward
 
@@ -41,8 +41,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XVIII — Shame-Origin Mechanics and the Shadow–Clown Subsystem](./../volume-18.md)  
   Most theories describe shame effects as masking, self-distortion, or defensive performance, but do not specify the subsystem that forms after shame-origin has already broken the base structure. Volume XVIII formalizes that missing subsystem layer by modelling the shadow-child, dark-field drift, and clown authority as the mechanics that turn shame-origin into system-wide behavioural control.
 
-- Volume XIX — Coming next
-- Volume XX
+- [Volume XIX — The Grand Hall and the Deep Engine of the Clown](./../volume-19.md)  
+  Most theories describe performative identity, masking, or scene-shifting behaviour, but do not specify the deep engine that re-stages the room once the clown subsystem has formed. Volume XIX formalizes that missing engine layer by modelling the Grand Hall, clown-led scene shift, recursive return to intimacy staging, and deep-engine governance as the mechanics of chamber reorganization.
+
+- Volume XX — Coming next
 
 ## Navigation
 
