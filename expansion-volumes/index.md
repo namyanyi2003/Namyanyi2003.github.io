@@ -13,7 +13,7 @@ If you are new to the system, read in this order:
 
 ## Expansion layers
 
-These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, and projection-breakdown mechanics.
+These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, and post-projection alarm governance.
 
 ## Volumes XI onward
 
@@ -32,8 +32,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XV — Projection Breakdown and Pressure Dynamics](./../volume-15.md)  
   Most theories describe disillusionment or relational shock as emotional correction, but do not specify the mechanics by which a projected world breaks down once contradiction accumulates inside it. Volume XV formalizes that missing breakdown layer by modelling contradiction pressure, infrastructure overload, and projection collapse as the sequence that turns reality breach into destabilizing chamber pressure.
 
-- Volume XVI — Coming next
-- Volume XVII
+- [Volume XVI — The Alarm Takeover State After Projection Shutdown](./../volume-16.md)  
+  Most theories describe post-collapse distress as panic, shock, or emotional fallout, but do not specify the governing state that takes over once projection has already shut down. Volume XVI formalizes that missing post-projection layer by modelling alarm takeover, control transfer, and post-projection governance as the mechanics that reorganize the room after projection failure.
+
+- Volume XVII — Coming next
 - Volume XVIII
 - Volume XIX
 - Volume XX
