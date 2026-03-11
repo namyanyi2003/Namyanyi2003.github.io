@@ -38,8 +38,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XVII — Shame-Origin Mechanics and the Base-Level Structural Break](./../volume-17.md)  
   Most theories describe shame as emotion, self-evaluation, or wounded identity, but do not specify the deeper structural break from which shame-driven mechanics arise. Volume XVII formalizes that missing origin layer by modelling shame as the consequence of a base-level structural break that reorganizes later alarm, collapse, and compensatory architecture.
 
-- Volume XVIII — Coming next
-- Volume XIX
+- [Volume XVIII — Shame-Origin Mechanics and the Shadow–Clown Subsystem](./../volume-18.md)  
+  Most theories describe shame effects as masking, self-distortion, or defensive performance, but do not specify the subsystem that forms after shame-origin has already broken the base structure. Volume XVIII formalizes that missing subsystem layer by modelling the shadow-child, dark-field drift, and clown authority as the mechanics that turn shame-origin into system-wide behavioural control.
+
+- Volume XIX — Coming next
 - Volume XX
 
 ## Navigation
