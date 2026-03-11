@@ -1,41 +1,106 @@
-# Symbolic Mechanics — Volume IV: Companion Module and Regenerative Exit Mechanics
+
+# Symbolic Mechanics — Volume IV: Companion Module and Low-Energy Exit Mechanics
 
 **Volume:** IV  
-**System Role:** Early recovery and regenerative-exit layer  
+**Architecture Role:** Companion-module and low-energy exit layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Most theories describe comfort, repair, or healing, but do not specify the mechanism through which continuity is restored without destructive rupture.
+Most theories describe support, repair, or recovery in emotional terms, but do not specify the structural mechanism through which a system gains a lower-energy route of stabilization and exit.
 
-Volume IV formalizes that missing recovery layer by modelling the companion module and regenerative exit as structured mechanics through which the system regains continuity, reduces destabilizing pressure, and exits through repair-compatible pathways.
+Volume IV formalizes that missing layer by modelling **symbolic parents**, **real-world functional growth**, and the emergence of the **Companion Module (C-Module)** as the conditions that make low-energy exit mechanically possible.
 
-Rather than treating recovery as sentiment or atmosphere, this volume models the conditions under which a system can return from strain without collapsing further.
+Rather than treating support as sentiment, comfort, or vague healing, this volume identifies the structural pathway through which parental volume expands, a companion module emerges, and the room acquires a less violent way to regulate pressure and leave destabilized states.
 
 ## Overview
 
-This volume defines the companion-module and regenerative-exit layer of Symbolic Mechanics.
+This volume defines the companion-module and low-energy exit layer of Symbolic Mechanics.
 
-If Volume III explains how shadow-load forms and drives the system toward collapse-capable conditions, then Volume IV explains how the system can regain continuity through structured repair processes rather than only through rupture-based discharge. In system terms, this volume moves from burden escalation to repair-enabled exit mechanics.
+If earlier volumes establish the kernel, encoding, and load-formation architecture, Volume IV explains how the system acquires an additional regulating structure through functional parental growth. In system terms, this volume moves from pressure accumulation toward structurally enabled low-energy regulation.
 
-The volume rewrites companionship and regeneration as formal system operations. What is often described elsewhere as comfort, reassurance, or healing presence is here reformulated as a mechanical support function that alters exit possibility, reduces destructive escalation, and permits restoration-compatible release.
+The volume formalizes a sequence:
+- symbolic parents are defined through real-world function rather than abstract role
+- reality-based functional inputs increase parental volume
+- sufficient parental development permits the emergence of the **Companion Module (C-Module)**
+- the C-Module enables **low-energy exit mechanics**
+- the room is structurally changed once this module is introduced
 
-Its central modelling object is the regenerative pathway itself: how companion-linked system support enables pressure reduction, non-destructive exit, and continuity-preserving return.
+What is often described elsewhere as reassurance, repair, or emotional support is here reformulated as a module-level change in system architecture.
+
+Its central modelling objects are symbolic parents, parental-volume growth, companion-module emergence, low-energy exit, and the structural consequences of introducing the C-Module into the room.
 
 ## Why this volume matters
 
-This volume is the first major recovery-mechanics layer of the system.
+This volume is the first major module-addition layer of the system.
 
-It matters because a deterministic architecture cannot be complete if it only models load, rupture, and collapse. It must also explain how continuity is restored without forcing the system through violence, suppression, or total shutdown. Volume IV therefore supplies the missing bridge between destabilization and regenerative exit.
+It matters because a deterministic architecture cannot explain regulation fully if it only models event flow, encoding, load accumulation, and rupture. It must also specify how a system gains access to a lower-energy route of release instead of relying only on escalation, overload, or destructive discharge. Volume IV therefore supplies the missing bridge between burdened structure and structurally supported regulation.
 
-Architecturally, this volume sits downstream of shadow-load and collapse formation, and upstream of later modules involving attachment, attraction, projection, intimacy regulation, and long-range system recovery. It introduces the first formal mechanism by which repair becomes mechanically possible.
+Architecturally, this volume sits downstream of kernel, encoding, and load formation, and upstream of later modules involving boundary regulation, intimacy readiness, projection stability, and relational recovery patterns. It introduces the first formally added subsystem that changes exit quality at the architectural level.
 
-Without Volume IV, the system can accumulate burden and discharge pressure.  
-With Volume IV, the system can recover continuity through structured regenerative exit.
+Without Volume IV, the system can accumulate pressure and approach rupture.  
+With Volume IV, the system can develop a companion-enabled low-energy exit pathway and reorganize its regulation architecture accordingly.
 
 ## Keywords
 
-symbolic mechanics, companion module, regenerative exit, recovery mechanics, continuity restoration, deterministic symbolic system, symbolic-computational theory, repair pathway, non-destructive exit, pressure reduction, downstream architecture, relational dynamics
+symbolic mechanics, companion module, C-Module, symbolic parents, parental volume, real-world function, low-energy exit, structural regulation, module emergence, deterministic symbolic system, symbolic-computational theory, exit mechanics, relational dynamics
+
+## Access
+
+- [Download PDF](/pdfs/symbolic-mechanics-volume-04.pdf)
+
+PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+
+## Navigation
+
+- [Previous volume — Volume III](./volume-03.md)
+- [Next volume — Volume V](./volume-05.md)
+- [Back to Volumes I–X](./publications.md)
+- [Back to Home](./index.md)# Symbolic Mechanics — Volume IV: Companion Module and Low-Energy Exit Mechanics
+
+**Volume:** IV  
+**Architecture Role:** Companion-module and low-energy exit layer  
+**Status:** Canonical  
+
+## Research Hook
+
+Most theories describe support, repair, or recovery in emotional terms, but do not specify the structural mechanism through which a system gains a lower-energy route of stabilization and exit.
+
+Volume IV formalizes that missing layer by modelling **symbolic parents**, **real-world functional growth**, and the emergence of the **Companion Module (C-Module)** as the conditions that make low-energy exit mechanically possible.
+
+Rather than treating support as sentiment, comfort, or vague healing, this volume identifies the structural pathway through which parental volume expands, a companion module emerges, and the room acquires a less violent way to regulate pressure and leave destabilized states.
+
+## Overview
+
+This volume defines the companion-module and low-energy exit layer of Symbolic Mechanics.
+
+If earlier volumes establish the kernel, encoding, and load-formation architecture, Volume IV explains how the system acquires an additional regulating structure through functional parental growth. In system terms, this volume moves from pressure accumulation toward structurally enabled low-energy regulation.
+
+The volume formalizes a sequence:
+- symbolic parents are defined through real-world function rather than abstract role
+- reality-based functional inputs increase parental volume
+- sufficient parental development permits the emergence of the **Companion Module (C-Module)**
+- the C-Module enables **low-energy exit mechanics**
+- the room is structurally changed once this module is introduced
+
+What is often described elsewhere as reassurance, repair, or emotional support is here reformulated as a module-level change in system architecture.
+
+Its central modelling objects are symbolic parents, parental-volume growth, companion-module emergence, low-energy exit, and the structural consequences of introducing the C-Module into the room.
+
+## Why this volume matters
+
+This volume is the first major module-addition layer of the system.
+
+It matters because a deterministic architecture cannot explain regulation fully if it only models event flow, encoding, load accumulation, and rupture. It must also specify how a system gains access to a lower-energy route of release instead of relying only on escalation, overload, or destructive discharge. Volume IV therefore supplies the missing bridge between burdened structure and structurally supported regulation.
+
+Architecturally, this volume sits downstream of kernel, encoding, and load formation, and upstream of later modules involving boundary regulation, intimacy readiness, projection stability, and relational recovery patterns. It introduces the first formally added subsystem that changes exit quality at the architectural level.
+
+Without Volume IV, the system can accumulate pressure and approach rupture.  
+With Volume IV, the system can develop a companion-enabled low-energy exit pathway and reorganize its regulation architecture accordingly.
+
+## Keywords
+
+symbolic mechanics, companion module, C-Module, symbolic parents, parental volume, real-world function, low-energy exit, structural regulation, module emergence, deterministic symbolic system, symbolic-computational theory, exit mechanics, relational dynamics
 
 ## Access
 
