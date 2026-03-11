@@ -16,10 +16,9 @@ These ten volumes establish the early architecture of the system, from kernel lo
   *Load / collapse layer*  
   Most theories describe distress, repression, or breakdown, but do not specify how unresolved symbolic material becomes accumulating internal burden. Volume III formalizes that missing pressure layer by modelling shadow-load as the bridge between encoded structure and collapse-capable mechanics.
 
-- [Volume IV — Companion Module and Regenerative Exit Mechanics](./volume-04.md)  
-  *Repair layer*  
-  Most theories describe comfort, repair, or healing, but do not specify the mechanism through which continuity is restored without destructive rupture. Volume IV formalizes that missing recovery layer by modelling companion support and regenerative exit as structured repair-compatible mechanics.
-
+- [Volume IV — Companion Module and Low-Energy Exit Mechanics](./volume-04.md)  
+  Most theories describe support, repair, or recovery in emotional terms, but do not specify the structural mechanism through which a system gains a lower-energy route of stabilization and exit. Volume IV formalizes that missing module layer by modelling symbolic parents, parental-volume growth, and the emergence of the C-Module as the conditions that make low-energy exit mechanically possible.
+  
 - [Volume V — Boundary Dynamics and Displacement Mechanics](./volume-05.md)  
   *Boundary layer*  
   Most theories explain failed change in emotional terms, but do not specify the boundary mechanics that make forward movement structurally impossible even when intention is present. Volume V formalizes that missing displacement layer by modelling safe-proximity radius, counterforce, and boundary compression as the conditions that determine whether change is blocked, reversed, or permitted.
