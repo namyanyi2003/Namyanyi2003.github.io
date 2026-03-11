@@ -13,7 +13,7 @@ If you are new to the system, read in this order:
 
 ## Expansion layers
 
-These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, post-projection alarm governance, shame-origin architecture, and clown-engine staging.
+These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, post-projection alarm governance, shame-origin architecture, clown-engine staging, and primitive navigation.
 
 ## Volumes XI onward
 
@@ -44,7 +44,8 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XIX — The Grand Hall and the Deep Engine of the Clown](./../volume-19.md)  
   Most theories describe performative identity, masking, or scene-shifting behaviour, but do not specify the deep engine that re-stages the room once the clown subsystem has formed. Volume XIX formalizes that missing engine layer by modelling the Grand Hall, clown-led scene shift, recursive return to intimacy staging, and deep-engine governance as the mechanics of chamber reorganization.
 
-- Volume XX — Coming next
+- [Volume XX — The Firefly as the System’s Primitive Navigational Layer](./../volume-20.md)  
+  Most theories describe instinct, intuition, or fragments of hope, but do not specify the minimal navigational signal that remains active when higher-order structure is unstable. Volume XX formalizes that missing primitive layer by modelling the Firefly as a low-resolution directional signal that preserves orientation even under darkened, damaged, or clown-governed chamber conditions.
 
 ## Navigation
 
