@@ -13,7 +13,7 @@ If you are new to the system, read in this order:
 
 ## Expansion layers
 
-These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, and post-projection alarm governance.
+These volumes extend the early engine into intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, projection-breakdown mechanics, post-projection alarm governance, and shame-origin architecture.
 
 ## Volumes XI onward
 
@@ -35,8 +35,10 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XVI — The Alarm Takeover State After Projection Shutdown](./../volume-16.md)  
   Most theories describe post-collapse distress as panic, shock, or emotional fallout, but do not specify the governing state that takes over once projection has already shut down. Volume XVI formalizes that missing post-projection layer by modelling alarm takeover, control transfer, and post-projection governance as the mechanics that reorganize the room after projection failure.
 
-- Volume XVII — Coming next
-- Volume XVIII
+- [Volume XVII — Shame-Origin Mechanics and the Base-Level Structural Break](./../volume-17.md)  
+  Most theories describe shame as emotion, self-evaluation, or wounded identity, but do not specify the deeper structural break from which shame-driven mechanics arise. Volume XVII formalizes that missing origin layer by modelling shame as the consequence of a base-level structural break that reorganizes later alarm, collapse, and compensatory architecture.
+
+- Volume XVIII — Coming next
 - Volume XIX
 - Volume XX
 
