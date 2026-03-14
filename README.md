@@ -1,29 +1,117 @@
 # Symbolic Mechanics
 
-Symbolic Mechanics is a multi-volume symbolic-computational theory of internal mechanics and relational dynamics.
+## A deterministic symbolic-computational architecture of inner mechanics and relational dynamics
 
-It is designed as a deterministic, recursively expandable system rather than a collection of isolated essays or reflective psychological writing.
+Symbolic Mechanics formalizes the missing computational layers beneath emotion, attraction, collapse, projection, shame, and relational conflict.
 
-[View Publications](./publications.md)
+It models inner life as deterministic symbolic mechanics rather than interpretation, symptom description, or narrative meaning.
 
-## Entry Points
+## Main Entry
 
-- [Volume I — Canonical Engine Kernel](./volume-01.md)  
-  Most theories describe inner life without specifying the irreducible engine that processes internal events. Volume I defines that missing kernel: the deterministic loop **Δ → S → L → R → Exit**, which functions as the root computational architecture of the entire Symbolic Mechanics system.
+- [Open Volumes I–X](./publications.md)
+- [Open Volumes XI–XX](./expansion-volumes/)
+- [For Researchers](./for-researchers/)
+- [Canonical Specification of Volumes I–XX](./canonical-specification-volumes-01-20/)
 
-- [Volume II — Structural Encoding](./volume-02.md)  
-  Many theories describe feeling, memory, or interpretation without specifying how symbolic material becomes fixed into internal structure. Volume II formalizes that missing conversion layer by modelling structural encoding as the bridge between event input and durable system form.
+## What this repository contains
 
-## What this project is
+This repository contains the public architecture of Symbolic Mechanics, including:
 
-Symbolic Mechanics is a structured theoretical architecture built as a multi-volume knowledge system.
+- individual volume pages
+- downloadable PDF volumes
+- researcher-facing overview pages
+- canonical engine specification
+- navigable runtime structure across Volumes I–XX
 
-Its aim is to model internal process not as loose interpretation, but as a deterministic symbolic-computational structure with kernel logic, modular expansions, cross-volume consistency, and formal system roles.
+It is designed not as a loose archive of essays, but as a structured knowledge system for readers, researchers, and machine-readable discovery.
 
-## Core system characteristics
+## Architecture overview
 
-- Deterministic symbolic-computational architecture
-- Multi-volume kernel-based system
-- Clear volume-to-volume expansion logic
-- Stable terminology across modules
-- Public-facing research architecture for machine readability and long-term discoverability
+### Volumes I–X · Core Runtime
+
+Volumes I–X establish the core runtime of the Symbolic Mechanics engine:
+
+- kernel processing
+- symbolic encoding
+- collapse-capable load formation
+- regenerative restart
+- boundary geometry
+- visibility failure
+- attraction fields
+- intrusion physics
+- blackout topology
+- voluntary shutdown
+
+### Volumes XI–XX · Deep Runtime
+
+Volumes XI–XX extend the runtime into:
+
+- intimacy-boundary computation
+- parental force-parameterization
+- projection initiation
+- single-input projection physics
+- projection thermodynamics
+- post-projection alarm locking
+- shame-origin rupture
+- dark-field clown architecture
+- hall-scale recurrence
+- post-shame survival navigation
+
+### Canonical Specification · Integrated Engine
+
+The Canonical Specification of Volumes I–XX consolidates the first twenty volumes into one integrated symbolic-computational engine with:
+
+- layer stratification
+- variable table
+- module table
+- routing rules
+- state-transition logic
+- canonical consistency corrections
+
+## Why this matters
+
+Symbolic Mechanics does not present isolated themes. It defines a runtime architecture: how symbolic input is installed, how load accumulates, how rupture and restart occur, how boundaries open or fail, how projection becomes mechanically necessary, how shame becomes residual architecture, and how the system continues after collapse.
+
+## Why researchers may care
+
+This repository makes the following objects readable as one deterministic architecture:
+
+- event routing
+- symbolic installation
+- weight distribution
+- parental-force parameterization
+- boundary opening
+- visibility collapse
+- attraction tension
+- intrusion vectors
+- blackout topology
+- voluntary shutdown
+- projection runtime
+- post-projection alarm governance
+- shame-origin rupture
+- clown-engine staging
+- primitive survival navigation
+
+## Repository structure
+
+- `publications.md` — Publications Page 1 (Volumes I–X)
+- `expansion-volumes/` — Publications Page 2 (Volumes XI–XX)
+- `for-researchers/` — researcher-facing overview
+- `canonical-specification-volumes-01-20/` — canonical engine specification page
+- `pdfs/` — downloadable PDF files
+- `volume-01.md` to `volume-20.md` — individual volume pages
+
+## Where to start
+
+- Start with [Publications — Page 1](./publications.md)
+- Then continue to [Publications — Page 2](./expansion-volumes/)
+- Then read [For Researchers](./for-researchers/)
+- Then open the [Canonical Specification of Volumes I–XX](./canonical-specification-volumes-01-20/)
+
+## Navigation
+
+- [Open Home Page](./index.md)
+- [Open Volumes I–X](./publications.md)
+- [Open Volumes XI–XX](./expansion-volumes/)
+- [Open For Researchers](./for-researchers/)
+- [Open Canonical Specification of Volumes I–XX](./canonical-specification-volumes-01-20/)
