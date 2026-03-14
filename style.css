@@ -407,3 +407,55 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+
+.hero-simple {
+  padding-bottom: 30px;
+}
+
+.hero-simple-inner {
+  max-width: 920px;
+}
+
+.banner-section {
+  padding-top: 0;
+}
+
+.hero-banner-frame {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.hero-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+@media (max-width: 640px) {
+  .brand-logo img {
+    height: 34px;
+  }
+
+  .hero-banner-frame {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .hero-banner {
+    border-radius: 10px;
+  }
+}
