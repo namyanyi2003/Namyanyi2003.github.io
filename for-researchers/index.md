@@ -11,8 +11,7 @@ It models inner life as deterministic symbolic mechanics rather than interpretat
 - [Open Volumes I–X](./publications.md)
 - [Open Volumes XI–XX](./expansion-volumes/)
 - [For Researchers](./for-researchers/)
-- [Canonical Specification of Volumes I–XX](./canonical-specification-volumes-01-20.md)
-
+- [Canonical Specification of Volumes I–XX](./../canonical-specification-volumes-01-20/)
 ## Why this project matters
 
 Symbolic Mechanics does not present isolated themes. It defines a runtime architecture: how symbolic input is installed, how load accumulates, how rupture and restart occur, how boundaries open or fail, how projection becomes mechanically necessary, how shame becomes residual architecture, and how the system continues after collapse.
