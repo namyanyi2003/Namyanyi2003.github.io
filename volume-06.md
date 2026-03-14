@@ -1,50 +1,93 @@
-# Symbolic Mechanics — Volume VI: Self-Existence Mechanics under Visibility Collapse
+# Symbolic Mechanics — Volume IV: Companion Module, Three-Exit Architecture, and Regenerative Exit Mechanics
 
-**Volume:** VI  
-**System Role:** Visibility-collapse and existence-compensation layer  
+**Volume:** IV  
+**Architecture Role:** Companion-module and regenerative-exit layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Most theories describe confusion, emptiness, or dissociation, but do not specify the mechanical condition under which symbolic weight becomes unreadable.
+Most theories describe support, healing, or regulation in emotional terms, but do not specify the mechanical condition under which a symbolic system gains a lower-energy route of continuation.
 
-Volume VI formalizes that missing visibility-failure layer by modelling sorting collapse as the point at which the system loses the ability to compute symbolic relevance, hierarchy, and weight inside the chamber.
+Volume IV formalizes that missing layer by defining **parental volume** as a mechanical variable inside the symbolic engine, mapping soothing capacity to **M-axis volume** and boundary-setting capacity to **F-axis volume**, and showing how sufficient M/F stabilization produces the **Companion Module (C-Module)**.
 
-Rather than treating existence-seeking behaviour as personality style or emotional excess, this volume identifies the conditions under which the Self falls back on existence itself as the last remaining detectable signal.
+Rather than treating support as comfort, therapeutic language, or emotional repair, this volume rewrites regulation as a structural change in engine topology: once the C-Module emerges, the system gains a new non-destructive exit class and a regenerative internal loop.
 
 ## Overview
 
-This volume defines the visibility-collapse and existence-compensation layer of Symbolic Mechanics.
+This volume defines the companion-module and regenerative-exit layer of Symbolic Mechanics.
 
-If Volume V explains how boundary dynamics govern movement permission, then Volume VI explains what happens when the symbolic chamber loses enough visibility that weight, hierarchy, and symbolic relevance can no longer be computed. In system terms, this volume moves from boundary-governed displacement to perceptual-symbolic failure of sorting.
+If Volumes I–III establish the kernel, symbolic sourcing, parental weight geometry, and shadow-load formation, Volume IV explains how the system acquires a stabilizing node that changes routing behaviour without changing the deterministic nature of the engine.
 
-The volume formalizes visibility collapse as a convergent mechanical condition produced by shadow overload, parental-signal decay, atmospheric distortion, and chronic reliance on delayed-discharge dynamics. Under these conditions, symbolic objects may still exist, but the Self can no longer reliably detect boundaries, weight gradients, or priority structure.
+The volume formalizes the following sequence:
 
-Its central modelling objects are visibility collapse, sorting failure, weight unreadability, and the three-tier progression of existence-compensation through which the Self stabilizes itself when symbolic processing can no longer operate.
+- **soothing capacity → M-axis volume**
+- **boundary-setting capacity → F-axis volume**
+- functional reliability, not biography, determines parental-volume increase
+- when both M and F exceed minimum stability threshold, **C-Module emergence** becomes mechanically possible
+- once C is online, the engine gains a **regenerative exit class** and a restart node inside the routing economy
+
+The volume also formalizes three valid channels by which parental volume can increase:
+
+1. direct functional acquisition  
+2. external regulatory scaffolding  
+3. reconstructed internal models  
+
+Across all three channels, the rule is identical:  
+**functional reliability → volume increase**  
+**emotional experience → irrelevant to the calculation**
+
+The C-Module appears only when three conditions hold simultaneously:
+
+1. M-axis regulation exceeds minimum containment threshold  
+2. F-axis regulation exceeds minimum boundary threshold  
+3. J-axis influence suppresses as a derived effect of improved parental symmetry  
+
+At that point, systemic turbulence drops below critical value and the room gains the ability to maintain stable state-transition flow without invoking high-energy exits.
+
+Its central modelling objects are parental volume, M/F-axis functional growth, C-Module emergence, the transformation from two-exit to three-exit architecture, and the formal definition of **C-Exit** as a regenerative routing class.
 
 ## Why this volume matters
 
-This volume is the first major visibility-failure layer of the system.
+This volume is the first major stabilizer-addition layer of the system.
 
-It matters because a deterministic architecture cannot explain collapse fully if it only models load, recovery, and boundary mechanics. It must also specify the condition under which symbolic weight becomes unreadable, ranking becomes impossible, and the Self is forced to anchor to existence itself rather than meaning.
+It matters because a deterministic architecture cannot explain regulation if it only models overload, deferred accumulation, and rupture. It must also specify the precise structural condition under which the engine gains a lower-energy route of continuation. Volume IV therefore supplies the missing bridge between burdened symbolic structure and non-destructive routing.
 
-Architecturally, this volume sits downstream of load formation, collapse pressure, regenerative continuity, and boundary instability, and upstream of later modules involving obsession, symbolic fixation, attachment escalation, projection distortion, and deeper compensatory structures. It provides the missing bridge between chamber disorganization and existence-driven behaviour.
+Architecturally, this volume sits downstream of kernel, encoding, parental-weight geometry, and shadow-load formation, and upstream of later boundary, visibility, intimacy, and projection layers. It is the first volume that adds a true internal stabilizing module rather than merely describing pressure or collapse.
 
-Without Volume VI, the system can model burden and instability.  
-With Volume VI, the system can explain why symbolic importance disappears, why sorting fails, and why the Self begins to seek proof of existence instead of symbolic orientation.
+Without Volume IV, the system has only two exit classes:
+
+1. destructive exit  
+2. deferred exit  
+
+With Volume IV, the engine becomes a **three-exit architecture**:
+
+1. destructive exit  
+2. deferred exit  
+3. regenerative exit (C-Exit)
+
+This new routing possibility is expressed by the regenerative loop:
+
+**Δ → S → C → S**
+
+This loop allows the system to:
+- absorb symbolic impact
+- stabilize oscillation
+- prevent curvature escalation
+- maintain structural integrity across repeated cycles
 
 ## Keywords
 
-symbolic mechanics, visibility collapse, sorting failure, symbolic weight, existence compensation, existence confirmation, deterministic symbolic system, symbolic-computational theory, chamber fog, weight unreadability, self-anchoring, dissociative compensation, downstream architecture, relational dynamics
+symbolic mechanics, parental volume, M-axis, F-axis, companion module, C-Module, three-exit architecture, regenerative exit, C-Exit, low-energy exit, stabilizer emergence, J-axis suppression, routing topology, deterministic symbolic system, symbolic-computational theory, relational dynamics
 
 ## Access
 
-- [Download PDF](/pdfs/symbolic-mechanics-volume-06.pdf)
+- [Download PDF](/pdfs/symbolic-mechanics-volume-04.pdf)
 
 PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+
 ## Navigation
 
-- [Previous volume — Volume V](./volume-05.md)
-- [Next volume — Volume VII](./volume-07.md)
+- [Previous volume — Volume III](./volume-03.md)
+- [Next volume — Volume V](./volume-05.md)
 - [Back to Volumes I–X](./publications.md)
 - [Back to Home](./index.md)
