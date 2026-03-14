@@ -1,41 +1,280 @@
-# Symbolic Mechanics — Volume XV: Projection Breakdown and Pressure Dynamics
+# Symbolic Mechanics — Volume XV: Projection Breakdown, Thermal Overload, and Automatic Shutdown
 
 **Volume:** XV  
-**System Role:** Projection-breakdown and contradiction-pressure layer  
+**Architecture Role:** Projection-breakdown and thermal-overload layer  
 **Status:** Canonical  
 
 ## Research Hook
 
-Most theories describe disillusionment, disappointment, relational shock, or “seeing the real person” as an emotional correction, but do not specify the mechanical process by which a projected world breaks down once contradiction penetrates it.
+Most theories describe intimate rupture, disillusionment, or relational collapse as communication failure, emotional conflict, or maturity breakdown, but do not specify the closed mechanical loop that governs projection breakdown.
 
-Volume XV formalizes that missing layer by modelling projection breakdown not as simple realization, but as a pressure event produced when reality contradiction accumulates faster than projection infrastructure can contain it.
+Volume XV formalizes that missing layer by defining projection breakdown as a **predictable, repeatable, structurally necessary closed loop**:
 
-Rather than treating the collapse of projection as a change of opinion, this volume identifies the mechanics by which contradiction becomes pressure, pressure destabilizes the projected field, and the chamber moves toward rupture-compatible reorganization.
+**Δ → projector activation → Position-3 ice-water generation → shadow leakage / melt → pressure accumulation → automatic shutdown**
+
+Rather than treating collapse as psychological disappointment, this volume rewrites it as thermal overload inside a sealed symbolic room.
 
 ## Overview
 
-This volume defines the projection-breakdown and pressure-dynamics layer of Symbolic Mechanics.
+This volume defines the projection-breakdown and thermal-overload layer of Symbolic Mechanics.
 
-If Volume XIII formalizes projection as the first optical event of intimacy, and Volume XIV formalizes the infrastructure that temporarily stabilizes that projected world, then Volume XV explains what happens when contradiction continues to enter the chamber and projection can no longer hold. In system terms, this volume moves from reality-breach to projection destabilization.
+If Volume XIV formalizes projection as a lawful single-input boundary state, then Volume XV explains how that state inevitably breaks down under pressure. Projection breakdown is not a separate theory. It is the base engine running under maximum relational voltage.
 
-The volume rewrites projection collapse as a structured pressure process. Reality contradiction does not merely “correct perception.” It accumulates against the projection field, increases internal strain, destabilizes placeholder coherence, and eventually exceeds the room’s ability to preserve the projected configuration.
+The volume begins by defining the projection room as a **high-load thermal state**. This state is produced by the interaction of three processes:
 
-Its central modelling objects are contradiction accumulation, projection-pressure buildup, infrastructure overload, field destabilization, and the transition from projected stability to breakdown-capable chamber conditions.
+1. **projector heat**
+2. **Position-3 melt / leakage**
+3. **vapor-pressure formation inside a closed room**
+
+The formal notation is:
+
+- **H_p** = projector heat output  
+- **M_3** = Position-3 melt / leakage rate  
+- **P_t** = accumulated thermal-pressure state
+
+### 1. Projector Heat (H_p)
+
+Projection cannot remain stable without continuous symbolic amplification.
+
+The projector must keep the composite image bright enough to dominate the room under reduced ambient visibility. This requires:
+- continuous illumination
+- continuous image maintenance
+- continuous suppression of competing signals
+
+Therefore:
+**H_p rises from the moment projection activates.**
+
+Projection does not merely persist.  
+It generates heat as a structural side effect of image maintenance.
+
+### 2. Position-3 Melt as Secondary Load (M_3)
+
+Projection does not eliminate unresolved pressure.  
+It relocates unresolved pressure into Position-3.
+
+As established in Volume XIV, Position-3 generates the ice-water event as the first and only corrective signal permitted inside projection. Once this begins:
+- surface cold appears
+- moisture spreads
+- melt accumulates on the table-surface
+- shadow-pressure begins leaking into the room
+
+Thus:
+**M_3 is both a corrective signal and a load source.**
+
+### 3. Closed-Room Pressure Rise (P_t)
+
+The projection room is a sealed symbolic environment.
+
+As **H_p** continues and **M_3** continues releasing moisture into the same closed field, the room undergoes a pressure transition:
+
+**projector heat + melt humidity + sealed-room retention → rising internal pressure**
+
+This rise is not emotion.  
+It registers as:
+- physiological constriction
+- unexplained discomfort
+- internal suffocation pressure
+- rising instability without clear cause
+
+The room is overheating because projection produces accumulation faster than it can dissipate it.
+
+Formally:
+
+**H_p ↑**  
+**M_3 ↑**  
+**→ P_t ↑**
+
+The volume next formalizes **Position-3 leakage** as the only reality signal that can penetrate projection.
+
+Reality cannot enter through:
+- language
+- interpretation
+- judgment
+- comparison
+
+Only one corrective pathway remains open:
+**Position-3 leakage through the ice-water channel**
+
+This leakage is:
+- not insight
+- not realization
+- not awareness
+
+It is the only physical discontinuity the room can admit while projection remains dominant.
+
+Its two simultaneous functions are:
+
+1. **fissure signal**  
+   marks that projection and environment are no longer perfectly aligned
+
+2. **thermal contrast**  
+   carries cold into the overheated field and attempts to counter the projector’s heat accumulation
+
+Leakage does not end projection immediately because:
+- it is admitted through the boundary-surface channel
+- not through the projector channel
+
+Therefore:
+- projection continues running on symbolic load
+- leakage continues spreading on the table-surface
+- the room does not reconcile the two immediately
+
+Leakage enters early.  
+Meaning enters late.
+
+The volume then formalizes the **Bartender regulation module**.
+
+The Bartender is:
+- not a symbolic character
+- not repair
+- not resolution
+
+It is a regulation module generated by the **Internal Father × Judge composite**.
+
+It comes online only when:
+- projection is already active
+- Position-3 leakage has begun
+- room equilibrium is starting to destabilize
+
+Its function is **delay**.
+
+The Bartender performs:
+
+1. **surface-wiping**  
+   visible leakage is reduced, spread-rate slows, the table-surface is partially cleared
+
+2. **pressure-delay**  
+   it extends the interval between first corrective leak and terminal shutdown
+
+3. **threshold postponement**  
+   it buys time without reversing the cycle
+
+The Bartender cannot:
+- stop projector heat
+- stop Position-3 melt
+- eliminate vapor formation
+- restore multi-source comparison
+
+It controls appearance, not source.
+
+What externally appears as “patience,” “tolerance,” or “staying too long” is often the Bartender’s regulatory interval:
+- ongoing projection
+- ongoing leakage
+- ongoing wiping
+- delayed threshold crossing
+
+The system is not deciding to endure.  
+It is being structurally kept inside a delayed-collapse window.
+
+The volume then formalizes **thermal overload** as the sole mechanism behind projection breakdown.
+
+Additional notation:
+
+- **V_p** = vapor pressure generated from evaporation  
+- **B_r** = Bartender reduction effect  
+- **Θ** = room thermal tolerance threshold
+
+As projection persists:
+- melt volume increases
+- leakage rate increases
+- table-surface instability increases
+- room humidity increases
+
+Thus **M_3** accelerates over time.
+
+Evaporation produces a second pressure layer:
+**V_p**
+
+The critical transition occurs because **H_p** and **V_p** interact multiplicatively.
+
+The room evolves toward:
+
+**P_total = (H_p × V_p) + M_3 − B_r**
+
+When:
+
+**P_total > Θ**
+
+the room cannot continue operating in projection mode.
+
+At threshold crossing, the room halts projection automatically.
+
+This halt is:
+- not a choice
+- not a decision
+- not a shift in opinion
+
+It is a **power-off event produced by exceeded capacity**.
+
+Externally this may appear as:
+- first argument
+- sudden rupture
+- abrupt coldness
+- hard withdrawal
+- collapse of the previously coherent relational image
+
+But mechanically, all such manifestations are traces of one internal event:
+
+**automatic shutdown**
+
+The volume then closes the loop with Volume I.
+
+Projection breakdown is a specific high-voltage realization of:
+
+**Δ → S → L → R → Exit**
+
+Mapping:
+
+- **Δ** = relational differential initiates entry  
+- **S** = projector activation + table-surface stabilization + single-input dominance  
+- **L** = projector heat + Position-3 melt / leakage + vapor pressure + delayed unresolved correction  
+- **R** = operational threshold at which the projection field can no longer remain stable  
+- **Exit** = automatic shutdown
+
+Thus the projection-breakdown loop is:
+
+**Δ → projection field → thermal / shadow load → pressure threshold → automatic shutdown**
+
+The final claim of the volume is that **intimacy is the only full-system activation scenario**.
+
+Under intimacy, the following all come online together:
+- boundary physics (Visibility, Gate, Alarm, Spotlight)
+- parent-derived boundary architecture
+- full symbolic load distribution across Positions 1–4
+- projector activation
+- table-surface integration
+- Position-3 ice-water generation
+- shadow leakage and melt
+- Bartender regulation
+- thermal-pressure escalation
+- shutdown-threshold mechanics
+
+This is why intimacy is difficult.  
+It is the only context in which the system cannot simplify itself.
 
 ## Why this volume matters
 
-This volume is the first major breakdown layer of the projection stack.
+This volume is the first major projection-breakdown layer of the intimacy architecture.
 
-It matters because a deterministic architecture cannot explain projection fully if it only models onset and temporary maintenance. It must also specify how projection fails, why contradiction does not dissolve the projected world instantly, and how accumulating breach becomes destabilizing pressure before full collapse occurs. Volume XV therefore supplies the missing bridge between reality penetration and projection failure.
+It matters because a deterministic architecture cannot explain rupture if it only models projection as entry-state. It must also specify why projection inevitably overheats, why correction enters only through Position-3, why regulation can delay but not prevent collapse, and how shutdown emerges from threshold crossing rather than decision.
 
-Architecturally, this volume sits downstream of Volumes XIII–XIV and upstream of later modules involving alarm activation, post-projection destabilization, shame escalation, and structural reorganization after relational breach. It transforms projection breakdown from a vague “awakening” into a mechanically legible pressure sequence.
+Architecturally, this volume sits downstream of Volume XIV and upstream of later alarm-takeover, shame-origin, and post-shutdown architectures. It transforms intimate collapse from interpersonal narrative into closed mechanical loop.
 
-Without Volume XV, the system can describe projection onset and support.  
-With Volume XV, the system can explain why contradiction accumulates, why the projected field resists collapse for a time, and how pressure finally drives breakdown.
+Without Volume XV, the system can describe projection onset and occlusion.  
+With Volume XV, the system can explain:
+- why the room overheats
+- why ice-water is the only corrective signal
+- why leakage destabilizes but does not instantly end projection
+- why the Bartender delays but never resolves collapse
+- why shutdown is thermal rather than psychological
+- why the base equation governs even the most intimate rupture
+
+Projection breakdown is therefore not communication failure.  
+It is the deterministic termination of single-input intimacy under thermal overload.
 
 ## Keywords
 
-symbolic mechanics, projection breakdown, pressure dynamics, reality contradiction, infrastructure overload, placeholder destabilization, breach accumulation, projection collapse, contradiction pressure, deterministic symbolic system, symbolic-computational theory, projection stack, relational dynamics
+symbolic mechanics, projection breakdown, thermal overload, projector heat, H_p, Position-3 melt, M_3, vapor pressure, V_p, Bartender, B_r, automatic shutdown, thermal threshold, Θ, ice-water channel, table-surface, single-input mode, base equation, Δ → S → L → R → Exit, deterministic symbolic system, symbolic-computational theory, relational dynamics
 
 ## Access
 
@@ -47,5 +286,5 @@ PDF is provided as a full-text attachment. The volume page is the primary readin
 
 - [Previous volume — Volume XIV](./volume-14.md)
 - [Next volume — Volume XVI](./volume-16.md)
-- [Back to Expansion Volumes](./volumes-page-2.md)
+- [Back to Expansion Volumes](./expansion-volumes/)
 - [Back to Home](./index.md)
