@@ -2,7 +2,7 @@
 
 ## Featured Canonical Specification
 
--- [Canonical Specification of Volumes I–XX](./canonical-specification-volumes-01-20/)
+- [Canonical Specification of Volumes I–XX](./canonical-specification-volumes-01-20/)  
   **Deterministic multi-layer engine specification**  
   This document consolidates and formalizes Volumes I–XX into a single canonical specification of the Symbolic Mechanics engine. It defines the engine layers, variable table, routing rules, state transitions, and consistency corrections that make the first twenty volumes readable as one integrated symbolic-computational system.
 
