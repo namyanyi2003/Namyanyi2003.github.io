@@ -10,945 +10,558 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
 
-  <style>
-/* ═══════════════════════════════════════════════════
-   SYMBOLIC MECHANICS — style.css
-   Zenodo-enhanced academic archive stylesheet
-   ═══════════════════════════════════════════════════ */
-
-/* ── Reset & tokens ───────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --navy:       #0d2b4e;
-  --blue:       #1a5276;
-  --blue-mid:   #2471a3;
-  --blue-lt:    #d6eaf8;
-  --teal:       #138d75;
-  --teal-lt:    #e8f8f5;
-
-  --bg:         #f5f4f0;
-  --surface:    #ffffff;
-  --surface-2:  #f0ede8;
-
-  --text:       #1a1a18;
-  --muted:      #6b7a8f;
-  --faint:      #9aaab8;
-
-  --border:     #dde3ec;
-  --border-lt:  #eaeef4;
-
-  --tag-bg:     #eaf2fb;
-  --tag-txt:    #1a5276;
-
-  --serif:      'Newsreader', Georgia, serif;
-  --sans:       'Inter', system-ui, sans-serif;
-  --mono:       'IBM Plex Mono', 'Fira Mono', monospace;
-
-  --max-w:      1260px;
-  --sidebar-w:  224px;
-  --gap:        28px;
-  --radius:     8px;
-}
-
-html { font-size: 16px; -webkit-font-smoothing: antialiased; }
-
-body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-}
-
-a { color: inherit; text-decoration: none; }
-
-/* ═══════════════════════════════════════════════════
-   ZENODO BANNER
-   ═══════════════════════════════════════════════════ */
-.zn-banner {
-  background: linear-gradient(135deg, var(--navy) 0%, #1c4f7a 60%, var(--blue-mid) 100%);
-  border-bottom: 3px solid var(--teal);
-  padding: 18px 32px 22px;
-}
-.zn-banner-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.zn-banner-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-.zn-wordmark {
-  font-family: var(--serif);
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-.zn-nav { display: flex; gap: 2px; flex-wrap: wrap; }
-.zn-nav a {
-  color: rgba(255,255,255,0.82);
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 5px;
-  transition: background 0.14s, color 0.14s;
-}
-.zn-nav a:hover { background: rgba(255,255,255,0.14); color: #fff; }
-
-/* Search bar */
-.zn-search-row { display: flex; }
-.zn-search { display: flex; width: 100%; max-width: 800px; }
-.zn-search input {
-  flex: 1;
-  padding: 10px 16px;
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  border: none;
-  border-radius: 6px 0 0 6px;
-  background: rgba(255,255,255,0.97);
-  color: var(--text);
-  outline: none;
-  transition: box-shadow 0.15s;
-}
-.zn-search input:focus { box-shadow: 0 0 0 2px var(--teal); }
-.zn-search input::placeholder { color: var(--faint); }
-.zn-search button {
-  padding: 10px 24px;
-  background: var(--teal);
-  color: #fff;
-  border: none;
-  border-radius: 0 6px 6px 0;
-  font-family: var(--sans);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  transition: background 0.14s;
-}
-.zn-search button:hover { background: #0f7560; }
-
-/* Info strip */
-.zn-strip { background: var(--surface); border-bottom: 1px solid var(--border); }
-.zn-strip-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 8px 32px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.zn-strip span {
-  font-size: 0.78rem;
-  color: var(--muted);
-  padding: 0 16px;
-  border-right: 1px solid var(--border);
-}
-.zn-strip span:last-child { border-right: none; }
-
-/* Sticky sub-nav */
-.zn-subnav {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.zn-subnav-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.zn-subnav-inner::-webkit-scrollbar { display: none; }
-.zn-subnav a {
-  font-size: 0.84rem;
-  font-weight: 500;
-  color: var(--muted);
-  padding: 11px 14px;
-  white-space: nowrap;
-  border-bottom: 3px solid transparent;
-  transition: color 0.14s, border-color 0.14s;
-}
-.zn-subnav a:hover,
-.zn-subnav a.active { color: var(--blue); border-bottom-color: var(--blue); }
-
-/* ═══════════════════════════════════════════════════
-   PAGE LAYOUT
-   ═══════════════════════════════════════════════════ */
-.zn-page {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 28px 32px 72px;
-  display: grid;
-  grid-template-columns: var(--sidebar-w) 1fr;
-  gap: var(--gap);
-  align-items: start;
-}
-
-/* ═══════════════════════════════════════════════════
-   SIDEBAR
-   ═══════════════════════════════════════════════════ */
-.zn-sidebar {
-  position: sticky;
-  top: 46px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.zn-sb-section {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.zn-sb-head {
-  background: var(--navy);
-  color: #fff;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 9px 14px;
-}
-.zn-sb-list { list-style: none; }
-.zn-sb-list li a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7px 14px;
-  font-size: 0.83rem;
-  color: var(--text);
-  border-bottom: 1px solid var(--border-lt);
-  transition: background 0.12s, color 0.12s;
-}
-.zn-sb-list li:last-child a { border-bottom: none; }
-.zn-sb-list li a:hover { background: var(--blue-lt); color: var(--blue); }
-.zn-sb-list li a.active {
-  background: var(--tag-bg);
-  color: var(--blue);
-  font-weight: 600;
-}
-.zn-badge {
-  background: var(--tag-bg);
-  color: var(--tag-txt);
-  font-size: 0.68rem;
-  font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 10px;
-  min-width: 24px;
-  text-align: center;
-}
-
-/* ═══════════════════════════════════════════════════
-   SHARED UTILITIES
-   ═══════════════════════════════════════════════════ */
-.zn-main { min-width: 0; }
-
-.section { margin-bottom: 36px; }
-
-.section-head { margin-bottom: 20px; }
-
-.eyebrow {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--blue-mid);
-  margin-bottom: 5px;
-}
-
-h1, h2, h3 { font-family: var(--serif); line-height: 1.15; letter-spacing: -0.01em; }
-
-h2 {
-  font-size: 1.85rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: var(--sans);
-  font-size: 0.86rem;
-  font-weight: 600;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: background 0.14s, color 0.14s, border-color 0.14s;
-  white-space: nowrap;
-}
-.btn-primary {
-  background: var(--navy);
-  color: #fff;
-  border-color: var(--navy);
-}
-.btn-primary:hover { background: var(--blue); border-color: var(--blue); }
-.btn-secondary {
-  background: transparent;
-  color: var(--navy);
-  border-color: var(--navy);
-}
-.btn-secondary:hover { background: var(--navy); color: #fff; }
-.btn-secondary-strong {
-  background: transparent;
-  color: var(--navy);
-  border-color: var(--navy);
-}
-.btn-secondary-strong:hover { background: var(--navy); color: #fff; }
-
-/* ═══════════════════════════════════════════════════
-   HERO
-   ═══════════════════════════════════════════════════ */
-.hero {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 36px 40px;
-  margin-bottom: 28px;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 272px;
-  gap: 36px;
-  align-items: start;
-}
-.hero-copy h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
-  line-height: 1.04;
-  margin-bottom: 16px;
-  letter-spacing: -0.025em;
-}
-.hero-deck {
-  font-family: var(--serif);
-  font-size: 1.18rem;
-  font-style: italic;
-  color: #333;
-  line-height: 1.55;
-  margin-bottom: 10px;
-}
-.hero-support {
-  font-size: 0.875rem;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-.cta-stack { display: flex; flex-direction: column; gap: 10px; }
-.cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
-.cta-row-secondary { opacity: 0.85; }
-
-/* Overview panel */
-.overview-panel {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.overview-row {
-  padding: 11px 16px;
-  border-bottom: 1px solid var(--border);
-}
-.overview-row:last-child { border-bottom: none; }
-.overview-label {
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 3px;
-}
-.overview-text {
-  font-size: 0.86rem;
-  color: var(--text);
-  font-weight: 500;
-}
-.overview-mono {
-  font-family: var(--mono);
-  font-size: 0.95rem;
-  color: var(--navy);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-/* ═══════════════════════════════════════════════════
-   ENTRY CARDS
-   ═══════════════════════════════════════════════════ */
-.section-entry { margin-bottom: 28px; }
-
-.entry-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.entry-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 22px 18px;
-  transition: border-color 0.14s, box-shadow 0.14s;
-}
-.entry-card:hover {
-  border-color: var(--blue-mid);
-  box-shadow: 0 2px 12px rgba(20,82,118,0.09);
-}
-.card-eyebrow {
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--blue-mid);
-}
-.entry-card h3 {
-  font-size: 1.08rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--text);
-}
-.card-copy {
-  font-size: 0.84rem;
-  color: var(--muted);
-  line-height: 1.6;
-  flex: 1;
-}
-.card-meta {
-  font-size: 0.7rem;
-  color: var(--faint);
-  border-top: 1px solid var(--border-lt);
-  padding-top: 10px;
-  margin-top: 2px;
-}
-.card-link {
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--blue-mid);
-  margin-top: 2px;
-}
-.entry-card:hover .card-link { text-decoration: underline; }
-
-/* ═══════════════════════════════════════════════════
-   MODULE GRID
-   ═══════════════════════════════════════════════════ */
-.section-soft {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 32px 36px;
-  margin-bottom: 28px;
-}
-.module-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.module-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  transition: border-color 0.14s, box-shadow 0.14s;
-}
-.module-card:hover {
-  border-color: var(--blue-mid);
-  box-shadow: 0 2px 8px rgba(20,82,118,0.08);
-}
-.module-card h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 7px;
-  color: var(--text);
-}
-.module-card p {
-  font-size: 0.84rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* ═══════════════════════════════════════════════════
-   RECENT RELEASES
-   ═══════════════════════════════════════════════════ */
-.section-recent { margin-bottom: 28px; }
-
-.recent-grid {
-  display: grid;
-  grid-template-columns: 1fr 256px;
-  gap: 24px;
-  align-items: start;
-}
-.release-list { display: flex; flex-direction: column; gap: 12px; }
-
-.release-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 24px;
-  transition: border-color 0.14s, box-shadow 0.14s;
-}
-.release-item:hover {
-  border-color: var(--blue-mid);
-  box-shadow: 0 2px 12px rgba(20,82,118,0.09);
-}
-.release-topline {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 9px;
-  flex-wrap: wrap;
-}
-.release-tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--tag-txt);
-  background: var(--tag-bg);
-  padding: 3px 9px;
-  border-radius: 3px;
-  border: 1px solid #c2d9ee;
-}
-.release-tag--spec {
-  color: var(--teal);
-  background: var(--teal-lt);
-  border-color: #a9ddd6;
-}
-.release-tag--research {
-  color: #7d3c98;
-  background: #f5eef8;
-  border-color: #d2b4de;
-}
-.release-date {
-  font-size: 0.78rem;
-  color: var(--muted);
-}
-.release-open {
-  margin-left: auto;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--teal);
-  background: var(--teal-lt);
-  padding: 3px 10px;
-  border-radius: 3px;
-  border: 1px solid #a2d9cc;
-  letter-spacing: 0.03em;
-  transition: background 0.13s, color 0.13s;
-}
-.release-open:hover { background: var(--teal); color: #fff; }
-
-.release-item h3 {
-  font-size: 1.12rem;
-  font-weight: 600;
-  margin-bottom: 7px;
-  line-height: 1.35;
-}
-.release-item h3 a { color: var(--text); }
-.release-item h3 a:hover { color: var(--blue-mid); text-decoration: underline; }
-
-.release-item > p {
-  font-size: 0.875rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-.release-bottom {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--border-lt);
-  padding-top: 10px;
-}
-.release-bottom span {
-  font-size: 0.71rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.release-bottom span::after { content: ' · '; margin: 0 5px; }
-.release-bottom span:last-of-type::after { display: none; }
-.release-bottom a {
-  margin-left: auto;
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--blue-mid);
-}
-.release-bottom a:hover { text-decoration: underline; }
-
-/* No results */
-.no-results {
-  padding: 32px;
-  text-align: center;
-  color: var(--muted);
-  font-style: italic;
-  font-size: 0.9rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-/* Archive side panel */
-.archive-sticky {
-  position: sticky;
-  top: 56px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 22px;
-}
-.archive-panel-eyebrow {
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--blue-mid);
-  margin-bottom: 7px;
-}
-.archive-sticky h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  line-height: 1.25;
-}
-.archive-panel-copy {
-  font-size: 0.84rem;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 14px;
-}
-.archive-panel-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.archive-panel-list li {
-  font-size: 0.84rem;
-  color: var(--text);
-  padding-left: 14px;
-  position: relative;
-}
-.archive-panel-list li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: var(--teal);
-  font-weight: 700;
-}
-
-/* ═══════════════════════════════════════════════════
-   BAND SECTION
-   ═══════════════════════════════════════════════════ */
-.section-band {
-  background: var(--navy);
-  border-radius: 10px;
-  padding: 36px 40px;
-  margin-bottom: 28px;
-  color: #fff;
-}
-.band-grid {
-  display: grid;
-  grid-template-columns: 1fr 220px;
-  gap: 40px;
-  align-items: start;
-}
-.band-copy .eyebrow { color: var(--teal); }
-.band-copy h2 { color: #fff; font-size: 1.65rem; margin-bottom: 12px; }
-.band-copy p { font-size: 0.875rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
-.band-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-top: 6px;
-}
-.band-links a {
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.75);
-  padding: 8px 12px;
-  border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.12);
-  transition: background 0.13s, color 0.13s, border-color 0.13s;
-}
-.band-links a:hover {
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-  border-color: rgba(255,255,255,0.25);
-}
-
-/* ═══════════════════════════════════════════════════
-   ARCHIVE GRID SECTION
-   ═══════════════════════════════════════════════════ */
-.archive-grid {
-  display: grid;
-  grid-template-columns: 1fr 256px;
-  gap: 32px;
-  align-items: start;
-}
-.archive-copy {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-top: 12px;
-}
-.archive-panel {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-}
-.archive-label {
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 10px;
-}
-.archive-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.archive-list li {
-  font-size: 0.86rem;
-  color: var(--text);
-  padding-left: 14px;
-  position: relative;
-}
-.archive-list li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: var(--teal);
-  font-weight: 700;
-}
-
-/* ═══════════════════════════════════════════════════
-   FOOTER
-   ═══════════════════════════════════════════════════ */
-.site-footer {
-  background: var(--navy);
-  border-top: 3px solid var(--teal);
-  padding: 36px 32px;
-  color: rgba(255,255,255,0.6);
-}
-.footer-grid {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-}
-.footer-title {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 10px;
-}
-.footer-copy {
-  font-size: 0.84rem;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.65;
-}
-.footer-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-.footer-list li a {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
-  transition: color 0.13s;
-}
-.footer-list li a:hover { color: #fff; }
-
-/* ═══════════════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════════════ */
-
-@media (max-width: 1180px) {
-  .recent-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .archive-sticky {
-    position: static;
-    top: auto;
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .zn-page { grid-template-columns: 1fr; padding: 24px 24px 56px; }
-  .zn-sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .hero-grid { grid-template-columns: 1fr; }
-  .overview-panel { max-width: 480px; }
-  .band-grid { grid-template-columns: 1fr; gap: 24px; }
-  .archive-grid { grid-template-columns: 1fr; }
-  .recent-grid { grid-template-columns: 1fr; }
-  .archive-sticky { position: static; }
-}
-
-@media (max-width: 768px) {
-  .zn-banner { padding: 14px 20px 18px; }
-  .zn-nav { display: none; }
-  .zn-sidebar { grid-template-columns: 1fr; }
-  .entry-grid { grid-template-columns: 1fr; }
-  .module-grid { grid-template-columns: 1fr 1fr; }
-  .hero { padding: 24px 22px; }
-  .hero-copy h1 { font-size: 2.8rem; }
-  .section-soft { padding: 24px 22px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-}
-
-@media (max-width: 480px) {
-  .module-grid { grid-template-columns: 1fr; }
-  .zn-strip span { padding: 0 10px; font-size: 0.72rem; }
-  .hero-copy h1 { font-size: 2.3rem; }
-  .cta-row { flex-direction: column; }
-}
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-wordmark" href="./index.html">Symbolic Mechanics</a>
 
-  <!-- ═══ ZENODO-STYLE TOP BANNER ═══ -->
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="./index.html" class="is-active">Home</a>
+        <a href="./publications/">Volumes I–X</a>
+        <a href="./expansion-volumes/">Volumes XI–XX</a>
+        <a href="./canonical-specification-volumes-01-20/">Specification</a>
+        <a href="./for-researchers/">Research</a>
+        <a href="./publications/">Archive</a>
+      </nav>
+    </div>
 
-  <div class="zn-banner">
-    <div class="zn-banner-inner">
-      <div class="zn-banner-top">
-        <a class="zn-wordmark" href="./index.html">Symbolic Mechanics</a>
-        <nav class="zn-nav" aria-label="Primary navigation">
-          <a href="./publications/">Volumes I–X</a>
-          <a href="./expansion-volumes/">Volumes XI–XX</a>
-          <a href="./canonical-specification-volumes-01-20/">Specification</a>
-          <a href="./for-researchers/">Research</a>
-          <a href="./publications/">Archive</a>
-        </nav>
-      </div>
-      <div class="zn-search-row">
-        <div class="zn-search">
-          <input type="text" id="searchInput" placeholder="Search volumes, modules, specifications…" autocomplete="off" />
-          <button onclick="doSearch()" aria-label="Search">Search</button>
+    <div class="meta-strip-wrap">
+      <div class="container">
+        <div class="meta-strip">
+          <span>Public release</span>
+          <span>Volumes I–XX available</span>
+          <span>Canonical specification</span>
+          <span>Archive-backed publication path</span>
+          <span>Versioned public record</span>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- ═══ INFO STRIP ═══ -->
+  <main class="archive-home">
+    <div class="container page-shell">
+      <aside class="catalog-sidebar" aria-label="Archive filters">
+        <section class="filter-box">
+          <h2>Record type</h2>
+          <ul>
+            <li><span>All records</span><strong>23</strong></li>
+            <li><span>Volume</span><strong>20</strong></li>
+            <li><span>Specification</span><strong>1</strong></li>
+            <li><span>Research</span><strong>1</strong></li>
+            <li><span>Archive note</span><strong>1</strong></li>
+          </ul>
+        </section>
 
-  <div class="zn-strip">
-    <div class="zn-strip-inner">
-      <span>Public release</span>
-      <span>Volumes I–XX available</span>
-      <span>Canonical specification</span>
-      <span>Archive-backed publication path</span>
-      <span>Versioned public record</span>
-    </div>
-  </div>
+        <section class="filter-box">
+          <h2>Volume cluster</h2>
+          <ul>
+            <li><span>Volumes I–X</span><strong>10</strong></li>
+            <li><span>Volumes XI–XX</span><strong>10</strong></li>
+          </ul>
+        </section>
 
-  <!-- ═══ STICKY SUB-NAV ═══ -->
+        <section class="filter-box">
+          <h2>Module category</h2>
+          <ul>
+            <li><span>Core Runtime</span></li>
+            <li><span>Boundary Geometry</span></li>
+            <li><span>Projection &amp; Attraction</span></li>
+            <li><span>Shame Mechanics</span></li>
+            <li><span>Visibility Failure</span></li>
+            <li><span>Deep Runtime</span></li>
+          </ul>
+        </section>
 
-  <div class="zn-subnav">
-    <div class="zn-subnav-inner">
-      <a href="./index.html" class="active">Home</a>
-      <a href="./publications/">Volumes I–X</a>
-      <a href="./expansion-volumes/">Volumes XI–XX</a>
-      <a href="./canonical-specification-volumes-01-20/">Specification</a>
-      <a href="./for-researchers/">Research</a>
-      <a href="./publications/">Archive</a>
-    </div>
-  </div>
+        <section class="filter-box">
+          <h2>Access</h2>
+          <ul>
+            <li><span>Open access</span><strong>23</strong></li>
+          </ul>
+        </section>
+      </aside>
 
-  <!-- ═══ MAIN BODY WITH SIDEBAR ═══ -->
+      <div class="main-column">
+        <section class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-main">
+              <p class="eyebrow">Deterministic symbolic architecture</p>
 
-  <div class="zn-page">
+              <h1>Symbolic Mechanics</h1>
 
-    <!-- LEFT SIDEBAR -->
-    <aside class="zn-sidebar" aria-label="Filter navigation">
+              <p class="hero-deck">
+                Formalizing the missing computational layers beneath emotion,
+                attraction, collapse, projection, shame, and relational conflict.
+              </p>
 
-      <div class="zn-sb-section">
-        <div class="zn-sb-head">Record Type</div>
-        <ul class="zn-sb-list">
-          <li><a href="#" class="active" data-filter="all">All records <span class="zn-badge">25</span></a></li>
-          <li><a href="#" data-filter="volume">Volume <span class="zn-badge">20</span></a></li>
-          <li><a href="#" data-filter="specification">Specification <span class="zn-badge">1</span></a></li>
-          <li><a href="#" data-filter="research">Research <span class="zn-badge">2</span></a></li>
-        </ul>
-      </div>
+              <p class="hero-support">
+                A multi-volume symbolic runtime architecture with public reading paths,
+                canonical specification, versioned archive structure, and researcher-oriented entry routes.
+              </p>
 
-      <div class="zn-sb-section">
-        <div class="zn-sb-head">Volume Cluster</div>
-        <ul class="zn-sb-list">
-          <li><a href="./publications/">Volumes I–X <span class="zn-badge">10</span></a></li>
-          <li><a href="./expansion-volumes/">Volumes XI–XX <span class="zn-badge">10</span></a></li>
-        </ul>
-      </div>
+              <div class="cta-stack">
+                <div class="cta-row">
+                  <a class="btn btn-primary" href="./publications/">Start from the system trunk</a>
+                  <a class="btn btn-secondary btn-secondary-strong" href="./canonical-specification-volumes-01-20/">Read the specification</a>
+                </div>
 
-      <div class="zn-sb-section">
-        <div class="zn-sb-head">Module Category</div>
-        <ul class="zn-sb-list">
-          <li><a href="#">Core Runtime <span class="zn-badge">6</span></a></li>
-          <li><a href="#">Boundary Geometry <span class="zn-badge">4</span></a></li>
-          <li><a href="#">Projection &amp; Attraction <span class="zn-badge">5</span></a></li>
-          <li><a href="#">Shame Mechanics <span class="zn-badge">4</span></a></li>
-          <li><a href="#">Visibility Failure <span class="zn-badge">3</span></a></li>
-          <li><a href="#">Deep Runtime <span class="zn-badge">4</span></a></li>
-        </ul>
-      </div>
-
-      <div class="zn-sb-section">
-        <div class="zn-sb-head">Access</div>
-        <ul class="zn-sb-list">
-          <li><a href="#">Open access <span class="zn-badge">25</span></a></li>
-        </ul>
-      </div>
-
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="zn-main">
-
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Deterministic symbolic architecture</p>
-            <h1>Symbolic<br>Mechanics</h1>
-            <p class="hero-deck">
-              Formalizing the missing computational layers beneath emotion,
-              attraction, collapse, projection, shame, and relational conflict.
-            </p>
-            <p class="hero-support">
-              A multi-volume symbolic runtime architecture with public reading paths,
-              canonical specification, versioned archive structure, and researcher-oriented entry routes.
-            </p>
-            <div class="cta-stack">
-              <div class="cta-row">
-                <a class="btn btn-primary" href="./publications/">Start from the system trunk</a>
-                <a class="btn btn-secondary btn-secondary-strong" href="./canonical-specification-volumes-01-20/">Read the specification</a>
-              </div>
-              <div class="cta-row cta-row-secondary">
-                <a class="btn btn-secondary" href="./publications/">Browse the archive</a>
-                <a class="btn btn-secondary" href="./for-researchers/">For researchers</a>
+                <div class="cta-row">
+                  <a class="btn btn-secondary" href="./publications/">Browse the archive</a>
+                  <a class="btn btn-secondary" href="./for-researchers/">For researchers</a>
+                </div>
               </div>
             </div>
+
+            <aside class="hero-side">
+              <div class="overview-row">
+                <p class="overview-label">Core loop</p>
+                <p class="overview-mono">Δ → S → L → R → Exit</p>
+              </div>
+
+              <div class="overview-row">
+                <p class="overview-label">Structure</p>
+                <p class="overview-text">Multi-volume symbolic runtime architecture</p>
+              </div>
+
+              <div class="overview-row">
+                <p class="overview-label">Available now</p>
+                <p class="overview-text">Volumes I–XX / Canonical specification / Public archive record</p>
+              </div>
+
+              <div class="overview-row">
+                <p class="overview-label">Research status</p>
+                <p class="overview-text">Active archive / public release / citation pathway</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section recent-section">
+          <div class="section-head">
+            <p class="eyebrow">Recent releases</p>
+            <h2>Recent public layers</h2>
           </div>
 
-         
+          <div class="recent-grid">
+            <div class="release-list">
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Specification</span>
+                  <span class="release-date">Current public layer</span>
+                </div>
+                <h3>Canonical Specification of Volumes I–XX</h3>
+                <p>
+                  Integrated engine document covering layer stratification, variable table, module table,
+                  routing rules, state-transition logic, and canonical consistency corrections.
+                </p>
+                <div class="release-bottom">
+                  <span>Canonical document</span>
+                  <span>Engine-level consolidation</span>
+                  <span>Archive trail</span>
+                  <a href="./canonical-specification-volumes-01-20/">Open</a>
+                </div>
+              </article>
+
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Volume</span>
+                  <span class="release-date">Public release</span>
+                </div>
+                <h3>Volume XIX — The Grand Hall, Scene-Shift Mechanics, and the Clown as the Deep Engine</h3>
+                <p>
+                  Hall-scale engine architecture, scene-shifting continuity, dark-run recurrence,
+                  and deep-engine governance within the system’s larger operating environment.
+                </p>
+                <div class="release-bottom">
+                  <span>Deep runtime</span>
+                  <span>Grand Hall layer</span>
+                  <span>Release trail</span>
+                  <a href="./volume-19.md">Open</a>
+                </div>
+              </article>
+
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Volume</span>
+                  <span class="release-date">Public release</span>
+                </div>
+                <h3>Volume XX — The Firefly, Post-Shame Survival Navigation, and the Compensation Vector</h3>
+                <p>
+                  Primitive navigational signalling, post-shame continuation, system switching,
+                  and long-range compensation-vector formation after catastrophic rupture.
+                </p>
+                <div class="release-bottom">
+                  <span>Post-shame survival</span>
+                  <span>Primitive navigation</span>
+                  <span>Release trail</span>
+                  <a href="./volume-20.md">Open</a>
+                </div>
+              </article>
+
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Research</span>
+                  <span class="release-date">Access route</span>
+                </div>
+                <h3>For Researchers</h3>
+                <p>
+                  Research-facing entry structure covering executable layers, publication logic,
+                  reading continuity, and the citation-oriented use of the public release surface.
+                </p>
+                <div class="release-bottom">
+                  <span>Research path</span>
+                  <span>Entry framing</span>
+                  <span>Access note</span>
+                  <a href="./for-researchers/">Open</a>
+                </div>
+              </article>
+            </div>
+
+            <aside class="archive-sticky">
+              <p class="archive-panel-eyebrow">Archive integrity</p>
+              <h3>Why this archive matters</h3>
+              <p class="archive-panel-copy">
+                This website serves as the curated entry layer. Public releases are versioned,
+                archived, and organized for reading continuity, research access, and citation-oriented use.
+              </p>
+
+              <ul class="archive-panel-list">
+                <li>Public record</li>
+                <li>Versioned release path</li>
+                <li>Canonical specification</li>
+                <li>Archive-backed publication</li>
+                <li>Research-oriented entry structure</li>
+                <li>Citation pathway</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section section-soft">
+          <div class="section-head">
+            <p class="eyebrow">System preview</p>
+            <h2>Core architecture modules</h2>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card">
+              <h3>Core Runtime</h3>
+              <p>Δ, symbolic installation, load accumulation, rupture threshold, exit routing, and restart-capable structure.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Boundary Geometry</h3>
+              <p>Safe-proximity radius, movement permission, threshold displacement, and structural counterforce.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Visibility Failure</h3>
+              <p>Unreadability, sorting collapse, fallback orientation, and existence-compensation under signal loss.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Projection &amp; Attraction</h3>
+              <p>Attraction tension, optical entry, placeholder interface, single-input dominance, and thermal overload.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Shame Mechanics</h3>
+              <p>Catastrophic rupture, Shadow-Child formation, symbolic locking, and residual internal architecture.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Deep Runtime</h3>
+              <p>Clown subsystem, Grand Hall recurrence, primitive navigation, and post-shame continuation.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-band">
+          <div class="band-grid">
+            <div class="band-copy">
+              <p class="eyebrow">For researchers</p>
+              <h2>Research-facing entry and citation path</<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics</title>
+  <meta name="description" content="A deterministic symbolic-computational architecture of inner mechanics and relational dynamics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-wordmark" href="./index.html">Symbolic Mechanics</a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="./index.html" class="is-active">Home</a>
+        <a href="./publications/">Volumes I–X</a>
+        <a href="./expansion-volumes/">Volumes XI–XX</a>
+        <a href="./canonical-specification-volumes-01-20/">Specification</a>
+        <a href="./for-researchers/">Research</a>
+        <a href="./publications/">Archive</a>
+      </nav>
+    </div>
+
+    <div class="meta-strip-wrap">
+      <div class="container">
+        <div class="meta-strip">
+          <span>Public release</span>
+          <span>Volumes I–XX available</span>
+          <span>Canonical specification</span>
+          <span>Archive-backed publication path</span>
+          <span>Versioned public record</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="archive-home">
+    <div class="container page-shell">
+      <aside class="catalog-sidebar" aria-label="Archive filters">
+        <section class="filter-box">
+          <h2>Record type</h2>
+          <ul>
+            <li><span>All records</span><strong>23</strong></li>
+            <li><span>Volume</span><strong>20</strong></li>
+            <li><span>Specification</span><strong>1</strong></li>
+            <li><span>Research</span><strong>1</strong></li>
+            <li><span>Archive note</span><strong>1</strong></li>
+          </ul>
+        </section>
+
+        <section class="filter-box">
+          <h2>Volume cluster</h2>
+          <ul>
+            <li><span>Volumes I–X</span><strong>10</strong></li>
+            <li><span>Volumes XI–XX</span><strong>10</strong></li>
+          </ul>
+        </section>
+
+        <section class="filter-box">
+          <h2>Module category</h2>
+          <ul>
+            <li><span>Core Runtime</span></li>
+            <li><span>Boundary Geometry</span></li>
+            <li><span>Projection &amp; Attraction</span></li>
+            <li><span>Shame Mechanics</span></li>
+            <li><span>Visibility Failure</span></li>
+            <li><span>Deep Runtime</span></li>
+          </ul>
+        </section>
+
+        <section class="filter-box">
+          <h2>Access</h2>
+          <ul>
+            <li><span>Open access</span><strong>23</strong></li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="main-column">
+        <section class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-main">
+              <p class="eyebrow">Deterministic symbolic architecture</p>
+
+              <h1>Symbolic Mechanics</h1>
+
+              <p class="hero-deck">
+                Formalizing the missing computational layers beneath emotion,
+                attraction, collapse, projection, shame, and relational conflict.
+              </p>
+
+              <p class="hero-support">
+                A multi-volume symbolic runtime architecture with public reading paths,
+                canonical specification, versioned archive structure, and researcher-oriented entry routes.
+              </p>
+
+              <div class="cta-stack">
+                <div class="cta-row">
+                  <a class="btn btn-primary" href="./publications/">Start from the system trunk</a>
+                  <a class="btn btn-secondary btn-secondary-strong" href="./canonical-specification-volumes-01-20/">Read the specification</a>
+                </div>
+
+                <div class="cta-row">
+                  <a class="btn btn-secondary" href="./publications/">Browse the archive</a>
+                  <a class="btn btn-secondary" href="./for-researchers/">For researchers</a>
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-side">
+              <div class="overview-row">
+                <p class="overview-label">Core loop</p>
+                <p class="overview-mono">Δ → S → L → R → Exit</p>
+              </div>
+
+              <div class="overview-row">
+                <p class="overview-label">Structure</p>
+                <p class="overview-text">Multi-volume symbolic runtime architecture</p>
+              </div>
+
+              <div class="overview-row">
+                <p class="overview-label">Available now</p>
+                <p class="overview-text">Volumes I–XX / Canonical specification / Public archive record</p>
+              </div>
+
+              <div class="overview-row">
+                <p class="overview-label">Research status</p>
+                <p class="overview-text">Active archive / public release / citation pathway</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section recent-section">
+          <div class="section-head">
+            <p class="eyebrow">Recent releases</p>
+            <h2>Recent public layers</h2>
+          </div>
+
+          <div class="recent-grid">
+            <div class="release-list">
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Specification</span>
+                  <span class="release-date">Current public layer</span>
+                </div>
+                <h3>Canonical Specification of Volumes I–XX</h3>
+                <p>
+                  Integrated engine document covering layer stratification, variable table, module table,
+                  routing rules, state-transition logic, and canonical consistency corrections.
+                </p>
+                <div class="release-bottom">
+                  <span>Canonical document</span>
+                  <span>Engine-level consolidation</span>
+                  <span>Archive trail</span>
+                  <a href="./canonical-specification-volumes-01-20/">Open</a>
+                </div>
+              </article>
+
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Volume</span>
+                  <span class="release-date">Public release</span>
+                </div>
+                <h3>Volume XIX — The Grand Hall, Scene-Shift Mechanics, and the Clown as the Deep Engine</h3>
+                <p>
+                  Hall-scale engine architecture, scene-shifting continuity, dark-run recurrence,
+                  and deep-engine governance within the system’s larger operating environment.
+                </p>
+                <div class="release-bottom">
+                  <span>Deep runtime</span>
+                  <span>Grand Hall layer</span>
+                  <span>Release trail</span>
+                  <a href="./volume-19.md">Open</a>
+                </div>
+              </article>
+
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Volume</span>
+                  <span class="release-date">Public release</span>
+                </div>
+                <h3>Volume XX — The Firefly, Post-Shame Survival Navigation, and the Compensation Vector</h3>
+                <p>
+                  Primitive navigational signalling, post-shame continuation, system switching,
+                  and long-range compensation-vector formation after catastrophic rupture.
+                </p>
+                <div class="release-bottom">
+                  <span>Post-shame survival</span>
+                  <span>Primitive navigation</span>
+                  <span>Release trail</span>
+                  <a href="./volume-20.md">Open</a>
+                </div>
+              </article>
+
+              <article class="release-item">
+                <div class="release-topline">
+                  <span class="release-tag">Research</span>
+                  <span class="release-date">Access route</span>
+                </div>
+                <h3>For Researchers</h3>
+                <p>
+                  Research-facing entry structure covering executable layers, publication logic,
+                  reading continuity, and the citation-oriented use of the public release surface.
+                </p>
+                <div class="release-bottom">
+                  <span>Research path</span>
+                  <span>Entry framing</span>
+                  <span>Access note</span>
+                  <a href="./for-researchers/">Open</a>
+                </div>
+              </article>
+            </div>
+
+            <aside class="archive-sticky">
+              <p class="archive-panel-eyebrow">Archive integrity</p>
+              <h3>Why this archive matters</h3>
+              <p class="archive-panel-copy">
+                This website serves as the curated entry layer. Public releases are versioned,
+                archived, and organized for reading continuity, research access, and citation-oriented use.
+              </p>
+
+              <ul class="archive-panel-list">
+                <li>Public record</li>
+                <li>Versioned release path</li>
+                <li>Canonical specification</li>
+                <li>Archive-backed publication</li>
+                <li>Research-oriented entry structure</li>
+                <li>Citation pathway</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section section-soft">
+          <div class="section-head">
+            <p class="eyebrow">System preview</p>
+            <h2>Core architecture modules</h2>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card">
+              <h3>Core Runtime</h3>
+              <p>Δ, symbolic installation, load accumulation, rupture threshold, exit routing, and restart-capable structure.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Boundary Geometry</h3>
+              <p>Safe-proximity radius, movement permission, threshold displacement, and structural counterforce.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Visibility Failure</h3>
+              <p>Unreadability, sorting collapse, fallback orientation, and existence-compensation under signal loss.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Projection &amp; Attraction</h3>
+              <p>Attraction tension, optical entry, placeholder interface, single-input dominance, and thermal overload.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Shame Mechanics</h3>
+              <p>Catastrophic rupture, Shadow-Child formation, symbolic locking, and residual internal architecture.</p>
+            </article>
+
+            <article class="module-card">
+              <h3>Deep Runtime</h3>
+              <p>Clown subsystem, Grand Hall recurrence, primitive navigation, and post-shame continuation.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-band">
+          <div class="band-grid">
+            <div class="band-copy">
+              <p class="eyebrow">For researchers</p>
+              <h2>Research-facing entry and citation path</
