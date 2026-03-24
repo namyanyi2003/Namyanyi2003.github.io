@@ -800,3 +800,431 @@ a {
     font-size: 1.3rem;
   }
 }
+
+/* ─────────────────────────────────────────────
+   SPACING + TYPOGRAPHY REFINEMENT PATCH
+   Paste at the very end of style.css
+   ───────────────────────────────────────────── */
+
+/* Global type scale: one step smaller */
+html {
+  font-size: 15px;
+}
+
+body {
+  font-size: 0.875rem;
+  line-height: 1.68;
+}
+
+/* Top banner / nav / strip */
+.zn-wordmark {
+  font-size: 1.6rem;
+}
+
+.zn-nav a,
+.zn-subnav a {
+  font-size: 0.8rem;
+}
+
+.zn-strip span {
+  font-size: 0.74rem;
+}
+
+.zn-search input,
+.zn-search button {
+  font-size: 0.84rem;
+}
+
+/* Main page rhythm */
+.zn-page {
+  padding: 34px 32px 88px;
+  gap: 36px;
+}
+
+.section {
+  margin-bottom: 52px;
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+.section-head h2 {
+  margin-top: 2px;
+}
+
+/* Sidebar spacing */
+.zn-sidebar {
+  gap: 16px;
+}
+
+.zn-sb-head {
+  padding: 10px 14px;
+}
+
+.zn-sb-list li a {
+  padding: 9px 14px;
+  font-size: 0.8rem;
+}
+
+/* Hero spacing */
+.hero {
+  padding: 44px 48px;
+  margin-bottom: 40px;
+}
+
+.hero-grid {
+  gap: 44px;
+}
+
+.hero-copy h1 {
+  font-size: 3.25rem;
+  line-height: 1.02;
+  margin-bottom: 20px;
+}
+
+.hero-deck {
+  font-size: 1.08rem;
+  line-height: 1.62;
+  margin-bottom: 16px;
+  max-width: 36rem;
+}
+
+.hero-support {
+  font-size: 0.82rem;
+  line-height: 1.72;
+  margin-bottom: 28px;
+  max-width: 44rem;
+}
+
+.cta-stack {
+  gap: 14px;
+}
+
+.cta-row {
+  gap: 12px;
+}
+
+.btn {
+  font-size: 0.82rem;
+  padding: 10px 18px;
+}
+
+/* Overview panel */
+.overview-row {
+  padding: 14px 18px;
+}
+
+.overview-label {
+  font-size: 0.62rem;
+  margin-bottom: 5px;
+}
+
+.overview-text {
+  font-size: 0.82rem;
+  line-height: 1.62;
+}
+
+.overview-mono {
+  font-size: 0.9rem;
+}
+
+/* Entry cards */
+.section-entry {
+  margin-bottom: 40px;
+}
+
+.entry-grid {
+  gap: 20px;
+}
+
+.entry-card {
+  padding: 24px 24px 22px;
+  gap: 10px;
+}
+
+.entry-card h3 {
+  font-size: 1rem;
+  line-height: 1.34;
+}
+
+.card-copy {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.card-meta {
+  font-size: 0.66rem;
+  padding-top: 12px;
+  margin-top: 6px;
+}
+
+.card-link {
+  font-size: 0.8rem;
+}
+
+/* Module section */
+.section-soft {
+  padding: 38px 40px;
+  margin-bottom: 40px;
+}
+
+.module-grid {
+  gap: 20px;
+}
+
+.module-card {
+  padding: 22px 22px;
+}
+
+.module-card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 9px;
+}
+
+.module-card p {
+  font-size: 0.8rem;
+  line-height: 1.68;
+}
+
+/* Recent releases section */
+.section-recent {
+  margin-bottom: 44px;
+}
+
+.recent-grid {
+  gap: 32px;
+}
+
+.release-list {
+  gap: 18px;
+}
+
+.release-item {
+  padding: 24px 28px;
+}
+
+.release-topline {
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.release-tag,
+.release-open {
+  font-size: 0.64rem;
+}
+
+.release-date {
+  font-size: 0.74rem;
+}
+
+.release-item h3 {
+  font-size: 1.04rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.release-item > p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.release-bottom {
+  padding-top: 12px;
+}
+
+.release-bottom span,
+.release-bottom a {
+  font-size: 0.74rem;
+}
+
+/* Sticky archive panel */
+.archive-sticky {
+  padding: 24px 24px;
+}
+
+.archive-panel-eyebrow {
+  font-size: 0.62rem;
+  margin-bottom: 8px;
+}
+
+.archive-sticky h3 {
+  font-size: 1.18rem;
+  margin-bottom: 12px;
+}
+
+.archive-panel-copy {
+  font-size: 0.8rem;
+  line-height: 1.72;
+  margin-bottom: 16px;
+}
+
+.archive-panel-list {
+  gap: 8px;
+}
+
+.archive-panel-list li {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Band section */
+.section-band {
+  padding: 42px 44px;
+  margin-bottom: 40px;
+}
+
+.band-grid {
+  gap: 48px;
+}
+
+.band-copy h2 {
+  font-size: 1.46rem;
+  margin-bottom: 14px;
+}
+
+.band-copy p {
+  font-size: 0.82rem;
+  line-height: 1.72;
+}
+
+.band-links {
+  gap: 8px;
+}
+
+.band-links a {
+  font-size: 0.8rem;
+  padding: 10px 12px;
+}
+
+/* Archive integrity section */
+.archive-grid {
+  gap: 36px;
+}
+
+.archive-copy {
+  font-size: 0.84rem;
+  line-height: 1.76;
+  margin-top: 16px;
+}
+
+.archive-panel {
+  padding: 22px 22px;
+}
+
+.archive-label {
+  font-size: 0.62rem;
+  margin-bottom: 12px;
+}
+
+.archive-list {
+  gap: 8px;
+}
+
+.archive-list li {
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.site-footer {
+  padding: 44px 32px;
+}
+
+.footer-grid {
+  gap: 48px;
+}
+
+.footer-title {
+  font-size: 0.74rem;
+  margin-bottom: 12px;
+}
+
+.footer-copy,
+.footer-list li a {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* Extra breathing room between major blocks inside main column */
+.zn-main > .hero + .section,
+.zn-main > .section + .section,
+.zn-main > .section + .section-soft,
+.zn-main > .section-soft + .section,
+.zn-main > .section-recent + .section-band,
+.zn-main > .section-band + .section {
+  margin-top: 8px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .zn-page {
+    padding: 24px 24px 72px;
+    gap: 28px;
+  }
+
+  .hero {
+    padding: 34px 34px;
+  }
+
+  .hero-grid {
+    gap: 28px;
+  }
+
+  .section,
+  .section-entry,
+  .section-soft,
+  .section-recent,
+  .section-band {
+    margin-bottom: 36px;
+  }
+
+  .recent-grid,
+  .archive-grid,
+  .band-grid {
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  .zn-page {
+    padding: 18px 16px 56px;
+    gap: 22px;
+  }
+
+  .hero {
+    padding: 22px 20px;
+    margin-bottom: 28px;
+  }
+
+  .section,
+  .section-entry,
+  .section-soft,
+  .section-recent,
+  .section-band {
+    margin-bottom: 28px;
+  }
+
+  .section-soft {
+    padding: 26px 20px;
+  }
+
+  .section-band {
+    padding: 28px 22px;
+  }
+
+  .entry-grid,
+  .module-grid {
+    gap: 14px;
+  }
+
+  .release-list {
+    gap: 14px;
+  }
+}
