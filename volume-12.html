@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume XII: Boundary Parameterization, Parental Force Distribution, and Intimacy Entry</title>
+  <meta name="description" content="Volume XII of Symbolic Mechanics. Boundary Parameterization, Parental Force Distribution, and Intimacy Entry.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.3rem, 5vw, 3.65rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 16ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./expansion-volumes/">Expansion Volumes</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume XII</p>
+      <h1>Symbolic Mechanics — Volume XII: Boundary Parameterization, Parental Force Distribution, and Intimacy Entry</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">XII</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Boundary-parameterization and entry-selection layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe intimacy boundaries through attachment style, childhood emotion, or temperament, but do not specify how the system acquires the actual parameters that govern entry.
+        </p>
+
+        <p>
+          Volume XII formalizes that missing layer by defining parents not as generators of personality, but as generators of boundary parameters. Through force distribution, the room computes three operating values:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Visibility (V)</li>
+          <li>Gate sensitivity (G)</li>
+          <li>Alarm threshold (A_th)</li>
+        </ul>
+
+        <p>
+          Rather than treating closeness as emotional readiness, this volume rewrites intimacy entry as an operation executed on fixed boundary parameters established by early force distribution and finalized in adolescence.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the boundary-parameterization and intimacy-entry layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          The volume begins from a decisive reclassification:
+        </p>
+
+        <p class="mono-line">
+          Parents do not generate personality.<br>
+          They generate boundary parameters.
+        </p>
+
+        <p>
+          The first readable map of force distribution does not appear in infancy. It appears only at two structural moments:
+        </p>
+
+        <ol class="number-list">
+          <li>paternal delayed-entry</li>
+          <li>adolescent recalibration</li>
+        </ol>
+
+        <p>
+          At these moments, the system performs a single computation:
+        </p>
+
+        <p class="mono-line">
+          How can force enter the room?
+        </p>
+
+        <p>
+          From this force-mapping, it initializes three baseline parameters:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Visibility (V)</strong><br>
+            The maximum internal load the room can stabilize.
+          </li>
+          <li>
+            <strong>Gate sensitivity (G)</strong><br>
+            How easily the boundary opens under admissible differential input.
+          </li>
+          <li>
+            <strong>Alarm threshold (A_th)</strong><br>
+            The point at which incoming force is classified as intrusion.
+          </li>
+        </ol>
+
+        <p>
+          The volume then formalizes how parental force asymmetry generates different boundary architectures.
+        </p>
+
+        <p><strong>Strong Father × Weak Mother</strong></p>
+
+        <p>
+          This produces an alarm-dominant configuration:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Alarm threshold shifts downward</li>
+          <li>Gate becomes restrictive</li>
+          <li>force-shaped input is classified as threat rather than information</li>
+          <li>external directive signals contract the boundary before evaluation</li>
+          <li>the room develops self-protective visibility</li>
+        </ul>
+
+        <p>
+          The system opens only to sufficiently soft, non-overriding forms of input.
+        </p>
+
+        <p><strong>Strong Mother × Weak Father</strong></p>
+
+        <p>
+          This produces a gate-dominant configuration:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Gate opens easily under soft input</li>
+          <li>Alarm threshold shifts upward</li>
+          <li>external load is not automatically treated as intrusion</li>
+          <li>soft cues and affective variation trigger entry readily</li>
+          <li>internal structure becomes less self-disciplined and more externally stabilized</li>
+        </ul>
+
+        <p>
+          The system opens easily under low-coercion input but may rely on outside differentiation.
+        </p>
+
+        <p>
+          The volume then formalizes adolescence as the second calibration.
+        </p>
+
+        <p class="mono-line">
+          Childhood produces only floating parameter estimates.<br>
+          Adolescence finalizes them.
+        </p>
+
+        <p>
+          During adolescence, the room re-tests:
+        </p>
+
+        <ul class="bullet-list">
+          <li>whether paternal pressure is still coercive</li>
+          <li>whether maternal softness still stabilizes</li>
+          <li>whether force still compresses the boundary</li>
+          <li>whether soft amplitude still opens the gate</li>
+          <li>whether the room can regulate without scaffolding</li>
+        </ul>
+
+        <p>
+          At this stage, V, G, and A_th are recalculated and shift from provisional estimates into fixed operating parameters.
+        </p>
+
+        <p>
+          After adolescence:
+        </p>
+
+        <ul class="bullet-list">
+          <li>V becomes a stable baseline</li>
+          <li>G becomes a stable access pattern</li>
+          <li>A_th becomes a stable intrusion threshold</li>
+        </ul>
+
+        <p>
+          Adult intimacy is then computed on:
+        </p>
+
+        <p class="mono-line">
+          fixed V × fixed G × fixed A_th
+        </p>
+
+        <p>
+          The final layer of the volume formalizes who can enter the boundary.
+        </p>
+
+        <p>
+          Boundary entry depends on two conditions:
+        </p>
+
+        <ol class="number-list">
+          <li>the incoming signal must match the room’s structural deficit (Δ)</li>
+          <li>the incoming force signature must remain below Alarm threshold while still triggering Gate opening</li>
+        </ol>
+
+        <p>
+          This means:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Δ is not attraction</li>
+          <li>Δ is the missing structural ingredient</li>
+        </ul>
+
+        <p>
+          The system opens only when:
+        </p>
+
+        <ul class="bullet-list">
+          <li>the incoming configuration carries the exact differential the room lacks</li>
+          <li>the signal does not trigger Alarm</li>
+          <li>Gate treats it as admissible</li>
+        </ul>
+
+        <p>
+          What is often described as chemistry is therefore the mechanical recognition of a stabilizing differential.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major parameterization layer of the intimacy architecture.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain intimacy if it only models boundary events. It must also specify where the governing parameters come from, how they become fixed, and why adult entry patterns repeat with such stability.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of Volume XI and upstream of later projection, placeholder entry, and reality-breach mechanics. It transforms intimacy from an opening event into a parameter-governed admission architecture.
+        </p>
+
+        <p>
+          Without Volume XII, the system can describe boundary opening. With Volume XII, the system can explain:
+        </p>
+
+        <ul class="bullet-list">
+          <li>why different rooms open under different force signatures</li>
+          <li>why softness enters one system but not another</li>
+          <li>why structure enters one system but not another</li>
+          <li>why adult intimacy echoes early force asymmetry</li>
+          <li>why “chemistry” is actually differential fit under boundary mechanics</li>
+        </ul>
+
+        <p class="mono-line">
+          Love does not begin here.<br>
+          Boundary mechanics begin here.<br>
+          Love becomes possible only after boundary formation is complete.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">parental force distribution</span>
+          <span class="keyword">boundary parameterization</span>
+          <span class="keyword">visibility</span>
+          <span class="keyword">V</span>
+          <span class="keyword">gate sensitivity</span>
+          <span class="keyword">G</span>
+          <span class="keyword">alarm threshold</span>
+          <span class="keyword">A_th</span>
+          <span class="keyword">paternal delayed-entry</span>
+          <span class="keyword">adolescent recalibration</span>
+          <span class="keyword">intimacy entry</span>
+          <span class="keyword">structural deficit</span>
+          <span class="keyword">delta</span>
+          <span class="keyword">Δ</span>
+          <span class="keyword">force asymmetry</span>
+          <span class="keyword">alarm-dominant configuration</span>
+          <span class="keyword">gate-dominant configuration</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-12.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-11.html">Volume XI</a></li>
+          <li>Next volume — <a href="./volume-13.html">Volume XIII</a></li>
+          <li><a href="./expansion-volumes/">Back to Expansion Volumes</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
