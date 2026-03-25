@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume V: Boundary Dynamics, Safe-Proximity Radius, and Displacement Mechanics</title>
+  <meta name="description" content="Volume V of Symbolic Mechanics. Boundary Dynamics, Safe-Proximity Radius, and Displacement Mechanics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 5.7vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 15ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list,
+    .nav-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li,
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker,
+    .nav-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./publications/">Volumes I–X</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume V</p>
+      <h1>Symbolic Mechanics — Volume V: Boundary Dynamics, Safe-Proximity Radius, and Displacement Mechanics</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">V</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Boundary geometry and change-permission layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories explain failed change in emotional, motivational, or developmental terms, but do not specify the boundary geometry that makes forward movement mechanically impossible even when intention is present.
+        </p>
+
+        <p>
+          Volume V formalizes that missing layer by modelling change failure as a predictable outcome of vector conflict inside the Δ→S→L→R engine. Its decisive variable is the system’s safe-proximity radius (Rₛ): the allowable zone of symbolic displacement before defensive counterforce activates.
+        </p>
+
+        <p>
+          Rather than treating resistance as fear, avoidance, or weak will, this volume rewrites failed change as a mechanical lockout produced by internal geometry.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the boundary geometry and displacement layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          The volume begins from a structural paradox: at any moment, two independent systems operate on incompatible directives.
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>The Organismic Vector (O-vector)</strong><br>
+            Oriented toward movement, improvement, reconfiguration, or forward displacement.
+          </li>
+          <li>
+            <strong>The Internal Regulatory Complex</strong><br>
+            Oriented toward preservation of continuity and resistance to destabilization. Its principal components are:
+            <ul class="bullet-list">
+              <li>parental-weight geometry</li>
+              <li>Judge-axis enforcement</li>
+              <li>shadow curvature</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>
+          The paradox of change arises because these two systems generate opposing forces:
+        </p>
+
+        <ul class="bullet-list">
+          <li>the O-vector pushes toward displacement</li>
+          <li>the regulatory complex interprets displacement as destabilization and generates counterforce</li>
+        </ul>
+
+        <p>
+          This is not indecision. It is deterministic structural opposition.
+        </p>
+
+        <p>
+          The volume then formalizes Rₛ (safe-proximity radius) as the key structural variable of the whole layer. Rₛ is not comfort, confidence, or preference. It is a structural threshold produced by internal geometry.
+        </p>
+
+        <p>
+          Rₛ is determined by three interacting components:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Parental-Weight Geometry (M/F-load distribution)</strong><br>
+            The heavier the symbolic load on the parental seats, the narrower the allowable radius of displacement.
+          </li>
+          <li>
+            <strong>Judge-Axis Intensity (J-amplitude)</strong><br>
+            High J-amplitude shrinks Rₛ because the evaluative subsystem flags micro-deviation as destabilization.
+          </li>
+          <li>
+            <strong>Shadow Curvature (ΔS-curvature)</strong><br>
+            When shadow objects dominate curvature, the system predicts catastrophic consequence for displacement and steepens the resistance gradient near the edge of Rₛ.
+          </li>
+        </ol>
+
+        <p>
+          Together, these components generate a defensive envelope: a region inside which the system remains stable enough, and beyond which internal modules initiate corrective resistance.
+        </p>
+
+        <p>
+          When the O-vector attempts to move beyond Rₛ, the system automatically generates:
+        </p>
+
+        <ul class="bullet-list">
+          <li>muscular freezing</li>
+          <li>avoidance acceleration</li>
+          <li>evaluative noise</li>
+          <li>cognitive narrowing</li>
+        </ul>
+
+        <p>
+          These are not emotional events. They are side effects of boundary-breach detection.
+        </p>
+
+        <p>
+          The volume then formalizes three internal modules that block displacement whenever structural coherence is threatened:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Parental Modules (M-axis and F-axis) as Stability Anchors</strong><br>
+            These act as load-bearing stabilizers and generate restorative torque back toward prior configuration.
+          </li>
+          <li>
+            <strong>Judge Module (J-axis) as Boundary Enforcement</strong><br>
+            This detects deviation gradients and produces evaluative spike activity, error-amplification loops, and narrowing of permissible action.
+          </li>
+          <li>
+            <strong>Shadow Curvature as Catastrophic Prediction</strong><br>
+            This encodes the steepest consequence gradients and sharply escalates resistance near shadow-dominant zones.
+          </li>
+        </ol>
+
+        <p>
+          Their combined action produces mechanical lockout. The system negates movement before conscious evaluation can complete.
+        </p>
+
+        <p>
+          The volume also formalizes four visible reaction patterns under boundary compression:
+        </p>
+
+        <ol class="number-list">
+          <li><strong>Compression–Release Pattern</strong><br>Forward movement followed by immediate reversal; oscillation around the same boundary line.</li>
+          <li><strong>Recoil Pattern</strong><br>Involuntary backward shift and rapid loss of forward permissibility.</li>
+          <li><strong>Immobilization Pattern</strong><br>Temporary lock-state in which the O-vector remains present but cannot execute.</li>
+          <li><strong>Load-Discharge Pattern</strong><br>Sudden release followed by collapse back toward the lowest-resistance configuration.</li>
+        </ol>
+
+        <p>
+          These are not emotions and not choices. They are mechanically predictable outputs generated when displacement exceeds the current curvature envelope.
+        </p>
+
+        <p>
+          A further decisive claim of the volume is that cognition has no authority over boundary geometry.
+        </p>
+
+        <p>
+          Reasoning, reframing, meaning-making, and realization operate within the representational layer. Boundary regulation is produced by:
+        </p>
+
+        <ul class="bullet-list">
+          <li>M-axis load distribution</li>
+          <li>F-axis curvature constraints</li>
+          <li>Judge-axis enforcement torque</li>
+          <li>shadow-density prediction fields</li>
+        </ul>
+
+        <p>
+          Cognition does not directly enter that computation.
+        </p>
+
+        <p>
+          Therefore:
+        </p>
+
+        <ul class="bullet-list">
+          <li>realization modifies representation</li>
+          <li>boundaries respond only to force ratios and geometry</li>
+          <li>insight does not reduce counterforce</li>
+          <li>narrative does not expand Rₛ</li>
+        </ul>
+
+        <p>
+          External facilitation often worsens the problem. When an external agent instructs, reassures, persuades, or accelerates change, the system may compute this as boundary compression, causing immediate escalation of:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Judge torque</li>
+          <li>shadow-density activation</li>
+          <li>M-axis and F-axis contraction</li>
+        </ul>
+
+        <p>
+          Thus Rₛ shrinks.
+        </p>
+
+        <p>
+          The volume then defines the minimal three-condition law under which change becomes mechanically possible:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Condition A — Reduced Counterforce (C↓)</strong><br>
+            Temporary weakening of the internal forces that normally prevent movement.
+          </li>
+          <li>
+            <strong>Condition B — Micro-Displacement of the O-Vector (ΔO_micro)</strong><br>
+            A minimal forward shift that is often sub-perceptual, not cognitively selected, and not produced by reasoning.
+          </li>
+          <li>
+            <strong>Condition C — Expansion of the Safe-Proximity Radius (Rₛ↑)</strong><br>
+            If the micro-displacement is not immediately punished, the system widens its allowable zone of movement.
+          </li>
+        </ol>
+
+        <p>
+          Together, the minimal self-reinforcing sequence of actual change is:
+        </p>
+
+        <p class="mono-line">
+          C↓ → ΔO_micro → Rₛ↑
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major boundary-geometry layer of the system.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain transformation if it only models event flow, encoding, load accumulation, and rupture. It must also specify the exact structural condition under which movement is blocked, reversed, immobilized, or permitted.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of kernel, structural encoding, shadow-load formation, and companion-enabled regulation, and upstream of later visibility, intimacy, projection, and relational access layers. It changes the theory of change from narrative persuasion to displacement geometry.
+        </p>
+
+        <p>
+          Without Volume V, the system can describe intention, burden, and regulation. With Volume V, the system can explain why movement fails, why reasoning cannot force change, and under what exact conditions a new trajectory becomes mechanically viable.
+        </p>
+
+        <p>
+          Within Symbolic Mechanics:
+        </p>
+
+        <p class="mono-line">
+          Change = a stable alteration of O-vector trajectory following the successful sequence C↓ → ΔO_micro → Rₛ↑
+        </p>
+
+        <p>
+          If any stage breaks, the trajectory resets.
+        </p>
+
+        <p>
+          Change is therefore not motivational, emotional, or interpretive. It is geometric.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">boundary dynamics</span>
+          <span class="keyword">displacement mechanics</span>
+          <span class="keyword">safe-proximity radius</span>
+          <span class="keyword">Rₛ</span>
+          <span class="keyword">O-vector</span>
+          <span class="keyword">Judge-axis</span>
+          <span class="keyword">shadow curvature</span>
+          <span class="keyword">parental-weight geometry</span>
+          <span class="keyword">counterforce</span>
+          <span class="keyword">boundary compression</span>
+          <span class="keyword">micro-displacement</span>
+          <span class="keyword">change window</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-05.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-04.html">Volume IV</a></li>
+          <li>Next volume — <a href="./volume-06.html">Volume VI</a></li>
+          <li><a href="./publications/">Back to Volumes I–X</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
