@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume IV: Companion Module, Three-Exit Architecture, and Regenerative Exit Mechanics</title>
+  <meta name="description" content="Volume IV of Symbolic Mechanics. Companion Module, Three-Exit Architecture, and Regenerative Exit Mechanics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.8vw, 4.1rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 15ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list,
+    .nav-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li,
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker,
+    .nav-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./publications/">Volumes I–X</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume IV</p>
+      <h1>Symbolic Mechanics — Volume IV: Companion Module, Three-Exit Architecture, and Regenerative Exit Mechanics</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">IV</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Companion-module and regenerative-exit layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe support, healing, or regulation in emotional terms, but do not specify the mechanical condition under which a symbolic system gains a lower-energy route of continuation.
+        </p>
+
+        <p>
+          Volume IV formalizes that missing layer by defining parental volume as a mechanical variable inside the symbolic engine, mapping soothing capacity to M-axis volume and boundary-setting capacity to F-axis volume, and showing how sufficient M/F stabilization produces the Companion Module (C-Module).
+        </p>
+
+        <p>
+          Rather than treating support as comfort, therapeutic language, or emotional repair, this volume rewrites regulation as a structural change in engine topology: once the C-Module emerges, the system gains a new non-destructive exit class and a regenerative internal loop.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the companion-module and regenerative-exit layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          If Volumes I–III establish the kernel, symbolic sourcing, parental weight geometry, and shadow-load formation, Volume IV explains how the system acquires a stabilizing node that changes routing behaviour without changing the deterministic nature of the engine.
+        </p>
+
+        <p>
+          The volume formalizes the following sequence:
+        </p>
+
+        <ul class="bullet-list">
+          <li>soothing capacity → M-axis volume</li>
+          <li>boundary-setting capacity → F-axis volume</li>
+          <li>functional reliability, not biography, determines parental-volume increase</li>
+          <li>when both M and F exceed minimum stability threshold, C-Module emergence becomes mechanically possible</li>
+          <li>once C is online, the engine gains a regenerative exit class and a restart node inside the routing economy</li>
+        </ul>
+
+        <p>
+          The volume also formalizes three valid channels by which parental volume can increase:
+        </p>
+
+        <ol class="number-list">
+          <li>direct functional acquisition</li>
+          <li>external regulatory scaffolding</li>
+          <li>reconstructed internal models</li>
+        </ol>
+
+        <p>
+          Across all three channels, the rule is identical:
+        </p>
+
+        <p class="mono-line">
+          functional reliability → volume increase<br>
+          emotional experience → irrelevant to the calculation
+        </p>
+
+        <p>
+          The C-Module appears only when three conditions hold simultaneously:
+        </p>
+
+        <ol class="number-list">
+          <li>M-axis regulation exceeds minimum containment threshold</li>
+          <li>F-axis regulation exceeds minimum boundary threshold</li>
+          <li>J-axis influence suppresses as a derived effect of improved parental symmetry</li>
+        </ol>
+
+        <p>
+          At that point, systemic turbulence drops below critical value and the room gains the ability to maintain stable state-transition flow without invoking high-energy exits.
+        </p>
+
+        <p>
+          Its central modelling objects are parental volume, M/F-axis functional growth, C-Module emergence, the transformation from two-exit to three-exit architecture, and the formal definition of C-Exit as a regenerative routing class.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major stabilizer-addition layer of the system.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain regulation if it only models overload, deferred accumulation, and rupture. It must also specify the precise structural condition under which the engine gains a lower-energy route of continuation. Volume IV therefore supplies the missing bridge between burdened symbolic structure and non-destructive routing.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of kernel, encoding, parental-weight geometry, and shadow-load formation, and upstream of later boundary, visibility, intimacy, and projection layers. It is the first volume that adds a true internal stabilizing module rather than merely describing pressure or collapse.
+        </p>
+
+        <p>
+          Without Volume IV, the system has only two exit classes:
+        </p>
+
+        <ol class="number-list">
+          <li>destructive exit</li>
+          <li>deferred exit</li>
+        </ol>
+
+        <p>
+          With Volume IV, the engine becomes a three-exit architecture:
+        </p>
+
+        <ol class="number-list">
+          <li>destructive exit</li>
+          <li>deferred exit</li>
+          <li>regenerative exit (C-Exit)</li>
+        </ol>
+
+        <p>
+          This new routing possibility is expressed by the regenerative loop:
+        </p>
+
+        <p class="mono-line">
+          Δ → S → C → S
+        </p>
+
+        <p>
+          This loop allows the system to:
+        </p>
+
+        <ul class="bullet-list">
+          <li>absorb symbolic impact</li>
+          <li>stabilize oscillation</li>
+          <li>prevent curvature escalation</li>
+          <li>maintain structural integrity across repeated cycles</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">parental volume</span>
+          <span class="keyword">M-axis</span>
+          <span class="keyword">F-axis</span>
+          <span class="keyword">companion module</span>
+          <span class="keyword">C-Module</span>
+          <span class="keyword">three-exit architecture</span>
+          <span class="keyword">regenerative exit</span>
+          <span class="keyword">C-Exit</span>
+          <span class="keyword">low-energy exit</span>
+          <span class="keyword">stabilizer emergence</span>
+          <span class="keyword">J-axis suppression</span>
+          <span class="keyword">routing topology</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-04.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-03.html">Volume III</a></li>
+          <li>Next volume — <a href="./volume-05.html">Volume V</a></li>
+          <li><a href="./publications/">Back to Volumes I–X</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
