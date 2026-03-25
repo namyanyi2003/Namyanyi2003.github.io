@@ -1,0 +1,697 @@
+File 名： volume-14.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume XIV: Projection as Single-Input Boundary Physics, Table-Surface Integration, and Occlusion Mechanics</title>
+  <meta name="description" content="Volume XIV of Symbolic Mechanics. Projection as Single-Input Boundary Physics, Table-Surface Integration, and Occlusion Mechanics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.15rem, 4.7vw, 3.45rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 18ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./expansion-volumes/">Expansion Volumes</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume XIV</p>
+      <h1>Symbolic Mechanics — Volume XIV: Projection as Single-Input Boundary Physics, Table-Surface Integration, and Occlusion Mechanics</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">XIV</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Single-input projection and occlusion layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe projection as fantasy, idealization, distortion, or emotional misreading, but do not specify the boundary condition under which projection becomes mechanically necessary.
+        </p>
+
+        <p>
+          Volume XIV formalizes that missing layer by defining projection not as psychological error, but as a temporary single-input boundary configuration. Under Δ (differential pull) and need-alignment, the room suppresses external prioritization, dims ambient visibility, and allows only one dominant signal to govern entry.
+        </p>
+
+        <p>
+          Rather than treating projection as immaturity, wishful thinking, or denial, this volume rewrites it as a lawful entry-state generated by boundary physics under reduced visibility.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the projection-physics and occlusion layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          Projection begins when the boundary system shifts into single-input mode. At that moment, two operations occur simultaneously:
+        </p>
+
+        <ol class="number-list">
+          <li>Spotlight undergoes temporary shutdown</li>
+          <li>ambient visibility decreases across the room</li>
+        </ol>
+
+        <p>
+          Once these two adjustments align, external signals lose priority and no longer govern the room. The only available dominant signal becomes the internally assembled composite image generated from Positions 1, 2, and 4.
+        </p>
+
+        <p class="mono-line">
+          This image is not wishful thinking.<br>
+          It is the mechanical consequence of a boundary configuration that has reduced the room to a single luminous source.
+        </p>
+
+        <p>
+          The volume then formalizes the table-surface as the first stable integration layer of projection.
+        </p>
+
+        <p>
+          The table-surface is:
+        </p>
+
+        <ul class="bullet-list">
+          <li>not a metaphor</li>
+          <li>not a narrative object</li>
+          <li>not an interpersonal construct</li>
+        </ul>
+
+        <p>
+          It is a mechanical integration layer whose function is to hold all active symbolic material from Positions 1, 2, and 4 in one stable location while the room operates with reduced visibility.
+        </p>
+
+        <p>
+          Its three operations are:
+        </p>
+
+        <ol class="number-list">
+          <li><strong>Stabilization</strong><br>fragmented symbolic loads are placed onto one stable plane</li>
+          <li><strong>Exposure</strong><br>all active symbolic loads remain spatially visible together</li>
+          <li><strong>Interference Detection</strong><br>later deviation on the plane becomes detectable, including Position-3 leakage and the earliest mismatch between projection and reality</li>
+        </ol>
+
+        <p>
+          The volume next formalizes the ice-water event.
+        </p>
+
+        <p>
+          Once projection begins, the room is operating under a single-input regime. This regime can sustain Δ-driven imagery, but it is too narrow to process reality on its own. To prevent total detachment, the system inserts one mandatory correction signal:
+        </p>
+
+        <p class="mono-line">
+          the ice-water event
+        </p>
+
+        <p>
+          The ice-water event is:
+        </p>
+
+        <ul class="bullet-list">
+          <li>not emotional</li>
+          <li>not symbolic</li>
+          <li>not interpretive</li>
+        </ul>
+
+        <p>
+          It is the only permitted reality marker during projection.
+        </p>
+
+        <p>
+          It always appears at Position 3 because:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Position 3 is the reservoir of unresolved material</li>
+          <li>load from Positions 1, 2, and 4 funnels pressure into Position 3</li>
+          <li>only Position 3 can generate correction without interrupting the projector</li>
+        </ul>
+
+        <p>
+          The signal appears as:
+        </p>
+
+        <ul class="bullet-list">
+          <li>cold</li>
+          <li>moisture</li>
+          <li>spreading liquid</li>
+          <li>tactile discomfort</li>
+        </ul>
+
+        <p>
+          It carries no narrative and no conclusion. It marks the earliest physical discontinuity between projection and environment.
+        </p>
+
+        <p>
+          The volume then formalizes the delay of reality registration.
+        </p>
+
+        <p>
+          During projection, the room enters two simultaneous states:
+        </p>
+
+        <ol class="number-list">
+          <li>high-intensity internal imagery</li>
+          <li>low-access boundary perception</li>
+        </ol>
+
+        <p>
+          This creates a computational bottleneck:
+        </p>
+
+        <ul class="bullet-list">
+          <li>the room detects discomfort</li>
+          <li>but cannot yet decode what that discomfort means</li>
+        </ul>
+
+        <p>
+          Projection continues because:
+        </p>
+
+        <ul class="bullet-list">
+          <li>the projector monopolizes internal brightness</li>
+          <li>boundary sensors operate at reduced bandwidth</li>
+          <li>the room cannot safely abort projection while Positions 1, 2, and 4 remain synchronized</li>
+        </ul>
+
+        <p class="mono-line">
+          This delay is not psychological.<br>
+          It is a mechanical consequence of projection dominance under temporary Spotlight suppression.
+        </p>
+
+        <p>
+          The volume next formalizes boundary impairment under projection load.
+        </p>
+
+        <p>
+          Once projection is active, the room temporarily loses the capacity to discriminate projected imagery from environmental input.
+        </p>
+
+        <p>
+          This happens because:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Spotlight shutdown prevents environmental prioritization</li>
+          <li>projector illumination reroutes internal structure as if it were external evidence</li>
+          <li>ice-water remains the only physical signal still admitted</li>
+          <li>the room behaves as a single-source field</li>
+          <li>multi-source comparison cannot initialize</li>
+        </ul>
+
+        <p class="mono-line">
+          Projection therefore does not reject reality.<br>
+          It outcompetes it.
+        </p>
+
+        <p>
+          The volume then defines the projection occlusion state.
+        </p>
+
+        <p>
+          Occlusion is a single-channel reality model in which:
+        </p>
+
+        <ul class="bullet-list">
+          <li>imagery receives full attentional bandwidth</li>
+          <li>real-world discrepancies cannot compete for weighting</li>
+          <li>cross-checking loops cannot initialize</li>
+        </ul>
+
+        <p>
+          Inside occlusion:
+        </p>
+
+        <ul class="bullet-list">
+          <li>no internal regulator can classify projection as error</li>
+          <li>only ice-water can breach the field</li>
+          <li>projection cannot end voluntarily</li>
+          <li>termination occurs only when discomfort crosses threshold, Spotlight reactivates, and multi-source comparison returns</li>
+        </ul>
+
+        <p>
+          Occlusion is therefore adaptive rather than pathological. It allows intimacy-entry to begin under simplified conditions before full comparison becomes available.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major projection-physics layer of the intimacy architecture.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain early intimacy if it assumes contact begins with full reality-processing. It must also specify the temporary single-input configuration that lets the room simplify the field, stabilize entry, and admit reality only through a narrow physical correction channel.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of Volumes XI–XII and upstream of later projection breakdown, heat accumulation, leakage dynamics, Bartender delay, and automatic shutdown. It transforms projection from a clinical label into a lawful boundary state.
+        </p>
+
+        <p>
+          Without Volume XIV, the system can describe boundary opening and entry conditions. With Volume XIV, the system can explain:
+        </p>
+
+        <ul class="bullet-list">
+          <li>why projection begins</li>
+          <li>why the table-surface is necessary</li>
+          <li>why reality first appears only through ice-water</li>
+          <li>why discomfort enters before meaning</li>
+          <li>why projection cannot terminate from inside itself</li>
+          <li>why occlusion persists until structural threshold crossing</li>
+        </ul>
+
+        <p class="mono-line">
+          Projection is therefore not fantasy.<br>
+          It is boundary physics under temporary single-input dominance.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">projection</span>
+          <span class="keyword">single-input mode</span>
+          <span class="keyword">table-surface</span>
+          <span class="keyword">ice-water event</span>
+          <span class="keyword">projection occlusion</span>
+          <span class="keyword">Spotlight shutdown</span>
+          <span class="keyword">ambient visibility decrease</span>
+          <span class="keyword">Position 3 leakage</span>
+          <span class="keyword">reality marker</span>
+          <span class="keyword">delayed reality registration</span>
+          <span class="keyword">boundary impairment</span>
+          <span class="keyword">multi-source comparison</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-14.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-13.html">Volume XIII</a></li>
+          <li>Next volume — <a href="./volume-15.html">Volume XV</a></li>
+          <li><a href="./expansion-volumes/">Back to Expansion Volumes</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
