@@ -62,7 +62,6 @@
     .topband-inner {
       max-width: var(--max);
       margin: 0 auto;
-      position: relative;
     }
 
     .wordmark {
@@ -75,55 +74,18 @@
       margin-bottom: 16px;
     }
 
-    .contact-badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 2px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
-    }
-
-    .contact-badge:hover {
-      background: rgba(255,255,255,0.14);
-      border-color: rgba(255,255,255,0.28);
-      transform: translateY(-1px);
-    }
-
-    .contact-label {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.2;
-    }
-
-    .contact-email {
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: #fff;
-      line-height: 1.3;
-    }
-
     .search-row {
       display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
     }
 
     .search-form {
       width: 100%;
       max-width: 780px;
       display: flex;
+      flex: 1 1 780px;
     }
 
     .search-form input {
@@ -153,6 +115,52 @@
       font-size: 0.92rem;
       font-weight: 700;
       cursor: pointer;
+    }
+
+    .topband-contact {
+      flex: 0 0 auto;
+      min-width: 280px;
+      padding-top: 2px;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: rgba(255,255,255,0.96);
+      line-height: 1.45;
+    }
+
+    .contact-label {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.68);
+      min-width: 58px;
+      flex: 0 0 auto;
+    }
+
+    .contact-value {
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.96);
+      word-break: break-word;
+    }
+
+    .contact-value a {
+      color: rgba(255,255,255,0.96);
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
     }
 
     .info-strip {
@@ -588,16 +596,17 @@
       margin-bottom: 4px;
     }
 
-    @media (max-width: 1180px) {
-      .contact-badge {
-        position: static;
-        display: inline-flex;
-        align-items: flex-start;
-        margin-bottom: 14px;
-      }
-    }
-
     @media (max-width: 1024px) {
+      .search-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .topband-contact {
+        min-width: 0;
+        padding-top: 0;
+      }
+
       .page {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -656,14 +665,14 @@
         grid-template-columns: 1fr;
       }
 
-      .contact-badge {
-        width: 100%;
+      .contact-line {
+        flex-direction: column;
+        gap: 2px;
         align-items: flex-start;
       }
 
-      .contact-email {
-        font-size: 0.84rem;
-        word-break: break-all;
+      .contact-label {
+        min-width: 0;
       }
     }
   </style>
@@ -674,16 +683,25 @@
       <div class="topband-inner">
         <a class="wordmark" href="./index.html">Symbolic Mechanics</a>
 
-        <a class="contact-badge" href="mailto:eidosan013135@hotmail.com">
-          <span class="contact-label">Contact</span>
-          <span class="contact-email">eidosan013135@hotmail.com</span>
-        </a>
-
         <div class="search-row">
           <form class="search-form" action="./publications/" method="get">
             <input type="search" name="q" placeholder="Search volumes, modules, specifications...">
             <button type="submit">Search</button>
           </form>
+
+          <div class="topband-contact">
+            <div class="contact-card">
+              <div class="contact-line">
+                <span class="contact-label">Email</span>
+                <span class="contact-value"><a href="mailto:eidosan013135@hotmail.com">eidosan013135@hotmail.com</a></span>
+              </div>
+
+              <div class="contact-line">
+                <span class="contact-label">Zenodo</span>
+                <span class="contact-value">namyanyi2003</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -868,7 +886,7 @@
               <div class="release-top">
                 <span class="release-tag">Volume</span>
                 <span class="release-date">Public release</span>
-                <a class="release-open" href="./volume-19.md">Open</a>
+                <a class="release-open" href="./volume-19.html">Open</a>
               </div>
               <h3>Volume XIX — The Grand Hall, Scene-Shift Mechanics, and the Clown as the Deep Engine</h3>
               <p>
@@ -879,7 +897,7 @@
                 <span>Deep runtime</span>
                 <span>Grand Hall layer</span>
                 <span>Release trail</span>
-                <a href="./volume-19.md">Read</a>
+                <a href="./volume-19.html">Read</a>
               </div>
             </article>
 
@@ -887,7 +905,7 @@
               <div class="release-top">
                 <span class="release-tag">Volume</span>
                 <span class="release-date">Public release</span>
-                <a class="release-open" href="./volume-20.md">Open</a>
+                <a class="release-open" href="./volume-20.html">Open</a>
               </div>
               <h3>Volume XX — The Firefly, Post-Shame Survival Navigation, and the Compensation Vector</h3>
               <p>
@@ -898,7 +916,7 @@
                 <span>Post-shame survival</span>
                 <span>Primitive navigation</span>
                 <span>Release trail</span>
-                <a href="./volume-20.md">Read</a>
+                <a href="./volume-20.html">Read</a>
               </div>
             </article>
 
