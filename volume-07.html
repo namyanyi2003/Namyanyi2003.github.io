@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume VII: Attraction Tension Mechanics</title>
+  <meta name="description" content="Volume VII of Symbolic Mechanics. Attraction Tension Mechanics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 5.7vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 14ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list,
+    .nav-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li,
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker,
+    .nav-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./publications/">Volumes I–X</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume VII</p>
+      <h1>Symbolic Mechanics — Volume VII: Attraction Tension Mechanics</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">VII</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Attraction-tension and oscillatory field layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe attraction as emotion, preference, chemistry, or sexual interest, but do not specify the mechanical field conditions under which attraction becomes persistent tension.
+        </p>
+
+        <p>
+          Volume VII formalizes that missing layer by defining attraction tension not as a psychological state, but as a force-pattern generated when visibility asymmetry, boundary invariance, structural homology, and existence-load modulation overlap inside the same interaction field.
+        </p>
+
+        <p>
+          Rather than treating attraction as feeling, familiarity, or narrative significance, this volume rewrites it as a deterministic oscillatory output of four interacting structural variables.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the attraction-tension layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          The volume begins from a strict reclassification: attraction tension is not relational, affective, or interpersonal in origin. It is a mechanical output generated by four variables established in prior layers:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Visibility Differential (ΔV)</strong><br>
+            The difference in symbolic visibility between two systems. Low visibility implies symbolic fog, boundary expansion, and reduced access to weight differentiation.
+          </li>
+          <li>
+            <strong>Safety Radius (Rₛ)</strong><br>
+            The fixed structural boundary defined in Volume V. Rₛ cannot be altered by preference, intention, comfort, or attraction.
+          </li>
+          <li>
+            <strong>Exit Homology (Eₕ)</strong><br>
+            Structural similarity in dominant exit-path usage, especially persistent reliance on Exit-2 (delay, suppression, avoidance). This creates matching overload rhythms, compatible defensive routing, and symbolic echo.
+          </li>
+          <li>
+            <strong>Existence-Compensation Load (Eₓ)</strong><br>
+            The compensatory load activated when symbolic weight becomes unreadable. Eₓ does not create attraction by itself, but it amplifies forward pull once another system is detected as a possible stabilizing reference.
+          </li>
+        </ol>
+
+        <p>
+          The formal field definition of the volume is:
+        </p>
+
+        <p class="mono-line">
+          Attraction Tension = f(ΔV, Rₛ, Eₕ, Eₓ)
+        </p>
+
+        <p>
+          The volume then establishes the minimal conditions of the field:
+        </p>
+
+        <ul class="bullet-list">
+          <li>ΔV activates differential orientation</li>
+          <li>Rₛ prevents that orientation from resolving through simple approach</li>
+          <li>Eₕ magnifies persistence by structural recognizability</li>
+          <li>Eₓ increases the amplitude of the forward term once the field is active</li>
+        </ul>
+
+        <p>
+          Attraction tension emerges only when the first three conditions co-exist, with Eₓ acting as amplitude modulation.
+        </p>
+
+        <p>
+          The volume formalizes the process of field formation in stages:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Visibility Differential as the Triggering Condition</strong><br>
+            When two systems possess different visibility levels, the contrast itself generates a displacement signal. This is not thought or interpretation. It is a structural registration of resolution asymmetry.
+          </li>
+        </ol>
+
+        <p>
+          Large ΔV intensifies unreadability in the lower-visibility system, which automatically activates existence-compensation and produces a forward stabilizing vector.
+        </p>
+
+        <ol class="number-list" start="2">
+          <li>
+            <strong>Safety Radius Converts Pull into Tension</strong>
+          </li>
+        </ol>
+
+        <p>
+          Without Rₛ, ΔV would produce simple movement toward the higher-resolution system.
+        </p>
+
+        <p>
+          With Rₛ fixed and non-negotiable:
+        </p>
+
+        <ul class="bullet-list">
+          <li>approach impulse rises</li>
+          <li>boundary reflex rises in parallel</li>
+          <li>approach and retreat coexist</li>
+        </ul>
+
+        <p>
+          Attraction does not compress Rₛ.<br>
+          Rₛ does not relax because of attraction.
+        </p>
+
+        <p>
+          This creates the first contradiction:
+        </p>
+
+        <ul class="bullet-list">
+          <li>strong impulse to move forward</li>
+          <li>simultaneous structural prohibition against moving forward</li>
+        </ul>
+
+        <p>
+          Tension begins here.
+        </p>
+
+        <ol class="number-list" start="3">
+          <li>
+            <strong>Exit Homology Magnifies the Field</strong>
+          </li>
+        </ol>
+
+        <p>
+          When two systems share the same dominant exit—especially Exit-2—the system detects structural similarity:
+        </p>
+
+        <ul class="bullet-list">
+          <li>similar overload routing</li>
+          <li>similar suppression logic</li>
+          <li>similar oscillation patterns</li>
+        </ul>
+
+        <p>
+          This is not empathy or emotional resonance. It is structural recognizability.
+        </p>
+
+        <p>
+          Exit homology increases both:
+        </p>
+
+        <ul class="bullet-list">
+          <li>pull, because the configuration appears mechanically legible</li>
+          <li>risk, because similar overloaded exits amplify each other rather than dilute tension</li>
+        </ul>
+
+        <p>
+          Thus homology does not create attraction.<br>
+          It magnifies attraction into tension.
+        </p>
+
+        <ol class="number-list" start="4">
+          <li>
+            <strong>Formation of the Oscillatory Field</strong>
+          </li>
+        </ol>
+
+        <p>
+          The volume formalizes two field-vectors:
+        </p>
+
+        <ul class="bullet-list">
+          <li><strong>Approach Vector (F₁)</strong><br>Produced by visibility differential, structural compatibility, and existence-load modulation.</li>
+          <li><strong>Retreat Vector (F₂)</strong><br>Produced by safety radius and predicted overload.</li>
+        </ul>
+
+        <p>
+          More formally:
+        </p>
+
+        <p class="mono-line">
+          F₁ ∝ (ΔV × Structural Compatibility) + Eₓ<br>
+          F₂ ∝ Rₛ × Predicted Overload
+        </p>
+
+        <p>
+          When F₁ and F₂ become comparable in magnitude, the system enters an oscillatory state:
+        </p>
+
+        <ul class="bullet-list">
+          <li>micro-approach</li>
+          <li>boundary activation</li>
+          <li>micro-retreat</li>
+          <li>renewed forward reactivation</li>
+        </ul>
+
+        <p>
+          This is not ambivalence.<br>
+          It is mechanical oscillation.
+        </p>
+
+        <ol class="number-list" start="5">
+          <li>
+            <strong>Full Composite Equation</strong>
+          </li>
+        </ol>
+
+        <p>
+          When all four variables are active simultaneously:
+        </p>
+
+        <ul class="bullet-list">
+          <li>ΔV generates orientation</li>
+          <li>Rₛ blocks resolution by approach</li>
+          <li>Eₕ sustains persistence</li>
+          <li>Eₓ amplifies forward magnitude</li>
+        </ul>
+
+        <p>
+          The result is a closed oscillatory field:
+        </p>
+
+        <p class="mono-line">
+          T = Oscillation(F₁, F₂)
+        </p>
+
+        <p>
+          More explicitly:
+        </p>
+
+        <p class="mono-line">
+          Attraction Tension = f(ΔV × Eₕ, Rₛ, Eₓ)
+        </p>
+
+        <p>
+          This is the full field model of the volume.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major attraction-field layer of the system.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain attraction fully if it only models burden, visibility collapse, boundary geometry, and existence-compensation separately. It must also specify the exact field condition under which these variables converge into persistent unresolved oscillation.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of Volume V and Volume VI and upstream of later intimacy, projection, and relational-entry mechanics. It changes the theory of attraction from emotional interpretation to structural field physics.
+        </p>
+
+        <p>
+          Without Volume VII, the system can describe:
+        </p>
+
+        <ul class="bullet-list">
+          <li>unreadability</li>
+          <li>existence-compensation</li>
+          <li>fixed safety boundaries</li>
+        </ul>
+
+        <p>
+          With Volume VII, the system can explain:
+        </p>
+
+        <ul class="bullet-list">
+          <li>why attraction appears without interaction</li>
+          <li>why attraction persists without contact</li>
+          <li>why approach and retreat intensify together</li>
+          <li>why “chemistry” is actually oscillatory field output</li>
+        </ul>
+
+        <p>
+          The final principle of the volume is strict:
+        </p>
+
+        <p>
+          If any major variable is absent, the field weakens or collapses:
+        </p>
+
+        <ul class="bullet-list">
+          <li>ΔV = 0 → no primary orientation</li>
+          <li>Rₛ = 0 → no counterforce, therefore no tension</li>
+          <li>Eₕ = 0 → reduced persistence, weaker continuity</li>
+          <li>Eₓ = 0 → reduced amplitude of forward pull</li>
+        </ul>
+
+        <p>
+          Only simultaneous activation produces full attraction tension.
+        </p>
+
+        <p>
+          Attraction tension is therefore not emotional conflict, sexual motivation, or interpersonal narrative. It is the direct mechanical outcome of:
+        </p>
+
+        <ul class="bullet-list">
+          <li>visibility physics</li>
+          <li>boundary physics</li>
+          <li>routing homology</li>
+          <li>existence-compensation dynamics</li>
+        </ul>
+
+        <p>
+          integrated into a single oscillatory system.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">attraction tension</span>
+          <span class="keyword">visibility differential</span>
+          <span class="keyword">ΔV</span>
+          <span class="keyword">safety radius</span>
+          <span class="keyword">Rₛ</span>
+          <span class="keyword">exit homology</span>
+          <span class="keyword">Eₕ</span>
+          <span class="keyword">existence-compensation load</span>
+          <span class="keyword">Eₓ</span>
+          <span class="keyword">oscillatory field</span>
+          <span class="keyword">approach vector</span>
+          <span class="keyword">retreat vector</span>
+          <span class="keyword">structural recognizability</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-07.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-06.html">Volume VI</a></li>
+          <li>Next volume — <a href="./volume-08.html">Volume VIII</a></li>
+          <li><a href="./publications/">Back to Volumes I–X</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
