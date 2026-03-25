@@ -25,6 +25,7 @@
       --bg: #f5f4f0;
       --surface: #ffffff;
       --surface-soft: #f8f6f2;
+      --surface-soft-2: #f2eee8;
       --text: #1a1a18;
       --muted: #666e79;
       --line: #ddd6cb;
@@ -76,16 +77,12 @@
 
     .search-row {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 28px;
     }
 
     .search-form {
       width: 100%;
       max-width: 780px;
       display: flex;
-      flex: 1 1 780px;
     }
 
     .search-form input {
@@ -115,52 +112,6 @@
       font-size: 0.92rem;
       font-weight: 700;
       cursor: pointer;
-    }
-
-    .topband-contact {
-      flex: 0 0 auto;
-      min-width: 280px;
-      padding-top: 2px;
-    }
-
-    .contact-card {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .contact-line {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      color: rgba(255,255,255,0.96);
-      line-height: 1.45;
-    }
-
-    .contact-label {
-      font-size: 0.67rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.68);
-      min-width: 58px;
-      flex: 0 0 auto;
-    }
-
-    .contact-value {
-      font-size: 0.86rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.96);
-      word-break: break-word;
-    }
-
-    .contact-value a {
-      color: rgba(255,255,255,0.96);
-    }
-
-    .contact-value a:hover {
-      text-decoration: underline;
     }
 
     .info-strip {
@@ -451,6 +402,149 @@
       text-decoration: underline;
     }
 
+    .prototype-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .prototype-card {
+      background: var(--surface);
+      border: 1px solid var(--line-soft);
+      border-radius: 12px;
+      padding: 24px 24px 22px;
+    }
+
+    .prototype-card h3 {
+      font-size: 1.18rem;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .prototype-card p {
+      font-size: 0.92rem;
+      line-height: 1.78;
+      color: var(--muted);
+    }
+
+    .prototype-note {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: var(--surface-soft-2);
+      border: 1px solid var(--line-soft);
+      border-radius: 12px;
+      color: var(--text);
+      font-size: 0.9rem;
+      line-height: 1.72;
+    }
+
+    .prototype-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .prototype-list li {
+      font-size: 0.9rem;
+      line-height: 1.72;
+      color: var(--text);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .prototype-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .prototype-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .prototype-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+    }
+
+    .prototype-btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .prototype-btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .prototype-btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .prototype-btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .status-panel {
+      position: sticky;
+      top: 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px 22px 20px;
+    }
+
+    .status-panel h3 {
+      font-size: 1.16rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .status-panel p {
+      font-size: 0.9rem;
+      line-height: 1.72;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .status-lines {
+      display: grid;
+      gap: 10px;
+    }
+
+    .status-line {
+      padding: 12px 14px;
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      background: var(--surface-soft);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .status-line strong {
+      color: var(--navy);
+    }
+
     .recent-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 280px;
@@ -597,16 +691,6 @@
     }
 
     @media (max-width: 1024px) {
-      .search-row {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .topband-contact {
-        min-width: 0;
-        padding-top: 0;
-      }
-
       .page {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -618,10 +702,12 @@
       }
 
       .hero-grid,
+      .prototype-layout,
       .recent-layout {
         grid-template-columns: 1fr;
       }
 
+      .status-panel,
       .archive-panel {
         position: static;
       }
@@ -664,16 +750,6 @@
       .entry-grid {
         grid-template-columns: 1fr;
       }
-
-      .contact-line {
-        flex-direction: column;
-        gap: 2px;
-        align-items: flex-start;
-      }
-
-      .contact-label {
-        min-width: 0;
-      }
     }
   </style>
 </head>
@@ -688,20 +764,6 @@
             <input type="search" name="q" placeholder="Search volumes, modules, specifications...">
             <button type="submit">Search</button>
           </form>
-
-          <div class="topband-contact">
-            <div class="contact-card">
-              <div class="contact-line">
-                <span class="contact-label">Email</span>
-                <span class="contact-value"><a href="mailto:eidosan013135@hotmail.com">eidosan013135@hotmail.com</a></span>
-              </div>
-
-              <div class="contact-line">
-                <span class="contact-label">Zenodo</span>
-                <span class="contact-value">namyanyi2003</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -711,8 +773,8 @@
         <span>Public release</span>
         <span>Volumes I–XX available</span>
         <span>Canonical specification</span>
+        <span>Prototype bridge available</span>
         <span>Archive-backed publication path</span>
-        <span>Versioned public record</span>
       </div>
     </div>
 
@@ -722,6 +784,7 @@
         <a href="./publications/">Volumes I–X</a>
         <a href="./expansion-volumes/">Volumes XI–XX</a>
         <a href="./canonical-specification-volumes-01-20/">Specification</a>
+        <a href="./prototype-prep-v0-1.html">Prototype Prep</a>
         <a href="./for-researchers/">Research</a>
         <a href="./publications/">Archive</a>
       </nav>
@@ -733,10 +796,11 @@
       <section class="filter-box">
         <div class="filter-head">Record type</div>
         <ul class="filter-list">
-          <li><span>All records</span><span class="badge">25</span></li>
+          <li><span>All records</span><span class="badge">24</span></li>
           <li><span>Volume</span><span class="badge">20</span></li>
           <li><span>Specification</span><span class="badge">1</span></li>
           <li><span>Research</span><span class="badge">2</span></li>
+          <li><span>Prototype</span><span class="badge">1</span></li>
         </ul>
       </section>
 
@@ -763,7 +827,7 @@
       <section class="filter-box">
         <div class="filter-head">Access</div>
         <ul class="filter-list">
-          <li><span>Open access</span><span class="badge">25</span></li>
+          <li><span>Open access</span><span class="badge">24</span></li>
         </ul>
       </section>
     </aside>
@@ -780,7 +844,8 @@
             </p>
             <p class="hero-support">
               A multi-volume symbolic runtime architecture with public reading paths,
-              canonical specification, versioned archive structure, and researcher-oriented entry routes.
+              canonical specification, versioned archive structure, researcher-oriented entry routes,
+              and a frozen prototype bridge for executable implementation.
             </p>
           </div>
 
@@ -797,7 +862,7 @@
 
             <div class="hero-panel-row">
               <div class="hero-panel-label">Available now</div>
-              <div class="hero-panel-text">Volumes I–XX / Canonical specification / Public archive record</div>
+              <div class="hero-panel-text">Volumes I–XX / Canonical specification / Prototype bridge / Public archive record</div>
             </div>
 
             <div class="hero-panel-row">
@@ -807,7 +872,7 @@
 
             <div class="hero-panel-row">
               <div class="hero-panel-label">Current public release</div>
-              <div class="hero-panel-text">Volumes I–XX with integrated engine specification</div>
+              <div class="hero-panel-text">Volumes I–XX with integrated engine specification and Prototype Prep v0.1</div>
             </div>
           </aside>
         </div>
@@ -857,6 +922,56 @@
 
       <section class="section">
         <div class="section-head">
+          <p class="eyebrow">Prototype bridge</p>
+          <h2>Prototype Prep v0.1</h2>
+        </div>
+
+        <div class="prototype-layout">
+          <article class="prototype-card">
+            <h3>The first frozen bridge from Symbolic Mechanics theory to executable structure</h3>
+            <p>
+              Prototype Prep v0.1 is not a complete Human OS.
+              It is the first reduced executable bridge of Symbolic Mechanics: a minimal runnable spine designed to preserve the canonical cycle in a form that can already be manually executed, simulated, tested for conformance, handed to builders, and attached to benchmark comparison.
+            </p>
+
+            <div class="prototype-note">
+              This line is intentionally narrow. It does not claim full implementation completion.
+              Its role is to freeze the smallest buildable deterministic spine clearly enough for a disciplined first build pass.
+            </div>
+
+            <ul class="prototype-list">
+              <li>minimal runnable spine</li>
+              <li>fixed variable vocabulary</li>
+              <li>Gold Traces and Conformance Matrix</li>
+              <li>Toy Simulator Blueprint</li>
+              <li>Benchmark-preparation bridge</li>
+            </ul>
+
+            <div class="prototype-actions">
+              <a class="prototype-btn prototype-btn-primary" href="./prototype-prep-v0-1.html">Open Prototype Prep</a>
+              <a class="prototype-btn prototype-btn-secondary" href="./pdfs/prototype-prep-v01.pdf" target="_blank" rel="noopener">Download PDF</a>
+            </div>
+          </article>
+
+          <aside class="status-panel">
+            <p class="eyebrow">Current status</p>
+            <h3>Build-ready at the preparation layer</h3>
+            <p>
+              Prototype Prep v0.1 is frozen as an executable preparation line, not presented as a completed Human OS.
+            </p>
+
+            <div class="status-lines">
+              <div class="status-line"><strong>Closure class:</strong> Prepared-Closed</div>
+              <div class="status-line"><strong>Implementation line:</strong> Exploratory-Closed</div>
+              <div class="status-line"><strong>Benchmark layer:</strong> Benchmark-Prepared-Closed</div>
+              <div class="status-line"><strong>Readiness level:</strong> Level 2 — Build Ready</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
           <p class="eyebrow">Recent releases</p>
           <h2>Recent public layers</h2>
         </div>
@@ -888,7 +1003,7 @@
                 <span class="release-date">Public release</span>
                 <a class="release-open" href="./volume-19.html">Open</a>
               </div>
-              <h3>Volume XIX — The Grand Hall, Scene-Shift Mechanics, and the Clown as the Deep Engine</h3>
+              <h3>Volume XIX — The Grand Hall, Scene-Shifting, and the Clown as the System’s Deep Engine</h3>
               <p>
                 Hall-scale engine architecture, scene-shifting continuity, dark-run recurrence,
                 and deep-engine governance within the system’s larger operating environment.
@@ -907,7 +1022,7 @@
                 <span class="release-date">Public release</span>
                 <a class="release-open" href="./volume-20.html">Open</a>
               </div>
-              <h3>Volume XX — The Firefly, Post-Shame Survival Navigation, and the Compensation Vector</h3>
+              <h3>Volume XX — The Firefly, Primitive Survival Navigation, and the Post-Shame Survival Triad</h3>
               <p>
                 Primitive navigational signalling, post-shame continuation, system switching,
                 and long-range compensation-vector formation after catastrophic rupture.
@@ -945,15 +1060,16 @@
             <h3>Why this archive matters</h3>
             <p>
               This website serves as the curated entry layer. Public releases are versioned,
-              archived, and organized for reading continuity, research access, and citation-oriented use.
+              archived, and organized for reading continuity, research access, executable entry,
+              and citation-oriented use.
             </p>
             <ul>
               <li>Public record</li>
               <li>Versioned release path</li>
               <li>Canonical specification</li>
+              <li>Prototype bridge</li>
               <li>Archive-backed publication</li>
               <li>Research-oriented entry structure</li>
-              <li>Citation pathway</li>
             </ul>
           </aside>
         </div>
