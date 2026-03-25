@@ -4,319 +4,546 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Publications — Page 2 | Symbolic Mechanics</title>
-  <meta name="description" content="Volumes XI–XX of Symbolic Mechanics: intimacy-boundary computation, projection runtime, shame-origin architecture, clown deep-engine staging, and post-shame survival navigation.">
-  <link rel="stylesheet" href="./../style.css">
+  <meta name="description" content="Volumes XI–XX of Symbolic Mechanics. Deep runtime architecture, projection runtime, shame-origin mechanics, and post-collapse continuation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-2: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.68;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .pub-page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 42px 32px 88px;
+    }
+
+    .pub-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .pub-main {
+      min-width: 0;
+    }
+
+    .pub-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 40px 42px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .pub-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 6vw, 4.6rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+      color: var(--text);
+    }
+
+    .pub-lead {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.72;
+      max-width: 62ch;
+      margin-bottom: 18px;
+    }
+
+    .pub-summary {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.76;
+      max-width: 84ch;
+      margin-bottom: 28px;
+    }
+
+    .pub-action-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 920px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .pub-side {
+      position: sticky;
+      top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 24px 20px;
+    }
+
+    .pub-side h2 {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    .pub-side p {
+      font-size: 0.9rem;
+      line-height: 1.76;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .pub-side ul {
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .pub-side li {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      margin-bottom: 4px;
+    }
+
+    .pub-section {
+      margin-top: 48px;
+    }
+
+    .pub-section-head {
+      margin-bottom: 18px;
+    }
+
+    .pub-section-head h2 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .cluster-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .cluster-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 22px 20px;
+    }
+
+    .cluster-meta {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .cluster-card h3 {
+      font-family: var(--sans);
+      font-size: 1.18rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .cluster-card p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .volume-map {
+      display: grid;
+      gap: 14px;
+    }
+
+    .volume-row {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr) 170px;
+      gap: 22px;
+      align-items: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+
+    .volume-num {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+
+    .volume-main h3 {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .volume-role {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 8px;
+    }
+
+    .volume-main p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .volume-link {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 3px;
+    }
+
+    .volume-link a {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .volume-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1100px) {
+      .cluster-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .pub-shell {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .pub-side {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .pub-page {
+        padding: 28px 20px 64px;
+      }
+
+      .pub-hero {
+        padding: 26px 22px;
+      }
+
+      .pub-side {
+        padding: 20px 18px 18px;
+      }
+
+      .cluster-card {
+        padding: 18px 18px 16px;
+      }
+
+      .volume-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px 18px;
+      }
+
+      .volume-link {
+        justify-content: flex-start;
+        padding-top: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="./../index.html">Symbolic Mechanics</a>
-      <nav class="top-nav">
-        <a href="./../publications/">Volumes I–X</a>
-        <a href="./">Volumes XI–XX</a>
-        <a href="./../for-researchers/">For Researchers</a>
-        <a href="./../canonical-specification-volumes-01-20/">Canonical Spec</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
+  <main class="pub-page">
+    <div class="pub-shell">
+      <div class="pub-main">
+        <section class="pub-hero">
           <p class="eyebrow">Publications — Page 2</p>
           <h1>Volumes XI–XX</h1>
-          <p class="lead">
+
+          <p class="pub-lead">
             The deep runtime of intimacy, projection, shame, and post-collapse continuation.
           </p>
-          <p class="sublead">
+
+          <p class="pub-summary">
             These ten volumes extend the Symbolic Mechanics runtime into intimacy-boundary computation,
             parental force-parameterization, projection initiation, single-input projection physics,
-            projection thermodynamics, post-projection alarm locking, shame-origin rupture,
-            dark-field clown architecture, hall-scale recurrence, and post-shame survival navigation.
+            projection thermodynamics, post-projection alarm locking, shame-origin rupture, dark-field clown architecture,
+            hall-scale recurrence, and post-shame survival navigation.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="./../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-            <a class="btn btn-secondary" href="./../publications/">Open Volumes I–X</a>
-            <a class="btn btn-secondary" href="./../for-researchers/">For Researchers</a>
+          <div class="pub-action-stack">
+            <a class="btn btn-primary" href="../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
+            <a class="btn btn-secondary" href="../publications/">Open Volumes I–X</a>
+            <a class="btn btn-secondary" href="../for-researchers/">For Researchers</a>
           </div>
-        </div>
+        </section>
 
-        <aside class="hero-panel">
-          <h2>Why this page matters</h2>
-          <p class="panel-text">
-            These volumes do not merely extend the theory into “relationships.” They formalize the deep runtime
-            of intimacy, projection, shame, and post-collapse continuation — including how access opens, how
-            projection becomes mechanically necessary, how it overheats, how Alarm takes over, how shame becomes
-            residual architecture, and how the system continues navigating after ordinary self-structure fails.
-          </p>
-          <ul class="mini-list">
-            <li>Boundary opening</li>
-            <li>Projection runtime</li>
-            <li>Thermal breakdown</li>
-            <li>Shame-origin rupture</li>
-            <li>Primitive survival navigation</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Deep runtime map</p>
-          <h2>XI–XX architecture clusters</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">XI–XII</p>
-            <h3>Boundary Opening and Intimacy Entry Computation</h3>
-            <p>
-              The system computes how intimacy begins, how opening is permitted, how force becomes admissible,
-              and how parental force-distribution stabilizes into entry parameters.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">XIII–XVI</p>
-            <h3>Projection Runtime and Post-Projection Locking</h3>
-            <p>
-              The system generates a first optical image-field, sustains single-input projection,
-              overheats under thermal load, then reorganizes into Alarm-governed locking after collapse.
-            </p>
-          </article>
-
-          <article class="card featured">
-            <p class="card-kicker">XVII–XX</p>
-            <h3>Shame-Origin, Clown Architecture, and Survival Navigation</h3>
-            <p>
-              The system formalizes catastrophic shame as rupture-template, converts hidden residue into
-              agency-bearing dark-field architecture, then continues through Grand Hall recurrence and Firefly navigation.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Cluster I</p>
-          <h2>XI–XII · Boundary Opening and Intimacy Entry</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Volume XI</p>
-            <h3>Intimacy as a Boundary Event, V × G Opening, and Δ Directional Alignment</h3>
-            <p><strong>Boundary-opening and gate-configuration layer</strong></p>
-            <p>
-              Most theories describe intimacy as openness, attachment style, or emotional closeness,
-              but do not specify the mechanical boundary event through which intimacy actually begins.
-              Volume XI formalizes that missing opening layer by modelling intimacy as a
-              <strong>V × G boundary event</strong>, assigning <strong>Δ</strong> directional authority
-              only after opening becomes possible, and showing how closure generates Return Load when visibility rises again.
-            </p>
-            <a class="card-link" href="./../volume-11.md">Open Volume XI</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XII</p>
-            <h3>Force Distribution, Boundary Parameters, and the Mechanics of Intimacy Entry</h3>
-            <p><strong>Boundary-parameterization and entry-selection layer</strong></p>
-            <p>
-              Most theories describe intimacy boundaries through attachment or temperament, but do not specify
-              how the room acquires the parameters that govern entry. Volume XII formalizes that missing parameter
-              layer by modelling parents as generators of <strong>V</strong>, <strong>G</strong>, and
-              <strong>A_th</strong>, showing how force distribution is first mapped and later fixed through
-              adolescent recalibration, and defining adult intimacy as execution on steady-state boundary parameters.
-            </p>
-            <a class="card-link" href="./../volume-12.md">Open Volume XII</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Cluster II</p>
-          <h2>XIII–XVI · Projection Runtime and Post-Projection Locking</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Volume XIII</p>
-            <h3>Projection, the Projector, and the First Optical Event of Intimacy</h3>
-            <p><strong>Projection-initiation and optical-entry layer</strong></p>
-            <p>
-              Most theories describe projection as fantasy or distortion, but do not specify the mechanical function
-              projection serves at the beginning of intimacy. Volume XIII formalizes that missing optical-entry layer
-              by modelling projection as the room’s first internally generated image-field, using the projector and
-              a placeholder interface to allow contact before full reality-processing becomes available.
-            </p>
-            <a class="card-link" href="./../volume-13.md">Open Volume XIII</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XIV</p>
-            <h3>Projection as Single-Input Boundary Physics, the Table-Surface, and Reality Occlusion</h3>
-            <p><strong>Single-input projection and occlusion layer</strong></p>
-            <p>
-              Most theories describe projection as idealization or misreading, but do not specify the boundary condition
-              under which projection becomes mechanically self-sustaining. Volume XIV formalizes that missing
-              projection-physics layer by modelling single-input mode, table-surface integration, ice-water correction,
-              and occlusion as the mechanics that temporarily let one internal image outrank the rest of reality.
-            </p>
-            <a class="card-link" href="./../volume-14.md">Open Volume XIV</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XV</p>
-            <h3>Projection Breakdown, Thermal Overload, and the Closed Mechanical Loop</h3>
-            <p><strong>Projection-breakdown and thermal-overload layer</strong></p>
-            <p>
-              Most theories describe relational rupture or disillusionment as emotional disappointment,
-              but do not specify the closed loop by which a projected world breaks down. Volume XV formalizes
-              that missing breakdown layer by modelling projector heat, Position-3 melt, vapor pressure,
-              Bartender delay, and automatic shutdown as the deterministic thermal endpoint of single-input intimacy.
-            </p>
-            <a class="card-link" href="./../volume-15.md">Open Volume XV</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XVI</p>
-            <h3>Alarm Takeover, Mirrored Alarm Recruitment, and Symbolic Locking</h3>
-            <p><strong>Post-projection alarm-governance layer</strong></p>
-            <p>
-              Most theories describe the aftermath of collapse as shock, panic, or conflict, but do not specify
-              the first governing state that appears once projection has shut down. Volume XVI formalizes that
-              missing post-projection layer by modelling Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking
-              as the mechanics that govern the room when projection ends but the symbolic field remains seated and active.
-            </p>
-            <a class="card-link" href="./../volume-16.md">Open Volume XVI</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Cluster III</p>
-          <h2>XVII–XX · Shame-Origin, Clown Architecture, and Post-Shame Navigation</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Volume XVII</p>
-            <h3>Catastrophic Shame, the Shadow-Child, and the First Rupture Template of Intimate Selection</h3>
-            <p><strong>Shame-origin and rupture-template layer</strong></p>
-            <p>
-              Most theories describe shame as emotion, self-evaluation, or wounded identity, but do not specify
-              the deeper structural break from which shame-driven mechanics arise. Volume XVII formalizes that
-              missing origin layer by modelling catastrophic shame as the first misalignment among Self-Body,
-              SCr, and Inner System, and by defining the Shadow-Child as the residual rupture artifact that later
-              organizes intimate recognition.
-            </p>
-            <a class="card-link" href="./../volume-17.md">Open Volume XVII</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XVIII</p>
-            <h3>The Clown Subsystem, Dark-Field Action-Formation, and the Search for the Original Shame Source</h3>
-            <p><strong>Shadow–clown subsystem and lighting-governance layer</strong></p>
-            <p>
-              Most theories describe masking, defensive performance, or fixation in emotional terms, but do not specify
-              the agency-capable subsystem that forms after shame disappears into the dark field. Volume XVIII formalizes
-              that missing subsystem layer by modelling the Clown as shame converted into agency, with root access
-              to lighting architecture, attraction locking, and rupture-pattern search.
-            </p>
-            <a class="card-link" href="./../volume-18.md">Open Volume XVIII</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XIX</p>
-            <h3>The Grand Hall, Scene-Shift Mechanics, and the Clown as the Deep Engine</h3>
-            <p><strong>Grand-hall and deep-engine layer</strong></p>
-            <p>
-              Most theories describe role-shifting, avoidance, or cyclical return in narrative or personality terms,
-              but do not specify the architecture in which large-scale scene movement occurs. Volume XIX formalizes
-              that missing hall-scale engine layer by modelling the Grand Hall as the system’s real operating
-              environment and the Clown as the deep engine that governs scene-shifting, dark-run continuity,
-              and repeated return to the intimacy stage.
-            </p>
-            <a class="card-link" href="./../volume-19.md">Open Volume XIX</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volume XX</p>
-            <h3>The Firefly, Post-Shame Survival Navigation, and the Formation of the Compensation Vector</h3>
-            <p><strong>Primitive navigational and post-shame survival layer</strong></p>
-            <p>
-              Most theories describe instinct, intuition, or hope in reflective terms, but do not specify the minimal
-              directional signal that survives after higher-order structure collapses. Volume XX formalizes that missing
-              primitive layer by modelling the Firefly as the system’s post-shame compass and by defining the
-              Firefly–Clown–Self-Core triad as the architecture that enables survival navigation, switching,
-              and long-term compensation-vector formation.
-            </p>
-            <a class="card-link" href="./../volume-20.md">Open Volume XX</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Navigation</p>
-          <h2>Continue through the system</h2>
-        </div>
-
-        <div class="path-grid">
-          <div class="path-step">
-            <div class="step-num">1</div>
-            <div>
-              <h3>Back to Volumes I–X</h3>
-              <p>Return to the core runtime architecture.</p>
-              <a class="card-link" href="./../publications/">Open Page 1</a>
-            </div>
+        <section class="pub-section">
+          <div class="pub-section-head">
+            <p class="eyebrow">Deep runtime map</p>
+            <h2>XI–XX architecture clusters</h2>
           </div>
 
-          <div class="path-step">
-            <div class="step-num">2</div>
-            <div>
-              <h3>Open For Researchers</h3>
-              <p>View the researcher-facing overview and canonical entry points.</p>
-              <a class="card-link" href="./../for-researchers/">Open For Researchers</a>
-            </div>
+          <div class="cluster-grid">
+            <article class="cluster-card">
+              <p class="cluster-meta">XI–XII</p>
+              <h3>Boundary Opening and Intimacy Entry Computation</h3>
+              <p>
+                The system computes how intimacy begins, how opening is permitted,
+                how force becomes admissible, and how parental force-distribution stabilizes into entry parameters.
+              </p>
+            </article>
+
+            <article class="cluster-card">
+              <p class="cluster-meta">XIII–XVI</p>
+              <h3>Projection Runtime and Post-Projection Locking</h3>
+              <p>
+                The system generates a first optical image-field, sustains single-input projection,
+                overheats under thermal load, then reorganizes into Alarm-governed locking after collapse.
+              </p>
+            </article>
+
+            <article class="cluster-card">
+              <p class="cluster-meta">XVII–XX</p>
+              <h3>Shame-Origin, Clown Architecture, and Survival Navigation</h3>
+              <p>
+                The system formalizes catastrophic shame, dark-field agency formation,
+                hall-scale recurrence, and the primitive navigation layer that remains after collapse.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="pub-section">
+          <div class="pub-section-head">
+            <p class="eyebrow">Deep runtime volumes</p>
+            <h2>Volume-by-volume architecture map</h2>
           </div>
 
-          <div class="path-step">
-            <div class="step-num">3</div>
-            <div>
-              <h3>Open Canonical Specification</h3>
-              <p>Read the integrated engine-level consolidation of Volumes I–XX.</p>
-              <a class="card-link" href="./../canonical-specification-volumes-01-20/">Open Canonical Spec</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+          <div class="volume-map">
+            <article class="volume-row">
+              <div class="volume-num">Volume XI</div>
+              <div class="volume-main">
+                <h3>Intimacy as a Boundary Event, V × G Opening, and Δ Directional Alignment</h3>
+                <p class="volume-role">Boundary-opening and gate-configuration layer</p>
+                <p>Most theories describe intimacy as openness, attachment style, or emotional closeness, but do not specify the mechanical boundary event through which intimacy actually begins. Volume XI formalizes that missing opening layer by modelling boundary access as a V × G event, assigning Δ only directional authority, and showing how closure generates Return Load when visibility restores.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-11.md">Open</a></div>
+            </article>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <span>Symbolic Mechanics · Publications Page 2</span>
-      <div class="footer-links">
-        <a href="./../index.html">Home</a>
-        <a href="./../publications/">Volumes I–X</a>
-        <a href="./../for-researchers/">For Researchers</a>
-        <a href="./../canonical-specification-volumes-01-20/">Canonical Spec</a>
+            <article class="volume-row">
+              <div class="volume-num">Volume XII</div>
+              <div class="volume-main">
+                <h3>Boundary Parameterization, Parental Force Distribution, and Intimacy Entry</h3>
+                <p class="volume-role">Boundary-parameterization and entry-selection layer</p>
+                <p>Most theories describe intimacy boundaries through attachment or temperament, but do not specify how the system acquires the parameters that govern entry. Volume XII formalizes that missing parameter layer by modelling parents as generators of V, G, and A_th boundary parameters and showing how adult intimacy entry is computed on fixed force-distribution architecture.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-12.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XIII</div>
+              <div class="volume-main">
+                <h3>Projection, Placeholder Interface, and the Long-Duration Dimmed-Room State</h3>
+                <p class="volume-role">Projection-initiation and dimmed-room entry layer</p>
+                <p>Most theories describe projection as fantasy or distortion, but do not specify the mechanical function projection serves at the beginning of intimacy. Volume XIII formalizes that missing optical-entry layer by modelling projection as the first optical event of intimacy, using a placeholder interface and dimmed-room state to allow contact before full reality-testing becomes available.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-13.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XIV</div>
+              <div class="volume-main">
+                <h3>Projection as Single-Input Boundary Physics, Table-Surface Integration, and Occlusion Mechanics</h3>
+                <p class="volume-role">Single-input projection and occlusion layer</p>
+                <p>Most theories describe projection as idealization or emotional misreading, but do not specify the boundary condition under which projection becomes mechanically necessary. Volume XIV formalizes that missing projection-physics layer by modelling single-input mode, table-surface integration, ice-water correction, and occlusion as the mechanics that sustain projection under reduced visibility.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-14.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XV</div>
+              <div class="volume-main">
+                <h3>Projection Breakdown, Thermal Overload, and Automatic Shutdown</h3>
+                <p class="volume-role">Projection-breakdown and thermal-overload layer</p>
+                <p>Most theories describe relational rupture or disillusionment as emotional disappointment, but do not specify the closed loop by which a projected world breaks down. Volume XV formalizes that missing breakdown layer by modelling projector heat, Position-3 melt, vapor pressure, Bartender delay, and threshold-crossing shutdown as the deterministic termination of single-input intimacy.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-15.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XVI</div>
+              <div class="volume-main">
+                <h3>Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking</h3>
+                <p class="volume-role">Post-projection alarm-governance layer</p>
+                <p>Most theories describe the aftermath of collapse as shock, panic, or conflict, but do not specify the first governing state that appears once projection has shut down. Volume XVI formalizes that missing post-projection layer by modelling Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking as the mechanics that govern the room after projection failure.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-16.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XVII</div>
+              <div class="volume-main">
+                <h3>Shame-Origin Mechanics, the Shadow-Child, and the Primary Rupture Template</h3>
+                <p class="volume-role">Shame-origin and rupture-template layer</p>
+                <p>Most theories describe shame as emotion, self-evaluation, or wounded identity, but do not specify the deeper structural break from which shame-driven mechanics arise. Volume XVII formalizes that missing origin layer by modelling catastrophic shame as the first misalignment among Self-Body, SCr, and Inner System, and by defining the Shadow-Child as the residual rupture artifact that later organizes intimate recognition.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-17.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XVIII</div>
+              <div class="volume-main">
+                <h3>The Clown Subsystem, Dark-Field Agency, and Lighting-Architecture Distortion</h3>
+                <p class="volume-role">Shadow–clown subsystem and lighting-control layer</p>
+                <p>Most theories describe masking, defensive performance, or fixation in emotional terms, but do not specify the agency-capable subsystem that forms after shame disappears into the dark field. Volume XVIII formalizes that missing subsystem layer by modelling the Clown as shame converted into agency, with root-level authority over lighting architecture, attraction locking, and rupture-pattern pursuit.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-18.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XIX</div>
+              <div class="volume-main">
+                <h3>The Grand Hall, Scene-Shifting, and the Clown as the System’s Deep Engine</h3>
+                <p class="volume-role">Grand-hall and deep-engine layer</p>
+                <p>Most theories describe role-shifting, avoidance, or cyclical intimacy return in narrative or personality terms, but do not specify the architecture in which large-scale scene movement occurs. Volume XIX formalizes that missing hall-scale engine layer by modelling the Grand Hall as the true operating environment and the Clown as the deep engine that governs scene-shifting, dark-run continuity, and repeated return to the intimacy stage.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-19.md">Open</a></div>
+            </article>
+
+            <article class="volume-row">
+              <div class="volume-num">Volume XX</div>
+              <div class="volume-main">
+                <h3>The Firefly, Primitive Survival Navigation, and the Post-Shame Survival Triad</h3>
+                <p class="volume-role">Primitive navigational and post-shame survival layer</p>
+                <p>Most theories describe instinct, intuition, or hope in reflective terms, but do not specify the minimal signal that remains when higher-order structure has collapsed. Volume XX formalizes that missing primitive layer by modelling the Firefly as the system’s surviving directional signal and by defining the Firefly–Clown–Self-Core triad as the architecture that enables post-shame continuation.</p>
+              </div>
+              <div class="volume-link"><a href="../volume-20.md">Open</a></div>
+            </article>
+          </div>
+        </section>
       </div>
+
+      <aside class="pub-side">
+        <h2>Why this page matters</h2>
+        <p>
+          These volumes do not merely extend the theory into “relationships.” They formalize the deep runtime of intimacy, projection, shame, and post-collapse continuation — including how access opens, how projection becomes mechanically necessary, how it overheats, how Alarm takes over, how shame becomes residual architecture, and how the system continues navigating after ordinary self-structure fails.
+        </p>
+        <ul>
+          <li>Boundary opening</li>
+          <li>Projection runtime</li>
+          <li>Thermal breakdown</li>
+          <li>Shame-origin rupture</li>
+          <li>Primitive survival navigation</li>
+        </ul>
+      </aside>
     </div>
-  </footer>
+  </main>
 </body>
 </html>
