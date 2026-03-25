@@ -64,6 +64,14 @@
       margin: 0 auto;
     }
 
+    .banner-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
     .wordmark {
       display: inline-block;
       font-family: var(--serif);
@@ -71,7 +79,54 @@
       font-weight: 600;
       color: #fff;
       letter-spacing: -0.02em;
-      margin-bottom: 16px;
+      align-self: center;
+    }
+
+    .contact-card {
+      justify-self: end;
+      width: 100%;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      padding: 14px 16px;
+      backdrop-filter: blur(4px);
+    }
+
+    .contact-card h2 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 10px;
+    }
+
+    .contact-item + .contact-item {
+      margin-top: 10px;
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.62);
+      margin-bottom: 3px;
+    }
+
+    .contact-value {
+      display: inline-block;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #fff;
+      word-break: break-word;
+    }
+
+    .contact-value:hover {
+      text-decoration: underline;
     }
 
     .search-row {
@@ -80,7 +135,7 @@
 
     .search-form {
       width: 100%;
-      max-width: 780px;
+      max-width: 820px;
       display: flex;
     }
 
@@ -547,6 +602,15 @@
     }
 
     @media (max-width: 1024px) {
+      .banner-top {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        justify-self: start;
+        max-width: 100%;
+      }
+
       .page {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -611,7 +675,23 @@
   <header>
     <div class="topband">
       <div class="topband-inner">
-        <a class="wordmark" href="./index.html">Symbolic Mechanics</a>
+        <div class="banner-top">
+          <a class="wordmark" href="./index.html">Symbolic Mechanics</a>
+
+          <aside class="contact-card">
+            <h2>Contact</h2>
+
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a class="contact-value" href="mailto:eidosan013135@hotmail.com">eidosan013135@hotmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Zenodo</span>
+              <span class="contact-value">namyanyi2003</span>
+            </div>
+          </aside>
+        </div>
 
         <div class="search-row">
           <form class="search-form" action="./publications/" method="get">
