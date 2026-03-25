@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume X: Voluntary Boundary Shutdown and the Mechanics of Existential Supplementation</title>
+  <meta name="description" content="Volume X of Symbolic Mechanics. Voluntary Boundary Shutdown and the Mechanics of Existential Supplementation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5.4vw, 3.85rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 15ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./publications/">Volumes I–X</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume X</p>
+      <h1>Symbolic Mechanics — Volume X: Voluntary Boundary Shutdown and the Mechanics of Existential Supplementation</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">X</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Voluntary-shutdown and existential-supplementation layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe withdrawal, fantasy, self-soothing, sensual escape, or sexual opening under pressure as collapse, addiction, loss of control, or pleasure-seeking, but do not specify the mechanical condition under which the system deliberately turns off its own boundary-light.
+        </p>
+
+        <p>
+          Volume X formalizes that missing layer by defining voluntary boundary shutdown as a self-initiated protective override triggered when symbolic pressure becomes too tightly focused on the core of the self.
+        </p>
+
+        <p>
+          Rather than treating this state as dysfunction, compulsion, or moral failure, this volume rewrites it as a controlled dark-room corridor that allows the self to remain present without direct exposure to concentrated symbolic pain.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the voluntary-shutdown and existential-supplementation layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          If Volume IX formalizes compulsive continuation as a blackout-state produced by structural collapse, Volume X explains a distinct configuration in which the boundary-light is not lost through failure but turned off through internal override. In system terms, this volume moves from forced blackout to protective shutdown.
+        </p>
+
+        <p>
+          The trigger of shutdown is a specific compression pattern formed by three converging pressures:
+        </p>
+
+        <ol class="number-list">
+          <li>
+            <strong>Seat 2 — L₂ Compression</strong><br>
+            The demand for absolute love, full holding, and unconditional validation.
+          </li>
+          <li>
+            <strong>Seat 3 — L₃ Compression</strong><br>
+            Ideal-self pressure, worthiness demand, and shame-potential.
+          </li>
+          <li>
+            <strong>Judge Activation — J Compression</strong><br>
+            High-frequency evaluative intensity that increases symbolic density per unit time.
+          </li>
+        </ol>
+
+        <p>
+          When L₂, L₃, and J rise together, symbolic load converges too sharply onto the core of the self. At this point, continued illumination becomes maladaptive: if the light remains on, the system would be forced to receive concentrated symbolic load at full resolution and minimal distance.
+        </p>
+
+        <p>
+          The system therefore executes a shutdown command:
+        </p>
+
+        <p class="mono-line">
+          Spotlight = 0
+        </p>
+
+        <p>
+          This produces three immediate state changes:
+        </p>
+
+        <ul class="bullet-list">
+          <li>boundary-light deactivates</li>
+          <li>symbolic channels mute</li>
+          <li>visibility collapses to zero</li>
+        </ul>
+
+        <p>
+          What continues internally is:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Seat 2’s longing-load continues</li>
+          <li>Seat 3’s evaluative load continues</li>
+          <li>the Judge continues producing pulses</li>
+        </ul>
+
+        <p>
+          But none of these signals can reach the self-agent in readable symbolic form. Interpretation is temporarily disabled.
+        </p>
+
+        <p>
+          Once symbolic guidance is suspended, the system generates a replacement reference:
+        </p>
+
+        <p class="mono-line">
+          the attractor
+        </p>
+
+        <p>
+          The attractor is:
+        </p>
+
+        <ul class="bullet-list">
+          <li>not pleasure</li>
+          <li>not reward</li>
+          <li>not addiction</li>
+          <li>not desire</li>
+        </ul>
+
+        <p>
+          It is a rotating attentional anchor generated by the dark-room state.
+        </p>
+
+        <p>
+          The attractor performs four mechanical functions:
+        </p>
+
+        <ol class="number-list">
+          <li><strong>A₁ — Pulse Engine</strong><br>Rhythmic excitation loop replaces symbolic tracking with stimulus-phase locking.</li>
+          <li><strong>A₂ — Full Attentional Capture</strong><br>Attention is rerouted into a single-channel excitation corridor.</li>
+          <li><strong>A₃ — Mapping Offline</strong><br>Evaluation, self-referencing, boundary calculation, and temporal integration are suspended.</li>
+          <li><strong>A₄ — Corridor Behaviour</strong><br>The system inclines toward behaviours that stabilize the excitation corridor, preserve anchoring, and keep symbolic pain at distance.</li>
+        </ol>
+
+        <p>
+          Within this corridor, actions such as:
+        </p>
+
+        <ul class="bullet-list">
+          <li>imagining</li>
+          <li>self-directed sensuality</li>
+          <li>voluntary sexual opening</li>
+        </ul>
+
+        <p>
+          are not compulsive discharge. They are anchoring behaviours executed while symbolic integration is offline.
+        </p>
+
+        <p>
+          The volume then formalizes delayed reconvergence.
+        </p>
+
+        <p>
+          When boundary-light returns, four mechanical steps occur:
+        </p>
+
+        <ol class="number-list">
+          <li><strong>R₁ — Symbolic Access Restores</strong><br>Seats, Judge output, and boundary position become readable again.</li>
+          <li><strong>R₂ — Load Influx</strong><br>All symbolic load that accumulated during shutdown reaches awareness at once.</li>
+          <li><strong>R₃ — Evaluative Re-entry</strong><br>Judge output floods back into awareness as a coherent block.</li>
+          <li><strong>R₄ — Shame Influx</strong><br>Shame appears as delayed detection of symbolic discrepancy after behaviour is already complete.</li>
+        </ol>
+
+        <p>
+          Shame here is not emotion in the usual sense. It is the structural consequence of:
+        </p>
+
+        <ul class="bullet-list">
+          <li>symbolic evaluation having been suspended</li>
+          <li>behaviour occurring without symbolic integration</li>
+          <li>reconvergence happening only after light returns</li>
+        </ul>
+
+        <p>
+          The full loop of the volume is:
+        </p>
+
+        <p class="mono-line">
+          Load → override → shutdown → attractor anchoring → reactivation → reconvergence
+        </p>
+
+        <p>
+          The defining feature of this loop is that behaviour is generated while symbolic access is offline because the system itself issued the shutdown.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major voluntary-shutdown layer of the system.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain all dark-room states through collapse, compulsion, or addiction. It must also specify the condition under which the organism deliberately suspends symbolic integration in order to survive concentrated symbolic exposure.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of boundary geometry, visibility mechanics, attraction-tension, intrusion physics, and blackout-state mechanics, and upstream of later shame-recoil, projection, and deeper reconfiguration layers. It separates protective shutdown from structural blackout.
+        </p>
+
+        <p>
+          Without Volume X, the system can describe collapse and compulsive continuation. With Volume X, the system can explain:
+        </p>
+
+        <ul class="bullet-list">
+          <li>why the light is turned off deliberately</li>
+          <li>why the attractor becomes a relief-device rather than a compulsive engine</li>
+          <li>why corridor behaviour is not loss of agency</li>
+          <li>why shame returns only after symbolic reconvergence</li>
+          <li>why temporary darkness can function as controlled internal silence</li>
+        </ul>
+
+        <p>
+          The formal identity of voluntary boundary shutdown is defined by five simultaneous conditions:
+        </p>
+
+        <ol class="number-list">
+          <li>boundary-light explicitly turned off by the self</li>
+          <li>attractor used as attentional relief, not compulsion</li>
+          <li>behaviour executed inside a symbolic-suspension corridor</li>
+          <li>delayed symbolic re-entry produces interpretive shock</li>
+          <li>the loop is cyclical but not addictive in nature</li>
+        </ol>
+
+        <p>
+          Voluntary boundary shutdown is therefore not collapse, not addiction, and not loss of control.
+        </p>
+
+        <p>
+          It is a mechanical attempt to survive concentrated symbolic overload by suspending visibility and substituting a temporary corridor of existence-relief.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">voluntary boundary shutdown</span>
+          <span class="keyword">existential supplementation</span>
+          <span class="keyword">Spotlight = 0</span>
+          <span class="keyword">L₂ compression</span>
+          <span class="keyword">L₃ compression</span>
+          <span class="keyword">Judge activation</span>
+          <span class="keyword">attractor anchoring</span>
+          <span class="keyword">symbolic suspension</span>
+          <span class="keyword">delayed reconvergence</span>
+          <span class="keyword">shame influx</span>
+          <span class="keyword">dark-room corridor</span>
+          <span class="keyword">attentional capture</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-10.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-09.html">Volume IX</a></li>
+          <li>Next volume — <a href="./volume-11.html">Volume XI</a></li>
+          <li><a href="./publications/">Back to Volumes I–X</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
