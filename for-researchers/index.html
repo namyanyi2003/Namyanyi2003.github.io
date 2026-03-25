@@ -4,329 +4,540 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>For Researchers | Symbolic Mechanics</title>
-  <meta name="description" content="Research-facing overview of Symbolic Mechanics as a deterministic symbolic-computational runtime architecture.">
-  <link rel="stylesheet" href="./../style.css">
+  <meta name="description" content="Research-facing entry page for Symbolic Mechanics. Canonical specification, publication structure, archive logic, and reading pathways.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-2: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.68;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 42px 32px 88px;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .main {
+      min-width: 0;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px 42px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 6vw, 4.6rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+      color: var(--text);
+      max-width: 10ch;
+    }
+
+    .lead {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.72;
+      max-width: 64ch;
+      margin-bottom: 18px;
+    }
+
+    .summary {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.76;
+      max-width: 84ch;
+      margin-bottom: 28px;
+    }
+
+    .action-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 920px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .side {
+      position: sticky;
+      top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 24px 20px;
+    }
+
+    .side h2 {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    .side p {
+      font-size: 0.9rem;
+      line-height: 1.76;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .side ul {
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .side li {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      margin-bottom: 4px;
+    }
+
+    .section {
+      margin-top: 48px;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 22px 20px;
+    }
+
+    .card-meta {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      font-family: var(--sans);
+      font-size: 1.14rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .map {
+      display: grid;
+      gap: 14px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr) 180px;
+      gap: 22px;
+      align-items: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+
+    .row-id {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+
+    .row-main h3 {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .row-role {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 8px;
+    }
+
+    .row-main p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .row-link {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 3px;
+    }
+
+    .row-link a {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .row-link a:hover {
+      text-decoration: underline;
+    }
+
+    .note-block {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 24px 22px;
+    }
+
+    .note-block p {
+      font-size: 0.9rem;
+      line-height: 1.78;
+      color: var(--muted);
+    }
+
+    .note-block p + p {
+      margin-top: 12px;
+    }
+
+    @media (max-width: 1100px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .shell {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .side {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 28px 20px 64px;
+      }
+
+      .hero {
+        padding: 26px 22px;
+      }
+
+      .side {
+        padding: 20px 18px 18px;
+      }
+
+      .card {
+        padding: 18px 18px 16px;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px 18px;
+      }
+
+      .row-link {
+        justify-content: flex-start;
+        padding-top: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="./../index.html">Symbolic Mechanics</a>
-      <nav class="top-nav">
-        <a href="./../publications/">Volumes I–X</a>
-        <a href="./../expansion-volumes/">Volumes XI–XX</a>
-        <a href="./">For Researchers</a>
-        <a href="./../canonical-specification-volumes-01-20/">Canonical Spec</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Research entry</p>
+  <main class="page">
+    <div class="shell">
+      <div class="main">
+        <section class="hero">
+          <p class="eyebrow">Research-facing entry</p>
           <h1>For Researchers</h1>
+
           <p class="lead">
-            Symbolic Mechanics formalizes the missing computational layers beneath emotion,
-            attraction, collapse, shame, projection, and relational conflict.
-          </p>
-          <p class="sublead">
-            It models inner life as deterministic symbolic mechanics rather than interpretation,
-            symptom description, or narrative meaning.
+            A clean entry surface for reading Symbolic Mechanics as a deterministic symbolic-computational architecture.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="./../publications/">Open Volumes I–X</a>
-            <a class="btn btn-primary" href="./../expansion-volumes/">Open Volumes XI–XX</a>
-            <a class="btn btn-secondary" href="./../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-          </div>
-        </div>
-
-        <aside class="hero-panel">
-          <h2>Core engine</h2>
-          <div class="formula">Δ → S → L → R → Exit</div>
-          <p class="panel-text">
-            The base runtime of Symbolic Mechanics converts difference into symbolic installation,
-            load accumulation, rupture-threshold approach, and constrained transition or discharge.
+          <p class="summary">
+            This page is designed for readers who want a direct route into the system’s public materials,
+            canonical layer, and archive structure. Its function is not to simplify the theory into a general overview,
+            but to clarify where the formal entry points are, how the public release surface is organized,
+            and how the system should be approached as a structured runtime rather than a set of isolated themes.
           </p>
-          <ul class="mini-list">
-            <li>Event routing</li>
-            <li>Weighted symbolic seating</li>
-            <li>Boundary opening</li>
-            <li>Projection runtime</li>
-            <li>Post-shame survival navigation</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Why researchers may care</p>
-          <h2>Executable layers beneath existing descriptive vocabularies</h2>
-        </div>
-        <div class="text-block">
-          <p>
-            Existing fields often describe emotion, attachment, collapse, projection, shame,
-            and relational conflict at the level of interpretation, affect report, behavioural
-            pattern, or clinical label. Symbolic Mechanics formalizes the missing executable layers beneath them.
-          </p>
-        </div>
+          <div class="action-stack">
+            <a class="btn btn-primary" href="../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
+            <a class="btn btn-secondary" href="../publications/">Open Volumes I–X</a>
+            <a class="btn btn-secondary" href="../expansion-volumes/">Open Volumes XI–XX</a>
+          </div>
+        </section>
 
-        <div class="pill-grid" style="margin-top:18px;">
-          <span class="pill">event routing</span>
-          <span class="pill">symbolic installation</span>
-          <span class="pill">weight distribution</span>
-          <span class="pill">parental-force parameterization</span>
-          <span class="pill">boundary opening</span>
-          <span class="pill">visibility collapse</span>
-          <span class="pill">attraction fields</span>
-          <span class="pill">intrusion physics</span>
-          <span class="pill">blackout topology</span>
-          <span class="pill">projection runtime</span>
-          <span class="pill">shame-origin rupture</span>
-          <span class="pill">Firefly navigation</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">What this system claims</p>
-          <h2>Inner life as runtime architecture</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Claim 1</p>
-            <h3>Internal process is executable structure</h3>
-            <p>
-              Symbolic Mechanics claims that inner life can be modeled as a structured symbolic
-              system with invariant routing logic, weighted symbolic seating, thresholded rupture
-              conditions, constrained exit pathways, and higher-order runtime layers.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Claim 2</p>
-            <h3>Many named phenomena are downstream effects</h3>
-            <p>
-              Emotion, attachment, collapse, projection, shame, conflict, fixation, and post-collapse
-              continuation can be reformulated as mechanically legible outputs of one deterministic engine.
-            </p>
-          </article>
-
-          <article class="card featured">
-            <p class="card-kicker">Claim 3</p>
-            <h3>Volumes I–XX form one integrated runtime</h3>
-            <p>
-              The first twenty volumes do not function as isolated conceptual essays.
-              Together they define one continuous architecture with system strata, variables,
-              modules, routing rules, and state transitions.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">What becomes formally specified here</p>
-          <h2>Runtime domains made modelable</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">1</p>
-            <h3>Core Runtime</h3>
-            <p>
-              Event routing, symbolic installation, load accumulation, rupture thresholds,
-              and exit classification.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">2</p>
-            <h3>Structural Formation</h3>
-            <p>
-              Symbolic encoding, weight formation, parental-force geometry, axis asymmetry,
-              companion emergence, and regenerative restart conditions.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">3</p>
-            <h3>Boundary and Interaction Field</h3>
-            <p>
-              Safe-proximity radius, change-permission geometry, visibility collapse,
-              existence compensation, attraction tension, intrusion vectors, and alarm cascades.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">4</p>
-            <h3>Blackout and Shutdown</h3>
-            <p>
-              Forced blackout, Orb dynamics, compulsive continuation, voluntary boundary shutdown,
-              existential supplementation, and delayed reconvergence.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">5</p>
-            <h3>Intimacy and Projection Runtime</h3>
-            <p>
-              V × G boundary opening, directional alignment, boundary parameterization,
-              projection as first optical event, placeholder interface, single-input mode,
-              table-surface integration, thermal overload, and automatic shutdown.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">6</p>
-            <h3>Post-Projection and Shame Architecture</h3>
-            <p>
-              Alarm Takeover, Double-Alarm Coupling, Symbolic Locking, catastrophic shame,
-              Shadow-Child formation, Clown emergence, Grand Hall recurrence, and Firefly navigation.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Architecture scope</p>
-          <h2>Volumes I–XX as one system</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Volumes I–X</p>
-            <h3>Core Runtime</h3>
-            <p>
-              Kernel processing, symbolic encoding, collapse-capable load formation,
-              regenerative restart, boundary geometry, visibility failure, attraction fields,
-              intrusion physics, blackout topology, and voluntary shutdown.
-            </p>
-            <a class="card-link" href="./../publications/">Open Page 1</a>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Volumes XI–XX</p>
-            <h3>Deep Runtime</h3>
-            <p>
-              Intimacy-boundary computation, parental boundary parameterization, projection initiation,
-              projection thermodynamics, post-projection alarm locking, shame-origin rupture,
-              clown architecture, hall-scale recurrence, and post-shame survival navigation.
-            </p>
-            <a class="card-link" href="./../expansion-volumes/">Open Page 2</a>
-          </article>
-
-          <article class="card featured">
-            <p class="card-kicker">Integrated engine</p>
-            <h3>Canonical Specification of Volumes I–XX</h3>
-            <p>
-              A consolidated engine-level document with layer stratification, variable table,
-              module table, routing rules, state-transition map, and canonical consistency corrections.
-            </p>
-            <a class="card-link" href="./../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Why this matters for AI, cognition, and symbolic modelling</p>
-          <h2>Research relevance</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">AI and symbolic modelling</p>
-            <h3>Deterministic architecture</h3>
-            <p>
-              A formal event-routing engine, weighted symbolic state transitions,
-              thresholded rupture dynamics, explicit runtime layers, and recursive multi-volume integration.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Cognition research</p>
-            <h3>Non-narrative process model</h3>
-            <p>
-              A mechanically specified account of burden, unreadability, projection,
-              alarm capture, shame rupture, and post-collapse continuation.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Relational modelling</p>
-            <h3>Entry, collapse, recurrence</h3>
-            <p>
-              Explicit mechanics for intimacy entry, projection breakdown, post-collapse locking,
-              and shame-driven recurrence rather than only descriptive relational themes.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Where to start</p>
-          <h2>Suggested path for first-time readers</h2>
-        </div>
-
-        <div class="path-grid">
-          <div class="path-step">
-            <div class="step-num">1</div>
-            <div>
-              <h3>Start with Publications — Page 1</h3>
-              <p>Read the core runtime first.</p>
-              <a class="card-link" href="./../publications/">Open Volumes I–X</a>
-            </div>
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">Research routes</p>
+            <h2>Three ways to enter the system</h2>
           </div>
 
-          <div class="path-step">
-            <div class="step-num">2</div>
-            <div>
-              <h3>Continue to Publications — Page 2</h3>
-              <p>Then move into intimacy, projection, shame, and deep runtime.</p>
-              <a class="card-link" href="./../expansion-volumes/">Open Volumes XI–XX</a>
-            </div>
+          <div class="grid-3">
+            <article class="card">
+              <p class="card-meta">Route A</p>
+              <h3>Read the canonical specification first</h3>
+              <p>
+                This is the most compressed route. It provides the integrated engine surface of Volumes I–XX
+                and is the clearest entry point for readers who want the formal structure before the individual releases.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="card-meta">Route B</p>
+              <h3>Read the publication pages in sequence</h3>
+              <p>
+                This route preserves developmental order. It is useful for readers who want to see how the
+                runtime architecture expands layer by layer from kernel mechanics into projection, shame, and survival structure.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="card-meta">Route C</p>
+              <h3>Use the archive as a release surface</h3>
+              <p>
+                This route treats the site as a public record of system construction. It is useful for readers
+                interested in release continuity, versioned public layers, and citation-oriented navigation.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">Material structure</p>
+            <h2>What is publicly available here</h2>
           </div>
 
-          <div class="path-step">
-            <div class="step-num">3</div>
-            <div>
-              <h3>Read the integrated engine document</h3>
-              <p>Then open the canonical specification of Volumes I–XX.</p>
-              <a class="card-link" href="./../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+          <div class="map">
+            <article class="row">
+              <div class="row-id">Specification</div>
+              <div class="row-main">
+                <h3>Canonical Specification of Volumes I–XX</h3>
+                <p class="row-role">Integrated engine document</p>
+                <p>
+                  Consolidates the first twenty volumes into one specification-grade surface, including runtime layers,
+                  modules, variables, routing logic, and consistency corrections.
+                </p>
+              </div>
+              <div class="row-link"><a href="../canonical-specification-volumes-01-20/">Open</a></div>
+            </article>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <span>Symbolic Mechanics · For Researchers</span>
-      <div class="footer-links">
-        <a href="./../index.html">Home</a>
-        <a href="./../publications/">Volumes I–X</a>
-        <a href="./../expansion-volumes/">Volumes XI–XX</a>
-        <a href="./../canonical-specification-volumes-01-20/">Canonical Spec</a>
+            <article class="row">
+              <div class="row-id">Volumes I–X</div>
+              <div class="row-main">
+                <h3>Core runtime architecture</h3>
+                <p class="row-role">Kernel to blackout layer</p>
+                <p>
+                  Covers kernel processing, symbolic encoding, load formation, stabilizer emergence,
+                  boundary geometry, visibility failure, attraction mechanics, intrusion, blackout topology, and shutdown.
+                </p>
+              </div>
+              <div class="row-link"><a href="../publications/">Open</a></div>
+            </article>
+
+            <article class="row">
+              <div class="row-id">Volumes XI–XX</div>
+              <div class="row-main">
+                <h3>Deep runtime architecture</h3>
+                <p class="row-role">Intimacy to survival layer</p>
+                <p>
+                  Covers intimacy entry, projection runtime, thermal breakdown, post-projection alarm locking,
+                  shame-origin mechanics, clown architecture, hall-scale recurrence, and primitive survival navigation.
+                </p>
+              </div>
+              <div class="row-link"><a href="../expansion-volumes/">Open</a></div>
+            </article>
+
+            <article class="row">
+              <div class="row-id">Archive</div>
+              <div class="row-main">
+                <h3>Public release and reading continuity</h3>
+                <p class="row-role">Curated entry surface</p>
+                <p>
+                  Provides a public-facing pathway through the released materials and preserves the site as a structured record
+                  of publication order, release clustering, and research-facing access.
+                </p>
+              </div>
+              <div class="row-link"><a href="../index.html">Open</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">Reading note</p>
+            <h2>How this site should be used</h2>
+          </div>
+
+          <div class="note-block">
+            <p>
+              This site should not be approached as a general theory homepage, a motivational overview, or a simplified introduction.
+              Its structure is closer to a public research surface: specification, clustered publication pages, and archive continuity.
+            </p>
+            <p>
+              The most accurate reading order for formal readers is usually specification first, then the clustered volume pages,
+              then individual releases where needed. Readers who prefer developmental order may reverse that path and move from
+              Volumes I–X into Volumes XI–XX before returning to the integrated specification.
+            </p>
+            <p>
+              The public archive layer exists to preserve coherence across release surfaces. The website is therefore best read
+              as a curated interface to a structured system, not as a collection of isolated essays.
+            </p>
+          </div>
+        </section>
       </div>
+
+      <aside class="side">
+        <h2>Why this page matters</h2>
+        <p>
+          Research pages often fail by mixing explanation, promotion, and archive logic into one blurred surface.
+          This page separates those functions and clarifies where the formal entry points actually are.
+        </p>
+        <ul>
+          <li>Canonical entry path</li>
+          <li>Publication clustering</li>
+          <li>Archive-facing logic</li>
+          <li>Reading-order clarity</li>
+          <li>Research-oriented access</li>
+        </ul>
+      </aside>
     </div>
-  </footer>
+  </main>
 </body>
 </html>
