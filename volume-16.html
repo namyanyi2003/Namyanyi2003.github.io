@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume XVI: Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking</title>
+  <meta name="description" content="Volume XVI of Symbolic Mechanics. Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.15rem, 4.6vw, 3.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 17ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./expansion-volumes/">Expansion Volumes</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume XVI</p>
+      <h1>Symbolic Mechanics — Volume XVI: Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">XVI</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Post-projection alarm-governance layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe the aftermath of relational collapse as emotional shock, panic, withdrawal, or miscommunication, but do not specify the first mechanical state that appears once projection has shut down.
+        </p>
+
+        <p>
+          Volume XVI formalizes that missing layer by defining Alarm Takeover as the fixed post-projection configuration in which projection has collapsed, visibility has not fully returned, residual heat remains active, and Alarm becomes the dominant governing module.
+        </p>
+
+        <p>
+          Rather than treating post-projection pain as emotional aftermath, this volume rewrites it as a deterministic threat-governance state produced by unresolved relational structure under insufficient visibility.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the post-projection alarm-governance layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          If Volumes XIV–XV formalize projection as a lawful single-input state and projection breakdown as a closed mechanical loop under thermal overload, Volume XVI explains what happens after projection goes offline but the relational field has not yet disengaged.
+        </p>
+
+        <p>
+          The volume begins by formalizing the first post-projection state:
+        </p>
+
+        <p class="mono-line">
+          Alarm Takeover
+        </p>
+
+        <p>
+          Projection shutdown removes the image, but it does not remove the symbolic objects that sustained the field. The room still contains seated relational symbols:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Seat 1 — being seen / being loved</li>
+          <li>Seat 2 — supporting or completing the other</li>
+          <li>Seat 4 — shared future potential</li>
+        </ul>
+
+        <p>
+          As long as these objects remain seated, the relational field remains mechanically active.
+        </p>
+
+        <p>
+          At the same time, Spotlight has not fully recovered. The room is only half-lit:
+        </p>
+
+        <ul class="bullet-list">
+          <li>enough visibility to register exposure</li>
+          <li>not enough visibility to compute meaning</li>
+          <li>not enough clarity to restore stable relational reading</li>
+        </ul>
+
+        <p>
+          Residual heat also remains in the room:
+        </p>
+
+        <ul class="bullet-list">
+          <li>thermal residue from projection</li>
+          <li>symbolic vibration</li>
+          <li>Position-3 condensation / leakage</li>
+          <li>unresolved pressure from the failed projection field</li>
+        </ul>
+
+        <p>
+          Because projection cannot reboot under high residual heat × low restored visibility, the room automatically shifts to its next available governing module:
+        </p>
+
+        <p class="mono-line">
+          Alarm
+        </p>
+
+        <p>
+          Alarm does not interpret meaning, feeling, or intention.<br>
+          Its only computation is:
+        </p>
+
+        <p class="mono-line">
+          exposure density
+        </p>
+
+        <p>
+          Where exposure is highest, threat classification becomes strongest.
+        </p>
+
+        <p>
+          The intimate partner is therefore automatically tagged as the primary threat source, not because of character or moral quality, but because they remain the nearest active object inside a half-lit, overheated room.
+        </p>
+
+        <p>
+          The volume then formalizes Mirror Activation.
+        </p>
+
+        <p>
+          Once one partner’s Alarm activates, defensive output is emitted:
+        </p>
+
+        <ul class="bullet-list">
+          <li>contraction</li>
+          <li>coldness</li>
+          <li>withdrawal</li>
+          <li>hardened tone</li>
+          <li>heightened reactivity</li>
+        </ul>
+
+        <p>
+          Under half-restored Spotlight, intention is unreadable. The other system receives only deviation, and deviation is mechanically classified as:
+        </p>
+
+        <p class="mono-line">
+          inconsistent → unpredictable → threatening
+        </p>
+
+        <p>
+          Thus the first system’s defense becomes threat input in the second system, which activates the second Alarm in turn.
+        </p>
+
+        <p>
+          This produces the deterministic chain:
+        </p>
+
+        <p class="mono-line">
+          A Alarm activates → A outputs defense<br>
+          A defense enters B as threat input → B Alarm activates<br>
+          B outputs defense → B defense enters A as threat input
+        </p>
+
+        <p>
+          This is formalized as:
+        </p>
+
+        <p class="mono-line">
+          Double-Alarm Coupling
+        </p>
+
+        <p>
+          The volume then formalizes Symbolic Locking.
+        </p>
+
+        <p>
+          Projection is offline, but the seated symbols remain. Residual heat prevents full exit because free operational energy is already consumed by:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Alarm activation</li>
+          <li>defensive output</li>
+          <li>misreading correction attempts</li>
+          <li>boundary maintenance</li>
+          <li>symbolic containment of the still-seated objects</li>
+        </ul>
+
+        <p>
+          Half-lit Spotlight makes repair impossible, because intention cannot be separated from threat-signature under insufficient visibility.
+        </p>
+
+        <p>
+          At this point two forces operate simultaneously:
+        </p>
+
+        <ul class="bullet-list">
+          <li>Alarm → pushes outward</li>
+          <li>seated symbols → pull inward</li>
+        </ul>
+
+        <p>
+          This creates a real force contradiction:
+        </p>
+
+        <ul class="bullet-list">
+          <li>pulled inward</li>
+          <li>pushed outward</li>
+          <li>overheated</li>
+          <li>unable to settle</li>
+          <li>unable to disengage</li>
+        </ul>
+
+        <p>
+          The outcome is:
+        </p>
+
+        <ul class="bullet-list">
+          <li>no exit</li>
+          <li>no closure</li>
+          <li>no clarity</li>
+          <li>no separation</li>
+        </ul>
+
+        <p>
+          This terminal locked state is Symbolic Locking.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major post-projection governance layer of the system.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot stop at projection shutdown. It must also specify the state that governs the room afterward, why threat becomes primary before clarity returns, why one Alarm recruits the other, and why two people can remain mechanically unable to repair or separate while the symbols remain seated.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of projection breakdown and upstream of shame-origin mechanics, shadow–clown formation, and deeper rupture-pattern architecture. It transforms relational aftermath from emotional chaos into a fixed post-projection state transition.
+        </p>
+
+        <p>
+          Without Volume XVI, the system can describe projection onset and breakdown. With Volume XVI, the system can explain:
+        </p>
+
+        <ul class="bullet-list">
+          <li>why projection shutdown does not restore neutrality</li>
+          <li>why the nearest person becomes the primary threat source</li>
+          <li>why one Alarm mechanically recruits the other</li>
+          <li>why relationships can remain trapped in no-exit, no-repair states</li>
+        </ul>
+
+        <p class="mono-line">
+          The intimate-adversary state is therefore not just conflict.<br>
+          It is the first stable mechanical configuration after projection collapse.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">Alarm Takeover</span>
+          <span class="keyword">Double-Alarm Coupling</span>
+          <span class="keyword">Symbolic Locking</span>
+          <span class="keyword">post-projection state</span>
+          <span class="keyword">exposure density</span>
+          <span class="keyword">relational threat classification</span>
+          <span class="keyword">residual heat</span>
+          <span class="keyword">half-lit Spotlight</span>
+          <span class="keyword">defensive output</span>
+          <span class="keyword">no-exit state</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-16.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-15.html">Volume XV</a></li>
+          <li>Next volume — <a href="./volume-17.html">Volume XVII</a></li>
+          <li><a href="./expansion-volumes/">Back to Expansion Volumes</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
