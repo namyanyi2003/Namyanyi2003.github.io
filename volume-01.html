@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Volume I — Canonical Engine Kernel | Symbolic Mechanics</title>
+  <title>Symbolic Mechanics — Volume I: Canonical Engine Kernel</title>
   <meta name="description" content="Volume I of Symbolic Mechanics. Canonical Engine Kernel.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,6 @@
       --blue: #2471a3;
       --navy: #0d2b4e;
       --teal: #138d75;
-
       --serif: "Newsreader", Georgia, serif;
       --sans: "Inter", system-ui, sans-serif;
       --mono: "IBM Plex Mono", monospace;
@@ -44,7 +43,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
-      line-height: 1.78;
+      line-height: 1.8;
     }
 
     a {
@@ -53,9 +52,9 @@
     }
 
     .page {
-      max-width: 980px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 42px 28px 88px;
+      padding: 40px 32px 88px;
     }
 
     .topbar {
@@ -68,7 +67,7 @@
 
     .site-link {
       font-family: var(--serif);
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: var(--navy);
       letter-spacing: -0.02em;
@@ -122,7 +121,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 34px 36px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .eyebrow {
@@ -136,19 +135,19 @@
 
     h1 {
       font-family: var(--serif);
-      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
       line-height: 0.96;
       letter-spacing: -0.03em;
       margin-bottom: 18px;
       color: var(--text);
-      max-width: 11ch;
+      max-width: 12ch;
     }
 
     .hero-meta {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .meta-box {
@@ -207,6 +206,15 @@
       margin-top: 14px;
     }
 
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.8;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
     .keywords {
       display: flex;
       flex-wrap: wrap;
@@ -227,16 +235,59 @@
       letter-spacing: 0.02em;
     }
 
-    .footer-return {
-      max-width: 980px;
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
       margin: 56px auto 0;
-      padding: 24px 28px 0;
+      padding: 24px 32px 0;
       border-top: 1px solid #ddd6cb;
       display: flex;
       justify-content: center;
     }
 
-    .footer-return a {
+    .home-return-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -244,14 +295,17 @@
       padding: 0 22px;
       border-radius: 8px;
       background: var(--navy);
-      color: #fff;
+      color: #ffffff;
+      font-family: var(--sans);
       font-size: 0.9rem;
       font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
       border: 1px solid var(--navy);
       transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
     }
 
-    .footer-return a:hover {
+    .home-return-btn:hover {
       background: #17446f;
       border-color: #17446f;
       transform: translateY(-1px);
@@ -276,11 +330,11 @@
         align-items: flex-start;
       }
 
-      .footer-return {
+      .home-return-section {
         padding: 22px 20px 0;
       }
 
-      .footer-return a {
+      .home-return-btn {
         width: 100%;
         max-width: 320px;
       }
@@ -293,14 +347,14 @@
       <a class="site-link" href="./index.html">Symbolic Mechanics</a>
 
       <div class="top-actions">
-        <a class="btn btn-secondary" href="./publications/">Publications</a>
+        <a class="btn btn-secondary" href="./publications/">Volumes I–X</a>
         <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
       </div>
     </div>
 
     <section class="hero">
       <p class="eyebrow">Volume I</p>
-      <h1>Canonical Engine Kernel</h1>
+      <h1>Symbolic Mechanics — Volume I: Canonical Engine Kernel</h1>
 
       <div class="hero-meta">
         <div class="meta-box">
@@ -309,7 +363,7 @@
         </div>
 
         <div class="meta-box">
-          <div class="meta-label">System role</div>
+          <div class="meta-label">System Role</div>
           <div class="meta-value">Root kernel</div>
         </div>
 
@@ -325,15 +379,15 @@
         <h2>Research Hook</h2>
 
         <p>
-          Most theories describe inner life, but do not specify the irreducible engine through which internal events must pass.
+          Most theories describe inner life, but do not specify the irreducible engine through which internal events must actually pass.
         </p>
 
         <p>
-          Volume I formalizes that missing kernel by defining a deterministic symbolic-computational loop processed through the invariant sequence <strong>Δ → S → L → R → Exit</strong>.
+          Volume I formalizes that missing kernel by defining a deterministic symbolic-computational loop in which all internal events are processed through the invariant sequence Δ → S → L → R → Exit.
         </p>
 
         <p>
-          Rather than beginning from narrative explanation, this volume begins from routing logic. It formalizes the minimum engine required to model how symbolic events enter a system, bind to structural position, accumulate load, cross rupture threshold, and discharge through constrained exits.
+          Rather than beginning from narrative explanation, this volume begins from routing logic. It formalizes the minimum engine required to model how symbolic events enter a system, bind to structural position, accumulate load, approach rupture, and discharge through constrained exits.
         </p>
       </div>
 
@@ -345,15 +399,19 @@
         </p>
 
         <p>
-          It introduces the minimal kernel from which all later layers expand, making it the formal entry point of the whole structure. In system terms, Volume I is not one module among many; it is the constitutive layer that makes later modules mechanically legible.
+          It introduces the minimal kernel from which all later layers expand, making it the formal entry point of the wider multi-volume structure. In system terms, Volume I is not one module among many; it is the constitutive layer that makes later modules mechanically legible.
         </p>
 
         <p>
-          The volume rewrites inner process as a closed symbolic system with fixed routing logic, load accumulation, rupture thresholds, and exit pathways. This converts what is often treated as interpretation or open-ended psychology into engine architecture.
+          The volume rewrites inner process as a closed symbolic system with fixed routing logic, load accumulation, rupture thresholds, and exit pathways. This converts what is often treated as interpretation or open-ended psychology into a deterministic processing architecture.
         </p>
 
         <p>
-          Its central modelling object is the canonical event cycle itself: <strong>Δ event input → seat binding (S) → load accumulation (L) → rupture threshold (R) → exit routing (Exit)</strong>.
+          Its central modelling object is the canonical event cycle itself:
+        </p>
+
+        <p class="mono-line">
+          Δ event input → seat binding (S) → load accumulation (L) → rupture threshold (R) → exit routing (Exit)
         </p>
       </div>
 
@@ -365,7 +423,7 @@
         </p>
 
         <p>
-          It is the volume that turns Symbolic Mechanics from a set of theoretical claims into a computable system. Every later volume depends on the engine first defined here, whether the later topic is attraction, boundary distortion, blackout, shame-origin, or navigational recovery.
+          It is the volume that turns Symbolic Mechanics from a set of theoretical claims into a computable architecture. Every later volume depends on the engine first defined here, whether the later topic is attraction, boundary displacement, projection, blackout, shame-origin, or navigational recovery.
         </p>
 
         <p>
@@ -373,7 +431,7 @@
         </p>
 
         <p>
-          Architecturally, this volume functions as the upstream constraint on the rest of the series: it defines the grammar that all subsequent expansions must preserve.
+          Architecturally, this volume functions as the upstream constraint on the rest of the series: it defines the invariant processing grammar that all subsequent expansions must preserve.
         </p>
       </div>
 
@@ -384,15 +442,44 @@
           <span class="keyword">symbolic mechanics</span>
           <span class="keyword">canonical engine kernel</span>
           <span class="keyword">deterministic symbolic system</span>
-          <span class="keyword">symbolic-computational loop</span>
-          <span class="keyword">runtime architecture</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">Δ → S → L → R → Exit</span>
+          <span class="keyword">event routing</span>
+          <span class="keyword">load mechanics</span>
+          <span class="keyword">rupture threshold</span>
+          <span class="keyword">exit routing</span>
+          <span class="keyword">recursive inner-world model</span>
+          <span class="keyword">relational dynamics</span>
+          <span class="keyword">kernel architecture</span>
+          <span class="keyword">system grammar</span>
         </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-01.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume: None</li>
+          <li>Next volume — <a href="./volume-02.html">Volume II</a></li>
+          <li><a href="./publications/">Back to Volumes I–X</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <section class="footer-return">
-    <a href="./index.html">← Back to Home</a>
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
   </section>
 </body>
 </html>
