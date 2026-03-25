@@ -4,310 +4,526 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Canonical Specification of Volumes I–XX | Symbolic Mechanics</title>
-  <meta name="description" content="Integrated runtime specification of the Symbolic Mechanics engine across Volumes I–XX.">
-  <link rel="stylesheet" href="./../style.css">
+  <meta name="description" content="Integrated canonical specification of Volumes I–XX of Symbolic Mechanics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-2: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.68;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .spec-page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 42px 32px 88px;
+    }
+
+    .spec-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .spec-main {
+      min-width: 0;
+    }
+
+    .spec-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px 42px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .spec-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 6vw, 4.7rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+      color: var(--text);
+      max-width: 12ch;
+    }
+
+    .spec-lead {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.72;
+      max-width: 66ch;
+      margin-bottom: 18px;
+    }
+
+    .spec-summary {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.76;
+      max-width: 84ch;
+      margin-bottom: 28px;
+    }
+
+    .spec-action-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 920px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .spec-side {
+      position: sticky;
+      top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 24px 20px;
+    }
+
+    .spec-side h2 {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    .spec-side p {
+      font-size: 0.9rem;
+      line-height: 1.76;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .spec-side ul {
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .spec-side li {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      margin-bottom: 4px;
+    }
+
+    .spec-section {
+      margin-top: 48px;
+    }
+
+    .spec-section-head {
+      margin-bottom: 18px;
+    }
+
+    .spec-section-head h2 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .coverage-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 22px 20px;
+    }
+
+    .coverage-meta {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .coverage-card h3 {
+      font-family: var(--sans);
+      font-size: 1.14rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .coverage-card p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .spec-map {
+      display: grid;
+      gap: 14px;
+    }
+
+    .spec-row {
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr) 180px;
+      gap: 22px;
+      align-items: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+
+    .spec-row-id {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+
+    .spec-row-main h3 {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .spec-row-role {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 8px;
+    }
+
+    .spec-row-main p {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .spec-row-link {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 3px;
+    }
+
+    .spec-row-link a {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .spec-row-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1100px) {
+      .coverage-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .spec-shell {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .spec-side {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .spec-page {
+        padding: 28px 20px 64px;
+      }
+
+      .spec-hero {
+        padding: 26px 22px;
+      }
+
+      .spec-side {
+        padding: 20px 18px 18px;
+      }
+
+      .coverage-card {
+        padding: 18px 18px 16px;
+      }
+
+      .spec-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px 18px;
+      }
+
+      .spec-row-link {
+        justify-content: flex-start;
+        padding-top: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="./../index.html">Symbolic Mechanics</a>
-      <nav class="top-nav">
-        <a href="./../publications/">Volumes I–X</a>
-        <a href="./../expansion-volumes/">Volumes XI–XX</a>
-        <a href="./../for-researchers/">For Researchers</a>
-        <a href="./">Canonical Spec</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Canonical engine document</p>
+  <main class="spec-page">
+    <div class="spec-shell">
+      <div class="spec-main">
+        <section class="spec-hero">
+          <p class="eyebrow">Canonical specification</p>
           <h1>Canonical Specification of Volumes I–XX</h1>
-          <p class="lead">
-            The integrated runtime specification of the Symbolic Mechanics engine across the first twenty volumes.
-          </p>
-          <p class="sublead">
-            This document consolidates Volumes I–XX into one deterministic symbolic-computational architecture with
-            layer stratification, variable definitions, module structure, routing rules, state transitions,
-            and canonical consistency corrections.
+
+          <p class="spec-lead">
+            The integrated engine document of the first twenty volumes of Symbolic Mechanics.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/pdfs/canonical-specification-volumes-01-20.pdf">Download PDF</a>
-            <a class="btn btn-secondary" href="./../publications/">Open Volumes I–X</a>
-            <a class="btn btn-secondary" href="./../expansion-volumes/">Open Volumes XI–XX</a>
-          </div>
-        </div>
-
-        <aside class="hero-panel">
-          <h2>Canonical engine identity</h2>
-          <div class="formula">Δ → S → L → R → Exit</div>
-          <p class="panel-text">
-            When structural stabilizers are present, the engine also permits regenerative restart:
+          <p class="spec-summary">
+            This document consolidates and formalizes Volumes I–XX into one canonical specification of the
+            Symbolic Mechanics engine. It brings together the runtime layers, variable table, structural modules,
+            routing rules, state transitions, and consistency corrections required to read the first twenty volumes
+            as one integrated symbolic-computational system.
           </p>
-          <div class="formula">Δ → S → C → S</div>
-          <ul class="mini-list">
-            <li>Layer stratification</li>
-            <li>Complete variable table</li>
-            <li>Module table</li>
-            <li>Routing rules</li>
-            <li>Canonical consistency corrections</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Why this document matters</p>
-          <h2>Not a summary. An integrated engine specification.</h2>
-        </div>
-        <div class="text-block">
-          <p>
-            Most theoretical systems describe themes, concepts, or local mechanisms, but do not provide a unified
-            engine-level specification that makes the whole architecture computable as one deterministic system.
-            This document formalizes that missing layer by making Volumes I–XX readable as one runtime.
-          </p>
-        </div>
-      </div>
-    </section>
+          <div class="spec-action-stack">
+            <a class="btn btn-primary" href="../publications/">Open Volumes I–X</a>
+            <a class="btn btn-secondary" href="../expansion-volumes/">Open Volumes XI–XX</a>
+            <a class="btn btn-secondary" href="../for-researchers/">For Researchers</a>
+          </div>
+        </section>
 
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Architecture scope</p>
-          <h2>Eight stratified runtime layers</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Layer 0</p>
-            <h3>Core Engine</h3>
-            <p>
-              Incoming difference, symbolic installation, load accumulation, rupture threshold,
-              and constrained exit routing.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Layer 1</p>
-            <h3>Symbol Economy</h3>
-            <p>
-              Seat economy, symbolic weight, internal distribution, and encoded structural burden.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Layer 2</p>
-            <h3>Axis Geometry</h3>
-            <p>
-              Parental-force geometry, companion emergence, axis asymmetry, and stabilizer-enabled restart.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Layer 3</p>
-            <h3>Boundary Physics</h3>
-            <p>
-              Safe-proximity radius, change-permission geometry, visibility collapse, and fallback orientation.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Layer 4</p>
-            <h3>Interaction Field</h3>
-            <p>
-              Attraction tension, intrusion vectors, alarm cascades, blackout topology, and voluntary shutdown.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Layer 5</p>
-            <h3>Projection Runtime</h3>
-            <p>
-              Boundary opening, parameterized intimacy entry, projection initiation, single-input mode,
-              and thermal overload.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Layer 6</p>
-            <h3>Post-Projection Alarm State</h3>
-            <p>
-              Alarm takeover, mirrored recruitment, symbolic locking, and failed post-collapse stabilization.
-            </p>
-          </article>
-
-          <article class="card featured">
-            <p class="card-kicker">Layer 7</p>
-            <h3>Catastrophic Fallback Layer</h3>
-            <p>
-              Shame-origin rupture, Shadow-Child formation, Clown deep-engine staging,
-              Grand Hall recurrence, and Firefly navigation.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">What this specification contains</p>
-          <h2>Engine-level components</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">1</p>
-            <h3>System Stratification</h3>
-            <p>
-              A full layer-by-layer map of Volumes I–XX, showing how the first twenty volumes resolve into one deterministic runtime.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">2</p>
-            <h3>Complete Variable Table</h3>
-            <p>
-              Canonical variables including Δ, S, L, R, Exit, P = (M, F, J), C, O-vector, Rₛ, V, G, A_th,
-              Spotlight, Orb, ΔV, Eₕ, Eₓ, Prj, TS, H_p, Θ, ShC, Clown, Firefly, and others.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">3</p>
-            <h3>Module Table</h3>
-            <p>
-              A consolidated map of all major modules across Volumes I–XX, including core engine,
-              parent–companion module, boundary module, projection runtime, post-projection alarm,
-              and shame–dark field architecture.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">4</p>
-            <h3>Routing Rules</h3>
-            <p>
-              Unified rules governing ordinary execution, regenerative restart, boundary opening,
-              intrusion, blackout, shutdown, projection, alarm transfer, and catastrophic fallback continuation.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">5</p>
-            <h3>Compressed State Transition Map</h3>
-            <p>
-              A compact runtime map covering ordinary operation, regenerative restart, projection runtime,
-              voluntary shutdown, post-projection alarm, and deep shame sequence.
-            </p>
-          </article>
-
-          <article class="card featured">
-            <p class="card-kicker">6–7</p>
-            <h3>Master Expression and Consistency Corrections</h3>
-            <p>
-              An integrated Engine₍20₎ expression plus final canonical unifications across naming,
-              exit taxonomy, companion routing, blackout/shutdown distinction, projection/alarm relation,
-              and catastrophic fallback terminology.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Canonical engine identity</p>
-          <h2>Rupture-governed routing and regenerative restart</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-kicker">Base cycle</p>
-            <h3>Δ → S → L → R → Exit → new Δ</h3>
-            <p>
-              The compulsory runtime in which incoming difference is converted into symbolic installation,
-              weighted load accumulation, rupture approach, and constrained transition or discharge.
-            </p>
-          </article>
-
-          <article class="card featured">
-            <p class="card-kicker">Regenerative path</p>
-            <h3>Δ → S → C → S</h3>
-            <p>
-              When structural stabilizers are present, the engine can restart without destructive rupture,
-              allowing low-energy continuation and stabilizing re-entry into the cycle.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Integrated runtime</p>
-            <h3>Volumes I–XX as one engine</h3>
-            <p>
-              The first twenty volumes specify compulsory event conversion, symbolic installation,
-              weighted distribution, axis curvature, boundary physics, interaction-field dynamics,
-              projection runtime, post-projection alarm transfer, and catastrophic fallback continuation.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Where to go next</p>
-          <h2>Continue through the public architecture</h2>
-        </div>
-
-        <div class="path-grid">
-          <div class="path-step">
-            <div class="step-num">1</div>
-            <div>
-              <h3>Open Publications — Page 1</h3>
-              <p>Read Volumes I–X as the core runtime architecture.</p>
-              <a class="card-link" href="./../publications/">Open Volumes I–X</a>
-            </div>
+        <section class="spec-section">
+          <div class="spec-section-head">
+            <p class="eyebrow">Document structure</p>
+            <h2>What this specification consolidates</h2>
           </div>
 
-          <div class="path-step">
-            <div class="step-num">2</div>
-            <div>
-              <h3>Open Publications — Page 2</h3>
-              <p>Continue into intimacy, projection, shame, and post-collapse continuation.</p>
-              <a class="card-link" href="./../expansion-volumes/">Open Volumes XI–XX</a>
-            </div>
+          <div class="coverage-grid">
+            <article class="coverage-card">
+              <p class="coverage-meta">Engine layer</p>
+              <h3>Runtime kernel and route structure</h3>
+              <p>
+                The document fixes the deterministic loop, symbolic installation process, load accumulation,
+                rupture logic, exit routing, and restart-capable continuity of the engine.
+              </p>
+            </article>
+
+            <article class="coverage-card">
+              <p class="coverage-meta">System layer</p>
+              <h3>Modules, fields, and internal mechanics</h3>
+              <p>
+                The document consolidates encoding, shadow-load, stabilizer formation, boundary geometry,
+                visibility failure, attraction fields, intrusion physics, blackout mechanics, and shutdown structure.
+              </p>
+            </article>
+
+            <article class="coverage-card">
+              <p class="coverage-meta">Deep layer</p>
+              <h3>Intimacy, projection, shame, and survival</h3>
+              <p>
+                The document integrates intimacy-entry computation, projection runtime, alarm locking,
+                shame-origin rupture, clown architecture, hall-scale recurrence, and primitive survival navigation.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="spec-section">
+          <div class="spec-section-head">
+            <p class="eyebrow">Canonical coverage map</p>
+            <h2>Integrated architecture map</h2>
           </div>
 
-          <div class="path-step">
-            <div class="step-num">3</div>
-            <div>
-              <h3>Open For Researchers</h3>
-              <p>View the research-facing overview and entry structure.</p>
-              <a class="card-link" href="./../for-researchers/">Open For Researchers</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+          <div class="spec-map">
+            <article class="spec-row">
+              <div class="spec-row-id">Volumes I–III</div>
+              <div class="spec-row-main">
+                <h3>Kernel, Encoding, and Load Formation</h3>
+                <p class="spec-row-role">Engine origin layer</p>
+                <p>
+                  Formalizes the deterministic engine kernel, symbolic inscription, structural weight,
+                  base-vector formation, and shadow-load accumulation as the precondition of rupture-capable mechanics.
+                </p>
+              </div>
+              <div class="spec-row-link"><a href="../publications/">Open</a></div>
+            </article>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <span>Symbolic Mechanics · Canonical Specification of Volumes I–XX</span>
-      <div class="footer-links">
-        <a href="./../index.html">Home</a>
-        <a href="./../publications/">Volumes I–X</a>
-        <a href="./../expansion-volumes/">Volumes XI–XX</a>
-        <a href="./../for-researchers/">For Researchers</a>
+            <article class="spec-row">
+              <div class="spec-row-id">Volumes IV–V</div>
+              <div class="spec-row-main">
+                <h3>Companion Module and Boundary Geometry</h3>
+                <p class="spec-row-role">Stabilizer and displacement layer</p>
+                <p>
+                  Formalizes symbolic parents, companion emergence, low-energy exit, change failure,
+                  safe-proximity radius, and the geometry that determines whether movement is mechanically permitted.
+                </p>
+              </div>
+              <div class="spec-row-link"><a href="../publications/">Open</a></div>
+            </article>
+
+            <article class="spec-row">
+              <div class="spec-row-id">Volumes VI–X</div>
+              <div class="spec-row-main">
+                <h3>Visibility Failure, Attraction, Intrusion, and Blackout Mechanics</h3>
+                <p class="spec-row-role">Mid-runtime architecture</p>
+                <p>
+                  Formalizes symbolic unreadability, existence-compensation, attraction tension,
+                  structural intrusion, alarm activation, blackout-state capture, and voluntary boundary shutdown.
+                </p>
+              </div>
+              <div class="spec-row-link"><a href="../publications/">Open</a></div>
+            </article>
+
+            <article class="spec-row">
+              <div class="spec-row-id">Volumes XI–XII</div>
+              <div class="spec-row-main">
+                <h3>Intimacy Entry and Boundary Parameterization</h3>
+                <p class="spec-row-role">Opening and entry layer</p>
+                <p>
+                  Formalizes intimacy as a boundary event, V × G opening, parental force-parameterization,
+                  and the architecture by which intimacy entry becomes executable on fixed parameters.
+                </p>
+              </div>
+              <div class="spec-row-link"><a href="../expansion-volumes/">Open</a></div>
+            </article>
+
+            <article class="spec-row">
+              <div class="spec-row-id">Volumes XIII–XVI</div>
+              <div class="spec-row-main">
+                <h3>Projection Runtime, Thermal Breakdown, and Alarm Locking</h3>
+                <p class="spec-row-role">Projection and post-collapse governance layer</p>
+                <p>
+                  Formalizes projection initiation, placeholder interface, single-input persistence,
+                  thermal overload, automatic shutdown, Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking.
+                </p>
+              </div>
+              <div class="spec-row-link"><a href="../expansion-volumes/">Open</a></div>
+            </article>
+
+            <article class="spec-row">
+              <div class="spec-row-id">Volumes XVII–XX</div>
+              <div class="spec-row-main">
+                <h3>Shame-Origin, Clown Architecture, Grand Hall, and Survival Navigation</h3>
+                <p class="spec-row-role">Deep runtime and continuation layer</p>
+                <p>
+                  Formalizes catastrophic shame, Shadow-Child residue, clown subsystem formation,
+                  hall-scale recurrence, and the primitive navigation architecture that remains after collapse.
+                </p>
+              </div>
+              <div class="spec-row-link"><a href="../expansion-volumes/">Open</a></div>
+            </article>
+          </div>
+        </section>
       </div>
+
+      <aside class="spec-side">
+        <h2>Why this document matters</h2>
+        <p>
+          This document is not a summary page. It is the canonical integration layer of the first twenty volumes.
+          Its function is to convert distributed runtime components into one specification-grade engine surface.
+        </p>
+        <ul>
+          <li>Integrated engine view</li>
+          <li>Canonical terminology layer</li>
+          <li>Routing and state-transition logic</li>
+          <li>Module and variable consolidation</li>
+          <li>Cross-volume consistency corrections</li>
+        </ul>
+      </aside>
     </div>
-  </footer>
+  </main>
 </body>
 </html>
