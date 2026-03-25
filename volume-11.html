@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume XI: V × G Boundary Opening, Directional Delta, and Return-Load Mechanics</title>
+  <meta name="description" content="Volume XI of Symbolic Mechanics. V × G Boundary Opening, Directional Delta, and Return-Load Mechanics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.35rem, 5.2vw, 3.75rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 16ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list,
+    .number-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li,
+    .number-list li {
+      font-size: 0.94rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker,
+    .number-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .mono-line {
+      font-family: var(--mono);
+      font-size: 0.94rem;
+      color: var(--navy);
+      line-height: 1.85;
+      margin-top: 14px;
+      word-break: break-word;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./expansion-volumes/">Expansion Volumes</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume XI</p>
+      <h1>Symbolic Mechanics — Volume XI: V × G Boundary Opening, Directional Delta, and Return-Load Mechanics</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">XI</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Architecture Role</div>
+          <div class="meta-value">Boundary-opening and gate-configuration layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories describe intimacy as emotion, attachment style, openness, or relational preference, but do not specify the mechanical boundary event through which intimacy actually begins.
+        </p>
+
+        <p>
+          Volume XI formalizes that missing layer by defining intimacy as a boundary event produced by the interaction of Visibility (V) and Gate (G), with Delta (Δ) serving only as the directional selector once opening becomes possible.
+        </p>
+
+        <p>
+          Rather than treating intimacy as trait or feeling, this volume rewrites it as a temporary permeability state generated by capacity, access, and directional alignment.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          This volume defines the boundary-opening and gate-configuration layer of Symbolic Mechanics.
+        </p>
+
+        <p>
+          The volume begins from a three-parameter framework:
+        </p>
+
+        <ul class="bullet-list">
+          <li><strong>Visibility (V)</strong> = structural resolution and holding capacity of the room</li>
+          <li><strong>Gate (G)</strong> = temporal access mechanism regulating boundary entry</li>
+          <li><strong>Delta (Δ)</strong> = structural differential assigning directionality once access becomes possible</li>
+        </ul>
+
+        <p>
+          No single parameter is sufficient. High V without G produces capacity without entry. High G without V produces entry without stability. Δ does not determine whether opening occurs; it determines toward whom opening is oriented once it can occur.
+        </p>
+
+        <p>
+          The volume then formalizes Visibility (V) as the room’s structural capacity parameter. V is not emotion or preference. It determines:
+        </p>
+
+        <ul class="bullet-list">
+          <li>clarity</li>
+          <li>internal differentiation</li>
+          <li>symbolic resolution</li>
+          <li>post-entry load tolerance</li>
+        </ul>
+
+        <p>
+          Within this volume, V is treated strictly in the functional range:
+        </p>
+
+        <p class="mono-line">
+          V &gt; 0
+        </p>
+
+        <p>
+          This is not a blackout model. It is a boundary-capacity model.
+        </p>
+
+        <p>
+          The volume next formalizes Gate (G) as the temporal access controller of the room. G is defined by:
+        </p>
+
+        <ul class="bullet-list">
+          <li>sensitivity</li>
+          <li>threshold</li>
+          <li>reactivity</li>
+        </ul>
+
+        <p>
+          A Gate event is binary. Once G crosses threshold, boundary access becomes momentarily possible. G is not structural capacity and does not encode how much the room can hold. It determines only whether access is granted.
+        </p>
+
+        <p>
+          Boundary opening is then defined as an emergent V × G interaction:
+        </p>
+
+        <p class="mono-line">
+          Opening Event = 1 only if<br>
+          V ≥ V_threshold<br>
+          AND<br>
+          G ≥ G_threshold
+        </p>
+
+        <p>
+          Two unstable or non-opening states are therefore standard:
+        </p>
+
+        <ul class="bullet-list">
+          <li>High V + Low G → capacity without access</li>
+          <li>Low V + High G → access without stabilization</li>
+        </ul>
+
+        <p>
+          The volume then formalizes Delta (Δ) as a purely directional parameter. Δ is not attraction, desire, or preference. Its role is:
+        </p>
+
+        <ul class="bullet-list">
+          <li>to assign orientation once Gate activation occurs</li>
+          <li>to determine which external configuration receives the opening event</li>
+          <li>to select direction by structural alignment rather than emotional valuation</li>
+        </ul>
+
+        <p>
+          Formally:
+        </p>
+
+        <p class="mono-line">
+          Direction = argmax(Δ_i)
+        </p>
+
+        <p>
+          The volume also formalizes boundary closure and the Return-Load mechanism.
+        </p>
+
+        <p>
+          Closure occurs when:
+        </p>
+
+        <p class="mono-line">
+          G &lt; G_threshold
+        </p>
+
+        <p>
+          After closure, V rises toward baseline and the room regains resolution. This re-illumination restores access to symbolic material that remained under-registered during the open state. The resulting influx is defined as Return Load.
+        </p>
+
+        <p>
+          Return Load is amplified by:
+        </p>
+
+        <ul class="bullet-list">
+          <li>the Judge Module</li>
+          <li>Seat 3 discrepancy pressure</li>
+        </ul>
+
+        <p>
+          It is not an emotional state. It is the mechanical consequence of restored symbolic visibility after opening.
+        </p>
+
+        <p>
+          Finally, the volume formalizes the full 2×2 V × G boundary-state system:
+        </p>
+
+        <ul class="bullet-list">
+          <li>High V × Low G → Stable–Selective</li>
+          <li>High V × High G → Stable–Expressive</li>
+          <li>Low V × Low G → Closed–Protective</li>
+          <li>Low V × High G → Open–Reactive</li>
+        </ul>
+
+        <p>
+          These are system states, not personality types.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          This volume is the first major boundary-opening layer of the intimacy architecture.
+        </p>
+
+        <p>
+          It matters because a deterministic architecture cannot explain intimacy if it only models attraction, pressure, or symbolic compatibility. It must also specify the exact conditions under which a boundary becomes permeable, how direction is assigned, and why closure generates a later recoil through restored visibility.
+        </p>
+
+        <p>
+          Architecturally, this volume sits downstream of boundary, visibility, attraction, and shutdown mechanics, and upstream of later parameterization, parental-force distribution, projection, and reality-breach layers. It redefines intimacy as a boundary computation rather than a psychological openness trait.
+        </p>
+
+        <p>
+          Without Volume XI, the system can describe burden, attraction, and instability. With Volume XI, the system can explain:
+        </p>
+
+        <ul class="bullet-list">
+          <li>when the boundary opens</li>
+          <li>why opening can fail despite capacity</li>
+          <li>why access can destabilize despite willingness</li>
+          <li>toward whom opening is directed</li>
+          <li>why closure produces Return Load</li>
+        </ul>
+
+        <p>
+          Intimacy is therefore not an act.<br>
+          It is a mechanically permitted boundary event.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">symbolic mechanics</span>
+          <span class="keyword">intimacy mechanics</span>
+          <span class="keyword">boundary opening</span>
+          <span class="keyword">visibility</span>
+          <span class="keyword">V</span>
+          <span class="keyword">gate</span>
+          <span class="keyword">G</span>
+          <span class="keyword">delta</span>
+          <span class="keyword">Δ</span>
+          <span class="keyword">return load</span>
+          <span class="keyword">Judge module</span>
+          <span class="keyword">Seat 3</span>
+          <span class="keyword">V × G state system</span>
+          <span class="keyword">stable-selective</span>
+          <span class="keyword">stable-expressive</span>
+          <span class="keyword">closed-protective</span>
+          <span class="keyword">open-reactive</span>
+          <span class="keyword">deterministic symbolic system</span>
+          <span class="keyword">symbolic-computational theory</span>
+          <span class="keyword">relational dynamics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-11.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-10.html">Volume X</a></li>
+          <li>Next volume — <a href="./volume-12.html">Volume XII</a></li>
+          <li><a href="./expansion-volumes/">Back to Expansion Volumes</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
