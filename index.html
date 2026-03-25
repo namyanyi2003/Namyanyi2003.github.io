@@ -1,429 +1,427 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Symbolic Mechanics</title>
-  <meta name="description" content="A deterministic symbolic-computational architecture of inner mechanics and relational dynamics.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ─────────────────────────────────────────────
+   SPACING + TYPOGRAPHY REFINEMENT PATCH
+   Paste at the very end of style.css
+   ───────────────────────────────────────────── */
 
-  <header class="top-banner">
-    <div class="container banner-inner">
-      <div class="banner-top">
-        <a class="wordmark" href="./index.html">Symbolic Mechanics</a>
+/* Global type scale: one step smaller */
+html {
+  font-size: 15px;
+}
 
-        <nav class="banner-nav" aria-label="Primary navigation">
-          <a href="./publications/">Volumes I–X</a>
-          <a href="./expansion-volumes/">Volumes XI–XX</a>
-          <a href="./canonical-specification-volumes-01-20/">Specification</a>
-          <a href="./for-researchers/">Research</a>
-          <a href="./publications/">Archive</a>
-        </nav>
-      </div>
+body {
+  font-size: 0.875rem;
+  line-height: 1.68;
+}
 
-      <div class="search-row">
-        <div class="search-wrap">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search volumes, modules, specifications..."
-            autocomplete="off"
-          >
-          <button type="button" onclick="doSearch()">Search</button>
-        </div>
-      </div>
-    </div>
-  </header>
+/* Top banner / nav / strip */
+.zn-wordmark {
+  font-size: 1.6rem;
+}
 
-  <div class="meta-strip">
-    <div class="container meta-strip-inner">
-      <span>Public release</span>
-      <span>Volumes I–XX available</span>
-      <span>Canonical specification</span>
-      <span>Archive-backed publication path</span>
-      <span>Versioned public record</span>
-    </div>
-  </div>
+.zn-nav a,
+.zn-subnav a {
+  font-size: 0.8rem;
+}
 
-  <nav class="subnav" aria-label="Section navigation">
-    <div class="container subnav-inner">
-      <a href="./index.html" class="is-active">Home</a>
-      <a href="./publications/">Volumes I–X</a>
-      <a href="./expansion-volumes/">Volumes XI–XX</a>
-      <a href="./canonical-specification-volumes-01-20/">Specification</a>
-      <a href="./for-researchers/">Research</a>
-      <a href="./publications/">Archive</a>
-    </div>
-  </nav>
+.zn-strip span {
+  font-size: 0.74rem;
+}
 
-  <main class="page-shell container">
+.zn-search input,
+.zn-search button {
+  font-size: 0.84rem;
+}
 
-    <aside class="sidebar" aria-label="Record navigation">
-      <section class="sidebar-block">
-        <div class="sidebar-head">Record type</div>
-        <ul class="sidebar-list">
-          <li><a href="#">All records <span>25</span></a></li>
-          <li><a href="#">Volume <span>20</span></a></li>
-          <li><a href="#">Specification <span>1</span></a></li>
-          <li><a href="#">Research <span>2</span></a></li>
-        </ul>
-      </section>
+/* Main page rhythm */
+.zn-page {
+  padding: 34px 32px 88px;
+  gap: 36px;
+}
 
-      <section class="sidebar-block">
-        <div class="sidebar-head">Volume cluster</div>
-        <ul class="sidebar-list">
-          <li><a href="./publications/">Volumes I–X <span>10</span></a></li>
-          <li><a href="./expansion-volumes/">Volumes XI–XX <span>10</span></a></li>
-        </ul>
-      </section>
+.section {
+  margin-bottom: 52px;
+}
 
-      <section class="sidebar-block">
-        <div class="sidebar-head">Module category</div>
-        <ul class="sidebar-list">
-          <li><a href="#">Core Runtime <span>6</span></a></li>
-          <li><a href="#">Boundary Geometry <span>4</span></a></li>
-          <li><a href="#">Projection &amp; Attraction <span>5</span></a></li>
-          <li><a href="#">Shame Mechanics <span>4</span></a></li>
-          <li><a href="#">Visibility Failure <span>3</span></a></li>
-          <li><a href="#">Deep Runtime <span>4</span></a></li>
-        </ul>
-      </section>
+.section-head {
+  margin-bottom: 28px;
+}
 
-      <section class="sidebar-block">
-        <div class="sidebar-head">Access</div>
-        <ul class="sidebar-list">
-          <li><a href="#">Open access <span>25</span></a></li>
-        </ul>
-      </section>
-    </aside>
+.section-head h2 {
+  margin-top: 2px;
+}
 
-    <div class="main-column">
+/* Sidebar spacing */
+.zn-sidebar {
+  gap: 16px;
+}
 
-      <section class="hero-card">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Deterministic symbolic architecture</p>
+.zn-sb-head {
+  padding: 10px 14px;
+}
 
-            <h1>Symbolic<br>Mechanics</h1>
+.zn-sb-list li a {
+  padding: 9px 14px;
+  font-size: 0.8rem;
+}
 
-            <p class="hero-deck">
-              Formalizing the missing computational layers beneath emotion,
-              attraction, collapse, projection, shame, and relational conflict.
-            </p>
+/* Hero spacing */
+.hero {
+  padding: 44px 48px;
+  margin-bottom: 40px;
+}
 
-            <p class="hero-support">
-              A multi-volume symbolic runtime architecture with public reading paths,
-              canonical specification, versioned archive structure, and researcher-oriented entry routes.
-            </p>
+.hero-grid {
+  gap: 44px;
+}
 
-            <div class="hero-actions">
-              <div class="hero-actions-row">
-                <a class="btn btn-primary" href="./publications/">Start from the system trunk</a>
-                <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Read the specification</a>
-              </div>
+.hero-copy h1 {
+  font-size: 3.25rem;
+  line-height: 1.02;
+  margin-bottom: 20px;
+}
 
-              <div class="hero-actions-row hero-actions-row-secondary">
-                <a class="btn btn-secondary" href="./publications/">Browse the archive</a>
-                <a class="btn btn-secondary" href="./for-researchers/">For researchers</a>
-              </div>
-            </div>
-          </div>
+.hero-deck {
+  font-size: 1.08rem;
+  line-height: 1.62;
+  margin-bottom: 16px;
+  max-width: 36rem;
+}
 
-          <aside class="hero-panel" aria-label="Project overview">
-            <div class="panel-row">
-              <p class="panel-label">Core loop</p>
-              <p class="panel-mono">Δ → S → L → R → Exit</p>
-            </div>
+.hero-support {
+  font-size: 0.82rem;
+  line-height: 1.72;
+  margin-bottom: 28px;
+  max-width: 44rem;
+}
 
-            <div class="panel-row">
-              <p class="panel-label">Structure</p>
-              <p class="panel-text">Multi-volume symbolic runtime architecture</p>
-            </div>
+.cta-stack {
+  gap: 14px;
+}
 
-            <div class="panel-row">
-              <p class="panel-label">Available now</p>
-              <p class="panel-text">Volumes I–XX / Canonical specification / Public archive record</p>
-            </div>
+.cta-row {
+  gap: 12px;
+}
 
-            <div class="panel-row">
-              <p class="panel-label">Research status</p>
-              <p class="panel-text">Active archive / public release / citation pathway</p>
-            </div>
+.btn {
+  font-size: 0.82rem;
+  padding: 10px 18px;
+}
 
-            <div class="panel-row">
-              <p class="panel-label">Current public release</p>
-              <p class="panel-text">Volumes I–XX with integrated engine specification</p>
-            </div>
-          </aside>
-        </div>
-      </section>
+/* Overview panel */
+.overview-row {
+  padding: 14px 18px;
+}
 
-      <section class="section" id="entryRoutes">
-        <div class="section-head">
-          <p class="eyebrow">Entry routes</p>
-          <h2>Choose a reading path</h2>
-        </div>
+.overview-label {
+  font-size: 0.62rem;
+  margin-bottom: 5px;
+}
 
-        <div class="entry-grid">
-          <article class="entry-card searchable" data-search="system trunk foundational route volumes kernel load boundary visibility">
-            <p class="card-eyebrow">System trunk</p>
-            <h3>Start from the system trunk</h3>
-            <p class="card-copy">
-              Enter through the first volume cluster and build the engine from kernel,
-              encoding, load, boundary, visibility, attraction, intrusion, blackout, and shutdown.
-            </p>
-            <p class="card-meta">Volumes I–X · Foundational route · Public release</p>
-            <a class="card-link" href="./publications/">Open</a>
-          </article>
+.overview-text {
+  font-size: 0.82rem;
+  line-height: 1.62;
+}
 
-          <article class="entry-card entry-card-featured searchable" data-search="canonical specification formal layer engine view citation path volumes 1 20">
-            <p class="card-eyebrow">Formal layer</p>
-            <h3>Read the canonical specification</h3>
-            <p class="card-copy">
-              Enter through the integrated engine document that consolidates Volumes I–XX
-              into one deterministic symbolic-computational system.
-            </p>
-            <p class="card-meta">Canonical document · Engine view · Citation path</p>
-            <a class="card-link" href="./canonical-specification-volumes-01-20/">Open</a>
-          </article>
+.overview-mono {
+  font-size: 0.9rem;
+}
 
-          <article class="entry-card searchable" data-search="public archive release trail publication order entry sequencing">
-            <p class="card-eyebrow">Public archive</p>
-            <h3>Browse the archive</h3>
-            <p class="card-copy">
-              Move through the released public volume surface as a curated record of
-              system development, publication order, and entry sequencing.
-            </p>
-            <p class="card-meta">Archive route · Release trail · Public record</p>
-            <a class="card-link" href="./publications/">Open</a>
-          </article>
-        </div>
-      </section>
+/* Entry cards */
+.section-entry {
+  margin-bottom: 40px;
+}
 
-      <section class="section section-soft" id="modulePreview">
-        <div class="section-head">
-          <p class="eyebrow">System preview</p>
-          <h2>Core architecture modules</h2>
-        </div>
+.entry-grid {
+  gap: 20px;
+}
 
-        <div class="module-grid">
-          <article class="module-card module-card-featured searchable" data-search="core runtime symbolic installation load accumulation rupture threshold exit routing restart">
-            <h3>Core Runtime</h3>
-            <p>Δ, symbolic installation, load accumulation, rupture threshold, exit routing, and restart-capable structure.</p>
-          </article>
+.entry-card {
+  padding: 24px 24px 22px;
+  gap: 10px;
+}
 
-          <article class="module-card searchable" data-search="boundary geometry safe proximity movement permission threshold displacement structural counterforce">
-            <h3>Boundary Geometry</h3>
-            <p>Safe-proximity radius, movement permission, threshold displacement, and structural counterforce.</p>
-          </article>
+.entry-card h3 {
+  font-size: 1rem;
+  line-height: 1.34;
+}
 
-          <article class="module-card searchable" data-search="visibility failure unreadability sorting collapse fallback orientation existence compensation signal loss">
-            <h3>Visibility Failure</h3>
-            <p>Unreadability, sorting collapse, fallback orientation, and existence-compensation under signal loss.</p>
-          </article>
+.card-copy {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
 
-          <article class="module-card searchable" data-search="projection attraction tension optical entry placeholder interface single input dominance thermal overload">
-            <h3>Projection &amp; Attraction</h3>
-            <p>Attraction tension, optical entry, placeholder interface, single-input dominance, and thermal overload.</p>
-          </article>
+.card-meta {
+  font-size: 0.66rem;
+  padding-top: 12px;
+  margin-top: 6px;
+}
 
-          <article class="module-card searchable" data-search="shame mechanics catastrophic rupture shadow child symbolic locking residual internal architecture">
-            <h3>Shame Mechanics</h3>
-            <p>Catastrophic rupture, Shadow-Child formation, symbolic locking, and residual internal architecture.</p>
-          </article>
+.card-link {
+  font-size: 0.8rem;
+}
 
-          <article class="module-card searchable" data-search="deep runtime clown subsystem grand hall recurrence primitive navigation post shame continuation">
-            <h3>Deep Runtime</h3>
-            <p>Clown subsystem, Grand Hall recurrence, primitive navigation, and post-shame continuation.</p>
-          </article>
-        </div>
-      </section>
+/* Module section */
+.section-soft {
+  padding: 38px 40px;
+  margin-bottom: 40px;
+}
 
-      <section class="section" id="recentReleases">
-        <div class="section-head">
-          <p class="eyebrow">Recent releases</p>
-          <h2>Recent public layers</h2>
-        </div>
+.module-grid {
+  gap: 20px;
+}
 
-        <div class="release-list">
-          <article class="release-item searchable" data-search="canonical specification volumes 1 20 integrated engine document variable table routing rules">
-            <div class="release-top">
-              <div class="release-top-left">
-                <span class="release-tag release-tag-spec">Specification</span>
-                <span class="release-date">Current public layer</span>
-              </div>
-              <a class="release-open" href="./canonical-specification-volumes-01-20/">Open</a>
-            </div>
+.module-card {
+  padding: 22px 22px;
+}
 
-            <h3>
-              <a href="./canonical-specification-volumes-01-20/">
-                Canonical Specification of Volumes I–XX
-              </a>
-            </h3>
+.module-card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 9px;
+}
 
-            <p>
-              Integrated engine document covering layer stratification, variable table,
-              module table, routing rules, state-transition logic, and canonical consistency corrections.
-            </p>
+.module-card p {
+  font-size: 0.8rem;
+  line-height: 1.68;
+}
 
-            <div class="release-meta">
-              <span>Canonical document</span>
-              <span>Engine-level consolidation</span>
-              <span>Citation path</span>
-            </div>
-          </article>
+/* Recent releases section */
+.section-recent {
+  margin-bottom: 44px;
+}
 
-          <article class="release-item searchable" data-search="volume 19 grand hall scene shift mechanics clown deep engine runtime">
-            <div class="release-top">
-              <div class="release-top-left">
-                <span class="release-tag">Volume</span>
-                <span class="release-date">Public release</span>
-              </div>
-              <a class="release-open" href="./volume-19.md">Open</a>
-            </div>
+.recent-grid {
+  gap: 32px;
+}
 
-            <h3>
-              <a href="./volume-19.md">
-                Volume XIX — The Grand Hall, Scene-Shift Mechanics, and the Clown as the Deep Engine
-              </a>
-            </h3>
+.release-list {
+  gap: 18px;
+}
 
-            <p>
-              Hall-scale engine architecture, scene-shifting continuity, dark-run recurrence,
-              and deep-engine governance within the system's larger operating environment.
-            </p>
+.release-item {
+  padding: 24px 28px;
+}
 
-            <div class="release-meta">
-              <span>Deep runtime</span>
-              <span>Grand Hall layer</span>
-              <span>Release trail</span>
-            </div>
-          </article>
+.release-topline {
+  margin-bottom: 12px;
+  gap: 12px;
+}
 
-          <article class="release-item searchable" data-search="volume 20 firefly post shame survival navigation compensation vector rupture">
-            <div class="release-top">
-              <div class="release-top-left">
-                <span class="release-tag">Volume</span>
-                <span class="release-date">Public release</span>
-              </div>
-              <a class="release-open" href="./volume-20.md">Open</a>
-            </div>
+.release-tag,
+.release-open {
+  font-size: 0.64rem;
+}
 
-            <h3>
-              <a href="./volume-20.md">
-                Volume XX — The Firefly, Post-Shame Survival Navigation, and the Compensation Vector
-              </a>
-            </h3>
+.release-date {
+  font-size: 0.74rem;
+}
 
-            <p>
-              Primitive navigational signalling, post-shame continuation, system switching,
-              and long-range compensation-vector formation after catastrophic rupture.
-            </p>
+.release-item h3 {
+  font-size: 1.04rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
 
-            <div class="release-meta">
-              <span>Post-shame survival</span>
-              <span>Primitive navigation</span>
-              <span>Release trail</span>
-            </div>
-          </article>
+.release-item > p {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
 
-          <article class="release-item searchable" data-search="research entry citation executable layers publication logic continuity">
-            <div class="release-top">
-              <div class="release-top-left">
-                <span class="release-tag release-tag-research">Research</span>
-                <span class="release-date">Access route</span>
-              </div>
-              <a class="release-open" href="./for-researchers/">Open</a>
-            </div>
+.release-bottom {
+  padding-top: 12px;
+}
 
-            <h3>
-              <a href="./for-researchers/">
-                For Researchers
-              </a>
-            </h3>
+.release-bottom span,
+.release-bottom a {
+  font-size: 0.74rem;
+}
 
-            <p>
-              Research-facing entry structure covering executable layers,
-              publication logic, reading continuity, and the current citation-oriented surface of the system.
-            </p>
+/* Sticky archive panel */
+.archive-sticky {
+  padding: 24px 24px;
+}
 
-            <div class="release-meta">
-              <span>Research path</span>
-              <span>Entry framing</span>
-              <span>Public access</span>
-            </div>
-          </article>
-        </div>
+.archive-panel-eyebrow {
+  font-size: 0.62rem;
+  margin-bottom: 8px;
+}
 
-        <p id="searchEmpty" class="search-empty" hidden>No matching items found.</p>
-      </section>
+.archive-sticky h3 {
+  font-size: 1.18rem;
+  margin-bottom: 12px;
+}
 
-    </div>
-  </main>
+.archive-panel-copy {
+  font-size: 0.8rem;
+  line-height: 1.72;
+  margin-bottom: 16px;
+}
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-title">Symbolic Mechanics</p>
-        <p class="footer-copy">A deterministic symbolic-computational architecture of inner mechanics and relational dynamics.</p>
-      </div>
+.archive-panel-list {
+  gap: 8px;
+}
 
-      <div>
-        <p class="footer-title">Theory</p>
-        <ul class="footer-list">
-          <li><a href="./publications/">Volumes I–X</a></li>
-          <li><a href="./expansion-volumes/">Volumes XI–XX</a></li>
-        </ul>
-      </div>
+.archive-panel-list li {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
 
-      <div>
-        <p class="footer-title">Research &amp; archive</p>
-        <ul class="footer-list">
-          <li><a href="./canonical-specification-volumes-01-20/">Specification</a></li>
-          <li><a href="./for-researchers/">Research</a></li>
-          <li><a href="./publications/">Archive</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+/* Band section */
+.section-band {
+  padding: 42px 44px;
+  margin-bottom: 40px;
+}
 
-  <script>
-    function doSearch() {
-      const q = document.getElementById('searchInput').value.trim().toLowerCase();
-      const items = document.querySelectorAll('.searchable');
-      const empty = document.getElementById('searchEmpty');
-      let visible = 0;
-      let firstVisible = null;
+.band-grid {
+  gap: 48px;
+}
 
-      items.forEach((item) => {
-        const hay = item.dataset.search.toLowerCase();
-        const match = q === '' || hay.includes(q);
-        item.classList.toggle('is-hidden', !match);
+.band-copy h2 {
+  font-size: 1.46rem;
+  margin-bottom: 14px;
+}
 
-        if (match) {
-          visible += 1;
-          if (!firstVisible) firstVisible = item;
-        }
-      });
+.band-copy p {
+  font-size: 0.82rem;
+  line-height: 1.72;
+}
 
-      empty.hidden = !(q !== '' && visible === 0);
+.band-links {
+  gap: 8px;
+}
 
-      if (q !== '' && firstVisible) {
-        firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
+.band-links a {
+  font-size: 0.8rem;
+  padding: 10px 12px;
+}
 
-    document.getElementById('searchInput').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        doSearch();
-      }
-    });
-  </script>
+/* Archive integrity section */
+.archive-grid {
+  gap: 36px;
+}
 
-</body>
-</html>
+.archive-copy {
+  font-size: 0.84rem;
+  line-height: 1.76;
+  margin-top: 16px;
+}
+
+.archive-panel {
+  padding: 22px 22px;
+}
+
+.archive-label {
+  font-size: 0.62rem;
+  margin-bottom: 12px;
+}
+
+.archive-list {
+  gap: 8px;
+}
+
+.archive-list li {
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.site-footer {
+  padding: 44px 32px;
+}
+
+.footer-grid {
+  gap: 48px;
+}
+
+.footer-title {
+  font-size: 0.74rem;
+  margin-bottom: 12px;
+}
+
+.footer-copy,
+.footer-list li a {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* Extra breathing room between major blocks inside main column */
+.zn-main > .hero + .section,
+.zn-main > .section + .section,
+.zn-main > .section + .section-soft,
+.zn-main > .section-soft + .section,
+.zn-main > .section-recent + .section-band,
+.zn-main > .section-band + .section {
+  margin-top: 8px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .zn-page {
+    padding: 24px 24px 72px;
+    gap: 28px;
+  }
+
+  .hero {
+    padding: 34px 34px;
+  }
+
+  .hero-grid {
+    gap: 28px;
+  }
+
+  .section,
+  .section-entry,
+  .section-soft,
+  .section-recent,
+  .section-band {
+    margin-bottom: 36px;
+  }
+
+  .recent-grid,
+  .archive-grid,
+  .band-grid {
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  .zn-page {
+    padding: 18px 16px 56px;
+    gap: 22px;
+  }
+
+  .hero {
+    padding: 22px 20px;
+    margin-bottom: 28px;
+  }
+
+  .section,
+  .section-entry,
+  .section-soft,
+  .section-recent,
+  .section-band {
+    margin-bottom: 28px;
+  }
+
+  .section-soft {
+    padding: 26px 20px;
+  }
+
+  .section-band {
+    padding: 28px 22px;
+  }
+
+  .entry-grid,
+  .module-grid {
+    gap: 14px;
+  }
+
+  .release-list {
+    gap: 14px;
+  }
+}
