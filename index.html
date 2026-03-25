@@ -66,7 +66,7 @@
 
     .banner-top {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 300px;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 24px;
       align-items: start;
       margin-bottom: 16px;
@@ -82,51 +82,41 @@
       align-self: center;
     }
 
-    .contact-card {
+    /* slim contact rail — only addition */
+    .contact-rail {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
       justify-self: end;
-      width: 100%;
-      max-width: 300px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 12px;
-      padding: 14px 16px;
-      backdrop-filter: blur(4px);
+      padding-top: 4px;
     }
 
-    .contact-card h2 {
-      font-family: var(--sans);
-      font-size: 0.72rem;
+    .contact-block {
+      min-width: 0;
+    }
+
+    .contact-kicker {
+      display: block;
+      font-size: 0.64rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.72);
-      margin-bottom: 10px;
-    }
-
-    .contact-item + .contact-item {
-      margin-top: 10px;
-    }
-
-    .contact-label {
-      display: block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
       color: rgba(255, 255, 255, 0.62);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
-    .contact-value {
+    .contact-link,
+    .contact-text {
       display: inline-block;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: #fff;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.94);
       word-break: break-word;
     }
 
-    .contact-value:hover {
+    .contact-link:hover {
       text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .search-row {
@@ -604,11 +594,13 @@
     @media (max-width: 1024px) {
       .banner-top {
         grid-template-columns: 1fr;
+        gap: 14px;
       }
 
-      .contact-card {
+      .contact-rail {
         justify-self: start;
-        max-width: 100%;
+        gap: 18px;
+        flex-wrap: wrap;
       }
 
       .page {
@@ -668,6 +660,11 @@
       .entry-grid {
         grid-template-columns: 1fr;
       }
+
+      .contact-rail {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -678,19 +675,17 @@
         <div class="banner-top">
           <a class="wordmark" href="./index.html">Symbolic Mechanics</a>
 
-          <aside class="contact-card">
-            <h2>Contact</h2>
-
-            <div class="contact-item">
-              <span class="contact-label">Email</span>
-              <a class="contact-value" href="mailto:eidosan013135@hotmail.com">eidosan013135@hotmail.com</a>
+          <div class="contact-rail">
+            <div class="contact-block">
+              <span class="contact-kicker">Email</span>
+              <a class="contact-link" href="mailto:eidosan013135@hotmail.com">eidosan013135@hotmail.com</a>
             </div>
 
-            <div class="contact-item">
-              <span class="contact-label">Zenodo</span>
-              <span class="contact-value">namyanyi2003</span>
+            <div class="contact-block">
+              <span class="contact-kicker">Zenodo</span>
+              <a class="contact-link" href="https://zenodo.org/search?q=namyanyi2003" target="_blank" rel="noopener noreferrer">namyanyi2003</a>
             </div>
-          </aside>
+          </div>
         </div>
 
         <div class="search-row">
