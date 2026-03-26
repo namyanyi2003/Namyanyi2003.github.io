@@ -7,6 +7,26 @@ Symbolic Mechanics formalizes the missing computational layers beneath emotion, 
 It models inner life as deterministic symbolic mechanics rather than interpretation, symptom description, or narrative meaning.
 
 ## Main Entry
+Prototype Prep v0.1
+
+The first frozen bridge from Symbolic Mechanics theory to executable structure
+
+Prototype Prep v0.1 is not a complete Human OS. It is the first reduced executable bridge of Symbolic Mechanics: a minimal runnable spine designed to preserve the canonical cycle in a form that can already be manually executed, simulated, tested for conformance, handed to builders, and attached to benchmark comparison.
+
+Its current status is:
+	•	Closure class: Prepared-Closed
+	•	Implementation line: Exploratory-Closed
+	•	Benchmark layer: Benchmark-Prepared-Closed
+	•	Readiness level: Level 2 — Build Ready
+
+Prototype Prep v0.1 exists to show that Symbolic Mechanics is no longer only a theory archive. At the prototype-preparation layer, it already has a fixed variable vocabulary, a fixed manual execution procedure, a fixed reference trace set, a fixed conformance matrix, a fixed implementation-readiness gate, and a defined toy simulator blueprint.
+
+This package does not claim a finished Human OS or a completed full-system implementation. Its role is narrower and more important: to freeze the smallest deterministic spine clearly enough that disciplined building can begin without doctrinal drift.
+
+Access
+	•	Open Prototype Prep v0.1 page￼
+	•	Download Prototype Prep PDF￼
+
 
 - [Open Volumes I–X](./publications.md)
 - [Open Volumes XI–XX](./expansion-volumes/)
