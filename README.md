@@ -24,6 +24,7 @@ Prototype Prep v0.1 exists to show that Symbolic Mechanics is no longer only a t
 This package does not claim a finished Human OS or a completed full-system implementation. Its role is narrower and more important: to freeze the smallest deterministic spine clearly enough that disciplined building can begin without doctrinal drift.
 
 Access
+
 	•	Open Prototype Prep v0.1 page￼
 	•	Download Prototype Prep PDF￼
 
