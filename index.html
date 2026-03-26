@@ -25,7 +25,7 @@
       --bg: #f5f4f0;
       --surface: #ffffff;
       --surface-soft: #f8f6f2;
-      --surface-soft-2: #f2eee8;
+      --surface-soft-2: #f1ece4;
       --text: #1a1a18;
       --muted: #666e79;
       --faint: #9aa4b0;
@@ -118,10 +118,10 @@
     .page {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 34px 28px 88px;
+      padding: 36px 28px 88px;
       display: grid;
-      grid-template-columns: 250px minmax(0, 1fr);
-      gap: 46px;
+      grid-template-columns: 248px minmax(0, 1fr);
+      gap: 48px;
       align-items: start;
     }
 
@@ -132,7 +132,7 @@
     }
 
     .sidebar-block + .sidebar-block {
-      margin-top: 28px;
+      margin-top: 30px;
       padding-top: 24px;
       border-top: 1px solid var(--line);
     }
@@ -148,15 +148,14 @@
 
     .sidebar-nav {
       display: grid;
-      gap: 4px;
+      gap: 6px;
     }
 
     .sidebar-nav a {
       display: block;
       padding: 8px 0;
       font-size: 0.95rem;
-      color: #425061;
-      border-bottom: 1px solid transparent;
+      color: #445161;
       transition: color 0.14s ease, transform 0.14s ease;
     }
 
@@ -168,7 +167,7 @@
 
     .meta-list {
       display: grid;
-      gap: 2px;
+      gap: 0;
     }
 
     .meta-row {
@@ -176,7 +175,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      padding: 8px 0;
+      padding: 10px 0;
       border-bottom: 1px solid var(--line-soft);
       font-size: 0.9rem;
       color: #394352;
@@ -202,7 +201,7 @@
     }
 
     .hero {
-      padding-bottom: 34px;
+      padding-bottom: 38px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -224,7 +223,7 @@
 
     .hero-copy h1 {
       font-family: var(--serif);
-      font-size: clamp(4rem, 8vw, 5.9rem);
+      font-size: clamp(3.8rem, 8vw, 5.7rem);
       line-height: 0.88;
       letter-spacing: -0.05em;
       margin-bottom: 24px;
@@ -241,7 +240,7 @@
     }
 
     .hero-support {
-      max-width: 58ch;
+      max-width: 52ch;
       font-size: 0.98rem;
       line-height: 1.84;
       color: var(--muted);
@@ -274,19 +273,19 @@
 
     .hero-meta-text {
       font-size: 0.95rem;
-      line-height: 1.7;
+      line-height: 1.72;
       color: var(--text);
     }
 
     .hero-meta-mono {
       font-family: var(--mono);
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       color: var(--navy);
       line-height: 1.6;
     }
 
     .section {
-      margin-top: 52px;
+      margin-top: 64px;
     }
 
     .section-head {
@@ -295,73 +294,21 @@
 
     .section-head h2 {
       font-family: var(--serif);
-      font-size: 2.3rem;
-      line-height: 1.05;
+      font-size: 2.35rem;
+      line-height: 1.04;
       letter-spacing: -0.02em;
     }
 
-    .entry-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .entry-card {
-      padding: 0 0 16px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .entry-card .card-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 10px;
-    }
-
-    .entry-card h3 {
-      font-size: 1.08rem;
-      line-height: 1.35;
-      margin-bottom: 10px;
-    }
-
-    .entry-card p {
-      font-size: 0.9rem;
-      line-height: 1.75;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .entry-meta {
-      font-size: 0.74rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #8f98a6;
-      margin-bottom: 10px;
-    }
-
-    .entry-link {
-      display: inline-block;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--blue);
-    }
-
-    .entry-link:hover {
-      text-decoration: underline;
-    }
-
-    .prototype-open {
-      padding-top: 8px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--line);
+    .prototype-section {
+      margin-top: 64px;
+      padding: 36px 0 10px;
+      border-top: 1px solid var(--line);
     }
 
     .prototype-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 48px;
+      gap: 52px;
       align-items: start;
     }
 
@@ -372,17 +319,17 @@
     }
 
     .prototype-copy p {
-      font-size: 0.94rem;
-      line-height: 1.82;
+      font-size: 0.95rem;
+      line-height: 1.84;
       color: var(--muted);
-      max-width: 64ch;
+      max-width: 62ch;
     }
 
     .prototype-note {
-      margin: 18px 0 18px;
+      margin: 20px 0 18px;
       padding: 16px 18px;
       background: var(--surface-soft-2);
-      border-left: 3px solid #d4c6b4;
+      border-left: 3px solid #d6c8b7;
       border-radius: 0 12px 12px 0;
       font-size: 0.9rem;
       line-height: 1.78;
@@ -416,9 +363,10 @@
 
     .prototype-actions {
       display: flex;
+      align-items: center;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
+      margin-top: 26px;
     }
 
     .prototype-btn {
@@ -445,19 +393,20 @@
       border-color: #17446f;
     }
 
-    .prototype-btn-secondary {
-      background: transparent;
-      color: var(--navy);
-      border-color: var(--navy);
+    .prototype-link {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--blue);
     }
 
-    .prototype-btn-secondary:hover {
-      background: var(--navy);
-      color: #fff;
+    .prototype-link:hover {
+      text-decoration: underline;
     }
 
     .status-column {
-      padding-top: 8px;
+      padding-top: 6px;
+      border-left: 1px solid var(--line);
+      padding-left: 28px;
     }
 
     .status-kicker {
@@ -492,7 +441,7 @@
       padding: 14px 0;
       border-bottom: 1px solid var(--line-soft);
       font-size: 0.92rem;
-      line-height: 1.65;
+      line-height: 1.66;
       color: var(--text);
     }
 
@@ -500,17 +449,17 @@
       color: var(--navy);
     }
 
-    .recent-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 34px;
-      align-items: start;
+    .recent-section {
+      margin-top: 72px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
     }
 
-    .release-list {
+    .recent-list {
       display: grid;
       gap: 0;
       border-top: 1px solid var(--line);
+      margin-top: 18px;
     }
 
     .release-item {
@@ -571,7 +520,7 @@
 
     .release-item p {
       font-size: 0.9rem;
-      line-height: 1.76;
+      line-height: 1.78;
       color: var(--muted);
       margin-bottom: 12px;
       max-width: 66ch;
@@ -611,33 +560,6 @@
       text-decoration: underline;
     }
 
-    .archive-panel {
-      padding-top: 8px;
-    }
-
-    .archive-panel h3 {
-      font-size: 1.2rem;
-      line-height: 1.3;
-      margin-bottom: 10px;
-    }
-
-    .archive-panel p {
-      font-size: 0.9rem;
-      line-height: 1.78;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .archive-panel ul {
-      padding-left: 18px;
-    }
-
-    .archive-panel li {
-      font-size: 0.88rem;
-      line-height: 1.72;
-      margin-bottom: 4px;
-    }
-
     @media (max-width: 1100px) {
       .page {
         grid-template-columns: 1fr;
@@ -649,13 +571,15 @@
       }
 
       .hero-grid,
-      .prototype-grid,
-      .recent-layout {
+      .prototype-grid {
         grid-template-columns: 1fr;
       }
 
-      .entry-grid {
-        grid-template-columns: 1fr 1fr;
+      .status-column {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
       }
     }
 
@@ -672,25 +596,16 @@
       }
 
       .hero-copy h1 {
-        font-size: 3.3rem;
+        font-size: 3.25rem;
       }
 
       .hero-deck {
         max-width: 100%;
       }
 
-      .entry-grid {
-        grid-template-columns: 1fr;
-      }
-
       .prototype-actions {
-        flex-direction: column;
         align-items: flex-start;
-      }
-
-      .prototype-btn {
-        width: 100%;
-        max-width: 280px;
+        flex-direction: column;
       }
     }
   </style>
@@ -772,14 +687,12 @@
             <p class="eyebrow">Deterministic symbolic architecture</p>
             <h1>Symbolic Mechanics</h1>
             <p class="hero-deck">
-              Formalizing the missing computational layers
-              beneath emotion, attraction, collapse, projection,
-              shame, and relational conflict.
+              Formalizing the missing computational layers beneath emotion,
+              attraction, collapse, projection, shame, and relational conflict.
             </p>
             <p class="hero-support">
-              A multi-volume symbolic runtime architecture with public reading paths,
-              canonical specification, versioned archive structure, researcher-oriented
-              entry routes, and a frozen prototype bridge for executable implementation.
+              A multi-volume symbolic runtime architecture with public reading access,
+              canonical specification, archive continuity, and one executable prototype bridge.
             </p>
           </div>
 
@@ -790,71 +703,19 @@
             </div>
 
             <div class="hero-meta-item">
-              <div class="hero-meta-label">Structure</div>
-              <div class="hero-meta-text">Multi-volume symbolic runtime architecture</div>
-            </div>
-
-            <div class="hero-meta-item">
               <div class="hero-meta-label">Available now</div>
-              <div class="hero-meta-text">Volumes I–XX / Canonical specification / Prototype bridge / Public archive record</div>
+              <div class="hero-meta-text">Volumes I–XX / Canonical specification / Prototype Prep v0.1</div>
             </div>
 
             <div class="hero-meta-item">
-              <div class="hero-meta-label">Research status</div>
-              <div class="hero-meta-text">Active archive / public release / citation pathway</div>
-            </div>
-
-            <div class="hero-meta-item">
-              <div class="hero-meta-label">Current public release</div>
-              <div class="hero-meta-text">Volumes I–XX with integrated engine specification and Prototype Prep v0.1</div>
+              <div class="hero-meta-label">Research contact</div>
+              <div class="hero-meta-text">eidosan013135@hotmail.com<br>Zenodo: namyanyi2003</div>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-head">
-          <p class="eyebrow">Entry routes</p>
-          <h2>Choose a reading path</h2>
-        </div>
-
-        <div class="entry-grid">
-          <article class="entry-card">
-            <div class="card-eyebrow">System trunk</div>
-            <h3>Start from the system trunk</h3>
-            <p>
-              Enter through the first volume cluster and build the engine from kernel,
-              encoding, load, boundary, visibility, attraction, intrusion, blackout, and shutdown.
-            </p>
-            <div class="entry-meta">Volumes I–X · Foundational route · Public release</div>
-            <a class="entry-link" href="./publications/">Open</a>
-          </article>
-
-          <article class="entry-card">
-            <div class="card-eyebrow">Formal layer</div>
-            <h3>Read the canonical specification</h3>
-            <p>
-              Enter through the integrated engine document that consolidates Volumes I–XX
-              into one deterministic symbolic-computational system.
-            </p>
-            <div class="entry-meta">Canonical document · Engine view · Citation path</div>
-            <a class="entry-link" href="./canonical-specification-volumes-01-20/">Open</a>
-          </article>
-
-          <article class="entry-card">
-            <div class="card-eyebrow">Public archive</div>
-            <h3>Browse the archive</h3>
-            <p>
-              Move through the released public volume surface as a curated record of system
-              development, publication order, and entry sequencing.
-            </p>
-            <div class="entry-meta">Archive route · Release trail · Public record</div>
-            <a class="entry-link" href="./publications/">Open</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section prototype-open">
+      <section class="prototype-section">
         <div class="section-head">
           <p class="eyebrow">Prototype bridge</p>
           <h2>Prototype Prep v0.1</h2>
@@ -872,8 +733,7 @@
 
             <div class="prototype-note">
               This line is intentionally narrow. It does not claim full implementation completion.
-              Its role is to freeze the smallest buildable deterministic spine clearly enough for a
-              disciplined first build pass.
+              It exists to freeze the smallest buildable deterministic spine clearly enough for a disciplined first build pass.
             </div>
 
             <ul class="prototype-list">
@@ -886,7 +746,7 @@
 
             <div class="prototype-actions">
               <a class="prototype-btn prototype-btn-primary" href="./prototype-prep-v0-1.html">Open Prototype Prep</a>
-              <a class="prototype-btn prototype-btn-secondary" href="./pdfs/prototype-prep-v01.pdf" target="_blank" rel="noopener">Download PDF</a>
+              <a class="prototype-link" href="./pdfs/prototype-prep-v01.pdf" target="_blank" rel="noopener">Download PDF →</a>
             </div>
           </div>
 
@@ -907,108 +767,88 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="recent-section">
         <div class="section-head">
-          <p class="eyebrow">Recent releases</p>
-          <h2>Recent public layers</h2>
+          <p class="eyebrow">Recent public layers</p>
+          <h2>Recent releases</h2>
         </div>
 
-        <div class="recent-layout">
-          <div class="release-list">
-            <article class="release-item">
-              <div class="release-top">
-                <span class="release-tag spec">Specification</span>
-                <span class="release-date">Current public layer</span>
-                <a class="release-open" href="./canonical-specification-volumes-01-20/">Open</a>
-              </div>
-              <h3>Canonical Specification of Volumes I–XX</h3>
-              <p>
-                Integrated engine document covering layer stratification, variable table, module table,
-                routing rules, state-transition logic, and canonical consistency corrections.
-              </p>
-              <div class="release-bottom">
-                <span>Canonical document</span>
-                <span>Engine-level consolidation</span>
-                <span>Archive trail</span>
-                <a href="./canonical-specification-volumes-01-20/">Read</a>
-              </div>
-            </article>
-
-            <article class="release-item">
-              <div class="release-top">
-                <span class="release-tag">Volume</span>
-                <span class="release-date">Public release</span>
-                <a class="release-open" href="./volume-19.html">Open</a>
-              </div>
-              <h3>Volume XIX — The Grand Hall, Scene-Shifting, and the Clown as the System’s Deep Engine</h3>
-              <p>
-                Hall-scale engine architecture, scene-shifting continuity, dark-run recurrence,
-                and deep-engine governance within the system’s larger operating environment.
-              </p>
-              <div class="release-bottom">
-                <span>Deep runtime</span>
-                <span>Grand Hall layer</span>
-                <span>Release trail</span>
-                <a href="./volume-19.html">Read</a>
-              </div>
-            </article>
-
-            <article class="release-item">
-              <div class="release-top">
-                <span class="release-tag">Volume</span>
-                <span class="release-date">Public release</span>
-                <a class="release-open" href="./volume-20.html">Open</a>
-              </div>
-              <h3>Volume XX — The Firefly, Primitive Survival Navigation, and the Post-Shame Survival Triad</h3>
-              <p>
-                Primitive navigational signalling, post-shame continuation, system switching,
-                and long-range compensation-vector formation after catastrophic rupture.
-              </p>
-              <div class="release-bottom">
-                <span>Post-shame survival</span>
-                <span>Primitive navigation</span>
-                <span>Release trail</span>
-                <a href="./volume-20.html">Read</a>
-              </div>
-            </article>
-
-            <article class="release-item">
-              <div class="release-top">
-                <span class="release-tag research">Research</span>
-                <span class="release-date">Access route</span>
-                <a class="release-open" href="./for-researchers/">Open</a>
-              </div>
-              <h3>For Researchers</h3>
-              <p>
-                Research-facing entry structure covering executable layers, publication logic,
-                reading continuity, and the citation-oriented use of the public release surface.
-              </p>
-              <div class="release-bottom">
-                <span>Research path</span>
-                <span>Entry framing</span>
-                <span>Access note</span>
-                <a href="./for-researchers/">Read</a>
-              </div>
-            </article>
-          </div>
-
-          <aside class="archive-panel">
-            <p class="eyebrow">Archive integrity</p>
-            <h3>Why this archive matters</h3>
+        <div class="recent-list">
+          <article class="release-item">
+            <div class="release-top">
+              <span class="release-tag spec">Specification</span>
+              <span class="release-date">Current public layer</span>
+              <a class="release-open" href="./canonical-specification-volumes-01-20/">Open</a>
+            </div>
+            <h3>Canonical Specification of Volumes I–XX</h3>
             <p>
-              This website serves as the curated entry layer. Public releases are versioned,
-              archived, and organized for reading continuity, research access, executable entry,
-              and citation-oriented use.
+              Integrated engine document covering layer stratification, variable table, module table,
+              routing rules, state-transition logic, and canonical consistency corrections.
             </p>
-            <ul>
-              <li>Public record</li>
-              <li>Versioned release path</li>
-              <li>Canonical specification</li>
-              <li>Prototype bridge</li>
-              <li>Archive-backed publication</li>
-              <li>Research-oriented entry structure</li>
-            </ul>
-          </aside>
+            <div class="release-bottom">
+              <span>Canonical document</span>
+              <span>Engine-level consolidation</span>
+              <span>Archive trail</span>
+              <a href="./canonical-specification-volumes-01-20/">Read</a>
+            </div>
+          </article>
+
+          <article class="release-item">
+            <div class="release-top">
+              <span class="release-tag">Volume</span>
+              <span class="release-date">Public release</span>
+              <a class="release-open" href="./volume-19.html">Open</a>
+            </div>
+            <h3>Volume XIX — The Grand Hall, Scene-Shifting, and the Clown as the System’s Deep Engine</h3>
+            <p>
+              Hall-scale engine architecture, scene-shifting continuity, dark-run recurrence,
+              and deep-engine governance within the system’s larger operating environment.
+            </p>
+            <div class="release-bottom">
+              <span>Deep runtime</span>
+              <span>Grand Hall layer</span>
+              <span>Release trail</span>
+              <a href="./volume-19.html">Read</a>
+            </div>
+          </article>
+
+          <article class="release-item">
+            <div class="release-top">
+              <span class="release-tag">Volume</span>
+              <span class="release-date">Public release</span>
+              <a class="release-open" href="./volume-20.html">Open</a>
+            </div>
+            <h3>Volume XX — The Firefly, Primitive Survival Navigation, and the Post-Shame Survival Triad</h3>
+            <p>
+              Primitive navigational signalling, post-shame continuation, system switching,
+              and long-range compensation-vector formation after catastrophic rupture.
+            </p>
+            <div class="release-bottom">
+              <span>Post-shame survival</span>
+              <span>Primitive navigation</span>
+              <span>Release trail</span>
+              <a href="./volume-20.html">Read</a>
+            </div>
+          </article>
+
+          <article class="release-item">
+            <div class="release-top">
+              <span class="release-tag research">Research</span>
+              <span class="release-date">Access route</span>
+              <a class="release-open" href="./for-researchers/">Open</a>
+            </div>
+            <h3>For Researchers</h3>
+            <p>
+              Research-facing entry structure covering executable layers, publication logic,
+              reading continuity, and citation-oriented use of the public release surface.
+            </p>
+            <div class="release-bottom">
+              <span>Research path</span>
+              <span>Entry framing</span>
+              <span>Access note</span>
+              <a href="./for-researchers/">Read</a>
+            </div>
+          </article>
         </div>
       </section>
     </section>
