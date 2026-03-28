@@ -120,7 +120,7 @@
       margin: 0 auto;
       padding: 36px 28px 88px;
       display: grid;
-      grid-template-columns: 248px minmax(0, 1fr);
+      grid-template-columns: 228px minmax(0, 1fr);
       gap: 48px;
       align-items: start;
     }
@@ -132,8 +132,8 @@
     }
 
     .sidebar-block + .sidebar-block {
-      margin-top: 30px;
-      padding-top: 24px;
+      margin-top: 28px;
+      padding-top: 22px;
       border-top: 1px solid var(--line);
     }
 
@@ -165,23 +165,28 @@
       transform: translateX(2px);
     }
 
-    .meta-list {
+    .sidebar-note {
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: var(--muted);
+    }
+
+    .mini-meta {
       display: grid;
       gap: 0;
     }
 
-    .meta-row {
+    .mini-meta-row {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 12px;
       padding: 10px 0;
       border-bottom: 1px solid var(--line-soft);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #394352;
     }
 
-    .meta-row:last-child {
+    .mini-meta-row:last-child {
       border-bottom: none;
     }
 
@@ -201,7 +206,7 @@
     }
 
     .hero {
-      padding-bottom: 38px;
+      padding-bottom: 42px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -240,7 +245,7 @@
     }
 
     .hero-support {
-      max-width: 52ch;
+      max-width: 54ch;
       font-size: 0.98rem;
       line-height: 1.84;
       color: var(--muted);
@@ -299,8 +304,65 @@
       letter-spacing: -0.02em;
     }
 
+    .entry-section {
+      margin-top: 56px;
+    }
+
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .entry-card {
+      background: var(--surface);
+      border: 1px solid var(--line-soft);
+      border-radius: 16px;
+      padding: 22px 22px 20px;
+      transition: border-color 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+    }
+
+    .entry-card:hover {
+      border-color: #cfc5b8;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(18, 59, 102, 0.05);
+    }
+
+    .entry-kicker {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .entry-card h3 {
+      font-size: 1.08rem;
+      line-height: 1.38;
+      margin-bottom: 10px;
+    }
+
+    .entry-card p {
+      font-size: 0.92rem;
+      line-height: 1.76;
+      color: var(--muted);
+      margin-bottom: 14px;
+      max-width: 34ch;
+    }
+
+    .entry-card a {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .entry-card a:hover {
+      text-decoration: underline;
+    }
+
     .prototype-section {
-      margin-top: 64px;
+      margin-top: 72px;
       padding: 36px 0 10px;
       border-top: 1px solid var(--line);
     }
@@ -583,6 +645,12 @@
       }
     }
 
+    @media (max-width: 820px) {
+      .entry-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 720px) {
       .topband,
       .page {
@@ -642,41 +710,19 @@
       </section>
 
       <section class="sidebar-block">
-        <div class="sidebar-label">Record Type</div>
-        <div class="meta-list">
-          <div class="meta-row"><span>All records</span><span class="badge">24</span></div>
-          <div class="meta-row"><span>Volume</span><span class="badge">20</span></div>
-          <div class="meta-row"><span>Specification</span><span class="badge">1</span></div>
-          <div class="meta-row"><span>Research</span><span class="badge">2</span></div>
-          <div class="meta-row"><span>Prototype</span><span class="badge">1</span></div>
+        <div class="sidebar-label">Archive Snapshot</div>
+        <div class="mini-meta">
+          <div class="mini-meta-row"><span>Total public records</span><span class="badge">24</span></div>
+          <div class="mini-meta-row"><span>Volumes</span><span class="badge">20</span></div>
+          <div class="mini-meta-row"><span>Research / Spec / Prototype</span><span class="badge">4</span></div>
         </div>
       </section>
 
       <section class="sidebar-block">
-        <div class="sidebar-label">Volume Cluster</div>
-        <div class="meta-list">
-          <div class="meta-row"><span>Volumes I–X</span><span class="badge">10</span></div>
-          <div class="meta-row"><span>Volumes XI–XX</span><span class="badge">10</span></div>
-        </div>
-      </section>
-
-      <section class="sidebar-block">
-        <div class="sidebar-label">Module Category</div>
-        <div class="meta-list">
-          <div class="meta-row"><span>Core Runtime</span><span class="badge">6</span></div>
-          <div class="meta-row"><span>Boundary Geometry</span><span class="badge">4</span></div>
-          <div class="meta-row"><span>Projection &amp; Attraction</span><span class="badge">5</span></div>
-          <div class="meta-row"><span>Shame Mechanics</span><span class="badge">4</span></div>
-          <div class="meta-row"><span>Visibility Failure</span><span class="badge">3</span></div>
-          <div class="meta-row"><span>Deep Runtime</span><span class="badge">4</span></div>
-        </div>
-      </section>
-
-      <section class="sidebar-block">
-        <div class="sidebar-label">Access</div>
-        <div class="meta-list">
-          <div class="meta-row"><span>Open access</span><span class="badge">24</span></div>
-        </div>
+        <div class="sidebar-label">Public Note</div>
+        <p class="sidebar-note">
+          This homepage is an entry surface, not the full archive index. Use the archive and specification routes for structured reading.
+        </p>
       </section>
     </aside>
 
@@ -703,8 +749,8 @@
             </div>
 
             <div class="hero-meta-item">
-              <div class="hero-meta-label">Available now</div>
-              <div class="hero-meta-text">Volumes I–XX / Canonical specification / Prototype Prep v0.1</div>
+              <div class="hero-meta-label">Public surface</div>
+              <div class="hero-meta-text">Volumes I–XX / Canonical Specification / Prototype Prep v0.1 / Research entry</div>
             </div>
 
             <div class="hero-meta-item">
@@ -712,6 +758,51 @@
               <div class="hero-meta-text">eidosan013135@hotmail.com<br>Zenodo: namyanyi2003</div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section entry-section">
+        <div class="section-head">
+          <p class="eyebrow">Start here</p>
+          <h2>Public entry routes</h2>
+        </div>
+
+        <div class="entry-grid">
+          <article class="entry-card">
+            <div class="entry-kicker">Reading path</div>
+            <h3>Volumes I–XX</h3>
+            <p>
+              Public release path across the first twenty volumes of the system, including the early engine, runtime layers, and deep-system modules.
+            </p>
+            <a href="./publications/">Open archive path →</a>
+          </article>
+
+          <article class="entry-card">
+            <div class="entry-kicker">Canonical layer</div>
+            <h3>Canonical Specification</h3>
+            <p>
+              Integrated engine-level consolidation of Volumes I–XX, including variable definitions, routing rules, module structure, and consistency corrections.
+            </p>
+            <a href="./canonical-specification-volumes-01-20/">Read specification →</a>
+          </article>
+
+          <article class="entry-card">
+            <div class="entry-kicker">Executable bridge</div>
+            <h3>Prototype Prep v0.1</h3>
+            <p>
+              The first frozen bridge from theory to executable structure: minimal runnable spine, conformance layer, and benchmark-preparation surface.
+            </p>
+            <a href="./prototype-prep-v0-1.html">Open prototype route →</a>
+          </article>
+
+          <article class="entry-card">
+            <div class="entry-kicker">Research-facing route</div>
+            <h3>For Researchers</h3>
+            <p>
+              Entry framing for readers approaching the system as a formal architecture, publication surface, or computational theory candidate.
+            </p>
+            <a href="./for-researchers/">Open research entry →</a>
+          </article>
         </div>
       </section>
 
@@ -855,4 +946,3 @@
   </main>
 </body>
 </html>
-
