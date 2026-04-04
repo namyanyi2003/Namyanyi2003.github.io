@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume XXXIV: Intimacy as Triple-Instinct Intersection — Power, Sovereignty, and the Visibility–Attachment–Resource Field</title>
+  <meta name="description" content="Volume XXXIV formalizes intimacy as the only OS environment where Visibility, Attachment, and Resource instincts activate simultaneously. Power is intrinsic to intimacy — derived from Exit-4 sovereignty computation. Attack, withdrawal, silence, and possessiveness are instinctual vectors, not moral failures.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 13ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./index.html">Home</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume XXXIV</p>
+      <h1>Symbolic Mechanics — Volume XXXIV: Intimacy as Triple-Instinct Intersection — Power, Sovereignty, and the Visibility–Attachment–Resource Field</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">XXXIV</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">System Role</div>
+          <div class="meta-value">Intimacy power kernel / Triple-instinct integration layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories of intimacy treat it as an emotional or relational phenomenon — love, attachment, bonding, or communication. This volume shows that intimacy is not an emotion; it is the only environment in the human OS where all three instinct clusters activate simultaneously: Visibility (being seen), Attachment (being held), and Resource (controllability/power).
+        </p>
+
+        <p>
+          The missing insight is that intimacy inevitably contains power — not as a pathological intrusion but as a natural outcome of the Resource Instinct’s activation. When someone enters the symbolic core, they become a resource to be maintained, a positional anchor, and a target for sovereignty expression. Power is not added to intimacy; it is intrinsic to it.
+        </p>
+
+        <p>
+          Volume XXXIV rewrites intimate conflict, dominance, submission, and boundary negotiation as mechanical outputs of Exit-4 (Sovereignty) operating in a dual-system field. It also redefines “attack” and “withdrawal” as externalized and internalized vectors of the same sovereignty computation, not as emotional or moral failures.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          Volume XXXIV defines intimacy as the simultaneous activation of three instinct clusters: Visibility Instinct (need to be seen, recognized, understood), Attachment Instinct (need to be held, bonded, connected), and Resource/Sovereignty Instinct (need for controllability and power allocation). When these three lines activate together, instinctual energy intensifies and becomes fully expressive because only within intimacy do human instincts operate without inhibition.
+        </p>
+
+        <p>
+          The volume then establishes that power in intimacy originates from Exit-4 (Sovereignty). All feelings of winning, losing, control, or dominance are derivatives of controllability computation. Intimate power is not determined by emotional volume but by the ability to influence state, rhythm, and direction. Emotion has no built-in controllability; power is who can cause the other to adjust.
+        </p>
+
+        <p>
+          Three forms of boundary invasion are formalized: direct invasion (verbal pressure, explicit demands), indirect invasion (silence, withdrawal, non-response), and melting invasion (soft dominance, emotional saturation, engulfing proximity). All are natural outputs of Exit-4 seeking controllability.
+        </p>
+
+        <p>
+          The volume then introduces win/lose logic: intimacy inevitably produces a sense of winning or losing because sovereignty must continually re-align within a two-person system. Possessiveness arises from the intersection of Attachment and Resource instincts — “I need you” × “I must stabilize you” — producing jealousy, protectiveness, exclusion, and boundary sensitivity.
+        </p>
+
+        <p>
+          Finally, the volume identifies common behaviors as power vectors: sex (sovereignty exchange), silence (controlling tempo), composure (self-control or rigidity), withdrawal (non-participation). All conflicts are sovereignty repositioning. Attack and retreat are instinctual vectors, not moral states.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          Volume XXXIV is the foundational volume for understanding all later work on dual-sovereignty mechanics (Volume XXXV), family power distribution (Volumes XXXVI–XL), and the Dependence line’s shell families (Volume LXXVIII). Without it, the theory would treat intimate conflict as emotional dysfunction rather than structural computation.
+        </p>
+
+        <p>
+          For upstream understanding, this volume explains why intimacy feels intense and volatile: it activates the full machine. It also reframes “toxic” behaviors (control, withdrawal, possessiveness) as natural instinct outputs under specific geometric conditions — not as character flaws. Missing this volume leads to misreading sovereignty expression as pathology and power as external to intimacy rather than intrinsic to it.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">intimacy</span>
+          <span class="keyword">triple-instinct intersection</span>
+          <span class="keyword">Visibility Instinct</span>
+          <span class="keyword">Attachment Instinct</span>
+          <span class="keyword">Resource Instinct</span>
+          <span class="keyword">Exit-4</span>
+          <span class="keyword">intimate power</span>
+          <span class="keyword">controllability</span>
+          <span class="keyword">boundary invasion</span>
+          <span class="keyword">direct invasion</span>
+          <span class="keyword">indirect invasion</span>
+          <span class="keyword">melting invasion</span>
+          <span class="keyword">win/lose logic</span>
+          <span class="keyword">possessiveness</span>
+          <span class="keyword">jealousy</span>
+          <span class="keyword">sovereignty repositioning</span>
+          <span class="keyword">power vectors</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-34.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-33.html">Volume XXXIII</a></li>
+          <li>Next volume: Volume XXXV</li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
