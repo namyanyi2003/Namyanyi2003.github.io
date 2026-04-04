@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prototype Records | Symbolic Mechanics</title>
-  <meta name="description" content="Prototype and implementation records for Symbolic Mechanics, including the prototype line canonical record, the v0.2.1 main specification, and the v0.2.1 test and validation report.">
+  <title>Prototype Records | Symbolic Mechanics Archive</title>
+  <meta name="description" content="Prototype Records for Symbolic Mechanics, including the prototype lineage record, the v0.2.1 main specification, and the v0.2.1 test and validation report.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,7 @@
       --border: #dde3ec;
       --blue: #2471a3;
       --navy: #0d2b4e;
+      --teal: #138d75;
       --serif: "Newsreader", Georgia, serif;
       --sans: "Inter", system-ui, sans-serif;
       --mono: "IBM Plex Mono", monospace;
@@ -104,49 +105,19 @@
 
     h1 {
       font-family: var(--serif);
-      font-size: clamp(2.7rem, 5.8vw, 4.25rem);
-      line-height: 0.97;
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+      line-height: 0.96;
       letter-spacing: -0.03em;
       margin-bottom: 14px;
       color: var(--text);
-      max-width: 10ch;
+      max-width: 11ch;
     }
 
     .hero-copy {
       font-size: 0.98rem;
       line-height: 1.84;
       color: var(--muted);
-      max-width: 74ch;
-    }
-
-    .meta-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .meta-box {
-      background: var(--surface-soft);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 16px;
-    }
-
-    .meta-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--faint);
-      margin-bottom: 6px;
-    }
-
-    .meta-value {
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: var(--text);
-      font-weight: 600;
+      max-width: 78ch;
     }
 
     .section-card {
@@ -171,6 +142,21 @@
     p {
       font-size: 0.96rem;
       line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--teal);
+      background: var(--surface-soft);
+      border-radius: 0 10px 10px 0;
+      font-size: 0.92rem;
+      line-height: 1.78;
       color: var(--text);
     }
 
@@ -201,26 +187,12 @@
       font-size: 1.42rem;
       line-height: 1.2;
       color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .record-subtitle {
-      font-size: 0.9rem;
-      line-height: 1.7;
-      color: var(--muted);
       margin-bottom: 10px;
-    }
-
-    .record-summary {
-      font-size: 0.94rem;
-      line-height: 1.82;
-      color: var(--text);
-      margin-bottom: 14px;
     }
 
     .record-meta {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
       margin-bottom: 14px;
     }
@@ -248,10 +220,31 @@
       font-weight: 600;
     }
 
+    .stats-list {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .stats-line {
+      padding: 11px 13px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 9px;
+      font-size: 0.9rem;
+      line-height: 1.72;
+      color: var(--text);
+    }
+
+    .stats-line strong {
+      color: var(--navy);
+    }
+
     .record-actions {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      margin-top: 14px;
     }
 
     .action-link {
@@ -285,6 +278,39 @@
       color: #fff;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .crumb {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
     .home-return-section {
       max-width: 1100px;
       margin: 56px auto 0;
@@ -316,16 +342,14 @@
     }
 
     @media (max-width: 900px) {
-      .meta-row,
       .record-meta {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 760px) {
       .page { padding: 28px 20px 56px; }
       .hero, .section-card { padding: 24px 22px; }
-      .meta-row, .record-meta { grid-template-columns: 1fr; }
       .topbar { flex-direction: column; align-items: flex-start; }
       .home-return-section { padding: 22px 20px 0; }
       .home-return-btn { width: 100%; max-width: 340px; }
@@ -335,154 +359,148 @@
 <body>
   <main class="page">
     <div class="topbar">
-      <a class="site-link" href="../index.html">Symbolic Mechanics</a>
+      <a class="site-link" href="/index.html">Symbolic Mechanics</a>
 
       <div class="top-actions">
-        <a class="btn btn-secondary" href="../index.html">Home</a>
-        <a class="btn btn-secondary" href="../publications/">Theory Volumes</a>
-        <a class="btn btn-secondary" href="../benchmark-records/">Benchmark Records</a>
+        <a class="btn btn-secondary" href="/index.html">Home</a>
+        <a class="btn btn-secondary" href="/benchmark-records/">Benchmark Line</a>
+        <a class="btn btn-secondary" href="/publications/">Theory Publications</a>
       </div>
     </div>
 
     <section class="hero">
-      <p class="eyebrow">Prototype / Implementation Line</p>
+      <p class="eyebrow">Prototype line</p>
       <h1>Prototype Records</h1>
       <p class="hero-copy">
-        This section preserves the implementation-facing prototype track of Symbolic Mechanics as a distinct archive line.
-        It is separate from theory volumes and benchmark records.
-        The prototype line documents lineage, bounded implementation layers, validation results, and preserved scope conditions for additive prototype-stage work.
+        The Prototype Line is the implementation-facing archive channel of Symbolic Mechanics. Unlike the specification line, which formalizes the first twenty volumes into one engine surface, or the theory-publication line, which preserves volume order, the prototype line preserves bounded executable and validation-facing records.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Prototype line positioning</h2>
+      <p>
+        The prototype line operates independently from specification, theory-publication, and benchmark. Its function is not to restate theory or to benchmark interpretation quality, but to preserve implementation-facing identity, bounded version lineage, stable specification layers, and validation records.
+      </p>
+      <p>
+        Prototype records are archive objects. They define what base core was preserved, what extension band was approved, what was tested, and what counts as implementation-stable within prototype scope.
       </p>
 
-      <div class="meta-row">
-        <div class="meta-box">
-          <div class="meta-label">Track Status</div>
-          <div class="meta-value">Canonical prototype line with bounded implementation milestones.</div>
-        </div>
-
-        <div class="meta-box">
-          <div class="meta-label">Current Active Line</div>
-          <div class="meta-value">Preserved v0.1-B1 base core + implementation-stable v0.2.1 extension layer.</div>
-        </div>
-
-        <div class="meta-box">
-          <div class="meta-label">Boundary</div>
-          <div class="meta-value">v0.2.1 frozen to Volumes 21–35 only; later topology excluded.</div>
-        </div>
+      <div class="note">
+        This line is not a full Human OS claim. It is a bounded prototype-stage archive line preserving additive extension work over a preserved base core.
       </div>
     </section>
 
     <section class="section-card">
-      <h2>Record Set</h2>
-      <p>
-        The three core prototype records below establish prototype lineage, implementation scope, and first-round validation status.
-        Together they define the preserved base core, the first additive extension layer, and the bounded meaning of implementation-stable status.
-      </p>
+      <h2>Available prototype records</h2>
 
       <div class="record-grid">
         <article class="record-card">
-          <div class="record-type">Canonical Record</div>
+          <div class="record-type">Canonical record</div>
           <div class="record-title">Prototype Line Canonical Record v1.0</div>
-          <div class="record-subtitle">Lineage, Version Status, and Boundary Definition for the Symbolic Mechanics Prototype Track</div>
-          <div class="record-summary">
-            This record anchors the prototype line as a third track (theory / benchmark / prototype). It documents which versions are preserved, which are failed, and which are active, and clarifies that v0.1-B1 is the preserved base core while v0.2.1 is the first implementation-stable additive extension layer within a bounded Volumes 21–35 scope.
-          </div>
 
           <div class="record-meta">
             <div class="record-meta-item">
-              <div class="record-meta-label">Record Type</div>
-              <div class="record-meta-value">Canonical record</div>
-            </div>
-            <div class="record-meta-item">
-              <div class="record-meta-label">Visibility</div>
+              <div class="record-meta-label">Status</div>
               <div class="record-meta-value">Public</div>
             </div>
-            <div class="record-meta-item">
-              <div class="record-meta-label">Version</div>
-              <div class="record-meta-value">v1.0</div>
-            </div>
+
             <div class="record-meta-item">
               <div class="record-meta-label">Date</div>
               <div class="record-meta-value">2026-04-04</div>
             </div>
+
+            <div class="record-meta-item">
+              <div class="record-meta-label">Function</div>
+              <div class="record-meta-value">Prototype lineage identity</div>
+            </div>
+          </div>
+
+          <div class="stats-list">
+            <div class="stats-line"><strong>Scope:</strong> Authorised version sequence and boundary definition of the prototype track.</div>
+            <div class="stats-line"><strong>Core statement:</strong> v0.1-B1 is the preserved base core; v0.2.1 is the first implementation-stable additive extension layer.</div>
           </div>
 
           <div class="record-actions">
-            <a class="action-link" href="../prototype_line_canonical_record_v1.0.html">Open Record</a>
-            <a class="action-link secondary" href="../pdfs/prototype/prototype_line_canonical_record_v1.0.pdf" target="_blank" rel="noopener">Download PDF</a>
+            <a class="action-link" href="/prototype-line-canonical-record-v1.0.html">Open Record</a>
           </div>
         </article>
 
         <article class="record-card">
-          <div class="record-type">Main Specification</div>
+          <div class="record-type">Main specification</div>
           <div class="record-title">Symbolic Mechanics Prototype v0.2.1 — Main Specification</div>
-          <div class="record-subtitle">Additive Extension Layer Above Preserved v0.1-B1 Base Core</div>
-          <div class="record-summary">
-            Prototype v0.2.1 extends the preserved base core with higher-order structures (scene switch, dark-field, directional assignment, conditional box intervention, controllability computation) without replacing v0.1-B1. It is bounded to Volumes 21–35 and explicitly excludes later topology material. Status: implementation-stable.
-          </div>
 
           <div class="record-meta">
             <div class="record-meta-item">
-              <div class="record-meta-label">Record Type</div>
-              <div class="record-meta-value">Main specification</div>
+              <div class="record-meta-label">Status</div>
+              <div class="record-meta-value">Implementation-stable</div>
             </div>
+
             <div class="record-meta-item">
-              <div class="record-meta-label">Base Dependency</div>
+              <div class="record-meta-label">Version</div>
+              <div class="record-meta-value">v0.2.1</div>
+            </div>
+
+            <div class="record-meta-item">
+              <div class="record-meta-label">Base dependency</div>
               <div class="record-meta-value">symbolic_mechanics_v0_1_b1</div>
             </div>
-            <div class="record-meta-item">
-              <div class="record-meta-label">Version</div>
-              <div class="record-meta-value">v0.2.1</div>
-            </div>
-            <div class="record-meta-item">
-              <div class="record-meta-label">Visibility</div>
-              <div class="record-meta-value">Public</div>
-            </div>
+          </div>
+
+          <div class="stats-list">
+            <div class="stats-line"><strong>Scope:</strong> Additive extension layer over the preserved base core, frozen to the approved Volumes 21–35 band.</div>
+            <div class="stats-line"><strong>Function:</strong> Implementation-facing formalization of scene overload, dark-field state, directional assignment, box lifecycle, fantasy route, controllability, and intimacy modifier layers.</div>
           </div>
 
           <div class="record-actions">
-            <a class="action-link" href="../symbolic_mechanics_prototype_v0.2.1_main_specification.html">Open Record</a>
-            <a class="action-link secondary" href="../pdfs/prototype/symbolic_mechanics_prototype_v0.2.1_main_specification.pdf" target="_blank" rel="noopener">Download PDF</a>
+            <a class="action-link" href="/symbolic-mechanics-prototype-v0.2.1-main-specification.html">Open Specification</a>
           </div>
         </article>
 
         <article class="record-card">
-          <div class="record-type">Validation Report</div>
+          <div class="record-type">Validation report</div>
           <div class="record-title">Prototype v0.2.1 — Test and Validation Report</div>
-          <div class="record-subtitle">Extension-Layer Implementation Stability Validation (First Round)</div>
-          <div class="record-summary">
-            The v0.2.1 extension layer passed its first implementation test: 12 traces, 12 stable, zero instability, zero exclusion violations. This confirms execution stability inside the frozen package boundary. The result is narrow: it does not claim full Human OS completion, only that the additive extension layer is keepable, citable, and usable.
-          </div>
 
           <div class="record-meta">
             <div class="record-meta-item">
-              <div class="record-meta-label">Record Type</div>
-              <div class="record-meta-value">Test and validation report</div>
+              <div class="record-meta-label">Status</div>
+              <div class="record-meta-value">Public</div>
             </div>
+
             <div class="record-meta-item">
-              <div class="record-meta-label">Dependency</div>
-              <div class="record-meta-value">v0.1-B1 + v0.2.1 extension layer</div>
+              <div class="record-meta-label">Result</div>
+              <div class="record-meta-value">Implementation-stable</div>
             </div>
+
             <div class="record-meta-item">
-              <div class="record-meta-label">Version</div>
-              <div class="record-meta-value">v0.2.1</div>
-            </div>
-            <div class="record-meta-item">
-              <div class="record-meta-label">Batch Result</div>
-              <div class="record-meta-value">Implementation-Stable</div>
+              <div class="record-meta-label">Trace family</div>
+              <div class="record-meta-value">12 extension traces</div>
             </div>
           </div>
 
+          <div class="stats-list">
+            <div class="stats-line"><strong>Batch result:</strong> 12 traces run, 12 operationally stable, 0 instability, 0 exclusion invalidation.</div>
+            <div class="stats-line"><strong>Interpretation:</strong> Confirms first-round execution stability inside the frozen v0.2.1 prototype boundary only.</div>
+          </div>
+
           <div class="record-actions">
-            <a class="action-link" href="../prototype_v0.2.1_test_and_validation_report.html">Open Record</a>
-            <a class="action-link secondary" href="../pdfs/prototype/prototype_v0.2.1_test_and_validation_report.pdf" target="_blank" rel="noopener">Download PDF</a>
+            <a class="action-link" href="/prototype-v0.2.1-test-and-validation-report.html">Open Report</a>
           </div>
         </article>
       </div>
+
+      <div class="nav-links">
+        <a class="nav-link" href="/canonical-specification-volumes-01-20/">Specification Line</a>
+        <a class="nav-link" href="/publications/">Theory Publications</a>
+        <a class="nav-link" href="/benchmark-records/">Benchmark Line</a>
+        <a class="nav-link" href="/index.html">Project Home</a>
+      </div>
+
+      <div class="crumb">Current: Prototype Records &gt; Index</div>
     </section>
   </main>
 
   <section class="home-return-section">
-    <a class="home-return-btn" href="../index.html">← Back to Home</a>
+    <a class="home-return-btn" href="/index.html">← Back to Home</a>
   </section>
 </body>
 </html>
