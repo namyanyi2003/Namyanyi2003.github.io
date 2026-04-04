@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototype Line Canonical Record v1.0</title>
+  <meta name="description" content="A canonical lineage record of the Symbolic Mechanics prototype track, defining the version sequence (v0.1-A → v0.1-B → v0.1-B1 → v0.2.1), preservation status, active working line, and frozen boundary conditions for the implementation-stable extension layer.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 15px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+
+    .page { max-width: 1100px; margin: 0 auto; padding: 40px 32px 88px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 28px; flex-wrap: wrap; }
+    .site-link { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
+    .top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 42px; padding: 0 16px; border-radius: 8px;
+      font-size: 0.84rem; font-weight: 700; border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      white-space: nowrap;
+    }
+
+    .btn-secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+
+    .hero {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 34px 36px; margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.8vw, 4.1rem);
+      line-height: 0.97;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      max-width: 12ch;
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: #2b2a28;
+      margin-bottom: 14px;
+    }
+
+    .hero-summary {
+      font-size: 0.98rem;
+      line-height: 1.84;
+      color: var(--muted);
+      max-width: 76ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.56;
+      color: var(--text);
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p { font-size: 0.96rem; line-height: 1.84; color: var(--text); }
+    p + p { margin-top: 14px; }
+
+    .bullet-list {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li {
+      font-size: 0.95rem;
+      line-height: 1.82;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker { color: var(--blue); }
+
+    .table-wrap {
+      margin-top: 16px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-soft);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+      line-height: 1.72;
+    }
+
+    th {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--faint);
+      background: #fbfaf8;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover { background: #17446f; border-color: #17446f; }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover { text-decoration: underline; }
+
+    .home-return-section {
+      max-width: 1100px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .hero-meta { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 28px 20px 56px; }
+      .hero, .content-card { padding: 24px 22px; }
+      .hero-meta { grid-template-columns: 1fr; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .home-return-section { padding: 22px 20px 0; }
+      .home-return-btn { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./index.html">Home</a>
+        <a class="btn btn-secondary" href="./prototype-records/">Prototype Records</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Prototype / Implementation Line</p>
+      <h1>Prototype Line Canonical Record v1.0</h1>
+      <p class="subtitle">Lineage, Version Status, and Boundary Definition for the Symbolic Mechanics Prototype Track</p>
+      <p class="hero-summary">
+        This record anchors the prototype line as a third track (theory / benchmark / prototype). It documents which versions are preserved, which are failed, and which are active, and clarifies that v0.1-B1 is the preserved base core while v0.2.1 is the first implementation-stable additive extension layer within a bounded Volumes 21–35 scope.
+      </p>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Record Type</div>
+          <div class="meta-value">Canonical record</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-label">Visibility</div>
+          <div class="meta-value">Public</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-label">Version</div>
+          <div class="meta-value">v1.0</div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-label">Date</div>
+          <div class="meta-value">2026-04-04</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>P1 | What this record is</h2>
+        <p>
+          This document is the canonical lineage record of the Symbolic Mechanics prototype track.
+          It does not replace any theory volume, benchmark report, or implementation specification.
+          Its sole function is to define the prototype line identity, version sequence, status of each major version, and the current active working boundary.
+        </p>
+        <p>
+          The prototype track exists alongside two other independent lines:
+        </p>
+        <ul class="bullet-list">
+          <li>Theory volumes (Volumes I–XLIV)</li>
+          <li>Benchmark reports (Phase I, adversarial interpretation tests)</li>
+        </ul>
+        <p>
+          This record makes the prototype line visible, citable, and auditable as a separate archive channel.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P2 | Prototype line identity</h2>
+        <p>
+          The prototype line is the implementation-facing track of Symbolic Mechanics.
+          It translates theoretical constructs (load, exit, sovereignty, scene, dark-field, etc.) into executable or simulation-capable structures.
+        </p>
+        <p>
+          Prototype versions are not full-system completions.
+          They are bounded, preservable implementation layers that sit above a preserved base core.
+        </p>
+        <p>
+          The prototype line does not replace or rewrite the canonical theory archive.
+          It extends, formalises, and tests additive layers under strict boundary rules.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P3 | Version sequence</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Status</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>v0.1-A</td>
+                <td>archived (preserved)</td>
+                <td>First minimal spine; conceptual prototype.</td>
+              </tr>
+              <tr>
+                <td>v0.1-B</td>
+                <td>archived (preserved)</td>
+                <td>Refined core with basic load/exit structure.</td>
+              </tr>
+              <tr>
+                <td>v0.1-B1</td>
+                <td>preserved base core</td>
+                <td>Frozen, maintained executable foundation.</td>
+              </tr>
+              <tr>
+                <td>v0.2.1</td>
+                <td>implementation-stable extension</td>
+                <td>Additive extension layer (Volumes 21–35).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          No version outside this sequence is recognised as canonical prototype lineage.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P4 | Canonical status of each line</h2>
+        <ul class="bullet-list">
+          <li>Theory line – canonical, unbounded, 44+ volumes</li>
+          <li>Benchmark line – canonical, empirical, phase-based</li>
+          <li>Prototype line – canonical, bounded, implementation-stable milestones</li>
+        </ul>
+        <p>
+          The prototype line does not inherit authority from later theory volumes (Volumes 36+).
+          Later volumes may inform future prototype versions but are excluded from v0.2.1.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P5 | What is preserved / what is failed / what is active</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>v0.1-A</td>
+                <td>preserved (archive only)</td>
+                <td>Not for active use</td>
+              </tr>
+              <tr>
+                <td>v0.1-B</td>
+                <td>preserved (archive only)</td>
+                <td>Not for active use</td>
+              </tr>
+              <tr>
+                <td>v0.1-B1</td>
+                <td>preserved base core</td>
+                <td>Active foundation</td>
+              </tr>
+              <tr>
+                <td>v0.2.1 extension layer</td>
+                <td>implementation-stable</td>
+                <td>Active, bounded</td>
+              </tr>
+              <tr>
+                <td>Volumes 36+ theory</td>
+                <td>not part of prototype</td>
+                <td>Excluded from v0.2.1</td>
+              </tr>
+              <tr>
+                <td>Family-table / lineage / birth-order / role-allocation</td>
+                <td>excluded</td>
+                <td>Forbidden in v0.2.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          No failed versions exist in the prototype line (all preserved or active).
+          Failure is defined as boundary violation or protected-distinction collapse — none recorded to date.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P6 | Current main working line</h2>
+        <p>
+          The current active working line is:
+        </p>
+        <p>
+          <strong>Preserved v0.1-B1 base core + v0.2.1 additive extension layer (implementation-stable)</strong>
+        </p>
+        <p>
+          v0.2.1 is the only implementation-stable extension above the preserved base core.
+          It is not a full Human OS. It is a bounded, testable, keepable extension package.
+        </p>
+        <p>
+          All further prototype work (v0.3, v0.4, etc.) must preserve v0.1-B1 and explicitly define new additive layers without altering the base spine.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P7 | Boundary statement</h2>
+        <ul class="bullet-list">
+          <li>Source extraction: Volumes 21–35 only</li>
+          <li>Excluded material: Volumes 36+, family-table, lineage, birth-order, role-allocation</li>
+          <li>Permitted use: Extension-layer execution, trace testing, validation runs</li>
+          <li>Non-permitted use: Replacement of base core, total-system claims, clinical application</li>
+        </ul>
+        <p>
+          The prototype line does not claim completeness.
+          Each version’s boundary is fixed and auditable.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P8 | Bottom line</h2>
+        <p>
+          Prototype Line Canonical Record v1.0 establishes the identity, lineage, and active boundary of the Symbolic Mechanics prototype track.
+        </p>
+        <ul class="bullet-list">
+          <li>v0.1-B1 = preserved base core</li>
+          <li>v0.2.1 = first implementation-stable additive extension layer (Volumes 21–35)</li>
+          <li>Later volumes (36+) and excluded topologies are not part of v0.2.1</li>
+          <li>The prototype line is a third independent archive channel (theory / benchmark / prototype)</li>
+        </ul>
+        <p>
+          This record is the master index for all prototype-related documents.
+          It is neither a theory volume nor a benchmark report, but the canonical reference for prototype lineage.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+        <p>PDF is provided as a full-text attachment. The record page is the primary reading surface.</p>
+        <a class="access-link" href="./pdfs/prototype/prototype_line_canonical_record_v1.0.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+        <ul class="nav-list">
+          <li><a href="./prototype-records/">Back to Prototype Records</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./prototype-records/">← Back to Prototype Records</a>
+  </section>
+</body>
+</html>
