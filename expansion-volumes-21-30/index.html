@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — Page 3 | Symbolic Mechanics</title>
+  <meta name="description" content="Publications — Page 3 of Symbolic Mechanics. Volumes XXI–XXX covering dark-field narrative installation, scene switching, wooden box lifecycle, shadow layers, fantasy, libido, and the first compensatory direction.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 15px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+
+    .page { max-width: 1100px; margin: 0 auto; padding: 40px 32px 88px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 28px; flex-wrap: wrap; }
+    .site-link { font-family: var(--serif); font-size: 1.42rem; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
+    .top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .btn, .mini-btn, .nav-link, .home-return-btn {
+      transition: background .14s ease, color .14s ease, border-color .14s ease, transform .14s ease;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 42px; padding: 0 16px; border-radius: 8px;
+      font-size: 0.84rem; font-weight: 700; border: 1px solid var(--navy);
+      color: var(--navy); background: transparent; white-space: nowrap;
+    }
+
+    .btn:hover, .mini-btn:hover, .nav-link:hover {
+      background: var(--navy); color: #fff;
+    }
+
+    .hero, .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .hero { margin-bottom: 28px; }
+    .section-card + .section-card { margin-top: 22px; }
+
+    .eyebrow {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: var(--text);
+      max-width: 11ch;
+    }
+
+    h2 {
+      font-size: 1.18rem; line-height: 1.35; font-weight: 800;
+      margin-bottom: 14px; color: var(--text);
+    }
+
+    p, li {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    .hero-copy { color: var(--muted); max-width: 78ch; }
+
+    .bullet-list { margin-top: 12px; padding-left: 20px; }
+
+    .volume-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .volume-card {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      border-radius: 12px;
+      padding: 18px 18px 16px;
+    }
+
+    .volume-card h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      line-height: 1.25;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .volume-card p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .mini-btn, .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .home-return-section {
+      max-width: 1100px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0 22px; border-radius: 8px;
+      background: var(--navy); color: #fff; font-size: 0.9rem; font-weight: 700;
+      border: 1px solid var(--navy);
+    }
+
+    .home-return-btn:hover {
+      background: #17446f; border-color: #17446f; transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 28px 20px 56px; }
+      .hero, .section-card { padding: 24px 22px; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .home-return-section { padding: 22px 20px 0; }
+      .home-return-btn { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="../index.html">Symbolic Mechanics</a>
+      <div class="top-actions">
+        <a class="btn" href="../index.html">Home</a>
+        <a class="btn" href="../for-researchers/">For Researchers</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Theory Archive</p>
+      <h1>Publications — Page 3</h1>
+      <p class="hero-copy">
+        The dark-field, narrative installation, scene switching, shadow layers, fantasy, libido, and the first compensation — the expansion that rewrites memory, identity, and life trajectory.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Reading position</h2>
+      <ol class="bullet-list">
+        <li>Complete Volumes I–XX (canonical engine, parental axes, boundary mechanics, projection, and intimacy).</li>
+        <li>Read Volumes XXI–XXX to understand how the system generates narrative, switches scenes, dissolves old selves, and fixes lifelong compensation direction.</li>
+        <li>Proceed to Volumes XXXI–XL for resource mechanics, family field, and paternal shadow.</li>
+        <li>Later volumes build on all of the above.</li>
+      </ol>
+    </section>
+
+    <section class="section-card">
+      <h2>Expansion layers</h2>
+      <p>
+        Volumes XXI–XXX extend the canonical engine into the narrative and temporal layers of the system. They formalize how the dark-field compiles experience into installed wooden boxes (XXI), how scenes collapse and suspend under symbolic overload (XXII), how old self-versions are terminally dissolved in the Affect Volcano (XXIII), and how three distinct shadow layers form across development (XXIV). The archetypal architecture of the dark domain (XXV) grounds the three-stage fantasy system (XXVI), while negative fantasy reveals a dual-pressure loop that leads to systemic depletion (XXVII). The Cradle Module (XXVIII) and the three-phase libido model (XXIX) trace desire back to primitive soothing templates, and the Firefly’s instinct-weighted navigation (XXX) locks the first compensatory direction before any conscious life decision is made.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Volumes XXI–XXX</h2>
+
+      <div class="volume-grid">
+        <article class="volume-card">
+          <h3>Volume XXI — Narrative Mechanics: The Dark-Field Switch and the Birth of the Wooden Box</h3>
+          <p>Memory is not stored; it is installed. The Self-Core reads pre-compiled narratives it never authored.</p>
+          <a class="mini-btn" href="./../volume-21.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXII — Scene Switching: Symbolic Overload, Dark-Field Transition, and the Suspension of the Old Stage</h3>
+          <p>Life proceeds through discrete scene switches, not continuous development. Old scenes are frozen, not erased.</p>
+          <a class="mini-btn" href="./../volume-22.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXIII — The Wooden Box Slot System: Version Management, the Affect Volcano, and the Dissolution of the Old Self</h3>
+          <p>The self is a version-control system. Deprecated boxes dissolve in the Affect Volcano, releasing raw emotional waves.</p>
+          <a class="mini-btn" href="./../volume-23.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXIV — The Three Shadow Layers: From Structural Imprint to Semantic Shame</h3>
+          <p>Shadow 0.0 (structural), 1.0 (accumulated noise), and 2.0 (semantic shame). Only the last is narratable.</p>
+          <a class="mini-btn" href="./../volume-24.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXV — The Dark Domain: Archetypal Architecture and the Pre-Semantic Origins of Fantasy</h3>
+          <p>The Father Archetype installs structural Proto-Boxes; the Mother Archetype holds the only activable containment light.</p>
+          <a class="mini-btn" href="./../volume-25.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXVI — The Fantasy System: From Archetypal Containment to Semantic Rendering</h3>
+          <p>Fantasy is believed not because it is accurate, but because its neural signature equals felt safety.</p>
+          <a class="mini-btn" href="./../volume-26.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXVII — Negative Fantasy: The Dual-Pressure Loop and the Path to Systemic Depletion</h3>
+          <p>Negative fantasy locks conscious catastrophic rendering with unconscious Shadow 0.0 into a self-amplifying loop.</p>
+          <a class="mini-btn" href="./../volume-27.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXVIII — The Cradle Module: Primitive Soothing Templates and the Origin of Desire</h3>
+          <p>Desire is the adult form of primordial soothing demand — body-first, awareness-second.</p>
+          <a class="mini-btn" href="./../volume-28.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXIX — Libido and Fantasy: The Three-Phase Model of Sexual Desire and the Bidirectional Amplification Loop</h3>
+          <p>Libido intensity is a function of ΔE between fusion demand and worthlessness load; semantic collapse unleashes unbounded fantasy.</p>
+          <a class="mini-btn" href="./../volume-29.html">Open Volume</a>
+        </article>
+
+        <article class="volume-card">
+          <h3>Volume XXX — The Firefly and the First Compensation: Instinct-Weighted Navigation and the Birth of Lifelong Trajectory</h3>
+          <p>The first compensatory direction is mechanically determined by instinct weight, not choice. Spotlight × Alarm decides externalization or internalization.</p>
+          <a class="mini-btn" href="./../volume-30.html">Open Volume</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Navigation</h2>
+      <div class="nav-links">
+        <a class="nav-link" href="./../expansion-volumes/">Back to Publications — Page 2</a>
+        <a class="nav-link" href="./../expansion-volumes-31-40/">Open Publications — Page 4</a>
+        <a class="nav-link" href="./../index.html">Back to Home</a>
+        <a class="nav-link" href="./../for-researchers/">For Researchers</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./../index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
