@@ -4,293 +4,269 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Publications — Page 1 | Symbolic Mechanics</title>
-  <meta name="description" content="Volumes I–X of Symbolic Mechanics. Core runtime architecture, canonical specification, and reading path.">
+  <meta name="description" content="Publications — Page 1 of Symbolic Mechanics. Featured Canonical Specification of Volumes I–XX, plus Volumes I–X as the opening theory chain of the archive.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
 
   <style>
-    .pub-page {
-      max-width: 1260px;
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 15px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width: 1100px;
       margin: 0 auto;
       padding: 40px 32px 88px;
-      background: #f5f4f0;
-      color: #1a1a18;
-      font-family: "Inter", system-ui, sans-serif;
-      line-height: 1.7;
     }
 
-    .pub-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 300px;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .pub-hero {
-      background: #ffffff;
-      border: 1px solid #dde3ec;
-      border-radius: 10px;
-      padding: 38px 42px;
-    }
-
-    .pub-hero .eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #2471a3;
-      margin-bottom: 10px;
-    }
-
-    .pub-hero h1 {
-      font-family: "Newsreader", Georgia, serif;
-      font-size: clamp(3.1rem, 6vw, 4.5rem);
-      line-height: 0.96;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-      color: #1a1a18;
-    }
-
-    .pub-lead {
-      font-size: 1rem;
-      color: #1a1a18;
-      line-height: 1.7;
-      max-width: 62ch;
-      margin-bottom: 18px;
-    }
-
-    .pub-summary {
-      font-size: 0.92rem;
-      color: #5f6470;
-      line-height: 1.72;
-      max-width: 76ch;
-      margin-bottom: 28px;
-    }
-
-    .pub-action-stack {
+    .topbar {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 920px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.42rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
+      min-height: 42px;
+      padding: 0 16px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.84rem;
       font-weight: 700;
       border: 1px solid transparent;
-      text-decoration: none;
       transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
-    }
-
-    .btn-primary {
-      background: #0d2b4e;
-      color: #fff;
-      border-color: #0d2b4e;
-    }
-
-    .btn-primary:hover {
-      background: #17446f;
-      border-color: #17446f;
+      white-space: nowrap;
     }
 
     .btn-secondary {
       background: transparent;
-      color: #0d2b4e;
-      border-color: #0d2b4e;
+      color: var(--navy);
+      border-color: var(--navy);
     }
 
     .btn-secondary:hover {
-      background: #0d2b4e;
+      background: var(--navy);
       color: #fff;
     }
 
-    .pub-side {
-      position: sticky;
-      top: 32px;
-      background: #ffffff;
-      border: 1px solid #dde3ec;
-      border-radius: 10px;
-      padding: 24px 24px 20px;
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
     }
 
-    .pub-side h2 {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      line-height: 1.35;
-      letter-spacing: -0.01em;
-      margin-bottom: 14px;
-      color: #1a1a18;
-    }
-
-    .pub-side p {
-      font-size: 0.9rem;
-      line-height: 1.72;
-      color: #1a1a18;
-      margin-bottom: 16px;
-    }
-
-    .pub-side ul {
-      margin: 0;
-      padding-left: 18px;
-      color: #1a1a18;
-    }
-
-    .pub-side li {
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 4px;
-    }
-
-    .pub-section {
-      margin-top: 48px;
-    }
-
-    .pub-section-head {
-      margin-bottom: 18px;
-    }
-
-    .pub-section-head .eyebrow {
+    .eyebrow {
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #2471a3;
-      margin-bottom: 8px;
-    }
-
-    .pub-section-head h2 {
-      font-family: "Newsreader", Georgia, serif;
-      font-size: 2rem;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      color: #1a1a18;
-    }
-
-    .feature-card-clean {
-      background: #ffffff;
-      border: 1px solid #dde3ec;
-      border-radius: 10px;
-      padding: 28px 30px;
-    }
-
-    .feature-meta {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #2471a3;
+      color: var(--blue);
       margin-bottom: 10px;
     }
 
-    .feature-card-clean h3 {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 1.65rem;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
       margin-bottom: 14px;
-      color: #1a1a18;
+      color: var(--text);
+      max-width: 11ch;
     }
 
-    .feature-card-clean p {
-      font-size: 0.92rem;
-      line-height: 1.72;
-      color: #5f6470;
-      max-width: 82ch;
-      margin-bottom: 18px;
+    .hero-copy {
+      font-size: 0.98rem;
+      line-height: 1.84;
+      color: var(--muted);
+      max-width: 78ch;
     }
 
-    .feature-link-clean {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #2471a3;
-      text-decoration: none;
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
     }
 
-    .feature-link-clean:hover {
-      text-decoration: underline;
+    .section-card + .section-card {
+      margin-top: 22px;
     }
 
-    .volume-map {
-      display: grid;
-      gap: 14px;
-    }
-
-    .volume-row {
-      display: grid;
-      grid-template-columns: 86px minmax(0, 1fr) 170px;
-      gap: 22px;
-      align-items: start;
-      background: #ffffff;
-      border: 1px solid #dde3ec;
-      border-radius: 10px;
-      padding: 22px 24px;
-    }
-
-    .volume-num {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #2471a3;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding-top: 2px;
-    }
-
-    .volume-main h3 {
-      font-family: "Inter", system-ui, sans-serif;
-      font-size: 1.08rem;
+    h2 {
+      font-size: 1.18rem;
       line-height: 1.35;
-      letter-spacing: -0.01em;
-      color: #1a1a18;
-      margin-bottom: 6px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--text);
     }
 
-    .volume-role {
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .featured-card,
+    .volume-card {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      border-radius: 12px;
+      padding: 18px 18px 16px;
+    }
+
+    .featured-card + .featured-card,
+    .volume-card + .volume-card {
+      margin-top: 14px;
+    }
+
+    .card-title {
+      font-family: var(--serif);
+      font-size: 1.32rem;
+      line-height: 1.24;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .card-sub {
       font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #9aaab8;
+      color: var(--faint);
       margin-bottom: 8px;
     }
 
-    .volume-main p {
-      font-size: 0.88rem;
-      line-height: 1.68;
-      color: #5f6470;
+    .card-copy {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 14px;
     }
 
-    .volume-link {
+    .card-actions {
       display: flex;
-      justify-content: flex-end;
-      padding-top: 3px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .volume-link a {
-      font-size: 0.86rem;
+    .mini-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
       font-weight: 700;
-      color: #2471a3;
-      white-space: nowrap;
-      text-decoration: none;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      background: transparent;
+      transition: background 0.14s ease, color 0.14s ease;
     }
 
-    .volume-link a:hover {
-      text-decoration: underline;
+    .mini-btn:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .volume-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .chain-links {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .chain-link {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-soft);
+      font-size: 0.92rem;
+      line-height: 1.72;
+      color: var(--text);
+    }
+
+    .chain-link strong {
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--navy);
+      color: #fff;
     }
 
     .home-return-section {
-      max-width: 1260px;
+      max-width: 1100px;
       margin: 56px auto 0;
-      padding: 24px 32px 40px;
+      padding: 24px 32px 0;
       border-top: 1px solid #ddd6cb;
       display: flex;
       justify-content: center;
@@ -303,14 +279,11 @@
       min-height: 48px;
       padding: 0 22px;
       border-radius: 8px;
-      background: #0d2b4e;
-      color: #ffffff;
-      font-family: "Inter", system-ui, sans-serif;
+      background: var(--navy);
+      color: #fff;
       font-size: 0.9rem;
       font-weight: 700;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-      border: 1px solid #0d2b4e;
+      border: 1px solid var(--navy);
       transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
     }
 
@@ -320,229 +293,185 @@
       transform: translateY(-1px);
     }
 
-    @media (max-width: 980px) {
-      .pub-shell {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .pub-side {
-        position: static;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .pub-page {
-        padding: 28px 20px 64px;
-      }
-
-      .pub-hero {
-        padding: 26px 22px;
-      }
-
-      .pub-side {
-        padding: 20px 18px 18px;
-      }
-
-      .feature-card-clean {
-        padding: 22px 20px;
-      }
-
-      .volume-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 18px 18px;
-      }
-
-      .volume-link {
-        justify-content: flex-start;
-        padding-top: 0;
-      }
-
-      .home-return-section {
-        padding: 22px 20px 32px;
-        margin-top: 44px;
-      }
-
-      .home-return-btn {
-        width: 100%;
-        max-width: 320px;
-      }
+    @media (max-width: 760px) {
+      .page { padding: 28px 20px 56px; }
+      .hero, .section-card { padding: 24px 22px; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .home-return-section { padding: 22px 20px 0; }
+      .home-return-btn { width: 100%; max-width: 340px; }
     }
   </style>
 </head>
 <body>
-  <main class="pub-page">
-    <div class="pub-shell">
-      <div>
-        <section class="pub-hero">
-          <p class="eyebrow">Publications — Page 1</p>
-          <h1>Volumes I–X</h1>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
 
-          <p class="pub-lead">
-            The core runtime architecture of Symbolic Mechanics.
-          </p>
-
-          <p class="pub-summary">
-            These ten volumes define kernel processing, symbolic encoding, collapse-capable load formation,
-            regenerative restart, boundary geometry, visibility failure, attraction fields, intrusion physics,
-            blackout topology, and voluntary shutdown.
-          </p>
-
-          <div class="pub-action-stack">
-            <a class="btn btn-primary" href="../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-            <a class="btn btn-secondary" href="../expansion-volumes/">Open Volumes XI–XX</a>
-            <a class="btn btn-primary" href="../for-researchers/">For Researchers</a>
-          </div>
-        </section>
-
-        <section class="pub-section">
-          <div class="pub-section-head">
-            <p class="eyebrow">Featured canonical specification</p>
-            <h2>Integrated engine document</h2>
-          </div>
-
-          <article class="feature-card-clean">
-            <p class="feature-meta">Featured document</p>
-            <h3>Canonical Specification of Volumes I–XX</h3>
-            <p>
-              This document consolidates and formalizes Volumes I–XX into a single canonical specification
-              of the Symbolic Mechanics engine. It defines the engine layers, variable table, routing rules,
-              state transitions, and consistency corrections that make the first twenty volumes readable as
-              one integrated symbolic-computational system.
-            </p>
-            <a class="feature-link-clean" href="../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-          </article>
-        </section>
-
-        <section class="pub-section">
-          <div class="pub-section-head">
-            <p class="eyebrow">Core runtime</p>
-            <h2>Volumes I–X architecture map</h2>
-          </div>
-
-          <div class="volume-map">
-            <article class="volume-row">
-              <div class="volume-num">Volume I</div>
-              <div class="volume-main">
-                <h3>Canonical Engine Kernel</h3>
-                <p class="volume-role">Kernel layer</p>
-                <p>Most theories describe inner life, but do not specify the irreducible engine through which symbolic events must pass. Volume I formalizes that missing kernel by defining the deterministic loop Δ → S → L → R → Exit.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-01.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume II</div>
-              <div class="volume-main">
-                <h3>Structural Encoding, Symbolic Weight, and Base-Vector Geometry</h3>
-                <p class="volume-role">Encoding and base-geometry layer</p>
-                <p>Most theories describe feeling, memory, or interpretation, but do not specify how symbolic material becomes fixed into durable structure. Volume II formalizes that missing encoding layer by modelling structural inscription, symbolic weight, and base-vector formation inside the early seat economy.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-02.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume III</div>
-              <div class="volume-main">
-                <h3>Shadow-Load Formation and Collapse Dynamics</h3>
-                <p class="volume-role">Load-formation and collapse layer</p>
-                <p>Most theories describe repression, distress, or breakdown, but do not specify how unresolved symbolic material becomes accumulating internal pressure. Volume III formalizes that missing collapse layer by modelling shadow-load as the bridge between encoded structure and rupture-capable mechanics.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-03.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume IV</div>
-              <div class="volume-main">
-                <h3>Symbolic Parents, Companion Emergence, and Low-Energy Exit</h3>
-                <p class="volume-role">Companion-module and regenerative-exit layer</p>
-                <p>Most theories describe support or healing in emotional terms, but do not specify the structural condition under which a symbolic system gains a lower-energy route of continuation. Volume IV formalizes that missing stabilizer layer by modelling symbolic parents as functional channels, defining parental-volume growth, and showing how the C-Module enables low-energy regenerative exit.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-04.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume V</div>
-              <div class="volume-main">
-                <h3>Change Failure, Safe-Proximity Radius, and the Geometry of Counterforce</h3>
-                <p class="volume-role">Boundary-geometry and change-permission layer</p>
-                <p>Most theories explain failed change in motivational or emotional terms, but do not specify the boundary geometry that makes movement mechanically impossible even when intention is present. Volume V formalizes that missing displacement layer by modelling Rₛ as a structural threshold and defining change through C↓ → ΔO_micro → Rₛ↑.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-05.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume VI</div>
-              <div class="volume-main">
-                <h3>Visibility Collapse, Sorting Failure, and Existence Compensation</h3>
-                <p class="volume-role">Visibility-collapse and fallback-orientation layer</p>
-                <p>Most theories describe confusion, emptiness, or validation-seeking as emotional or cognitive phenomena, but do not specify the condition under which symbolic weight becomes unreadable. Volume VI formalizes that missing visibility-failure layer by defining sorting failure as symbolic unreadability and modelling existence-compensation as the fallback procedure that appears when weight signals go offline.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-06.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume VII</div>
-              <div class="volume-main">
-                <h3>Attraction Tension, Visibility Differential, and Oscillatory Field Mechanics</h3>
-                <p class="volume-role">Attraction-field and oscillation layer</p>
-                <p>Most theories describe attraction as emotion, chemistry, or preference, but do not specify the field conditions under which attraction becomes unresolved tension. Volume VII formalizes that missing field layer by modelling attraction tension as the deterministic output of ΔV, Rₛ, Eₕ, and Eₓ interacting inside a single oscillatory system.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-07.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume VIII</div>
-              <div class="volume-main">
-                <h3>Instruction Resistance, Structural Intrusion, and the Alarm Cascade</h3>
-                <p class="volume-role">Intrusion-physics and alarm-cascade layer</p>
-                <p>Most theories describe resistance to advice or commands in emotional or interpersonal terms, but do not specify the condition under which an external directive becomes a structural threat to sovereignty. Volume VIII formalizes that missing intrusion layer by defining command as I°, modelling Alarm activation under seat-weight and radius conditions, and showing how repeated intrusion reshapes visibility, sovereignty, and exit bias over time.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-08.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume IX</div>
-              <div class="volume-main">
-                <h3>Black Room Collapse, the Orb, and Delayed Shame After Reconnection</h3>
-                <p class="volume-role">Blackout-state and attractor-governance layer</p>
-                <p>Most theories describe compulsion, fixation, or self-loss through desire, reward, or habit, but do not specify the blackout-state in which continuation becomes mechanically inevitable. Volume IX formalizes that missing blackout layer by modelling the Black Room as a forced state transition and the Orb as a rotational attractor that captures attention, suspends symbolic access, and delays shame until reconnection restores visibility.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-09.html">Open</a></div>
-            </article>
-
-            <article class="volume-row">
-              <div class="volume-num">Volume X</div>
-              <div class="volume-main">
-                <h3>Voluntary Boundary Shutdown, Existential Supplementation, and Delayed Reconvergence</h3>
-                <p class="volume-role">Protective-shutdown and symbolic-suspension layer</p>
-                <p>Most theories describe withdrawal, fantasy, sensual escape, or sexual opening under pressure as collapse or addiction, but do not specify the condition under which the system deliberately turns off its own boundary-light. Volume X formalizes that missing shutdown layer by modelling voluntary boundary shutdown as a protective override that suspends symbolic visibility, generates an attractor corridor, and postpones shame until symbolic reconvergence returns.</p>
-              </div>
-              <div class="volume-link"><a href="../volume-10.html">Open</a></div>
-            </article>
-          </div>
-        </section>
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./index.html">Home</a>
+        <a class="btn btn-secondary" href="./for-researchers/">For Researchers</a>
       </div>
-
-      <aside class="pub-side">
-        <h2>Why this page matters</h2>
-        <p>
-          These publications do not present isolated themes. Together, they define the core runtime of the Symbolic Mechanics engine: how symbolic input is encoded, how pressure accumulates, how rupture and restart occur, how boundaries open or fail, and how the system behaves when visibility, control, or coherence break down.
-        </p>
-        <ul>
-          <li>Kernel processing</li>
-          <li>Collapse-capable load formation</li>
-          <li>Boundary geometry</li>
-          <li>Blackout topology</li>
-          <li>Voluntary shutdown</li>
-        </ul>
-      </aside>
     </div>
+
+    <section class="hero">
+      <p class="eyebrow">Theory Archive</p>
+      <h1>Publications — Page 1</h1>
+      <p class="hero-copy">
+        The opening publication page of the Symbolic Mechanics theory archive. This page anchors the canonical specification and the first ten theory volumes, then routes forward into the full four-page publication chain covering Volumes I–XL.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Featured Canonical Specification</h2>
+
+      <article class="featured-card">
+        <div class="card-title">Canonical Specification of Volumes I–XX</div>
+        <div class="card-sub">Deterministic multi-layer engine specification</div>
+        <div class="card-copy">
+          This document consolidates and formalizes Volumes I–XX into a single canonical specification of the Symbolic Mechanics engine. It defines the engine layers, variable table, routing rules, state transitions, and consistency corrections that make the first twenty volumes readable as one integrated symbolic-computational system.
+        </div>
+        <div class="card-actions">
+          <a class="mini-btn" href="./canonical-specification-volumes-01-20/">Open Specification</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-card">
+      <h2>Why this page matters</h2>
+      <p>
+        These publications do not present isolated themes. Together, they define the core runtime of the Symbolic Mechanics engine: how symbolic input is encoded, how pressure accumulates, how rupture and restart occur, how boundaries open or fail, and how the system behaves when visibility, control, or coherence break down.
+      </p>
+      <p>
+        This page is now the first page of a four-page publication chain covering Volumes I–XL. Read forward into Pages 2–4 to continue from intimacy-boundary mechanics into dark-field narrative architecture, fantasy and libido, resource mechanics, family field, and intergenerational shadow transmission.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Volumes I–X</h2>
+      <p>
+        These ten volumes establish the core runtime architecture of Symbolic Mechanics: kernel processing, symbolic encoding, collapse-capable load formation, regenerative restart, boundary geometry, visibility failure, attraction fields, intrusion physics, blackout topology, and voluntary shutdown.
+      </p>
+
+      <div class="volume-grid">
+        <article class="volume-card">
+          <div class="card-title">Volume I — Canonical Engine Kernel</div>
+          <div class="card-sub">Kernel layer</div>
+          <div class="card-copy">
+            Most theories describe inner life, but do not specify the irreducible engine through which symbolic events must pass. Volume I formalizes that missing kernel by defining the deterministic loop <strong>Δ → S → L → R → Exit</strong>.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-01.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume II — Structural Encoding, Symbolic Weight, and Base-Vector Geometry</div>
+          <div class="card-sub">Encoding and base-geometry layer</div>
+          <div class="card-copy">
+            Most theories describe feeling, memory, or interpretation, but do not specify how symbolic material becomes fixed into durable structure. Volume II formalizes that missing encoding layer by modelling structural inscription, symbolic weight, and base-vector formation inside the early seat economy.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-02.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume III — Shadow-Load Formation and Collapse Dynamics</div>
+          <div class="card-sub">Load-formation and collapse layer</div>
+          <div class="card-copy">
+            Most theories describe repression, distress, or breakdown, but do not specify how unresolved symbolic material becomes accumulating internal pressure. Volume III formalizes that missing collapse layer by modelling shadow-load as the bridge between encoded structure and rupture-capable mechanics.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-03.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume IV — Symbolic Parents, Companion Emergence, and Low-Energy Exit</div>
+          <div class="card-sub">Companion-module and regenerative-exit layer</div>
+          <div class="card-copy">
+            Most theories describe support or healing in emotional terms, but do not specify the structural condition under which a symbolic system gains a lower-energy route of continuation. Volume IV formalizes that missing stabilizer layer by modelling symbolic parents as functional channels, defining parental-volume growth, and showing how the C-Module enables low-energy regenerative exit.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-04.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume V — Change Failure, Safe-Proximity Radius, and the Geometry of Counterforce</div>
+          <div class="card-sub">Boundary-geometry and change-permission layer</div>
+          <div class="card-copy">
+            Most theories explain failed change in motivational or emotional terms, but do not specify the boundary geometry that makes movement mechanically impossible even when intention is present. Volume V formalizes that missing displacement layer by modelling <strong>Rₛ</strong> as a structural threshold and defining change through <strong>C↓ → ΔO_micro → Rₛ↑</strong>.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-05.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume VI — Visibility Collapse, Sorting Failure, and Existence Compensation</div>
+          <div class="card-sub">Visibility-collapse and fallback-orientation layer</div>
+          <div class="card-copy">
+            Most theories describe confusion, emptiness, or validation-seeking as emotional or cognitive phenomena, but do not specify the condition under which symbolic weight becomes unreadable. Volume VI formalizes that missing visibility-failure layer by defining sorting failure as symbolic unreadability and modelling existence-compensation as the fallback procedure that appears when weight signals go offline.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-06.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume VII — Attraction Tension, Visibility Differential, and Oscillatory Field Mechanics</div>
+          <div class="card-sub">Attraction-field and oscillation layer</div>
+          <div class="card-copy">
+            Most theories describe attraction as emotion, chemistry, or preference, but do not specify the field conditions under which attraction becomes unresolved tension. Volume VII formalizes that missing field layer by modelling attraction tension as the deterministic output of <strong>ΔV, Rₛ, Eₕ, and Eₓ</strong> interacting inside a single oscillatory system.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-07.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume VIII — Instruction Resistance, Structural Intrusion, and the Alarm Cascade</div>
+          <div class="card-sub">Intrusion-physics and alarm-cascade layer</div>
+          <div class="card-copy">
+            Most theories describe resistance to advice or commands in emotional or interpersonal terms, but do not specify the condition under which an external directive becomes a structural threat to sovereignty. Volume VIII formalizes that missing intrusion layer by defining command as <strong>I°</strong>, modelling Alarm activation under seat-weight and radius conditions, and showing how repeated intrusion reshapes visibility, sovereignty, and exit bias over time.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-08.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume IX — Black Room Collapse, the Orb, and Delayed Shame After Reconnection</div>
+          <div class="card-sub">Blackout-state and attractor-governance layer</div>
+          <div class="card-copy">
+            Most theories describe compulsion, fixation, or self-loss through desire, reward, or habit, but do not specify the blackout-state in which continuation becomes mechanically inevitable. Volume IX formalizes that missing blackout layer by modelling the Black Room as a forced state transition and the Orb as a rotational attractor that captures attention, suspends symbolic access, and delays shame until reconnection restores visibility.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-09.md">Open Volume</a></div>
+        </article>
+
+        <article class="volume-card">
+          <div class="card-title">Volume X — Voluntary Boundary Shutdown, Existential Supplementation, and Delayed Reconvergence</div>
+          <div class="card-sub">Protective-shutdown and symbolic-suspension layer</div>
+          <div class="card-copy">
+            Most theories describe withdrawal, fantasy, sensual escape, or sexual opening under pressure as collapse or addiction, but do not specify the condition under which the system deliberately turns off its own boundary-light. Volume X formalizes that missing shutdown layer by modelling voluntary boundary shutdown as a protective override that suspends symbolic visibility, generates an attractor corridor, and postpones shame until symbolic reconvergence returns.
+          </div>
+          <div class="card-actions"><a class="mini-btn" href="./volume-10.md">Open Volume</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Continue the publication chain</h2>
+
+      <div class="chain-links">
+        <div class="chain-link"><strong>Publications — Page 2 | Volumes XI–XX</strong><br><a href="./expansion-volumes/">Open Page 2</a></div>
+        <div class="chain-link"><strong>Publications — Page 3 | Volumes XXI–XXX</strong><br><a href="./expansion-volumes-21-30/">Open Page 3</a></div>
+        <div class="chain-link"><strong>Publications — Page 4 | Volumes XXXI–XL</strong><br><a href="./expansion-volumes-31-40/">Open Page 4</a></div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Navigation</h2>
+
+      <div class="nav-links">
+        <a class="nav-link" href="./index.html">Back to Home</a>
+        <a class="nav-link" href="./expansion-volumes/">Open Expansion Volumes — Page 2</a>
+        <a class="nav-link" href="./expansion-volumes-21-30/">Open Expansion Volumes — Page 3</a>
+        <a class="nav-link" href="./expansion-volumes-31-40/">Open Expansion Volumes — Page 4</a>
+        <a class="nav-link" href="./benchmark-records/">Benchmark Records</a>
+        <a class="nav-link" href="./prototype-records/">Prototype Records</a>
+        <a class="nav-link" href="./for-researchers/">For Researchers</a>
+      </div>
+    </section>
   </main>
 
   <section class="home-return-section">
-    <a class="home-return-btn" href="../index.html">← Back to Home</a>
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
   </section>
 </body>
 </html>
