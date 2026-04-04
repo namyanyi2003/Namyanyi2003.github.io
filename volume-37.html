@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symbolic Mechanics — Volume XXXVII: Instinct Zero — The Gravity of Human Grouping and the Maternal Conduction Node</title>
+  <meta name="description" content="Volume XXXVII formalizes Instinct Zero — the group-gravity instinct that precedes Visibility, Attachment, and Resource. The mother is the first conduction node of the Pressure Core, transmitting pressure algorithms, functional memory, cultural carriers, and fear signatures across generations. Belonging is survival confirmation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--text);
+      max-width: 13ch;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .keyword {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #eaf2fb;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1040px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./index.html">Home</a>
+        <a class="btn btn-secondary" href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Volume XXXVII</p>
+      <h1>Symbolic Mechanics — Volume XXXVII: Instinct Zero — The Gravity of Human Grouping and the Maternal Conduction Node</h1>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Volume</div>
+          <div class="meta-value">XXXVII</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">System Role</div>
+          <div class="meta-value">Primitive grouping kernel / Intergenerational transmission layer</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Canonical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>Research Hook</h2>
+
+        <p>
+          Most theories of human belonging assume that group attachment emerges from social bonding, shared identity, or evolutionary advantage. This volume shows that before any of the three major instincts (Visibility, Attachment, Resource) become operational, there is a more primitive force: Instinct Zero — the group-gravity instinct.
+        </p>
+
+        <p>
+          The missing insight is that a newborn does not first seek visibility, attachment, or resources. The newborn first takes a seat. This seat activates the Pressure Core — a gravitational center that pulls all members into orbit. Position precedes personhood. Orbit precedes instinct. Group-gravity precedes relationship.
+        </p>
+
+        <p>
+          Volume XXXVII rewrites the origin of belonging as structural adhesion, not emotional bonding. It formalizes the mother not as the emotional center of the family but as the first conduction node through which the old Pressure Core enters the new one — transmitting pressure algorithms, functional memory, cultural carriers, and fear signatures. This reframes intergenerational transmission as engineering, not psychology.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+
+        <p>
+          Volume XXXVII defines Instinct Zero as the group-gravity instinct that anchors a newborn into a collective structure before any other instinct operates. The Pressure Core emerges automatically when a group forms, and every member is drawn toward it, finding a survivable orbit. Entry Law: Seat → Orbit → Instinct.
+        </p>
+
+        <p>
+          The mother is formalized as the first conduction node of the Pressure Core. She carries four classes of data from the previous table: Pressure Algorithms (how the old family maintained its core), Functional Memory (her previous role: bearer, mediator, listener, absorber), Cultural Carriers (rituals, rules, preferences, prohibitions), and Fear Signatures (the danger-recognition map of the previous generation). Transmission occurs in two modes: passive (functional patterns reproduce automatically) and active (the mother locates actions that satisfy Visibility, Cradle, and Sovereignty).
+        </p>
+
+        <p>
+          Cultural carriers are defined as the portable tools of the Pressure Core. A behavior becomes culture only if it satisfies four conditions: recognizable by the previous table, executable within the new table, reinforces the actor’s position and visibility, and stabilizes the Pressure Core. Culture is not symbolism; it is the machinery through which the Pressure Core survives. Most cultural carriers are transmitted through the maternal line because the mother is the first conduction node.
+        </p>
+
+        <p>
+          Function memory is formalized as the deep-layer function log of the Pressure Core. It contains positional memory (the occupant’s orbit), stabilization method (the algorithm refined over decades to keep the core from collapsing), and recognition pathway (the most reliable route to Visibility, Cradle, and Sovereignty). Intergenerational continuity is not trauma replication; it is the reactivation of the pressure-stabilizing function perfected on the previous table.
+        </p>
+
+        <p>
+          Fear transfer is formalized as the re-encoded continuity of the Pressure Core. Fear is neither erased nor healed; it is simply re-encoded and re-emitted on the next table. Fear is the Pressure Core’s message to the next generation, marking where instability once occurred. It is survival metadata, not psychological damage.
+        </p>
+
+        <p>
+          The volume concludes by linking the Pressure Core to subjective experience: stable core → safety signal → belonging. Belonging is not romance; it is survival confirmation — the brain’s reward signal when the Pressure Core holds.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why this volume matters</h2>
+
+        <p>
+          Volume XXXVII is the foundational volume for understanding intergenerational transmission as structural continuity rather than emotional inheritance. It explains why mothers carry more cultural transmission, why fear persists across generations, and why belonging feels like a survival need — because it is.
+        </p>
+
+        <p>
+          Within the larger system, this volume bridges the family table (Volume XXXVI) and the collision of parental vectors (Volumes XXXIX–XL). Without it, the theory would lack an account of how the old Pressure Core installs itself into the new family, why mothers are the primary conduction node, and why cultural and fear patterns survive across generations. It is essential for understanding the origin of the maternal load (Volume XLII) and the shadow transmission chain.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Keywords</h2>
+
+        <div class="keywords">
+          <span class="keyword">Instinct Zero</span>
+          <span class="keyword">group gravity</span>
+          <span class="keyword">Pressure Core</span>
+          <span class="keyword">maternal conduction node</span>
+          <span class="keyword">pressure algorithms</span>
+          <span class="keyword">functional memory</span>
+          <span class="keyword">cultural carriers</span>
+          <span class="keyword">fear signatures</span>
+          <span class="keyword">passive transmission</span>
+          <span class="keyword">active transmission</span>
+          <span class="keyword">culture as machinery</span>
+          <span class="keyword">function memory</span>
+          <span class="keyword">intergenerational continuity</span>
+          <span class="keyword">fear re-encoding</span>
+          <span class="keyword">belonging as survival</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The volume page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/symbolic-mechanics-volume-37.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li>Previous volume — <a href="./volume-36.html">Volume XXXVI</a></li>
+          <li>Next volume: Volume XXXVIII</li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./index.html">← Back to Home</a>
+  </section>
+</body>
+</html>
