@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Publications — Page 3 | Symbolic Mechanics</title>
-  <meta name="description" content="Publications — Page 3 of Symbolic Mechanics. Volumes XXI–XXX covering dark-field narrative installation, scene switching, wooden box lifecycle, shadow layers, fantasy, libido, and the first compensatory direction.">
+  <meta name="description" content="Publications — Page 3 of Symbolic Mechanics. Volumes XXI–XXX covering dark-field narrative installation, scene switching, shadow layers, fantasy, libido, and the first compensatory direction.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,39 +30,75 @@
     body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
     a { color: inherit; text-decoration: none; }
 
-    .page { max-width: 1100px; margin: 0 auto; padding: 40px 32px 88px; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 28px; flex-wrap: wrap; }
-    .site-link { font-family: var(--serif); font-size: 1.42rem; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
-    .top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
 
-    .btn, .mini-btn, .nav-link, .home-return-btn {
-      transition: background .14s ease, color .14s ease, border-color .14s ease, transform .14s ease;
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.42rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-height: 42px; padding: 0 16px; border-radius: 8px;
-      font-size: 0.84rem; font-weight: 700; border: 1px solid var(--navy);
-      color: var(--navy); background: transparent; white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      white-space: nowrap;
     }
 
-    .btn:hover, .mini-btn:hover, .nav-link:hover {
-      background: var(--navy); color: #fff;
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
     }
 
-    .hero, .section-card {
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 34px 36px;
+      margin-bottom: 28px;
     }
 
-    .hero { margin-bottom: 28px; }
-    .section-card + .section-card { margin-top: 22px; }
-
     .eyebrow {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
     }
 
     h1 {
@@ -75,20 +111,49 @@
       max-width: 11ch;
     }
 
-    h2 {
-      font-size: 1.18rem; line-height: 1.35; font-weight: 800;
-      margin-bottom: 14px; color: var(--text);
+    .hero-copy {
+      font-size: 0.98rem;
+      line-height: 1.84;
+      color: var(--muted);
+      max-width: 78ch;
     }
 
-    p, li {
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section-card + .section-card {
+      margin-top: 22px;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      line-height: 1.35;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
       font-size: 0.96rem;
       line-height: 1.84;
       color: var(--text);
     }
 
-    .hero-copy { color: var(--muted); max-width: 78ch; }
+    .bullet-list {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
 
-    .bullet-list { margin-top: 12px; padding-left: 20px; }
+    .bullet-list li {
+      font-size: 0.95rem;
+      line-height: 1.82;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
 
     .volume-grid {
       display: grid;
@@ -114,10 +179,11 @@
     .volume-card p {
       font-size: 0.92rem;
       line-height: 1.8;
+      color: var(--text);
       margin-bottom: 12px;
     }
 
-    .mini-btn, .nav-link {
+    .mini-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -129,6 +195,12 @@
       border: 1px solid var(--navy);
       color: var(--navy);
       background: transparent;
+      transition: background .14s ease, color .14s ease;
+    }
+
+    .mini-btn:hover {
+      background: var(--navy);
+      color: #fff;
     }
 
     .nav-links {
@@ -136,6 +208,25 @@
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 16px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--navy);
+      color: #fff;
     }
 
     .home-return-section {
@@ -148,14 +239,24 @@
     }
 
     .home-return-btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-height: 48px; padding: 0 22px; border-radius: 8px;
-      background: var(--navy); color: #fff; font-size: 0.9rem; font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
       border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
     }
 
     .home-return-btn:hover {
-      background: #17446f; border-color: #17446f; transform: translateY(-1px);
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
     }
 
     @media (max-width: 760px) {
@@ -170,15 +271,16 @@
 <body>
   <main class="page">
     <div class="topbar">
-      <a class="site-link" href="../index.html">Symbolic Mechanics</a>
+      <a class="site-link" href="/index.html">Symbolic Mechanics</a>
+
       <div class="top-actions">
-        <a class="btn" href="../index.html">Home</a>
-        <a class="btn" href="../for-researchers/">For Researchers</a>
+        <a class="btn btn-secondary" href="/index.html">Home</a>
+        <a class="btn btn-secondary" href="/for-researchers/">For Researchers</a>
       </div>
     </div>
 
     <section class="hero">
-      <p class="eyebrow">Theory Archive</p>
+      <p class="eyebrow">Theory-publication line</p>
       <h1>Publications — Page 3</h1>
       <p class="hero-copy">
         The dark-field, narrative installation, scene switching, shadow layers, fantasy, libido, and the first compensation — the expansion that rewrites memory, identity, and life trajectory.
@@ -188,7 +290,7 @@
     <section class="section-card">
       <h2>Reading position</h2>
       <ol class="bullet-list">
-        <li>Complete Volumes I–XX (canonical engine, parental axes, boundary mechanics, projection, and intimacy).</li>
+        <li>Complete Volumes I–XX through Publications Pages 1–2 and the adjacent specification line where needed.</li>
         <li>Read Volumes XXI–XXX to understand how the system generates narrative, switches scenes, dissolves old selves, and fixes lifelong compensation direction.</li>
         <li>Proceed to Volumes XXXI–XL for resource mechanics, family field, and paternal shadow.</li>
         <li>Later volumes build on all of the above.</li>
@@ -209,61 +311,61 @@
         <article class="volume-card">
           <h3>Volume XXI — Narrative Mechanics: The Dark-Field Switch and the Birth of the Wooden Box</h3>
           <p>Memory is not stored; it is installed. The Self-Core reads pre-compiled narratives it never authored.</p>
-          <a class="mini-btn" href="./../volume-21.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-21.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXII — Scene Switching: Symbolic Overload, Dark-Field Transition, and the Suspension of the Old Stage</h3>
           <p>Life proceeds through discrete scene switches, not continuous development. Old scenes are frozen, not erased.</p>
-          <a class="mini-btn" href="./../volume-22.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-22.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXIII — The Wooden Box Slot System: Version Management, the Affect Volcano, and the Dissolution of the Old Self</h3>
           <p>The self is a version-control system. Deprecated boxes dissolve in the Affect Volcano, releasing raw emotional waves.</p>
-          <a class="mini-btn" href="./../volume-23.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-23.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXIV — The Three Shadow Layers: From Structural Imprint to Semantic Shame</h3>
           <p>Shadow 0.0 (structural), 1.0 (accumulated noise), and 2.0 (semantic shame). Only the last is narratable.</p>
-          <a class="mini-btn" href="./../volume-24.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-24.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXV — The Dark Domain: Archetypal Architecture and the Pre-Semantic Origins of Fantasy</h3>
           <p>The Father Archetype installs structural Proto-Boxes; the Mother Archetype holds the only activable containment light.</p>
-          <a class="mini-btn" href="./../volume-25.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-25.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXVI — The Fantasy System: From Archetypal Containment to Semantic Rendering</h3>
           <p>Fantasy is believed not because it is accurate, but because its neural signature equals felt safety.</p>
-          <a class="mini-btn" href="./../volume-26.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-26.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXVII — Negative Fantasy: The Dual-Pressure Loop and the Path to Systemic Depletion</h3>
           <p>Negative fantasy locks conscious catastrophic rendering with unconscious Shadow 0.0 into a self-amplifying loop.</p>
-          <a class="mini-btn" href="./../volume-27.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-27.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXVIII — The Cradle Module: Primitive Soothing Templates and the Origin of Desire</h3>
           <p>Desire is the adult form of primordial soothing demand — body-first, awareness-second.</p>
-          <a class="mini-btn" href="./../volume-28.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-28.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXIX — Libido and Fantasy: The Three-Phase Model of Sexual Desire and the Bidirectional Amplification Loop</h3>
           <p>Libido intensity is a function of ΔE between fusion demand and worthlessness load; semantic collapse unleashes unbounded fantasy.</p>
-          <a class="mini-btn" href="./../volume-29.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-29.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXX — The Firefly and the First Compensation: Instinct-Weighted Navigation and the Birth of Lifelong Trajectory</h3>
           <p>The first compensatory direction is mechanically determined by instinct weight, not choice. Spotlight × Alarm decides externalization or internalization.</p>
-          <a class="mini-btn" href="./../volume-30.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-30.html">Open Volume</a>
         </article>
       </div>
     </section>
@@ -271,16 +373,16 @@
     <section class="section-card">
       <h2>Navigation</h2>
       <div class="nav-links">
-        <a class="nav-link" href="./../expansion-volumes/">Back to Publications — Page 2</a>
-        <a class="nav-link" href="./../expansion-volumes-31-40/">Open Publications — Page 4</a>
-        <a class="nav-link" href="./../index.html">Back to Home</a>
-        <a class="nav-link" href="./../for-researchers/">For Researchers</a>
+        <a class="nav-link" href="/expansion-volumes/">Back to Publications — Page 2</a>
+        <a class="nav-link" href="/expansion-volumes-31-40/">Open Publications — Page 4</a>
+        <a class="nav-link" href="/index.html">Back to Home</a>
+        <a class="nav-link" href="/for-researchers/">For Researchers</a>
       </div>
     </section>
   </main>
 
   <section class="home-return-section">
-    <a class="home-return-btn" href="./../index.html">← Back to Home</a>
+    <a class="home-return-btn" href="/index.html">← Back to Home</a>
   </section>
 </body>
 </html>
