@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Canonical Specification of Volumes I–XX | Symbolic Mechanics</title>
-  <meta name="description" content="Integrated canonical specification of Volumes I–XX of Symbolic Mechanics.">
+  <meta name="description" content="Canonical Specification of Volumes I–XX of Symbolic Mechanics. Integrated formula/specification surface of the first twenty volumes, consolidating runtime layers, variables, routing logic, state transitions, and consistency corrections into one engine document.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,8 @@
     :root {
       --bg: #f5f4f0;
       --surface: #ffffff;
-      --surface-2: #f8f6f1;
+      --surface-soft: #f8f6f1;
+      --surface-2: #f2eee8;
       --text: #1a1a18;
       --muted: #5f6470;
       --faint: #8d97a5;
@@ -22,7 +23,6 @@
       --blue: #2471a3;
       --navy: #0d2b4e;
       --teal: #138d75;
-
       --serif: "Newsreader", Georgia, serif;
       --sans: "Inter", system-ui, sans-serif;
       --mono: "IBM Plex Mono", monospace;
@@ -44,7 +44,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
-      line-height: 1.68;
+      line-height: 1.72;
     }
 
     a {
@@ -52,84 +52,47 @@
       text-decoration: none;
     }
 
-    .spec-page {
-      max-width: 1260px;
+    .page {
+      max-width: 1240px;
       margin: 0 auto;
       padding: 42px 32px 88px;
     }
 
-    .spec-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 42px;
-      align-items: start;
-    }
-
-    .spec-main {
-      min-width: 0;
-    }
-
-    .spec-hero {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 40px 42px;
-    }
-
-    .eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 8px;
-    }
-
-    .spec-hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(3.2rem, 6vw, 4.7rem);
-      line-height: 0.96;
-      letter-spacing: -0.03em;
-      margin-bottom: 22px;
-      color: var(--text);
-      max-width: 12ch;
-    }
-
-    .spec-lead {
-      font-size: 1rem;
-      color: var(--text);
-      line-height: 1.72;
-      max-width: 66ch;
-      margin-bottom: 18px;
-    }
-
-    .spec-summary {
-      font-size: 0.92rem;
-      color: var(--muted);
-      line-height: 1.76;
-      max-width: 84ch;
-      margin-bottom: 28px;
-    }
-
-    .spec-action-stack {
+    .topbar {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 920px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
+      min-height: 42px;
+      padding: 0 16px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.84rem;
       font-weight: 700;
       border: 1px solid transparent;
-      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
-      text-align: center;
+      transition: background .14s ease, color .14s ease, border-color .14s ease;
+      white-space: nowrap;
     }
 
     .btn-primary {
@@ -154,116 +117,208 @@
       color: #fff;
     }
 
-    .spec-side {
-      position: sticky;
-      top: 28px;
+    .shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .main {
+      min-width: 0;
+    }
+
+    .hero {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
+      padding: 40px 42px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      max-width: 10ch;
+      color: var(--text);
+    }
+
+    .spec-lead {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text);
+      max-width: 72ch;
+      margin-bottom: 16px;
+    }
+
+    .spec-summary {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 84ch;
+      margin-bottom: 26px;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .side {
+      position: sticky;
+      top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
       padding: 24px 24px 20px;
     }
 
-    .spec-side h2 {
-      font-family: var(--sans);
-      font-size: 1.08rem;
-      font-weight: 800;
+    .side h2 {
+      font-size: 1.06rem;
       line-height: 1.35;
-      letter-spacing: -0.01em;
+      font-weight: 800;
       margin-bottom: 14px;
       color: var(--text);
     }
 
-    .spec-side p {
+    .side p {
       font-size: 0.9rem;
-      line-height: 1.76;
+      line-height: 1.78;
       color: var(--text);
       margin-bottom: 16px;
     }
 
-    .spec-side ul {
+    .side ul {
       padding-left: 18px;
       color: var(--text);
     }
 
-    .spec-side li {
+    .side li {
       font-size: 0.88rem;
       line-height: 1.72;
       margin-bottom: 4px;
     }
 
-    .spec-section {
-      margin-top: 48px;
+    .section {
+      margin-top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 34px 36px;
     }
 
-    .spec-section-head {
+    .section-head {
       margin-bottom: 18px;
     }
 
-    .spec-section-head h2 {
+    .section-head h2 {
       font-family: var(--serif);
-      font-size: 2rem;
+      font-size: 1.95rem;
       line-height: 1.08;
       letter-spacing: -0.02em;
       color: var(--text);
+      margin-bottom: 10px;
     }
 
-    .coverage-grid {
+    .section-head p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 84ch;
+    }
+
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .coverage-card {
-      background: var(--surface);
+    .card {
+      background: var(--surface-soft);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 22px 22px 20px;
+      border-radius: 12px;
+      padding: 20px 20px 18px;
     }
 
-    .coverage-meta {
+    .card-meta {
       font-family: var(--mono);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 600;
       color: var(--blue);
       letter-spacing: 0.04em;
-      margin-bottom: 10px;
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .coverage-card h3 {
-      font-family: var(--sans);
-      font-size: 1.14rem;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      margin-bottom: 10px;
+    .card h3 {
+      font-size: 1.08rem;
+      line-height: 1.34;
+      font-weight: 800;
+      margin-bottom: 8px;
       color: var(--text);
     }
 
-    .coverage-card p {
-      font-size: 0.88rem;
-      line-height: 1.72;
+    .card p {
+      font-size: 0.89rem;
+      line-height: 1.74;
       color: var(--muted);
+      margin-bottom: 0;
     }
 
-    .spec-map {
+    .map {
       display: grid;
       gap: 14px;
     }
 
-    .spec-row {
+    .row {
       display: grid;
-      grid-template-columns: 108px minmax(0, 1fr) 180px;
-      gap: 22px;
+      grid-template-columns: 130px minmax(0, 1fr) 170px;
+      gap: 20px;
       align-items: start;
-      background: var(--surface);
+      background: var(--surface-soft);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 22px 24px;
+      border-radius: 12px;
+      padding: 18px 18px;
     }
 
-    .spec-row-id {
+    .row-id {
       font-family: var(--mono);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--blue);
       letter-spacing: 0.04em;
@@ -271,310 +326,294 @@
       padding-top: 2px;
     }
 
-    .spec-row-main h3 {
-      font-family: var(--sans);
-      font-size: 1.08rem;
-      line-height: 1.35;
-      letter-spacing: -0.01em;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-
-    .spec-row-role {
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--faint);
+    .row-main h3 {
+      font-size: 1.04rem;
+      line-height: 1.34;
+      font-weight: 800;
       margin-bottom: 8px;
+      color: var(--text);
     }
 
-    .spec-row-main p {
-      font-size: 0.88rem;
-      line-height: 1.72;
+    .row-main p {
+      font-size: 0.89rem;
+      line-height: 1.74;
       color: var(--muted);
     }
 
-    .spec-row-link {
+    .row-link {
       display: flex;
       justify-content: flex-end;
-      padding-top: 3px;
+      padding-top: 2px;
     }
 
-    .spec-row-link a {
-      font-size: 0.86rem;
+    .row-link a {
+      font-size: 0.84rem;
       font-weight: 700;
       color: var(--blue);
       white-space: nowrap;
     }
 
-    .spec-row-link a:hover {
+    .row-link a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 1100px) {
-      .coverage-grid {
-        grid-template-columns: 1fr;
-      }
+    .note-block {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 22px 20px;
+    }
+
+    .note-block p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .note-block p + p {
+      margin-top: 12px;
     }
 
     @media (max-width: 980px) {
-      .spec-shell {
+      .shell {
         grid-template-columns: 1fr;
-        gap: 24px;
       }
 
-      .spec-side {
+      .side {
         position: static;
+      }
+
+      .hero-meta,
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (max-width: 720px) {
-      .spec-page {
+    @media (max-width: 760px) {
+      .page {
         padding: 28px 20px 64px;
       }
 
-      .spec-hero {
-        padding: 26px 22px;
+      .hero,
+      .section,
+      .side {
+        padding: 24px 22px;
       }
 
-      .spec-side {
-        padding: 20px 18px 18px;
+      .hero-meta,
+      .grid-2 {
+        grid-template-columns: 1fr;
       }
 
-      .coverage-card {
-        padding: 18px 18px 16px;
-      }
-
-      .spec-row {
+      .row {
         grid-template-columns: 1fr;
         gap: 12px;
-        padding: 18px 18px;
       }
 
-      .spec-row-link {
+      .row-link {
         justify-content: flex-start;
-        padding-top: 0;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-  <main class="spec-page">
-    <div class="spec-shell">
-      <div class="spec-main">
-        <section class="spec-hero">
-          <p class="eyebrow">Canonical specification</p>
+  <main class="page">
+    <div class="topbar">
+      <a class="brand" href="/index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-primary" href="/publications/">Theory Publications</a>
+        <a class="btn btn-secondary" href="/for-researchers/">For Researchers</a>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="main">
+        <section class="hero">
+          <p class="eyebrow">Specification line</p>
           <h1>Canonical Specification of Volumes I–XX</h1>
 
           <p class="spec-lead">
-            The integrated engine document of the first twenty volumes of Symbolic Mechanics.
+            The integrated formula/specification document of the first twenty volumes of Symbolic Mechanics.
           </p>
 
           <p class="spec-summary">
-            This document consolidates and formalizes Volumes I–XX into one canonical specification of the
-            Symbolic Mechanics engine. It brings together the runtime layers, variable table, structural modules,
-            routing rules, state transitions, and consistency corrections required to read the first twenty volumes
-            as one integrated symbolic-computational system.
+            This document consolidates and formalizes Volumes I–XX into one canonical specification of the Symbolic Mechanics engine. It brings together the runtime layers, variable table, structural modules, routing rules, state transitions, and consistency corrections required to read the first twenty volumes as one integrated formula/specification surface.
           </p>
 
-          <div class="spec-action-stack">
-            <a class="btn btn-primary" href="../publications/">Open Volumes I–X</a>
-            <a class="btn btn-secondary" href="../expansion-volumes/">Open Volumes XI–XX</a>
-            <a class="btn btn-secondary" href="../for-researchers/">For Researchers</a>
+          <div class="hero-meta">
+            <div class="meta-box">
+              <div class="meta-label">Document Class</div>
+              <div class="meta-value">Formula / specification line</div>
+            </div>
+
+            <div class="meta-box">
+              <div class="meta-label">Volume Scope</div>
+              <div class="meta-value">Volumes I–XX</div>
+            </div>
+
+            <div class="meta-box">
+              <div class="meta-label">Function</div>
+              <div class="meta-value">Integrated engine surface</div>
+            </div>
+
+            <div class="meta-box">
+              <div class="meta-label">Relation</div>
+              <div class="meta-value">Separate from the theory-publication chain</div>
+            </div>
           </div>
         </section>
 
-        <section class="spec-section">
-          <div class="spec-section-head">
-            <p class="eyebrow">Document structure</p>
-            <h2>What this specification consolidates</h2>
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">What this document is</p>
+            <h2>A specification surface, not a publication page</h2>
+            <p>
+              This document should not be read as Publications Page 0 or as a simple overview. Its job is different: it compresses the first twenty volumes into one formal engine-facing layer so that the runtime can be read as one coherent specification rather than as twenty separate documents.
+            </p>
           </div>
 
-          <div class="coverage-grid">
-            <article class="coverage-card">
-              <p class="coverage-meta">Engine layer</p>
-              <h3>Runtime kernel and route structure</h3>
+          <div class="grid-2">
+            <article class="card">
+              <p class="card-meta">Included here</p>
+              <h3>Integrated engine logic</h3>
               <p>
-                The document fixes the deterministic loop, symbolic installation process, load accumulation,
-                rupture logic, exit routing, and restart-capable continuity of the engine.
+                Runtime layers, variable definitions, routing logic, state transitions, and consistency corrections required to hold Volumes I–XX together as one engine surface.
               </p>
             </article>
 
-            <article class="coverage-card">
-              <p class="coverage-meta">System layer</p>
-              <h3>Modules, fields, and internal mechanics</h3>
+            <article class="card">
+              <p class="card-meta">Not this line</p>
+              <h3>Not the theory-publication chain</h3>
               <p>
-                The document consolidates encoding, shadow-load, stabilizer formation, boundary geometry,
-                visibility failure, attraction fields, intrusion physics, blackout mechanics, and shutdown structure.
-              </p>
-            </article>
-
-            <article class="coverage-card">
-              <p class="coverage-meta">Deep layer</p>
-              <h3>Intimacy, projection, shame, and survival</h3>
-              <p>
-                The document integrates intimacy-entry computation, projection runtime, alarm locking,
-                shame-origin rupture, clown architecture, hall-scale recurrence, and primitive survival navigation.
+                The theory-publication line remains the four-page publication route across Volumes I–XL. This specification line sits beside it as a formula-grade compression layer.
               </p>
             </article>
           </div>
         </section>
 
-        <section class="spec-section">
-          <div class="spec-section-head">
-            <p class="eyebrow">Canonical coverage map</p>
-            <h2>Integrated architecture map</h2>
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">Why this matters</p>
+            <h2>Why the specification line is separate</h2>
           </div>
 
-          <div class="spec-map">
-            <article class="spec-row">
-              <div class="spec-row-id">Volumes I–III</div>
-              <div class="spec-row-main">
-                <h3>Kernel, Encoding, and Load Formation</h3>
-                <p class="spec-row-role">Engine origin layer</p>
+          <div class="map">
+            <article class="row">
+              <div class="row-id">Reason 01</div>
+              <div class="row-main">
+                <h3>Theory pages preserve developmental order</h3>
                 <p>
-                  Formalizes the deterministic engine kernel, symbolic inscription, structural weight,
-                  base-vector formation, and shadow-load accumulation as the precondition of rupture-capable mechanics.
+                  Publication pages preserve reading sequence and conceptual expansion. They are built for theoretical movement across volumes.
                 </p>
               </div>
-              <div class="spec-row-link"><a href="../publications/">Open</a></div>
+              <div class="row-link"><a href="/publications/">Open Publications</a></div>
             </article>
 
-            <article class="spec-row">
-              <div class="spec-row-id">Volumes IV–V</div>
-              <div class="spec-row-main">
-                <h3>Companion Module and Boundary Geometry</h3>
-                <p class="spec-row-role">Stabilizer and displacement layer</p>
+            <article class="row">
+              <div class="row-id">Reason 02</div>
+              <div class="row-main">
+                <h3>The specification line preserves engine coherence</h3>
                 <p>
-                  Formalizes symbolic parents, companion emergence, low-energy exit, change failure,
-                  safe-proximity radius, and the geometry that determines whether movement is mechanically permitted.
+                  This line exists so the first twenty volumes can be read as one formula/specification layer without depending on page-by-page reconstruction by the reader.
                 </p>
               </div>
-              <div class="spec-row-link"><a href="../publications/">Open</a></div>
+              <div class="row-link"><a href="/canonical-specification-volumes-01-20/">Open Here</a></div>
             </article>
 
-            <article class="spec-row">
-              <div class="spec-row-id">Volumes VI–X</div>
-              <div class="spec-row-main">
-                <h3>Visibility Failure, Attraction, Intrusion, and Blackout Mechanics</h3>
-                <p class="spec-row-role">Mid-runtime architecture</p>
+            <article class="row">
+              <div class="row-id">Reason 03</div>
+              <div class="row-main">
+                <h3>It stabilises the archive structure</h3>
                 <p>
-                  Formalizes symbolic unreadability, existence-compensation, attraction tension,
-                  structural intrusion, alarm activation, blackout-state capture, and voluntary boundary shutdown.
+                  The specification line, theory-publication line, benchmark line, and prototype line now each carry different archive functions. This separation makes the site legible.
                 </p>
               </div>
-              <div class="spec-row-link"><a href="../publications/">Open</a></div>
+              <div class="row-link"><a href="/for-researchers/">Research Map</a></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">Archive relation</p>
+            <h2>How this line relates to the rest of the site</h2>
+          </div>
+
+          <div class="map">
+            <article class="row">
+              <div class="row-id">Next</div>
+              <div class="row-main">
+                <h3>Theory-publication chain</h3>
+                <p>
+                  After the specification line, readers can enter the publication chain through Pages 1–4, which preserve the distributed theory surface from Volumes I–XL.
+                </p>
+              </div>
+              <div class="row-link"><a href="/publications/">Open Page 1</a></div>
             </article>
 
-            <article class="spec-row">
-              <div class="spec-row-id">Volumes XI–XII</div>
-              <div class="spec-row-main">
-                <h3>Intimacy Entry and Boundary Parameterization</h3>
-                <p class="spec-row-role">Opening and entry layer</p>
+            <article class="row">
+              <div class="row-id">Parallel</div>
+              <div class="row-main">
+                <h3>Benchmark line</h3>
                 <p>
-                  Formalizes intimacy as a boundary event, V × G opening, parental force-parameterization,
-                  and the architecture by which intimacy entry becomes executable on fixed parameters.
+                  The benchmark line is not theory exposition. It evaluates interpretive performance under fixed adversarial conditions.
                 </p>
               </div>
-              <div class="spec-row-link"><a href="../expansion-volumes/">Open</a></div>
+              <div class="row-link"><a href="/benchmark-records/">Open</a></div>
             </article>
 
-            <article class="spec-row">
-              <div class="spec-row-id">Volumes XIII–XVI</div>
-              <div class="spec-row-main">
-                <h3>Projection Runtime, Thermal Breakdown, and Alarm Locking</h3>
-                <p class="spec-row-role">Projection and post-collapse governance layer</p>
+            <article class="row">
+              <div class="row-id">Parallel</div>
+              <div class="row-main">
+                <h3>Prototype line</h3>
                 <p>
-                  Formalizes projection initiation, placeholder interface, single-input persistence,
-                  thermal overload, automatic shutdown, Alarm Takeover, Double-Alarm Coupling, and Symbolic Locking.
+                  The prototype line preserves implementation-facing materials. It does not replace either the specification line or the theory-publication line.
                 </p>
               </div>
-              <div class="spec-row-link"><a href="../expansion-volumes/">Open</a></div>
+              <div class="row-link"><a href="/prototype-records/">Open</a></div>
             </article>
+          </div>
+        </section>
 
-            <article class="spec-row">
-              <div class="spec-row-id">Volumes XVII–XX</div>
-              <div class="spec-row-main">
-                <h3>Shame-Origin, Clown Architecture, Grand Hall, and Survival Navigation</h3>
-                <p class="spec-row-role">Deep runtime and continuation layer</p>
-                <p>
-                  Formalizes catastrophic shame, Shadow-Child residue, clown subsystem formation,
-                  hall-scale recurrence, and the primitive navigation architecture that remains after collapse.
-                </p>
-              </div>
-              <div class="spec-row-link"><a href="../expansion-volumes/">Open</a></div>
-            </article>
+        <section class="section">
+          <div class="section-head">
+            <p class="eyebrow">Reading note</p>
+            <h2>Best use of this document</h2>
+          </div>
+
+          <div class="note-block">
+            <p>
+              Use this line when you want the first twenty volumes in one integrated engine-facing surface.
+            </p>
+            <p>
+              Use Publications Pages 1–4 when you want the distributed theory-publication route.
+            </p>
+            <p>
+              The specification line and the publication line are adjacent but not identical. One compresses; the other unfolds.
+            </p>
           </div>
         </section>
       </div>
 
-      <aside class="spec-side">
+      <aside class="side">
         <h2>Why this document matters</h2>
         <p>
-          This document is not a summary page. It is the canonical integration layer of the first twenty volumes.
-          Its function is to convert distributed runtime components into one specification-grade engine surface.
+          This document is not a theory-publication page. It is the canonical specification / formula layer of the first twenty volumes. Its function is to convert distributed runtime components into one specification-grade engine surface.
         </p>
         <ul>
-          <li>Integrated engine view</li>
-          <li>Canonical terminology layer</li>
-          <li>Routing and state-transition logic</li>
-          <li>Module and variable consolidation</li>
-          <li>Cross-volume consistency corrections</li>
+          <li>Integrated engine reading</li>
+          <li>Volumes I–XX only</li>
+          <li>Formula/specification line</li>
+          <li>Separate from Publications Pages 1–4</li>
         </ul>
       </aside>
     </div>
   </main>
 </body>
 </html>
-
-<section class="home-return-section">
-  <a class="home-return-btn" href="../index.html">← Back to Home</a>
-</section>
-
-<style>
-  .home-return-section {
-    max-width: 1260px;
-    margin: 56px auto 0;
-    padding: 24px 32px 40px;
-    border-top: 1px solid #ddd6cb;
-    display: flex;
-    justify-content: center;
-  }
-
-  .home-return-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 0 22px;
-    border-radius: 8px;
-    background: #0d2b4e;
-    color: #ffffff;
-    font-family: "Inter", system-ui, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    border: 1px solid #0d2b4e;
-    transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
-  }
-
-  .home-return-btn:hover {
-    background: #17446f;
-    border-color: #17446f;
-    transform: translateY(-1px);
-  }
-
-  @media (max-width: 720px) {
-    .home-return-section {
-      padding: 22px 20px 32px;
-      margin-top: 44px;
-    }
-
-    .home-return-btn {
-      width: 100%;
-      max-width: 320px;
-    }
-  }
-</style>
