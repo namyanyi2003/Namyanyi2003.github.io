@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>For Researchers | Symbolic Mechanics</title>
-  <meta name="description" content="Research-facing entry page for Symbolic Mechanics. Canonical specification, publication structure, archive logic, and reading pathways.">
+  <meta name="description" content="Research-facing entry page for Symbolic Mechanics. Canonical specification, publication structure, benchmark line, prototype line, archive logic, and reading pathways.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,6 @@
       --blue: #2471a3;
       --navy: #0d2b4e;
       --teal: #138d75;
-
       --serif: "Newsreader", Georgia, serif;
       --sans: "Inter", system-ui, sans-serif;
       --mono: "IBM Plex Mono", monospace;
@@ -329,6 +328,39 @@
       margin-top: 12px;
     }
 
+    .home-return-section {
+      max-width: 1260px;
+      margin: 56px auto 0;
+      padding: 24px 32px 40px;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: #0d2b4e;
+      color: #ffffff;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid #0d2b4e;
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
     @media (max-width: 1100px) {
       .grid-3 {
         grid-template-columns: 1fr;
@@ -373,6 +405,16 @@
         justify-content: flex-start;
         padding-top: 0;
       }
+
+      .home-return-section {
+        padding: 22px 20px 32px;
+        margin-top: 44px;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 320px;
+      }
     }
   </style>
 </head>
@@ -389,23 +431,24 @@
           </p>
 
           <p class="summary">
-            This page is designed for readers who want a direct route into the system’s public materials,
-            canonical layer, and archive structure. Its function is not to simplify the theory into a general overview,
-            but to clarify where the formal entry points are, how the public release surface is organized,
-            and how the system should be approached as a structured runtime rather than a set of isolated themes.
+            This page is designed for readers who want a direct route into the system’s public materials, canonical layer, archive structure, benchmark line, and prototype line. Its function is not to simplify the theory into a general overview, but to clarify where the formal entry points are and how the public archive is organized.
           </p>
 
           <div class="action-stack">
             <a class="btn btn-primary" href="../canonical-specification-volumes-01-20/">Open Canonical Specification</a>
-            <a class="btn btn-secondary" href="../publications/">Open Volumes I–X</a>
-            <a class="btn btn-secondary" href="../expansion-volumes/">Open Volumes XI–XX</a>
+            <a class="btn btn-secondary" href="../publications/">Open Publications — Page 1</a>
+            <a class="btn btn-secondary" href="../expansion-volumes/">Open Publications — Page 2</a>
+            <a class="btn btn-secondary" href="../expansion-volumes-21-30/">Open Publications — Page 3</a>
+            <a class="btn btn-secondary" href="../expansion-volumes-31-40/">Open Publications — Page 4</a>
+            <a class="btn btn-secondary" href="../benchmark-records/">Open Benchmark Records</a>
+            <a class="btn btn-secondary" href="../prototype-records/">Open Prototype Records</a>
           </div>
         </section>
 
         <section class="section">
           <div class="section-head">
             <p class="eyebrow">Research routes</p>
-            <h2>Three ways to enter the system</h2>
+            <h2>Four ways to enter the archive</h2>
           </div>
 
           <div class="grid-3">
@@ -413,26 +456,31 @@
               <p class="card-meta">Route A</p>
               <h3>Read the canonical specification first</h3>
               <p>
-                This is the most compressed route. It provides the integrated engine surface of Volumes I–XX
-                and is the clearest entry point for readers who want the formal structure before the individual releases.
+                This is the most compressed route. It provides the integrated engine surface of Volumes I–XX and remains the cleanest formal entry point.
               </p>
             </article>
 
             <article class="card">
               <p class="card-meta">Route B</p>
-              <h3>Read the publication pages in sequence</h3>
+              <h3>Read the publication pages in order</h3>
               <p>
-                This route preserves developmental order. It is useful for readers who want to see how the
-                runtime architecture expands layer by layer from kernel mechanics into projection, shame, and survival structure.
+                This route preserves developmental order across Pages 1–4, from the kernel through projection, dark-field narrative, fantasy, libido, resource mechanics, family field, and paternal shadow.
               </p>
             </article>
 
             <article class="card">
               <p class="card-meta">Route C</p>
-              <h3>Use the archive as a release surface</h3>
+              <h3>Use the benchmark line</h3>
               <p>
-                This route treats the site as a public record of system construction. It is useful for readers
-                interested in release continuity, versioned public layers, and citation-oriented navigation.
+                This route enters through empirical comparison. It is useful for readers who want to see how interpretation frameworks perform under fixed adversarial conditions.
+              </p>
+            </article>
+
+            <article class="card">
+              <p class="card-meta">Route D</p>
+              <h3>Use the prototype line</h3>
+              <p>
+                This route enters through implementation-facing materials. It is useful for readers interested in executable boundaries, validation logic, and preserved prototype architecture.
               </p>
             </article>
           </div>
@@ -451,50 +499,82 @@
                 <h3>Canonical Specification of Volumes I–XX</h3>
                 <p class="row-role">Integrated engine document</p>
                 <p>
-                  Consolidates the first twenty volumes into one specification-grade surface, including runtime layers,
-                  modules, variables, routing logic, and consistency corrections.
+                  Consolidates the first twenty volumes into one specification-grade surface, including runtime layers, variables, routing logic, and consistency corrections.
                 </p>
               </div>
               <div class="row-link"><a href="../canonical-specification-volumes-01-20/">Open</a></div>
             </article>
 
             <article class="row">
-              <div class="row-id">Volumes I–X</div>
+              <div class="row-id">Page 1</div>
               <div class="row-main">
-                <h3>Core runtime architecture</h3>
+                <h3>Publications — Page 1 | Volumes I–X</h3>
                 <p class="row-role">Kernel to blackout layer</p>
                 <p>
-                  Covers kernel processing, symbolic encoding, load formation, stabilizer emergence,
-                  boundary geometry, visibility failure, attraction mechanics, intrusion, blackout topology, and shutdown.
+                  Covers kernel processing, symbolic encoding, load formation, rupture, regenerative restart, boundary geometry, visibility failure, attraction fields, intrusion physics, blackout topology, and voluntary shutdown.
                 </p>
               </div>
               <div class="row-link"><a href="../publications/">Open</a></div>
             </article>
 
             <article class="row">
-              <div class="row-id">Volumes XI–XX</div>
+              <div class="row-id">Page 2</div>
               <div class="row-main">
-                <h3>Deep runtime architecture</h3>
-                <p class="row-role">Intimacy to survival layer</p>
+                <h3>Publications — Page 2 | Volumes XI–XX</h3>
+                <p class="row-role">Intimacy and projection layer</p>
                 <p>
-                  Covers intimacy entry, projection runtime, thermal breakdown, post-projection alarm locking,
-                  shame-origin mechanics, clown architecture, hall-scale recurrence, and primitive survival navigation.
+                  Covers intimacy-boundary mechanics, parental boundary architecture, projection-entry physics, reality-breach mechanics, post-projection alarm governance, shame-origin architecture, clown-engine staging, and primitive navigation.
                 </p>
               </div>
               <div class="row-link"><a href="../expansion-volumes/">Open</a></div>
             </article>
 
             <article class="row">
-              <div class="row-id">Archive</div>
+              <div class="row-id">Page 3</div>
               <div class="row-main">
-                <h3>Public release and reading continuity</h3>
-                <p class="row-role">Curated entry surface</p>
+                <h3>Publications — Page 3 | Volumes XXI–XXX</h3>
+                <p class="row-role">Narrative and temporal layer</p>
                 <p>
-                  Provides a public-facing pathway through the released materials and preserves the site as a structured record
-                  of publication order, release clustering, and research-facing access.
+                  Covers dark-field narrative installation, scene switching, wooden box lifecycle, shadow layers, archetypal fantasy, libido, and the first compensatory direction.
                 </p>
               </div>
-              <div class="row-link"><a href="../index.html">Open</a></div>
+              <div class="row-link"><a href="../expansion-volumes-21-30/">Open</a></div>
+            </article>
+
+            <article class="row">
+              <div class="row-id">Page 4</div>
+              <div class="row-main">
+                <h3>Publications — Page 4 | Volumes XXXI–XL</h3>
+                <p class="row-role">Resource and family field layer</p>
+                <p>
+                  Covers resource mechanics, sovereignty computation, social resource transition, family field, Instinct Zero, fear-as-data, paternal vector collision, and the three-generation shadow loop.
+                </p>
+              </div>
+              <div class="row-link"><a href="../expansion-volumes-31-40/">Open</a></div>
+            </article>
+
+            <article class="row">
+              <div class="row-id">Benchmark</div>
+              <div class="row-main">
+                <h3>Benchmark Records</h3>
+                <p class="row-role">Empirical comparison line</p>
+                <p>
+                  Preserves the Phase I benchmark chain, including the aggregate report and the benchmark-facing archive structure used for controlled framework comparison.
+                </p>
+              </div>
+              <div class="row-link"><a href="../benchmark-records/">Open</a></div>
+            </article>
+
+            <article class="row">
+              <div class="row-id">Prototype</div>
+              <div class="row-main">
+                <h3>Prototype Records</h3>
+                <p class="row-role">Implementation-facing line</p>
+                <p>
+                  Preserves prototype lineage, the v0.2.1 main specification, and the first implementation-stable validation report as a bounded execution archive.
+                </p>
+              </div>
+              <div class="row-link"><a href="../prototype-records/">Open</a></div>
             </article>
           </div>
         </section>
@@ -502,22 +582,18 @@
         <section class="section">
           <div class="section-head">
             <p class="eyebrow">Reading note</p>
-            <h2>How this site should be used</h2>
+            <h2>How this archive should now be used</h2>
           </div>
 
           <div class="note-block">
             <p>
-              This site should not be approached as a general theory homepage, a motivational overview, or a simplified introduction.
-              Its structure is closer to a public research surface: specification, clustered publication pages, and archive continuity.
+              This site should no longer be approached as a theory-only homepage. It now exposes three public channels: theory, benchmark, and prototype.
             </p>
             <p>
-              The most accurate reading order for formal readers is usually specification first, then the clustered volume pages,
-              then individual releases where needed. Readers who prefer developmental order may reverse that path and move from
-              Volumes I–X into Volumes XI–XX before returning to the integrated specification.
+              The most accurate reading order for formal readers is usually Canonical Specification first, then Publications Pages 1–4, then Benchmark Records and Prototype Records as distinct downstream lines.
             </p>
             <p>
-              The public archive layer exists to preserve coherence across release surfaces. The website is therefore best read
-              as a curated interface to a structured system, not as a collection of isolated essays.
+              The benchmark line is not theory exposition, and the prototype line is not a replacement for canonical theory. Each channel preserves a different function within the archive.
             </p>
           </div>
         </section>
@@ -526,68 +602,21 @@
       <aside class="side">
         <h2>Why this page matters</h2>
         <p>
-          Research pages often fail by mixing explanation, promotion, and archive logic into one blurred surface.
-          This page separates those functions and clarifies where the formal entry points actually are.
+          Research pages often fail by mixing theory explanation, archive logic, and evaluation surfaces into one blurred entry. This page separates those functions and clarifies where the formal entry points actually are.
         </p>
         <ul>
           <li>Canonical entry path</li>
-          <li>Publication clustering</li>
-          <li>Archive-facing logic</li>
-          <li>Reading-order clarity</li>
+          <li>Publication chain through Volumes I–XL</li>
+          <li>Benchmark line</li>
+          <li>Prototype line</li>
           <li>Research-oriented access</li>
         </ul>
       </aside>
     </div>
   </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="../index.html">← Back to Home</a>
+  </section>
 </body>
 </html>
-<section class="home-return-section">
-  <a class="home-return-btn" href="../index.html">← Back to Home</a>
-</section>
-
-<style>
-  .home-return-section {
-    max-width: 1260px;
-    margin: 56px auto 0;
-    padding: 24px 32px 40px;
-    border-top: 1px solid #ddd6cb;
-    display: flex;
-    justify-content: center;
-  }
-
-  .home-return-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 0 22px;
-    border-radius: 8px;
-    background: #0d2b4e;
-    color: #ffffff;
-    font-family: "Inter", system-ui, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    border: 1px solid #0d2b4e;
-    transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
-  }
-
-  .home-return-btn:hover {
-    background: #17446f;
-    border-color: #17446f;
-    transform: translateY(-1px);
-  }
-
-  @media (max-width: 720px) {
-    .home-return-section {
-      padding: 22px 20px 32px;
-      margin-top: 44px;
-    }
-
-    .home-return-btn {
-      width: 100%;
-      max-width: 320px;
-    }
-  }
-</style>
