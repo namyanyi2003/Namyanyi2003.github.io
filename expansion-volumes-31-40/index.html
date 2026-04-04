@@ -30,39 +30,75 @@
     body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
     a { color: inherit; text-decoration: none; }
 
-    .page { max-width: 1100px; margin: 0 auto; padding: 40px 32px 88px; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 28px; flex-wrap: wrap; }
-    .site-link { font-family: var(--serif); font-size: 1.42rem; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
-    .top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
 
-    .btn, .mini-btn, .nav-link, .home-return-btn {
-      transition: background .14s ease, color .14s ease, border-color .14s ease, transform .14s ease;
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.42rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-height: 42px; padding: 0 16px; border-radius: 8px;
-      font-size: 0.84rem; font-weight: 700; border: 1px solid var(--navy);
-      color: var(--navy); background: transparent; white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      white-space: nowrap;
     }
 
-    .btn:hover, .mini-btn:hover, .nav-link:hover {
-      background: var(--navy); color: #fff;
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
     }
 
-    .hero, .section-card {
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 34px 36px;
+      margin-bottom: 28px;
     }
 
-    .hero { margin-bottom: 28px; }
-    .section-card + .section-card { margin-top: 22px; }
-
     .eyebrow {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
     }
 
     h1 {
@@ -75,20 +111,49 @@
       max-width: 11ch;
     }
 
-    h2 {
-      font-size: 1.18rem; line-height: 1.35; font-weight: 800;
-      margin-bottom: 14px; color: var(--text);
+    .hero-copy {
+      font-size: 0.98rem;
+      line-height: 1.84;
+      color: var(--muted);
+      max-width: 78ch;
     }
 
-    p, li {
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section-card + .section-card {
+      margin-top: 22px;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      line-height: 1.35;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
       font-size: 0.96rem;
       line-height: 1.84;
       color: var(--text);
     }
 
-    .hero-copy { color: var(--muted); max-width: 78ch; }
+    .bullet-list {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
 
-    .bullet-list { margin-top: 12px; padding-left: 20px; }
+    .bullet-list li {
+      font-size: 0.95rem;
+      line-height: 1.82;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
 
     .volume-grid {
       display: grid;
@@ -114,10 +179,11 @@
     .volume-card p {
       font-size: 0.92rem;
       line-height: 1.8;
+      color: var(--text);
       margin-bottom: 12px;
     }
 
-    .mini-btn, .nav-link {
+    .mini-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -129,6 +195,12 @@
       border: 1px solid var(--navy);
       color: var(--navy);
       background: transparent;
+      transition: background .14s ease, color .14s ease;
+    }
+
+    .mini-btn:hover {
+      background: var(--navy);
+      color: #fff;
     }
 
     .nav-links {
@@ -136,6 +208,25 @@
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 16px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--navy);
+      color: #fff;
     }
 
     .home-return-section {
@@ -148,14 +239,24 @@
     }
 
     .home-return-btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-height: 48px; padding: 0 22px; border-radius: 8px;
-      background: var(--navy); color: #fff; font-size: 0.9rem; font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
       border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
     }
 
     .home-return-btn:hover {
-      background: #17446f; border-color: #17446f; transform: translateY(-1px);
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
     }
 
     @media (max-width: 760px) {
@@ -170,15 +271,16 @@
 <body>
   <main class="page">
     <div class="topbar">
-      <a class="site-link" href="../index.html">Symbolic Mechanics</a>
+      <a class="site-link" href="/index.html">Symbolic Mechanics</a>
+
       <div class="top-actions">
-        <a class="btn" href="../index.html">Home</a>
-        <a class="btn" href="../for-researchers/">For Researchers</a>
+        <a class="btn btn-secondary" href="/index.html">Home</a>
+        <a class="btn btn-secondary" href="/for-researchers/">For Researchers</a>
       </div>
     </div>
 
     <section class="hero">
-      <p class="eyebrow">Theory Archive</p>
+      <p class="eyebrow">Theory-publication line</p>
       <h1>Publications — Page 4</h1>
       <p class="hero-copy">
         From instinct-weighted routing to family field mechanics — the Resource Instinct, dual-sovereignty intimacy, the Family Table, and the structural asymmetry of paternal shadow.
@@ -188,8 +290,8 @@
     <section class="section-card">
       <h2>Reading position</h2>
       <ol class="bullet-list">
-        <li>Complete Volumes I–XX (canonical engine).</li>
-        <li>Read Volumes XXI–XXX (narrative, scene switching, shadow layers, fantasy, libido, first compensation).</li>
+        <li>Complete Volumes I–XX through Publications Pages 1–2 and the adjacent specification line where needed.</li>
+        <li>Read Volumes XXI–XXX to understand narrative installation, scene switching, shadow layers, fantasy, libido, and the first compensation.</li>
         <li>Then read Volumes XXXI–XL to understand resource mechanics, intimate power, family as a pressure core, and intergenerational shadow transmission.</li>
         <li>Later volumes extend into counter-position and shell families.</li>
       </ol>
@@ -209,61 +311,61 @@
         <article class="volume-card">
           <h3>Volume XXXI — The Firefly’s Three Compensatory Directions: Instinct-Weighted Routing and the First Bifurcation of Life Trajectory</h3>
           <p>The Firefly routes toward the strongest instinct line — Resource, Attachment, or Existence — locking lifelong compensation before conscious choice.</p>
-          <a class="mini-btn" href="./../volume-31.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-31.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXII — The Resource Instinct: Exit-4 Sovereignty and the Controllability Computation</h3>
           <p>Control is not personality; it is controllability computation across world, others, self, and non-participation.</p>
-          <a class="mini-btn" href="./../volume-32.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-32.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXIII — Resource × Social Mechanics: The Fake World, the Real World, and the Activation of the Resource Instinct</h3>
           <p>The Fake World suppresses competition; the first shame event triggers the Fake→Real switch, producing three resource phenotypes.</p>
-          <a class="mini-btn" href="./../volume-33.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-33.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXIV — Intimacy as Triple-Instinct Intersection: Power, Sovereignty, and the Visibility–Attachment–Resource Field</h3>
           <p>Intimacy activates all three instincts simultaneously. Power is intrinsic — attack and withdrawal are sovereignty vectors, not moral failures.</p>
-          <a class="mini-btn" href="./../volume-34.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-34.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXV — Dual-Sovereignty Network: Intimacy as Two Exit-4 Vectors Continuously Reshaping Each Other</h3>
           <p>Power cannot be erased; it only transforms and returns. Withdrawal is as powerful as aggression.</p>
-          <a class="mini-btn" href="./../volume-35.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-35.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXVI — The Family Table: Fixed Symbolic Seats and the Structural Origin of Belonging</h3>
           <p>A child enters an already weighted table. The seat is structurally assigned and never moves — explaining why family positions feel inescapable.</p>
-          <a class="mini-btn" href="./../volume-36.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-36.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXVII — Instinct Zero: The Gravity of Human Grouping and the Maternal Conduction Node</h3>
           <p>Before any instinct, the newborn takes a seat. The mother transmits pressure algorithms, functional memory, culture, and fear signatures.</p>
-          <a class="mini-btn" href="./../volume-37.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-37.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXVIII — Fear as Primitive Driver: From Danger Map to Culture, Function, and Control Vectors</h3>
           <p>Fear is not an emotion but a binary survival dataset. Culture encodes it; function executes it; control/no-control vectors compress it.</p>
-          <a class="mini-btn" href="./../volume-38.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-38.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XXXIX — The Paternal Vector: Collision, Shadow Output, and the Formation of the Family Pressure Core</h3>
           <p>The father is a full 100% vector colliding with the mother’s. The child is pulled into the resulting structural gap.</p>
-          <a class="mini-btn" href="./../volume-39.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-39.html">Open Volume</a>
         </article>
 
         <article class="volume-card">
           <h3>Volume XL — The Paternal Shadow and the Three-Generation Loop: Structural Asymmetry and Intergenerational Transmission</h3>
           <p>Maternal unfinished need → paternal delay → child receives structural mismatch. The composite shadow repeats across generations.</p>
-          <a class="mini-btn" href="./../volume-40.html">Open Volume</a>
+          <a class="mini-btn" href="/volume-40.html">Open Volume</a>
         </article>
       </div>
     </section>
@@ -271,15 +373,15 @@
     <section class="section-card">
       <h2>Navigation</h2>
       <div class="nav-links">
-        <a class="nav-link" href="./../expansion-volumes-21-30/">Back to Publications — Page 3</a>
-        <a class="nav-link" href="./../index.html">Back to Home</a>
-        <a class="nav-link" href="./../for-researchers/">For Researchers</a>
+        <a class="nav-link" href="/expansion-volumes-21-30/">Back to Publications — Page 3</a>
+        <a class="nav-link" href="/index.html">Back to Home</a>
+        <a class="nav-link" href="/for-researchers/">For Researchers</a>
       </div>
     </section>
   </main>
 
   <section class="home-return-section">
-    <a class="home-return-btn" href="./../index.html">← Back to Home</a>
+    <a class="home-return-btn" href="/index.html">← Back to Home</a>
   </section>
 </body>
 </html>
