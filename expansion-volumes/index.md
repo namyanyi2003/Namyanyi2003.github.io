@@ -54,7 +54,7 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 
 ## Navigation
 
-- [Back to Volumes I–X](./../publications.md)
+- [Back to Volumes I–X](./../publications.html)
 - [Open Publications — Page 3](./../expansion-volumes-21-30/)
 - [Open Publications — Page 4](./../expansion-volumes-31-40/)
 - [Benchmark Records](./../benchmark-records/)
