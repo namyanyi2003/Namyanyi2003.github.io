@@ -47,8 +47,17 @@ These volumes extend the early engine into intimacy-boundary mechanics, parental
 - [Volume XX — The Firefly as the System’s Primitive Navigational Layer](./../volume-20.md)  
   Most theories describe instinct, intuition, or fragments of hope, but do not specify the minimal navigational signal that remains active when higher-order structure is unstable. Volume XX formalizes that missing primitive layer by modelling the Firefly as a low-resolution directional signal that preserves orientation even under darkened, damaged, or clown-governed chamber conditions.
 
+## Continue the publication chain
+
+- [Publications — Page 3 | Volumes XXI–XXX](./../expansion-volumes-21-30/)
+- [Publications — Page 4 | Volumes XXXI–XL](./../expansion-volumes-31-40/)
+
 ## Navigation
 
 - [Back to Volumes I–X](./../publications.md)
+- [Open Publications — Page 3](./../expansion-volumes-21-30/)
+- [Open Publications — Page 4](./../expansion-volumes-31-40/)
+- [Benchmark Records](./../benchmark-records/)
+- [Prototype Records](./../prototype-records/)
 - [Back to Home](./../index.md)
 - [For Researchers](./../for-researchers/)
