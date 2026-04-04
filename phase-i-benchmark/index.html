@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phase I Benchmark | Symbolic Mechanics Archive</title>
+  <meta name="description" content="Phase I Benchmark for Symbolic Mechanics, comparing mainstream psychology and Symbolic Mechanics Volumes 1–30 across 24 adversarial high-residual cases using a five-platform equal-weight aggregate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 15px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.42rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      white-space: nowrap;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: var(--text);
+      max-width: 11ch;
+    }
+
+    .hero-copy {
+      font-size: 0.98rem;
+      line-height: 1.84;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section-card + .section-card {
+      margin-top: 22px;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      line-height: 1.35;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .bullet-list {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li {
+      font-size: 0.95rem;
+      line-height: 1.82;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .record-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .record-card {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      border-radius: 12px;
+      padding: 18px 18px 16px;
+    }
+
+    .record-index {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .record-title {
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      line-height: 1.25;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .record-copy {
+      font-size: 0.92rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .record-note {
+      font-size: 0.86rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .record-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      background: var(--navy);
+      border: 1px solid var(--navy);
+      color: #fff;
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .action-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background 0.14s ease, color 0.14s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .crumb {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    .home-return-section {
+      max-width: 1100px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .page { padding: 28px 20px 56px; }
+      .hero, .section-card { padding: 24px 22px; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .home-return-section { padding: 22px 20px 0; }
+      .home-return-btn { width: 100%; max-width: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="../index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="../index.html">Home</a>
+        <a class="btn btn-secondary" href="../benchmark-records/">Benchmark Records</a>
+        <a class="btn btn-secondary" href="../prototype-records/">Prototype Line</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Benchmark / Evaluation Line</p>
+      <h1>Phase I Benchmark</h1>
+      <p class="hero-copy">
+        Phase I is the first completed benchmark in the Symbolic Mechanics empirical line. It compares two interpretation frameworks — A (mainstream psychology) and B (Symbolic Mechanics Volumes 1–30) — across 24 high-residual cases, using a five-platform equal-weight aggregate. The test is adversarial by design: cases are selected to resist surface-level explanation and require structural backend mapping.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>What Phase I Is</h2>
+      <p>
+        Phase I is not a survey or a preference test. It is a controlled, repeatable interpretation benchmark with fixed parameters and preserved evaluation conditions.
+      </p>
+
+      <ul class="bullet-list">
+        <li>Total items: 24, evenly split into four categories</li>
+        <li>Comparison: A vs B, blind to platform</li>
+        <li>Platforms: ChatGPT, DeepSeek, Claude, Grok, Gemini (equal weight)</li>
+        <li>Aggregation: vote-based and score-based</li>
+        <li>Output: debiased ratings, case triage, internal readout, completion block</li>
+      </ul>
+
+      <p>
+        The benchmark measures backend map performance, not front-end style. B’s advantage is concentrated in structural closure, framework recognition, causal clarity, and phenomenological fit — not readability.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>Available Phase I Records</h2>
+
+      <div class="record-grid">
+        <article class="record-card">
+          <div class="record-index">Record 01</div>
+          <div class="record-title">Five-Platform Equal-Weight Aggregate Report (Formal Internal Report v1.0)</div>
+          <div class="record-copy">
+            Full aggregate results, category breakdown, case triage, and representative cases.
+          </div>
+          <div class="record-note">Format: PDF / HTML</div>
+          <div class="record-actions">
+            <a class="action-link" href="../phase-i-five-platform-equal-weight-aggregate-report.html">Open Record</a>
+          </div>
+        </article>
+
+        <article class="record-card">
+          <div class="record-index">Record 02</div>
+          <div class="record-title">Deblinded Ratings Archive v1.0 (platform-level, sealed)</div>
+          <div class="record-copy">
+            Raw ratings per platform, per item.
+          </div>
+          <div class="record-note">Access: upon request / internal reference</div>
+        </article>
+
+        <article class="record-card">
+          <div class="record-index">Record 03</div>
+          <div class="record-title">Case Triage v1.0 (platform-level, sealed)</div>
+          <div class="record-copy">
+            Each platform’s individual triage decisions.
+          </div>
+          <div class="record-note">Access: upon request / internal reference</div>
+        </article>
+
+        <article class="record-card">
+          <div class="record-index">Record 04</div>
+          <div class="record-title">Internal Readout v1.0 (platform-level, sealed)</div>
+          <div class="record-copy">
+            Platform-specific interpretive notes and anomalies.
+          </div>
+          <div class="record-note">Access: upon request / internal reference</div>
+        </article>
+
+        <article class="record-card">
+          <div class="record-index">Record 05</div>
+          <div class="record-title">Platform Completion Block v1.0 (platform-level, sealed)</div>
+          <div class="record-copy">
+            Execution logs and completion confirmation.
+          </div>
+          <div class="record-note">Access: upon request / internal reference</div>
+        </article>
+      </div>
+
+      <p style="margin-top:18px;">
+        Note: Sealed records are archived but not published directly. For research or collaboration inquiries, contact the archive.
+      </p>
+
+      <div class="nav-links">
+        <a class="nav-link" href="../publications/">Theory Volumes</a>
+        <a class="nav-link" href="../benchmark-records/">Benchmark Records</a>
+        <a class="nav-link" href="../prototype-records/">Prototype Line</a>
+        <a class="nav-link" href="../index.html">Project Home</a>
+      </div>
+
+      <div class="crumb">Current: Benchmark Records &gt; Phase I Index</div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="../benchmark-records/">← Back to Benchmark Records</a>
+  </section>
+</body>
+</html>
