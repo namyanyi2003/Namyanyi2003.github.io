@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phase I High-Residual Adversarial Interpretation Benchmark: Five-Platform Equal-Weight Aggregate Report</title>
+  <meta name="description" content="Aggregate results across five LLM platforms (ChatGPT, DeepSeek, Claude, Grok, Gemini) comparing mainstream psychology (A) vs. Symbolic Mechanics (B) on 24 high-residual interpretation cases. B wins 23 of 24 vote-based cases, with strongest advantages in structural closure and causal clarity.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f4f0;
+      --surface: #ffffff;
+      --surface-soft: #f8f6f1;
+      --surface-soft-2: #f2eee8;
+      --text: #1a1a18;
+      --muted: #5f6470;
+      --faint: #8d97a5;
+      --border: #dde3ec;
+      --blue: #2471a3;
+      --navy: #0d2b4e;
+      --teal: #138d75;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 32px 88px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .site-link {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.8vw, 4.2rem);
+      line-height: 0.97;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: var(--text);
+      max-width: 14ch;
+    }
+
+    .subtitle {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      line-height: 1.5;
+      color: #2b2a28;
+      margin-bottom: 12px;
+    }
+
+    .hero-summary {
+      font-size: 0.98rem;
+      line-height: 1.82;
+      color: var(--muted);
+      max-width: 70ch;
+      margin-bottom: 22px;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .meta-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 34px 36px;
+    }
+
+    .section + .section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-family: var(--sans);
+      font-size: 1.18rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 0.96rem;
+      line-height: 1.84;
+      color: var(--text);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .simple-lines {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .simple-line {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-soft);
+      font-size: 0.94rem;
+      line-height: 1.72;
+      color: var(--text);
+    }
+
+    .simple-line strong {
+      color: var(--navy);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .stat-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 16px 14px;
+    }
+
+    .stat-label {
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .stat-copy {
+      font-size: 0.88rem;
+      line-height: 1.66;
+      color: var(--muted);
+    }
+
+    .category-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .category-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 120px 120px;
+      gap: 14px;
+      align-items: center;
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 14px;
+    }
+
+    .category-name {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .category-score {
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      color: var(--navy);
+      text-align: right;
+    }
+
+    .bullet-list {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .bullet-list li {
+      font-size: 0.95rem;
+      line-height: 1.82;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list li::marker {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .case-block {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 18px 16px;
+    }
+
+    .case-block + .case-block {
+      margin-top: 14px;
+    }
+
+    .access-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--navy);
+      margin-top: 12px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .access-link:hover {
+      background: #17446f;
+      border-color: #17446f;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .nav-list li {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .nav-list a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    .home-return-section {
+      max-width: 1100px;
+      margin: 56px auto 0;
+      padding: 24px 32px 0;
+      border-top: 1px solid #ddd6cb;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-return-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--navy);
+      transition: background 0.14s ease, border-color 0.14s ease, transform 0.14s ease;
+    }
+
+    .home-return-btn:hover {
+      background: #17446f;
+      border-color: #17446f;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .hero-meta,
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .content-card {
+        padding: 24px 22px;
+      }
+
+      .hero-meta,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .category-score {
+        text-align: left;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-return-section {
+        padding: 22px 20px 0;
+      }
+
+      .home-return-btn {
+        width: 100%;
+        max-width: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="site-link" href="./index.html">Symbolic Mechanics</a>
+
+      <div class="top-actions">
+        <a class="btn btn-secondary" href="./index.html">Home</a>
+        <a class="btn btn-secondary" href="./benchmark-records/">Benchmark Records</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Benchmark Records</p>
+      <h1>Phase I High-Residual Adversarial Interpretation Benchmark: Five-Platform Equal-Weight Aggregate Report</h1>
+      <p class="subtitle">Formal Internal Results Report v1.0</p>
+      <p class="hero-summary">
+        Five-platform equal-weight aggregate shows Interpretation B (Symbolic Mechanics) with a clear, stable advantage over mainstream psychology (A), especially in relationship systems, family dynamics, and causal chain completion. A holds minority exceptions in hybrid cases.
+      </p>
+
+      <div class="hero-meta">
+        <div class="meta-box">
+          <div class="meta-label">Category</div>
+          <div class="meta-value">Phase I / Benchmark Records</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Record Type</div>
+          <div class="meta-value">Aggregate Report / Internal Report</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Report Label</div>
+          <div class="meta-value">Phase I | Aggregate Report | Internal</div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-label">Date</div>
+          <div class="meta-value">2026-04-01</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <div class="section">
+        <h2>P1 | Benchmark Snapshot</h2>
+
+        <p>
+          This benchmark does not compare front-end explanation styles, but backend map performance.
+          Total items: 24, fixed into four categories: Intimate Relationships, Social Mechanics, Family Systems, and Hybrid.
+          Comparison targets: A = mainstream psychology interpretation; B = Symbolic Mechanics Volume 1–30 interpretation.
+          All formal results are based on a five-platform equal-weight aggregate.
+          The five fixed platforms: CHATGPT, DEEPSEEK, CLAUDE, GROK, GEMINI.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P2 | Method Brief</h2>
+
+        <p>
+          Each platform completed the full process independently and archived four files:
+          Deblinded Ratings Archive v1.0, Case Triage v1.0, Internal Readout v1.0, Platform Completion Block v1.0.
+          Thereafter, the five platforms were aggregated with equal weight.
+          This body text focuses on the aggregate layer only; platform-level raw archives are sealed separately as evidence base.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P3 | Platform Completion + Overall Results</h2>
+
+        <div class="simple-lines">
+          <div class="simple-line"><strong>Completion status:</strong> All five platforms complete.</div>
+          <div class="simple-line"><strong>Platforms:</strong> CHATGPT, DEEPSEEK, CLAUDE, GROK, GEMINI.</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-label">Vote-Based Result</div>
+            <div class="stat-value">A 1 / B 23 / Tie 0</div>
+            <div class="stat-copy">B shows a dominant aggregate vote pattern across the full benchmark set.</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-label">Score-Based Result</div>
+            <div class="stat-value">A 4 / B 20 / Tie 0</div>
+            <div class="stat-copy">Score direction broadly aligns with vote direction, though not without exceptions.</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-label">Aggregate Mean</div>
+            <div class="stat-value">A 45.07 / B 48.13</div>
+            <div class="stat-copy">B’s strongest edge lies in structural closure, causal clarity, framework recognition, and phenomenological fit.</div>
+          </div>
+        </div>
+
+        <p>
+          Overall, the five-platform aggregate shows a clear advantage for B.
+          Vote-based and score-based patterns are broadly aligned, though not without exceptions.
+          B’s strengths lie in structural closure, framework recognition, causal clarity, and phenomenological fit — not in baseline readability.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P4 | Category Results</h2>
+
+        <div class="category-grid">
+          <div class="category-row">
+            <div class="category-name">Intimate Relationships</div>
+            <div class="category-score">A 44.40</div>
+            <div class="category-score">B 47.90</div>
+          </div>
+
+          <div class="category-row">
+            <div class="category-name">Social Mechanics</div>
+            <div class="category-score">A 45.60</div>
+            <div class="category-score">B 47.87</div>
+          </div>
+
+          <div class="category-row">
+            <div class="category-name">Family Systems</div>
+            <div class="category-score">A 45.00</div>
+            <div class="category-score">B 50.07</div>
+          </div>
+
+          <div class="category-row">
+            <div class="category-name">Hybrid</div>
+            <div class="category-score">A 45.27</div>
+            <div class="category-score">B 46.70</div>
+          </div>
+        </div>
+
+        <div class="simple-lines">
+          <div class="simple-line"><strong>Largest gap:</strong> Family Systems</div>
+          <div class="simple-line"><strong>Smallest gap:</strong> Hybrid</div>
+        </div>
+
+        <p>
+          B leads across all four categories, but intensity varies.
+          Family Systems shows the widest margin; Hybrid contains more exceptions and competitive cases.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P5 | Aggregate Case Triage</h2>
+
+        <ul class="bullet-list">
+          <li><strong>Strong B wins:</strong> 17 items (Q1, Q2, Q3, Q5, Q8, Q10, Q11, Q13, Q14, Q15, Q16, Q17, Q18, Q20, Q21, Q22, Q23)</li>
+          <li><strong>Moderate B advantage:</strong> 2 items (Q4, Q9)</li>
+          <li><strong>Close / split:</strong> 1 item (Q12)</li>
+          <li><strong>A exception:</strong> 4 items (Q6, Q7, Q19, Q24)</li>
+        </ul>
+
+        <p>
+          The triage shows that B’s advantage is not driven by a few extreme items but forms a stable majority pattern across most cases.
+          At the same time, A exceptions and split cases exist — the result is not a zero-exception sweep.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P6 | Representative Cases</h2>
+
+        <div class="case-block">
+          <h3>Q5 | Intimate Relationships | Strong B win</h3>
+          <p>
+            This case tests why, after stability and intimacy are reached, a sudden sense of distance or “fog” emerges — as if separated by glass.
+            A provides a naming and description of the state.
+            B goes deeper by tracing the sudden distance back to a structural pathway: a load limit was triggered, and the system temporarily pulls away.
+            This case is representative because it shows who can explain the causal loop of “the closer, the farther” in high-residual intimate phenomena.
+          </p>
+        </div>
+
+        <div class="case-block">
+          <h3>Q9 | Social Mechanics | Moderate B advantage</h3>
+          <p>
+            This case tests why, after being misunderstood — even knowing that further explanation may be useless — people still keep talking and adding until exhaustion.
+            A maintains basic understanding.
+            B more clearly traces the behavior back to a backend pathway: the person is still placed in the wrong position, and that positioning remains unrepaired, so the supplementary behavior cannot stop.
+            This case shows a non-extreme but stable B advantage: A stays relevant, but B achieves deeper structural compression.
+          </p>
+        </div>
+
+        <div class="case-block">
+          <h3>Q12 | Social Mechanics | Close / split</h3>
+          <p>
+            This case tests why people always say yes first, even when they know they will regret it, overextend, or breed resentment.
+            Both A and B achieve some level of understanding, but this is a close/split case — there is tension between vote and score directions.
+            It exposes the benchmark’s boundary zone: mainstream frameworks can retain surface plausibility, while B still has an advantage but not a landslide.
+          </p>
+        </div>
+
+        <div class="case-block">
+          <h3>Q24 | Hybrid | A exception</h3>
+          <p>
+            This case tests why, on the surface, life appears normal, but when quiet, a blankness or derealization emerges — as if existence suddenly loosens.
+            This is an A exception: A wins both vote-based and score-based at the aggregate level.
+            B is not entirely ineffective but fails to form a stable cross-platform margin.
+            This case reminds us that the benchmark cannot be written as a one-way sweep; exceptions are real.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>P7 | Final Readout</h2>
+
+        <p>
+          B’s main advantages lie in structural closure, framework recognition, causal clarity, and phenomenological fit.
+          In other words, B pulls away most consistently not in tone, but in its ability to trace phenomena back to complete upstream causal chains and present clearer framework signatures.
+        </p>
+
+        <p>
+          A holds its ground mainly in a minority of high-readability items that are easily absorbed by familiar mainstream psychological language — particularly in the Hybrid category and a few close cases.
+          These holdouts do not mean A is competitive across all categories, but rather that under certain item designs, mainstream frameworks can survive using familiar language.
+        </p>
+
+        <p>
+          A exceptions and split cases remind us: although this benchmark has produced stable differences, there remain local exceptions and near zones.
+          The most valuable areas for follow-up validation are the Hybrid category and A exception items — especially those easily absorbed by familiar psychological language, or those showing tension between vote and score directions.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P8 | Limitations</h2>
+
+        <p>
+          These results only represent the current benchmark set.
+          A exception cases and split cases exist, so the result cannot be written as a zero-exception sweep.
+          Raw platform files, aggregate source files, and working materials are sealed separately and not reproduced here in full.
+          Although B responses reference Symbolic Mechanics Volumes 1–30, this does not equal a full implementation of the entire theoretical framework.
+          This document is a formal internal results summary, not the final public release.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>P9 | Bottom Line</h2>
+
+        <p>
+          This five-platform equal-weight aggregate shows that B has demonstrated a clear, stable, cross-category interpretation benchmark advantage.
+          The strongest gaps are in structural closure, framework recognition, causal clarity, and phenomenological fit — not in readability itself.
+          What needs the most conservative handling: A exception cases, close cases, and split cases.
+          The most reasonable positioning is not to treat this as a final conclusion, but as a formal internal baseline report for Phase I — to be used for subsequent public synthesis, representative case selection, and further benchmark development.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Access</h2>
+
+        <p>
+          PDF is provided as a full-text attachment. The report page is the primary reading surface.
+        </p>
+
+        <a class="access-link" href="./pdfs/benchmark/phase1_aggregate_report_v1.0.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+
+      <div class="section">
+        <h2>Navigation</h2>
+
+        <ul class="nav-list">
+          <li><a href="./benchmark-records/">Back to Benchmark Records</a></li>
+          <li><a href="./phase-i-benchmark/">Back to Phase I Benchmark</a></li>
+          <li><a href="./index.html">Back to Home</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="home-return-section">
+    <a class="home-return-btn" href="./benchmark-records/">← Back to Benchmark Records</a>
+  </section>
+</body>
+</html>
