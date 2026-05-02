@@ -1,0 +1,11 @@
+title: Symbolic Mechanics
+description: A deterministic symbolic-computational architecture of inner mechanics and relational dynamics
+url: ""
+baseurl: ""
+markdown: kramdown
+# Global Default Layout Enforcement
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
