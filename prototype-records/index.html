@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype Records | Symbolic Mechanics Archive</title>
+  <style>
+    :root {
+      --bg:#f8f9fa; --surface:#fff; --text:#212529; --muted:#495057;
+      --link:#0056b3; --border:#dee2e6; --badge:#e9ecef;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; }
+    header { background:var(--surface); border-bottom:1px solid var(--border); padding:20px 32px; }
+    .top,.wrap { max-width:980px; margin:0 auto; }
+    .top { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center; }
+    .brand { font-size:1.25rem; font-weight:700; color:#1a202c; }
+    nav { display:flex; gap:18px; flex-wrap:wrap; font-size:.9rem; }
+    a { color:var(--link); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrap { padding:40px 24px 80px; }
+    h1 { font-size:2rem; margin:0 0 10px; }
+    h2 { margin-top:36px; padding-bottom:8px; border-bottom:1px solid var(--border); font-size:1.35rem; }
+    h3 { margin-top:0; font-size:1.2rem; }
+    .record-card { background:var(--surface); border:1px solid var(--border); border-radius:4px; padding:24px; margin:18px 0; box-shadow:0 1px 2px rgba(0,0,0,.02); }
+    .lead { color:var(--muted); font-size:1.08rem; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; }
+    .badge { background:var(--badge); border:1px solid var(--border); color:var(--muted); padding:3px 9px; border-radius:999px; font-size:.78rem; }
+    .button { display:inline-block; margin-top:8px; border:1px solid var(--border); padding:7px 13px; border-radius:4px; color:var(--text); background:#fff; font-size:.9rem; }
+    footer { border-top:1px solid var(--border); color:var(--muted); text-align:center; padding:28px; background:var(--surface); font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="brand"><a href="../">Symbolic Mechanics Archive</a></div>
+      <nav>
+        <a href="../">Home</a>
+        <a href="../publications/">Theory Volumes</a>
+        <a href="../phase-i-benchmark/">Benchmark Records</a>
+        <a href="../canonical-specification-volumes-01-20/">Canonical Specification</a>
+        <a href="../for-researchers/">For Researchers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="record-card" style="border-top:4px solid var(--link);">
+      <h1>Prototype Records</h1>
+      <p class="lead">Implementation-facing archive records for the Symbolic Mechanics / Human OS prototype line.</p>
+      <p>This section preserves bounded executable, validation-facing, and implementation archive records. It does not replace the theory-volume archive; it records prototype state, specification boundaries, and test results.</p>
+      <div class="meta">
+        <span class="badge">Type: Prototype Line</span>
+        <span class="badge">Archive Channel: Implementation-facing</span>
+        <span class="badge">Author: A.N. Eidos</span>
+      </div>
+    </section>
+
+    <h2>Available Prototype Records</h2>
+
+    <section class="record-card">
+      <h3>Prototype Line Canonical Record v1.0</h3>
+      <div class="meta">
+        <span class="badge">Record Type: Canonical Record</span>
+        <span class="badge">Status: Public</span>
+      </div>
+      <p>Authorised version sequence and boundary definition of the prototype track.</p>
+      <a class="button" href="../prototype_line_canonical_record_v1.0.html">Open Record</a>
+    </section>
+
+    <section class="record-card">
+      <h3>Symbolic Mechanics Prototype v0.2.1 — Main Specification</h3>
+      <div class="meta">
+        <span class="badge">Record Type: Main Specification</span>
+        <span class="badge">Version: v0.2.1</span>
+      </div>
+      <p>Additive extension layer over the preserved base core, frozen to the approved implementation band.</p>
+      <a class="button" href="../symbolic_mechanics_prototype_v0.2.1_main_specification.html">Open Specification</a>
+    </section>
+
+    <section class="record-card">
+      <h3>Prototype v0.2.1 — Test and Validation Report</h3>
+      <div class="meta">
+        <span class="badge">Record Type: Validation Report</span>
+        <span class="badge">Status: Public</span>
+      </div>
+      <p>Validation-facing report for the v0.2.1 prototype line.</p>
+      <a class="button" href="../prototype_v0.2.1_test_and_validation_report.html">Open Report</a>
+    </section>
+
+    <section class="record-card">
+      <h3>Prototype Prep v0.1</h3>
+      <div class="meta">
+        <span class="badge">Record Type: Preparation Record</span>
+        <span class="badge">Status: Archive</span>
+      </div>
+      <p>Preparation-stage archive material for the prototype line.</p>
+      <a class="button" href="../prototype-prep-v0-1.html">Open Prep Record</a>
+    </section>
+  </main>
+
+  <footer>
+    Symbolic Mechanics Archive · Prototype Records · A.N. Eidos · 2026
+  </footer>
+</body>
+</html>
