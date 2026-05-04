@@ -1,10 +1,10 @@
-# Symbolic Mechanics / Human OS
+# Human OS
 
-## Make LLMs infer human protective states, not just mimic empathy.
+## Map the human situation. Predict the next state.
 
-**Symbolic Mechanics / Human OS** is an independently built backend system for mechanism-based human-state inference.
+**Symbolic Mechanics / Human OS** is a symbolic-computational system for mapping human situations and predicting next-state dynamics.
 
-It is designed to help language models track hidden human-state transitions, next-Δ bias, protective-function activation, response-route calibration, and case-level backend state shifts from ordinary messy language.
+One major application is helping AI systems understand human-state dynamics beyond surface language.
 
 **Independent · Benchmarked · Runtime-traced · Publicly archived · Challengeable**
 
@@ -28,11 +28,21 @@ Research contact: **eidosan013135@hotmail.com**
 | **Method** | **No fine-tune. No extra training data. Protocol-based improvement.** |
 | **Runtime line** | Human OS runtime-traced backend evidence, bounded by version and execution layer |
 
+These benchmark results test components of the broader mapping and next-state prediction direction.
+
 These results are presented as **bounded evidence**, not universal proof.
 
 The claim is narrower and testable:
 
 **A mechanism-guided backend protocol can improve LLM performance on hidden human-state inference tasks compared with ordinary baseline interpretation.**
+
+---
+
+## Human OS Simulator v0.2 Direction
+
+Natural Input → Mapping → Prediction → Plain-Language Output
+
+The simulator models state transition inside a specific situation, not a whole person.
 
 ---
 
