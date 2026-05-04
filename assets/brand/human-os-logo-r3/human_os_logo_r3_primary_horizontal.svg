@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-label="Human OS logo">
+  <defs>
+    <linearGradient id="navy" x1="25" y1="140" x2="165" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#031A3D"/>
+      <stop offset="0.55" stop-color="#082A5A"/>
+      <stop offset="1" stop-color="#1A4278"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(34 30)">
+    <path d="M60 112 L100 42 Q112 22 124 42 L164 112 Q176 132 152 132 H36 Q14 132 26 112 Z" fill="none" stroke="url(#navy)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M70 112 H135 Q146 112 140 101 L112 54 Q106 44 100 54 L73 101 Q67 112 70 112 Z" fill="#ffffff"/>
+  </g>
+  <text x="245" y="114" font-family="Avenir Next Rounded, Avenir Next, Nunito Sans, Inter, Arial, sans-serif" font-size="74" font-weight="600" letter-spacing="1" fill="#06142E">Human OS</text>
+</svg>
