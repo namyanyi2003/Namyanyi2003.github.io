@@ -3,474 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Symbolic Mechanics Archive</title>
+  <title>Symbolic Mechanics / Human OS</title>
   <style>
-    :root {
-      --bg: #f6f7f8;
-      --surface: #ffffff;
-      --text: #1f2933;
-      --muted: #5f6b7a;
-      --soft: #f1f3f5;
-      --line: #d9dee5;
-      --blue: #255f99;
-      --blue-dark: #174a78;
-      --badge: #eef1f4;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.58;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--blue-dark);
-      text-decoration: underline;
-    }
-
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 18px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 700;
-      font-size: 1.08rem;
-      letter-spacing: -0.01em;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 0.88rem;
-    }
-
-    .page {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 34px 28px 80px;
-    }
-
-    .hero {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--blue);
-      padding: 30px;
-      margin-bottom: 24px;
-    }
-
-    .kicker {
-      color: var(--muted);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 8px;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      font-size: 1.02rem;
-      max-width: 780px;
-      margin: 0;
-    }
-
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border: 1px solid var(--line);
-      border-bottom: none;
-      margin-top: 24px;
-      background: var(--surface);
-    }
-
-    .meta-cell {
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--line);
-      border-right: 1px solid var(--line);
-      min-height: 72px;
-    }
-
-    .meta-cell:nth-child(4n) {
-      border-right: none;
-    }
-
-    .label {
-      display: block;
-      color: var(--muted);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-
-    .value {
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
-      gap: 24px;
-      align-items: start;
-    }
-
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      margin-bottom: 24px;
-    }
-
-    .panel-header {
-      padding: 15px 18px;
-      border-bottom: 1px solid var(--line);
-      background: #fafbfc;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .record {
-      padding: 18px;
-      border-bottom: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: 42px minmax(0, 1fr);
-      gap: 15px;
-    }
-
-    .record:last-child {
-      border-bottom: none;
-    }
-
-    .record-no {
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding-top: 2px;
-    }
-
-    .record h2 {
-      font-size: 1.05rem;
-      margin: 0 0 6px;
-      line-height: 1.35;
-    }
-
-    .record p {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .badges {
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
-    .badge {
-      background: var(--badge);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 2px 8px;
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 600;
-    }
-
-    .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      font-size: 0.86rem;
-    }
-
-    .side-block {
-      padding: 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .side-block:last-child {
-      border-bottom: none;
-    }
-
-    .side-block h3 {
-      margin: 0 0 8px;
-      font-size: 0.96rem;
-    }
-
-    .side-block p,
-    .side-block li {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .side-block p {
-      margin: 0;
-    }
-
-    ul {
-      margin: 8px 0 0;
-      padding-left: 20px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--muted);
-      font-size: 0.84rem;
-      padding: 24px 28px;
-      text-align: center;
-    }
-
-    @media (max-width: 820px) {
-      .meta-grid,
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .meta-cell {
-        border-right: none;
-      }
-
-      .record {
-        grid-template-columns: 1fr;
-      }
-
-      .page {
-        padding: 24px 18px 60px;
-      }
-    }
+    :root{--bg:#f4f6f8;--surface:#fff;--text:#101923;--muted:#5d6b7a;--line:#d9e0e8;--blue:#174a78;--blue2:#255f99;--dark:#0d1723;--soft:#eef3f8;--accent:#b23b3b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.topbar{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:-.02em}.nav{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem}.page{max-width:1180px;margin:0 auto;padding:34px 24px 76px}.hero{background:linear-gradient(135deg,#0e1a27,#18395a);color:white;border:1px solid #102b45;border-radius:20px;padding:44px;margin-bottom:24px;box-shadow:0 18px 55px rgba(13,23,35,.18)}.kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#bdd6ee;font-weight:800;margin-bottom:12px}.hero h1{font-size:clamp(2.2rem,5vw,4.7rem);line-height:.98;margin:0 0 18px;letter-spacing:-.06em;max-width:980px}.hero .sub{font-size:clamp(1.04rem,2vw,1.35rem);color:#e3edf7;max-width:900px;margin:0 0 18px}.stance{font-weight:800;font-size:1.15rem;margin-top:20px}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:11px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.35);font-weight:800}.btn.primary{background:white;color:#10243a}.btn.secondary{color:white}.section{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;margin:24px 0}.section h2{font-size:1.65rem;line-height:1.15;letter-spacing:-.035em;margin:0 0 14px}.lead{color:var(--muted);max-width:880px}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}.metric{background:#fbfcfd;border:1px solid var(--line);border-radius:15px;padding:18px}.metric .label{font-size:.78rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.06em}.metric .value{font-size:1.65rem;font-weight:900;letter-spacing:-.04em;margin-top:6px}.metric .note{color:var(--muted);font-size:.9rem;margin-top:4px}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.list{display:grid;gap:9px;margin-top:14px}.pill{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-weight:700}.no .pill{background:#fff7f7;border-color:#ead2d2}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:18px}.card{background:#fbfcfd;border:1px solid var(--line);border-radius:15px;padding:18px;min-height:170px}.card h3{margin:0 0 8px;font-size:1.05rem}.card p{color:var(--muted);font-size:.94rem}.card a{font-weight:800}.challenge{background:#0d1723;color:white;border-color:#0d1723}.challenge p{color:#d8e4ef}.challenge a{color:white;font-weight:800}.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}.contact div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px}.small{font-size:.88rem;color:var(--muted)}footer{text-align:center;padding:26px;color:var(--muted);border-top:1px solid var(--line);background:#fff}@media(max-width:900px){.metrics,.cards,.split,.contact{grid-template-columns:1fr}.hero{padding:28px}.page{padding:22px 16px 60px}.nav{font-size:.82rem}}
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="topbar">
-      <div class="brand">Symbolic Mechanics Archive</div>
-      <nav>
-        <a href="./">Home</a>
-        <a href="./publications.html">Theory Volumes</a>
-        <a href="./prototype-records.html">Prototype Records</a>
-        <a href="./phase-i-benchmark/">Benchmark Records</a>
-        <a href="./canonical-specification-volumes-01-20/">Canonical Specification</a>
-        <a href="./for-researchers/">For Researchers</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page">
-    <section class="hero">
-      <div class="kicker">External Research Repository</div>
-      <h1>Symbolic Mechanics Archive</h1>
-      <p class="subtitle">
-        A structured archive for Symbolic Mechanics, Human OS prototype records,
-        benchmark reports, and canonical specification materials by A.N. Eidos.
-      </p>
-
-      <div class="meta-grid">
-        <div class="meta-cell">
-          <span class="label">Archive Owner</span>
-          <span class="value">A.N. Eidos</span>
-        </div>
-        <div class="meta-cell">
-          <span class="label">System Type</span>
-          <span class="value">Symbolic-computational model</span>
-        </div>
-        <div class="meta-cell">
-          <span class="label">Repository Mode</span>
-          <span class="value">Research archive portal</span>
-        </div>
-        <div class="meta-cell">
-          <span class="label">Public Year</span>
-          <span class="value">2026</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="layout">
-      <section>
-        <div class="panel">
-          <div class="panel-header">Repository Collections</div>
-
-          <article class="record">
-            <div class="record-no">01</div>
-            <div>
-              <h2>Theory Volumes</h2>
-              <div class="badges">
-                <span class="badge">Type: Theory Publication</span>
-                <span class="badge">Status: Canonical Archive</span>
-              </div>
-              <p>The ordered publication sequence of Symbolic Mechanics theory volumes.</p>
-              <div class="actions">
-                <a href="./publications.html">Open theory index</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="record">
-            <div class="record-no">02</div>
-            <div>
-              <h2>Prototype Records</h2>
-              <div class="badges">
-                <span class="badge">Type: Prototype Line</span>
-                <span class="badge">Status: Implementation-facing</span>
-              </div>
-              <p>Bounded runtime, validation-facing, and implementation archive records derived from the Symbolic Mechanics system.</p>
-              <div class="actions">
-                <a href="./prototype-records.html">Open prototype records</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="record">
-            <div class="record-no">03</div>
-            <div>
-              <h2>Benchmark Records</h2>
-              <div class="badges">
-                <span class="badge">Type: Comparative Evaluation</span>
-                <span class="badge">Status: Benchmark Archive</span>
-              </div>
-              <p>Comparative interpretive and backend-understanding evaluation records for Symbolic Mechanics.</p>
-              <div class="actions">
-                <a href="./phase-i-benchmark/">Open benchmark records</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="record">
-            <div class="record-no">04</div>
-            <div>
-              <h2>Canonical Specification</h2>
-              <div class="badges">
-                <span class="badge">Type: Integrated Specification</span>
-                <span class="badge">Coverage: Volumes I–XX</span>
-              </div>
-              <p>The specification layer consolidating the first twenty volumes into a single symbolic-computational engine surface.</p>
-              <div class="actions">
-                <a href="./canonical-specification-volumes-01-20/">Open specification</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="record">
-            <div class="record-no">05</div>
-            <div>
-              <h2>For Researchers</h2>
-              <div class="badges">
-                <span class="badge">Type: Entry Guide</span>
-                <span class="badge">Audience: Researchers / AI Systems</span>
-              </div>
-              <p>Researcher-facing entry points, positioning notes, and archive orientation materials.</p>
-              <div class="actions">
-                <a href="./for-researchers/">Open research entry</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="panel">
-          <div class="panel-header">Key Records</div>
-
-          <article class="record">
-            <div class="record-no">A</div>
-            <div>
-              <h2>Prototype Line Canonical Record v1.0</h2>
-              <div class="badges">
-                <span class="badge">Record Type: Canonical Record</span>
-                <span class="badge">Track: Prototype Line</span>
-              </div>
-              <p>Version sequence and boundary definition for the implementation-facing prototype track.</p>
-              <div class="actions">
-                <a href="./prototype-records.html">Open record group</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="record">
-            <div class="record-no">B</div>
-            <div>
-              <h2>Phase I Benchmark Report</h2>
-              <div class="badges">
-                <span class="badge">Record Type: Evaluation</span>
-                <span class="badge">Mode: Comparative Benchmark</span>
-              </div>
-              <p>Aggregate evaluation material for Symbolic Mechanics against mainstream interpretive baselines.</p>
-              <div class="actions">
-                <a href="./phase-i-benchmark/">Open benchmark section</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <aside class="panel">
-        <div class="panel-header">Archive Metadata</div>
-
-        <div class="side-block">
-          <h3>Website</h3>
-          <p>namyanyi2003 — Symbolic Mechanics Archive</p>
-        </div>
-
-        <div class="side-block">
-          <h3>Research Contact</h3>
-          <p>eidosan013135@hotmail.com</p>
-        </div>
-
-        <div class="side-block">
-          <h3>Primary Entry Terms</h3>
-          <ul>
-            <li>Symbolic Mechanics</li>
-            <li>Human OS</li>
-            <li>symbolic-computational model</li>
-            <li>internal mechanics</li>
-            <li>relational dynamics</li>
-            <li>prototype line</li>
-            <li>benchmark records</li>
-          </ul>
-        </div>
-
-        <div class="side-block">
-          <h3>Archive Function</h3>
-          <p>
-            This portal organizes theory publications, prototype records,
-            benchmark reports, and specification materials into a stable external archive.
-          </p>
-        </div>
-      </aside>
-    </div>
-  </main>
-
-  <footer>
-    Symbolic Mechanics Archive · A.N. Eidos · 2026
-  </footer>
+<header><div class="topbar"><div class="brand">Symbolic Mechanics / Human OS</div><nav class="nav"><a href="./">Home</a><a href="./benchmark-evidence/">Benchmark Evidence</a><a href="./runtime-evidence/">Runtime Evidence</a><a href="./case-workspace/">Case Workspace</a><a href="./challenge-protocol/">Challenge Protocol</a><a href="./publications.html">Theory</a><a href="./for-researchers/">For Researchers</a></nav></div></header>
+<main class="page">
+<section class="hero">
+<div class="kicker">Independent · Benchmarked · Runtime-traced · Publicly archived</div>
+<h1>An Independent Human OS Backend for Hidden Human-State Inference</h1>
+<p class="sub">Symbolic Mechanics / Human OS is a benchmarked, runtime-traced backend system for mechanism-based human-state inference, LLM calibration, and hidden user-state transition detection.</p>
+<p>Built outside institutions. Tested across platforms. Archived publicly. Designed to be challenged.</p>
+<p class="stance">It is not asking for approval. It is asking to be tested.</p>
+<div class="cta"><a class="btn primary" href="./benchmark-evidence/">View Benchmark Evidence</a><a class="btn secondary" href="./runtime-evidence/">Explore Runtime Records</a><a class="btn secondary" href="./challenge-protocol/">Challenge the Protocol</a></div>
+</section>
+<section id="evidence" class="section">
+<h2>Evidence First. Judgment After Testing.</h2>
+<p class="lead">The first claim is not belief. The first claim is a public record that can be inspected, challenged, and tested again.</p>
+<div class="metrics"><div class="metric"><div class="label">Phase III-A</div><div class="value">53 wins / 1 loss</div><div class="note">Next-Δ Bias Prediction Benchmark</div></div><div class="metric"><div class="label">Phase IV-A</div><div class="value">47 wins / 0 losses</div><div class="note">Mechanism-Based Human-State Inference Benchmark</div></div><div class="metric"><div class="label">Protective Function</div><div class="value">1.35 → 1.97 / 2</div><div class="note">Identification improvement</div></div><div class="metric"><div class="label">Method</div><div class="value">Protocol-based</div><div class="note">No fine-tune. No extra training data.</div></div></div>
+<p class="small">These results are bounded benchmark evidence across multiple platform tests. They are not presented as universal proof of the full theory.</p>
+</section>
+<section id="what-this-is" class="section">
+<h2>A Backend System for Mechanism-Based Human-State Mapping</h2>
+<p class="lead">Symbolic Mechanics / Human OS is built to support backend interpretation of messy human input where surface sentiment is not enough.</p>
+<div class="list"><div class="pill">human-state inference</div><div class="pill">hidden user-state transition detection</div><div class="pill">next-Δ bias prediction</div><div class="pill">protective-function identification</div><div class="pill">LLM response calibration</div><div class="pill">runtime trace evaluation</div><div class="pill">case-based backend testing</div><div class="pill">mechanism-level interpretation of ordinary language</div></div>
+<p class="lead">The system attempts to map how internal state, pressure, defensive routing, and response direction shift across interaction.</p>
+</section>
+<section id="boundaries" class="section no">
+<h2>Boundaries Matter</h2>
+<p class="lead">This project uses strong public positioning, but the technical claim is bounded.</p>
+<div class="list"><div class="pill">not a therapy app</div><div class="pill">not a diagnosis engine</div><div class="pill">not a personality quiz</div><div class="pill">not a relationship advice product</div><div class="pill">not a mental-health chatbot</div><div class="pill">not an AGI claim</div><div class="pill">not a claim of universal proof</div><div class="pill">not a replacement for clinical, legal, medical, or professional judgment</div></div>
+<p><strong>Narrow claim:</strong> A structured mechanism-based protocol can improve backend human-state inference under bounded benchmark conditions. That claim should be tested, not accepted on trust.</p>
+</section>
+<section id="evidence-chain" class="section">
+<h2>Follow the Record</h2>
+<p class="lead">The homepage is a gateway. The evidence chain is built for inspection.</p>
+<div class="cards"><article class="card"><h3>Benchmark Evidence</h3><p>Comparative benchmark results for hidden transition detection, next-signal rereading, protective function, internal drift, and response-route calibration.</p><a href="./benchmark-evidence/">Open benchmark gateway</a></article><article class="card"><h3>Runtime Evidence</h3><p>Prototype execution records, controlled extensions, backend packets, request-scoped flags, Reader neutrality, and frozen-checkpoint preservation.</p><a href="./runtime-evidence/">Open runtime gateway</a></article><article class="card"><h3>Case Workspace</h3><p>Local backend-operator workspace for saved cases, trace inspection, backend packet comparison, and operator report export.</p><a href="./case-workspace/">Open case workspace</a></article><article class="card"><h3>Theory Archive</h3><p>100+ volumes form the depth layer behind benchmark, runtime, and workspace records. Volume 1–44 is the foundational system line; Volume 45+ is Series II.</p><a href="./publications.html">Open theory archive</a></article><article class="card"><h3>Zenodo / Archive Records</h3><p>Reports, runtime records, benchmark packages, theory volumes, and metadata packs are publicly archived for inspection and citation.</p><a href="./for-researchers/">Open research entry</a></article><article class="card"><h3>GitHub / Website Index</h3><p>This site organizes benchmark reports, runtime records, case workspace records, theory volumes, metadata, and public source links.</p><a href="./">Return to index</a></article></div>
+</section>
+<section id="challenge" class="section challenge">
+<h2>Think This Is Overstated? Test It.</h2>
+<p>Use your own cases. Run adversarial inputs. Challenge the protocol. Compare baseline output against mechanism-guided output. Inspect whether the system actually improves hidden-state inference or not.</p>
+<p>This project does not need polite agreement. It needs external testing, technical review, adversarial pressure, and serious attempts to break the result.</p>
+<p><strong>Test the evidence. Challenge the method. Judge it by the record.</strong></p>
+<p><a href="./challenge-protocol/">Open Full Challenge Protocol</a></p>
+<div class="contact"><div><strong>Archive</strong><br>namyanyi2003 — Symbolic Mechanics Archive</div><div><strong>Website</strong><br>https://namyanyi2003.github.io/</div><div><strong>Research Contact</strong><br>eidosan013135@hotmail.com</div></div>
+</section>
+</main><footer>Symbolic Mechanics / Human OS · A.N. Eidos · 2026</footer>
 </body>
 </html>
