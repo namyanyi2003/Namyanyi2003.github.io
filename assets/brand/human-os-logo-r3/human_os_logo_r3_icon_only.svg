@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Human OS icon">
+  <defs>
+    <linearGradient id="navy" x1="48" y1="196" x2="205" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#031A3D"/>
+      <stop offset="0.55" stop-color="#082A5A"/>
+      <stop offset="1" stop-color="#1A4278"/>
+    </linearGradient>
+  </defs>
+  <path d="M75 184 L124 99 Q138 75 152 99 L201 184 Q215 208 187 208 H69 Q41 208 55 184 Z" fill="none" stroke="url(#navy)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 181 H164 Q177 181 169 168 L138 114 Q130 101 122 114 L91 168 Q83 181 90 181 Z" fill="#ffffff"/>
+</svg>
