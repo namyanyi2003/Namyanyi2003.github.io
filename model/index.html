@@ -5,165 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Human OS Model | Symbolic Mechanics / Human OS</title>
   <style>
-    :root{--bg:#f4f6f8;--surface:#fff;--text:#101923;--muted:#5d6b7a;--line:#d9e0e8;--blue:#174a78;--blue2:#255f99;--dark:#07111d;--dark2:#0d1723;--soft:#eef3f8;--accent:#f06b63;--accent2:#b23b3b;--glow:#9dbdff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.topbar{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:-.02em}.nav{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem}.page{max-width:1180px;margin:0 auto;padding:38px 24px 82px}.hero{background:radial-gradient(circle at 75% 15%,rgba(70,110,170,.35),transparent 34%),linear-gradient(135deg,#06101b,#102844 64%,#0b1623);color:white;border:1px solid #102b45;border-radius:24px;padding:44px;margin-bottom:32px;box-shadow:0 18px 55px rgba(13,23,35,.22);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:30px;align-items:center}.kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#bdd6ee;font-weight:850;margin-bottom:12px}.hero h1{font-size:clamp(2.35rem,5vw,4.7rem);line-height:.96;margin:0 0 18px;letter-spacing:-.065em}.hero .tagline{font-size:clamp(1.7rem,4vw,3.15rem);line-height:1.02;font-weight:950;letter-spacing:-.06em;margin:0 0 18px;max-width:880px}.hero .sub{font-size:clamp(1.04rem,2vw,1.3rem);color:#e3edf7;max-width:900px;margin:0}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:11px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.35);font-weight:850}.btn.primary{background:white;color:#10243a}.btn.secondary{color:white}.preview-card{background:rgba(255,255,255,.055);border:1px solid rgba(180,210,255,.24);box-shadow:inset 0 0 0 1px rgba(255,255,255,.035),0 18px 48px rgba(0,0,0,.28);border-radius:22px;padding:22px}.preview-label{color:#9dbdff;text-transform:uppercase;letter-spacing:.11em;font-size:.72rem;font-weight:900;margin-bottom:8px}.preview-input{border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px;background:rgba(255,255,255,.05);font-size:1.05rem}.preview-output{display:grid;gap:10px;margin-top:16px}.mini-line{background:rgba(7,17,29,.66);border:1px solid rgba(157,189,255,.18);border-radius:13px;padding:11px 12px;color:#dce9f7;font-size:.92rem}.mini-line strong{color:#fff}.section{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px;margin:30px 0}.section h2{font-size:1.78rem;line-height:1.12;letter-spacing:-.04em;margin:0 0 14px}.lead{color:var(--muted);max-width:920px}.promise h2,.io h2{font-size:clamp(1.85rem,4vw,3.1rem);max-width:900px}.cards4,.cards3,.concepts,.status-grid,.metrics{display:grid;gap:15px;margin-top:18px}.cards4{grid-template-columns:repeat(4,minmax(0,1fr))}.cards3{grid-template-columns:repeat(3,minmax(0,1fr))}.concepts{grid-template-columns:repeat(3,minmax(0,1fr))}.status-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.metrics{grid-template-columns:repeat(4,minmax(0,1fr))}.card,.concept,.status-card,.metric{background:#fbfcfd;border:1px solid var(--line);border-radius:16px;padding:18px}.card h3,.concept h3,.status-card h3{margin:0 0 8px;font-size:1.04rem}.card p,.concept p,.status-card p,.metric p{color:var(--muted);font-size:.93rem;margin:0}.io-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.io-box{border-radius:18px;padding:22px;border:1px solid var(--line)}.io-box.dark{background:#0d1723;color:white;border-color:#0d1723}.io-box.light{background:#fbfcfd}.io-box h3{margin:0 0 12px}.io-box ul{margin:0;padding-left:20px;color:inherit}.io-box li{margin:8px 0}.demo-card{background:#fbfcfd;border:1px solid var(--line);border-radius:18px;overflow:hidden}.demo-head{background:#0d1723;color:white;padding:16px 18px}.demo-head span{display:block;color:#9dbdff;font-size:.75rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;margin-bottom:4px}.demo-body{padding:18px;display:grid;gap:10px}.demo-row{border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:.91rem}.demo-row:first-child{border-top:0;padding-top:0}.demo-row strong{display:block;color:var(--text);margin-bottom:4px}.dark-section{background:#07111d;color:white;border-color:#07111d}.dark-section h2{color:white}.dark-section .lead{color:#c9d8e8}.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.compare-col{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:20px;background:rgba(255,255,255,.045)}.compare-col.hos{border-color:rgba(240,107,99,.45);box-shadow:0 0 0 1px rgba(240,107,99,.08)}.compare-col h3{margin:0 0 14px}.compare-col ul{margin:0;padding-left:20px;color:#d8e4ef}.visual-stage{background:#06101b;color:white;border-color:#06101b;overflow:hidden}.diagram-wrap{margin-top:22px;background:radial-gradient(circle at 50% 45%,rgba(60,100,150,.16),transparent 54%),#06101b;border:1px solid rgba(157,189,255,.2);border-radius:20px;padding:20px;overflow:auto}.operation-svg{display:block;width:100%;min-width:900px;height:auto}.pipeline-strip{margin-top:16px;background:rgba(255,255,255,.055);border:1px solid rgba(157,189,255,.2);border-radius:14px;padding:14px 16px;color:#dce9f7;font-size:.92rem}.metric .label{font-size:.76rem;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.06em}.metric .value{font-size:1.42rem;font-weight:950;letter-spacing:-.04em;margin-top:6px}.metric .note{color:var(--muted);font-size:.88rem;margin-top:4px}.boundary-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{background:#fff7f7;border:1px solid #ead2d2;border-radius:999px;padding:10px 13px;font-weight:800;color:#263241}.challenge{background:#0d1723;color:white;border-color:#0d1723}.challenge p{color:#d8e4ef}.challenge a{color:white;font-weight:850}.challenge-lines{font-size:clamp(1.25rem,2.6vw,2.05rem);line-height:1.18;font-weight:950;letter-spacing:-.04em;color:white;margin:12px 0 20px}.footer-ctas{display:flex;gap:12px;flex-wrap:wrap}.small{font-size:.88rem;color:var(--muted)}footer{text-align:center;padding:26px;color:var(--muted);border-top:1px solid var(--line);background:#fff}@media(max-width:1050px){.hero{grid-template-columns:1fr}.cards4,.cards3,.concepts,.status-grid,.metrics,.io-grid,.compare{grid-template-columns:1fr 1fr}.page{padding:28px 18px 68px}}@media(max-width:720px){.hero{padding:28px}.cards4,.cards3,.concepts,.status-grid,.metrics,.io-grid,.compare{grid-template-columns:1fr}.section{padding:24px}.nav{font-size:.82rem}.diagram-wrap{padding:12px}.operation-svg{min-width:760px}}
+    :root{--bg:#f6f7f8;--text:#101923;--muted:#5f6b7a;--line:#dbe1e8;--navy:#06142e;--blue:#174a78;--blue2:#255f99;--soft:#eef3f8;--accent:#f06b63;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62}a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.topbar{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{font-weight:850;letter-spacing:-.02em}.nav{display:flex;gap:14px;flex-wrap:wrap;font-size:.86rem}.hero{min-height:82vh;background:radial-gradient(circle at 50% 12%,rgba(157,189,255,.22),transparent 30%),radial-gradient(circle at 50% 80%,rgba(240,107,99,.12),transparent 35%),linear-gradient(135deg,#06101b,#102844 64%,#07111d);color:white;display:flex;align-items:center;justify-content:center;text-align:center;padding:86px 24px}.hero-inner{max-width:980px;margin:0 auto}.hero-logo{display:block;width:min(430px,82vw);height:auto;margin:0 auto 34px;filter:drop-shadow(0 18px 46px rgba(0,0,0,.22));background:rgba(255,255,255,.96);border-radius:28px;padding:18px 26px}.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#bdd6ee;font-weight:850;margin-bottom:14px}.hero h1{font-size:clamp(2.8rem,7vw,6rem);line-height:.92;margin:0 0 18px;letter-spacing:-.07em}.tagline{font-size:clamp(1.65rem,4vw,3.25rem);line-height:1.04;font-weight:950;letter-spacing:-.06em;margin:0 0 22px}.sub{font-size:clamp(1.02rem,2vw,1.32rem);color:#e3edf7;max-width:790px;margin:0 auto}.cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:999px;border:1px solid rgba(255,255,255,.36);font-weight:850}.btn.primary{background:white;color:#10243a}.btn.secondary{color:white}.page{max-width:1120px;margin:0 auto;padding:0 24px 88px}.section{padding:86px 0;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0}h2{font-size:clamp(2.1rem,4.6vw,4rem);line-height:1.02;letter-spacing:-.065em;margin:0 0 24px}.intro-text{font-size:clamp(1.12rem,2vw,1.38rem);color:#31404f;max-width:870px}.intro-text p{margin:0 0 20px}.difference-list{display:grid;gap:34px;margin-top:36px}.difference-item{max-width:850px}.difference-item h3{font-size:clamp(1.35rem,3vw,2.3rem);letter-spacing:-.045em;line-height:1.08;margin:0 0 8px}.difference-item p{font-size:1.05rem;color:var(--muted);margin:0}.io-layout{display:grid;grid-template-columns:1fr 1px 1fr;gap:38px;align-items:start;margin-top:34px}.divider{background:var(--line);height:100%}.io-col h3{font-size:1rem;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin:0 0 18px}.clean-list{list-style:none;margin:0;padding:0}.clean-list li{font-size:clamp(1.08rem,2vw,1.35rem);padding:11px 0;border-bottom:1px solid rgba(16,25,35,.09)}.clean-list li:last-child{border-bottom:0}.diagram-stage{margin-top:34px;background:#06101b;border-radius:28px;padding:28px;overflow:auto}.operation-svg{display:block;width:100%;min-width:860px;height:auto}.diagram-caption{font-size:1.02rem;color:var(--muted);max-width:880px;margin:18px 0 0}.examples{display:grid;gap:28px;margin-top:34px}.example{padding:0 0 26px;border-bottom:1px solid var(--line)}.example:last-child{border-bottom:0;padding-bottom:0}.example h3{font-size:clamp(1.28rem,2.4vw,1.85rem);letter-spacing:-.04em;margin:0 0 8px}.example p{color:var(--muted);font-size:1.04rem;margin:0;max-width:780px}.access-row{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:36px}.access-item{padding-top:18px;border-top:3px solid var(--navy)}.access-item h3{font-size:1.35rem;margin:0 0 8px;letter-spacing:-.035em}.access-item p{color:var(--muted);margin:0 0 14px}.access-item a{font-weight:850}.resource-links{display:flex;gap:14px 22px;flex-wrap:wrap;margin-top:24px}.resource-links a{font-weight:800}.boundary-line{color:var(--muted);font-size:.94rem;margin-top:30px;max-width:850px}footer{text-align:center;padding:28px 24px;color:var(--muted);border-top:1px solid var(--line);background:#fff}@media(max-width:840px){.hero{min-height:auto;padding:70px 18px}.page{padding:0 18px 64px}.section{padding:62px 0}.io-layout{grid-template-columns:1fr;gap:26px}.divider{display:none}.access-row{grid-template-columns:1fr}.diagram-stage{padding:14px;border-radius:20px}.operation-svg{min-width:760px}.nav{font-size:.82rem}.hero-logo{border-radius:22px;padding:14px 18px}}
   </style>
 </head>
 <body>
 <header><div class="topbar"><div class="brand">Symbolic Mechanics / Human OS</div><nav class="nav"><a href="../">Home</a><a href="../model/">Model</a><a href="../benchmark-evidence/">Benchmarks</a><a href="../runtime-evidence/">Runtime</a><a href="../case-workspace/">Workspace</a><a href="../challenge-protocol/">Challenge</a><a href="../publications.html">Archive</a></nav></div></header>
-<main class="page">
+
 <section class="hero">
-  <div>
-    <div class="kicker">Human OS Model · Mapping + Next-State Prediction</div>
+  <div class="hero-inner">
+    <img class="hero-logo" src="../assets/brand/human-os-logo-r3/human_os_logo_r3_primary_horizontal.svg" alt="Human OS logo" />
+    <div class="kicker">Human OS Model</div>
     <h1>Human OS Model</h1>
     <p class="tagline">Map the human situation.<br>Predict the next state.</p>
-    <p class="sub">A model layer for seeing what ordinary chatbots miss: pressure, loops, hidden state movement, and the likely next move before the next reaction appears.</p>
-    <div class="cta"><a class="btn primary" href="#how-it-works">See the Operation</a><a class="btn secondary" href="#model-demos">View Demos</a><a class="btn secondary" href="../challenge-protocol/">Test the Model</a></div>
-  </div>
-  <aside class="preview-card" aria-label="Human OS model preview">
-    <div class="preview-label">Input</div>
-    <div class="preview-input">“She only said ‘okay’, but it felt different this time.”</div>
-    <div class="preview-output">
-      <div class="preview-label">Human OS Output</div>
-      <div class="mini-line"><strong>Map:</strong> neutral signal entering a pressure-loaded field</div>
-      <div class="mini-line"><strong>Loop:</strong> waiting → checking → rereading</div>
-      <div class="mini-line"><strong>Next State:</strong> later neutral signals may feel heavier</div>
-      <div class="mini-line"><strong>Boundary:</strong> depends on prior pattern and repair</div>
-    </div>
-  </aside>
-</section>
-
-<section class="section promise">
-  <h2>Built for the gap ordinary chatbots miss.</h2>
-  <p class="lead">Use Human OS when the surface wording is not enough to explain the next reaction.</p>
-  <div class="cards4">
-    <article class="card"><h3>Before AI Responds</h3><p>Build the state map before response generation.</p></article>
-    <article class="card"><h3>Inspect the Case State</h3><p>Turn messy situations into inspectable structure.</p></article>
-    <article class="card"><h3>Predict the Next Bias</h3><p>Track how earlier pressure changes the next reading.</p></article>
-    <article class="card"><h3>Calibrate the Response Route</h3><p>Align output with the mapped state, not surface wording alone.</p></article>
+    <p class="sub">A standalone symbolic-computational model for turning human situations into structured state maps and bounded next-state readings.</p>
+    <div class="cta"><a class="btn primary" href="../case-workspace/">Open Workspace</a><a class="btn secondary" href="../runtime-evidence/">View Current Build</a><a class="btn secondary" href="#what-human-os-is">Read Model Overview</a></div>
   </div>
 </section>
 
-<section class="section io">
-  <h2>Give it a messy human situation. Get back a structured state map.</h2>
-  <div class="io-grid">
-    <div class="io-box dark"><h3>Input</h3><ul><li>neutral messages that feel heavier than they should</li><li>repeated conflict loops</li><li>defensive surfaces</li><li>pressure-loaded ordinary signals</li><li>small reactions that seem larger than the surface trigger</li></ul></div>
-    <div class="io-box light"><h3>Output</h3><ul><li>Situation Map</li><li>Surface / Core Separation</li><li>Pressure Movement</li><li>Active Loop</li><li>Likely Next State</li><li>Uncertainty Boundary</li><li>Plain-Language Output</li></ul></div>
+<main class="page">
+<section id="what-human-os-is" class="section">
+  <h2>What Human OS Is</h2>
+  <div class="intro-text">
+    <p>Human OS is a standalone symbolic-computational model.</p>
+    <p>It turns messy human situations into structured state maps, tracking pressure movement, loop formation, and likely next-state direction before visible response fully stabilizes.</p>
+    <p>It can operate as its own model layer, and it can also support AI systems before response generation.</p>
   </div>
 </section>
 
-<section id="model-demos" class="section">
-  <h2>Model Demos</h2>
-  <p class="lead">Human OS maps state transition inside a situation, then states what could change the reading.</p>
-  <div class="cards3">
-    <article class="demo-card"><div class="demo-head"><span>Demo 1</span><h3>When a neutral signal becomes heavy</h3></div><div class="demo-body"><div class="demo-row"><strong>Input</strong>“Okay, we can talk later.”</div><div class="demo-row"><strong>Mapped Movement</strong>A neutral delay enters a relational field already carrying pressure.</div><div class="demo-row"><strong>Likely Next State</strong>Later neutral signals may feel heavier.</div><div class="demo-row"><strong>Boundary</strong>Depends on prior pattern and repair signals.</div></div></article>
-    <article class="demo-card"><div class="demo-head"><span>Demo 2</span><h3>When the same conflict repeats</h3></div><div class="demo-body"><div class="demo-row"><strong>Input</strong>The same task becomes a fight every night.</div><div class="demo-row"><strong>Mapped Movement</strong>The task signal is no longer neutral; it enters an already loaded action field.</div><div class="demo-row"><strong>Likely Next State</strong>The next task signal may trigger earlier resistance.</div><div class="demo-row"><strong>Boundary</strong>Depends on timing, repair, and task framing.</div></div></article>
-    <article class="demo-card"><div class="demo-head"><span>Demo 3</span><h3>When a surface answer misses the loop</h3></div><div class="demo-body"><div class="demo-row"><strong>Input</strong>A system gives a calm surface answer while the user keeps escalating.</div><div class="demo-row"><strong>Mapped Movement</strong>The visible question is less important than the pressure loop underneath it.</div><div class="demo-row"><strong>Likely Next State</strong>More surface answering may increase resistance.</div><div class="demo-row"><strong>Boundary</strong>Depends on what the response needs to stabilize.</div></div></article>
+<section class="section">
+  <h2>Why Human OS Is Different</h2>
+  <div class="difference-list">
+    <div class="difference-item"><h3>It maps before response.</h3><p>The model builds a state map before choosing how to answer, interpret, or route the situation.</p></div>
+    <div class="difference-item"><h3>It separates surface wording from inner movement.</h3><p>The visible sentence is treated as an entry point, not the whole event.</p></div>
+    <div class="difference-item"><h3>It tracks pressure loops before they become visible behavior.</h3><p>Human OS follows pressure as it enters, repeats, redirects, or becomes heavier.</p></div>
+    <div class="difference-item"><h3>It returns a bounded next-state reading.</h3><p>The output is a structured reading of likely movement, not generic surface answering.</p></div>
   </div>
 </section>
 
-<section class="section dark-section">
-  <h2>Chatbots respond.<br>Human OS maps before response.</h2>
-  <p class="lead">The difference is not tone. It is the order of operation.</p>
-  <div class="compare">
-    <div class="compare-col"><h3>Ordinary Chatbot</h3><ul><li>Surface response</li><li>Tone matching</li><li>Immediate output</li><li>Post-language reaction</li></ul></div>
-    <div class="compare-col hos"><h3>Human OS</h3><ul><li>State map</li><li>Mechanism structure</li><li>Pressure-loop tracking</li><li>Pre-response state mapping</li></ul></div>
+<section class="section">
+  <h2>What goes in.<br>What comes out.</h2>
+  <div class="io-layout">
+    <div class="io-col"><h3>Input</h3><ul class="clean-list"><li>Messy human situations</li><li>Neutral signals that feel heavier than they should</li><li>Repeated loops</li><li>Defensive surfaces</li><li>Pressure-loaded interactions</li></ul></div>
+    <div class="divider"></div>
+    <div class="io-col"><h3>Output</h3><ul class="clean-list"><li>Situation Map</li><li>Pressure Movement</li><li>Active Loop</li><li>Likely Next State</li><li>Uncertainty Boundary</li><li>Readable Output</li></ul></div>
   </div>
 </section>
 
-<section id="how-it-works" class="section visual-stage">
-  <h2>How Human OS Works</h2>
-  <p class="lead">The diagram shows the core operation: situation enters, surface and inner movement separate, pressure-loop movement is mapped, and a bounded next-state reading is produced before response generation.</p>
-  <div class="diagram-wrap" aria-label="Human OS operation diagram">
+<section id="how-it-works" class="section">
+  <h2>How the Model Runs</h2>
+  <div class="diagram-stage" aria-label="Human OS operation diagram">
     <svg class="operation-svg" viewBox="0 0 1600 900" role="img" aria-labelledby="diagramTitle diagramDesc" xmlns="http://www.w3.org/2000/svg">
       <title id="diagramTitle">Human OS operation diagram</title>
       <desc id="diagramDesc">Human Situation to Inner State Movement to Bounded Next State.</desc>
-      <defs>
-        <radialGradient id="coreGlow" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#9dbdff" stop-opacity=".85"/><stop offset=".45" stop-color="#456baf" stop-opacity=".28"/><stop offset="1" stop-color="#06101b" stop-opacity="0"/></radialGradient>
-        <filter id="softGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
+      <defs><radialGradient id="coreGlow" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#9dbdff" stop-opacity=".85"/><stop offset=".45" stop-color="#456baf" stop-opacity=".28"/><stop offset="1" stop-color="#06101b" stop-opacity="0"/></radialGradient><filter id="softGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
       <rect width="1600" height="900" fill="#06101b"/>
-      <line x1="510" y1="100" x2="510" y2="790" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="3 4"/>
-      <line x1="1000" y1="100" x2="1000" y2="790" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="3 4"/>
-      <text x="128" y="145" fill="#c9d8ff" font-size="30" font-weight="800">Human Situation</text>
-      <text x="620" y="145" fill="#c9d8ff" font-size="30" font-weight="800">Inner State Movement</text>
-      <text x="1115" y="145" fill="#c9d8ff" font-size="30" font-weight="800">Bounded Next State</text>
-      <text x="118" y="235" fill="#ffffff" font-size="22">A human situation enters</text>
-      <circle cx="65" cy="475" r="24" fill="none" stroke="#ffffff" stroke-width="4"/><path d="M34 567 V540 C34 502 96 502 96 540 V567" fill="none" stroke="#ffffff" stroke-width="4"/><text x="31" y="610" fill="#ffffff" font-size="22">person</text>
-      <path d="M103 500 H145" stroke="#ffffff" stroke-width="3"/><path d="M145 500 l-11 -9 M145 500 l-11 9" stroke="#ffffff" stroke-width="3"/>
-      <rect x="147" y="465" width="112" height="70" rx="10" fill="none" stroke="#ffffff" stroke-width="2.4"/><text x="164" y="509" fill="#ffffff" font-size="22">I’m fine.</text><text x="174" y="610" fill="#ffffff" font-size="22">signal</text>
-      <path d="M262 500 H302" stroke="#ffffff" stroke-width="3"/><path d="M302 500 l-11 -9 M302 500 l-11 9" stroke="#ffffff" stroke-width="3"/>
-      <circle cx="380" cy="500" r="96" fill="none" stroke="#9dbdff" stroke-opacity=".85" stroke-width="1.5"/><circle cx="380" cy="500" r="76" fill="none" stroke="#9dbdff" stroke-opacity=".6" stroke-width="1.3"/><circle cx="380" cy="500" r="56" fill="none" stroke="#9dbdff" stroke-opacity=".52" stroke-width="1.2"/><circle cx="380" cy="500" r="36" fill="none" stroke="#9dbdff" stroke-opacity=".42" stroke-width="1.2"/><circle cx="380" cy="500" r="18" fill="url(#coreGlow)"/><circle cx="380" cy="500" r="8" fill="#9dbdff"/>
-      <text x="298" y="642" fill="#ffffff" font-size="22">mapping field</text>
-      <line x1="380" y1="402" x2="380" y2="340" stroke="#9dbdff" stroke-width="2"/><circle cx="380" cy="330" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><text x="402" y="332" fill="#ffffff" font-size="22">context</text>
-      <line x1="418" y1="585" x2="448" y2="650" stroke="#9dbdff" stroke-width="2"/><circle cx="453" cy="660" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><text x="420" y="706" fill="#ffffff" font-size="22">missing</text><text x="412" y="738" fill="#ffffff" font-size="22">evidence</text>
-      <path d="M476 500 H505" stroke="#ffffff" stroke-width="3"/><path d="M505 500 l-11 -9 M505 500 l-11 9" stroke="#ffffff" stroke-width="3"/>
-      <text x="690" y="245" fill="#ffffff" font-size="23">What was said</text><rect x="635" y="274" width="248" height="72" rx="13" fill="none" stroke="#ffffff" stroke-width="2"/><text x="706" y="320" fill="#ffffff" font-size="32">I’m fine.</text>
-      <line x1="545" y1="382" x2="970" y2="382" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="4 5"/><text x="648" y="420" fill="#ffffff" font-size="24">surface ≠ inner movement</text><line x1="545" y1="452" x2="970" y2="452" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="4 5"/>
-      <text x="625" y="515" fill="#ffffff" font-size="24">What is moving underneath</text>
-      <path d="M548 640 C610 545 725 580 760 630 C800 690 925 686 960 600" fill="none" stroke="#f06b63" stroke-width="4" filter="url(#softGlow)"/><path d="M548 640 c2 -21 11 -36 28 -48 M960 600 c-4 22 -15 38 -33 49" fill="none" stroke="#f06b63" stroke-width="4"/>
-      <path d="M590 598 C660 560 720 620 778 586 C850 544 900 596 935 565" fill="none" stroke="#9dbdff" stroke-opacity=".35" stroke-width="1.4"/><path d="M588 625 C660 590 718 650 780 620 C840 590 902 637 940 608" fill="none" stroke="#9dbdff" stroke-opacity=".28" stroke-width="1.4"/><circle cx="660" cy="604" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><circle cx="710" cy="565" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><circle cx="800" cy="622" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/>
-      <text x="692" y="740" fill="#f06b63" font-size="25">pressure loop</text>
-      <path d="M990 500 H1040" stroke="#f06b63" stroke-width="3"/><path d="M1040 500 l-11 -9 M1040 500 l-11 9" stroke="#f06b63" stroke-width="3"/>
-      <circle cx="1225" cy="500" r="160" fill="none" stroke="#9dbdff" stroke-width="2"/><circle cx="1225" cy="500" r="130" fill="none" stroke="#9dbdff" stroke-width="2" stroke-dasharray="10 12"/><text x="1145" y="292" fill="#ffffff" font-size="22">uncertainty boundary</text><line x1="1225" y1="330" x2="1225" y2="660" stroke="#9dbdff" stroke-opacity=".5" stroke-width="2"/><circle cx="1225" cy="322" r="9" fill="#456baf" opacity=".8"/><circle cx="1225" cy="668" r="9" fill="#456baf" opacity=".8"/>
-      <path d="M1105 500 H1365" stroke="#f06b63" stroke-width="3"/><text x="1148" y="488" fill="#f06b63" font-size="23">Likely next state</text><circle cx="1362" cy="500" r="11" fill="#f06b63" filter="url(#softGlow)"/><path d="M1365 500 H1430" stroke="#f06b63" stroke-width="3"/><path d="M1430 500 l-11 -9 M1430 500 l-11 9" stroke="#f06b63" stroke-width="3"/>
-      <text x="1150" y="745" fill="#ffffff" font-size="22">before response</text>
-      <rect x="1450" y="445" width="125" height="142" rx="10" fill="none" stroke="#ffffff" stroke-width="2"/><circle cx="1475" cy="475" r="7" fill="#9dbdff"/><line x1="1493" y1="475" x2="1550" y2="475" stroke="#c9d8ff" stroke-width="3"/><circle cx="1475" cy="503" r="7" fill="#9dbdff"/><line x1="1493" y1="503" x2="1538" y2="503" stroke="#c9d8ff" stroke-width="3"/><circle cx="1475" cy="531" r="7" fill="#9dbdff"/><line x1="1493" y1="531" x2="1557" y2="531" stroke="#c9d8ff" stroke-width="3"/><path d="M1482 566 l30 -25 30 29 26 -39" fill="none" stroke="#9dbdff" stroke-width="2"/><circle cx="1482" cy="566" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><circle cx="1512" cy="541" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><circle cx="1542" cy="570" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><circle cx="1568" cy="531" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/>
-      <text x="1476" y="642" fill="#ffffff" font-size="22">readable</text><text x="1476" y="674" fill="#ffffff" font-size="22">output</text>
+      <line x1="510" y1="100" x2="510" y2="790" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="3 4"/><line x1="1000" y1="100" x2="1000" y2="790" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="3 4"/>
+      <text x="128" y="145" fill="#c9d8ff" font-size="30" font-weight="800">Human Situation</text><text x="620" y="145" fill="#c9d8ff" font-size="30" font-weight="800">Inner State Movement</text><text x="1115" y="145" fill="#c9d8ff" font-size="30" font-weight="800">Bounded Next State</text>
+      <text x="118" y="235" fill="#ffffff" font-size="22">A human situation enters</text><circle cx="65" cy="475" r="24" fill="none" stroke="#ffffff" stroke-width="4"/><path d="M34 567 V540 C34 502 96 502 96 540 V567" fill="none" stroke="#ffffff" stroke-width="4"/><text x="31" y="610" fill="#ffffff" font-size="22">person</text><path d="M103 500 H145" stroke="#ffffff" stroke-width="3"/><path d="M145 500 l-11 -9 M145 500 l-11 9" stroke="#ffffff" stroke-width="3"/><rect x="147" y="465" width="112" height="70" rx="10" fill="none" stroke="#ffffff" stroke-width="2.4"/><text x="164" y="509" fill="#ffffff" font-size="22">I’m fine.</text><text x="174" y="610" fill="#ffffff" font-size="22">signal</text>
+      <path d="M262 500 H302" stroke="#ffffff" stroke-width="3"/><path d="M302 500 l-11 -9 M302 500 l-11 9" stroke="#ffffff" stroke-width="3"/><circle cx="380" cy="500" r="96" fill="none" stroke="#9dbdff" stroke-opacity=".85" stroke-width="1.5"/><circle cx="380" cy="500" r="76" fill="none" stroke="#9dbdff" stroke-opacity=".6" stroke-width="1.3"/><circle cx="380" cy="500" r="56" fill="none" stroke="#9dbdff" stroke-opacity=".52" stroke-width="1.2"/><circle cx="380" cy="500" r="36" fill="none" stroke="#9dbdff" stroke-opacity=".42" stroke-width="1.2"/><circle cx="380" cy="500" r="18" fill="url(#coreGlow)"/><circle cx="380" cy="500" r="8" fill="#9dbdff"/><text x="298" y="642" fill="#ffffff" font-size="22">mapping field</text><line x1="380" y1="402" x2="380" y2="340" stroke="#9dbdff" stroke-width="2"/><circle cx="380" cy="330" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><text x="402" y="332" fill="#ffffff" font-size="22">context</text><line x1="418" y1="585" x2="448" y2="650" stroke="#9dbdff" stroke-width="2"/><circle cx="453" cy="660" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><text x="420" y="706" fill="#ffffff" font-size="22">missing</text><text x="412" y="738" fill="#ffffff" font-size="22">evidence</text>
+      <path d="M476 500 H505" stroke="#ffffff" stroke-width="3"/><path d="M505 500 l-11 -9 M505 500 l-11 9" stroke="#ffffff" stroke-width="3"/><text x="690" y="245" fill="#ffffff" font-size="23">What was said</text><rect x="635" y="274" width="248" height="72" rx="13" fill="none" stroke="#ffffff" stroke-width="2"/><text x="706" y="320" fill="#ffffff" font-size="32">I’m fine.</text><line x1="545" y1="382" x2="970" y2="382" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="4 5"/><text x="648" y="420" fill="#ffffff" font-size="24">surface ≠ inner movement</text><line x1="545" y1="452" x2="970" y2="452" stroke="#9dbdff" stroke-opacity=".35" stroke-dasharray="4 5"/><text x="625" y="515" fill="#ffffff" font-size="24">What is moving underneath</text>
+      <path d="M548 640 C610 545 725 580 760 630 C800 690 925 686 960 600" fill="none" stroke="#f06b63" stroke-width="4" filter="url(#softGlow)"/><path d="M548 640 c2 -21 11 -36 28 -48 M960 600 c-4 22 -15 38 -33 49" fill="none" stroke="#f06b63" stroke-width="4"/><path d="M590 598 C660 560 720 620 778 586 C850 544 900 596 935 565" fill="none" stroke="#9dbdff" stroke-opacity=".35" stroke-width="1.4"/><path d="M588 625 C660 590 718 650 780 620 C840 590 902 637 940 608" fill="none" stroke="#9dbdff" stroke-opacity=".28" stroke-width="1.4"/><circle cx="660" cy="604" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><circle cx="710" cy="565" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><circle cx="800" cy="622" r="9" fill="#06101b" stroke="#9dbdff" stroke-width="3"/><text x="692" y="740" fill="#f06b63" font-size="25">pressure loop</text>
+      <path d="M990 500 H1040" stroke="#f06b63" stroke-width="3"/><path d="M1040 500 l-11 -9 M1040 500 l-11 9" stroke="#f06b63" stroke-width="3"/><circle cx="1225" cy="500" r="160" fill="none" stroke="#9dbdff" stroke-width="2"/><circle cx="1225" cy="500" r="130" fill="none" stroke="#9dbdff" stroke-width="2" stroke-dasharray="10 12"/><text x="1145" y="292" fill="#ffffff" font-size="22">uncertainty boundary</text><line x1="1225" y1="330" x2="1225" y2="660" stroke="#9dbdff" stroke-opacity=".5" stroke-width="2"/><circle cx="1225" cy="322" r="9" fill="#456baf" opacity=".8"/><circle cx="1225" cy="668" r="9" fill="#456baf" opacity=".8"/><path d="M1105 500 H1365" stroke="#f06b63" stroke-width="3"/><text x="1148" y="488" fill="#f06b63" font-size="23">Likely next state</text><circle cx="1362" cy="500" r="11" fill="#f06b63" filter="url(#softGlow)"/><path d="M1365 500 H1430" stroke="#f06b63" stroke-width="3"/><path d="M1430 500 l-11 -9 M1430 500 l-11 9" stroke="#f06b63" stroke-width="3"/><text x="1150" y="745" fill="#ffffff" font-size="22">before response</text>
+      <rect x="1450" y="445" width="125" height="142" rx="10" fill="none" stroke="#ffffff" stroke-width="2"/><circle cx="1475" cy="475" r="7" fill="#9dbdff"/><line x1="1493" y1="475" x2="1550" y2="475" stroke="#c9d8ff" stroke-width="3"/><circle cx="1475" cy="503" r="7" fill="#9dbdff"/><line x1="1493" y1="503" x2="1538" y2="503" stroke="#c9d8ff" stroke-width="3"/><circle cx="1475" cy="531" r="7" fill="#9dbdff"/><line x1="1493" y1="531" x2="1557" y2="531" stroke="#c9d8ff" stroke-width="3"/><path d="M1482 566 l30 -25 30 29 26 -39" fill="none" stroke="#9dbdff" stroke-width="2"/><circle cx="1482" cy="566" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><circle cx="1512" cy="541" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><circle cx="1542" cy="570" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><circle cx="1568" cy="531" r="5" fill="#06101b" stroke="#9dbdff" stroke-width="2"/><text x="1476" y="642" fill="#ffffff" font-size="22">readable</text><text x="1476" y="674" fill="#ffffff" font-size="22">output</text>
     </svg>
   </div>
-  <div class="pipeline-strip"><strong>Operational sequence:</strong> Natural Input → Situation Mapping → State-Structure Mapping → Pressure / Loop Detection → Likely Next State → Plain-Language Output</div>
+  <p class="diagram-caption">Human OS maps the situation before response generation, separates surface signal from inner movement, and produces a bounded next-state reading.</p>
 </section>
 
 <section class="section">
-  <h2>Core Model Concepts</h2>
-  <p class="lead">A compact glossary for the public model layer.</p>
-  <div class="concepts">
-    <article class="concept"><h3>Situation Map</h3><p>The visible situation and the structure forming inside it.</p></article>
-    <article class="concept"><h3>Surface / Core Separation</h3><p>The difference between surface wording and inner movement.</p></article>
-    <article class="concept"><h3>Pressure Movement</h3><p>Where pressure enters, grows, redirects, or becomes heavier.</p></article>
-    <article class="concept"><h3>Active Loop</h3><p>The repeated movement currently running or becoming more likely.</p></article>
-    <article class="concept"><h3>Next-State Direction</h3><p>The likely next movement if the structure continues.</p></article>
-    <article class="concept"><h3>Uncertainty Boundary</h3><p>The missing evidence and conditions that could change the reading.</p></article>
+  <h2>Examples</h2>
+  <div class="examples">
+    <div class="example"><h3>A neutral signal feels heavier than it looks.</h3><p>Human OS maps the hidden pressure and predicts the likely next state.</p></div>
+    <div class="example"><h3>The same conflict keeps repeating.</h3><p>Human OS maps the loop instead of only describing the surface disagreement.</p></div>
+    <div class="example"><h3>A surface answer misses what is actually moving.</h3><p>Human OS traces the deeper movement before response.</p></div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Current Model Status</h2>
-  <p class="lead">Current public build: model page, benchmark evidence, runtime line, and simulator direction.</p>
-  <div class="status-grid">
-    <article class="status-card"><h3>Model Direction</h3><p>Mapping + next-state prediction.</p></article>
-    <article class="status-card"><h3>Runtime Line</h3><p>63–81 Integration Line v1.0, line-specific.</p></article>
-    <article class="status-card"><h3>Simulator Direction</h3><p>Case Workspace + Simulator v0.2.</p></article>
-    <article class="status-card"><h3>Evidence Line</h3><p>Phase III-A and Phase IV-A.</p></article>
-    <article class="status-card"><h3>Source Layer</h3><p>Symbolic Mechanics archive.</p></article>
-    <article class="status-card"><h3>Dormant Boundary</h3><p>83+ reference-only unless activated.</p></article>
+  <h2>Access the Model</h2>
+  <div class="access-row">
+    <div class="access-item"><h3>Open Workspace</h3><p>Use the current Case Workspace / Simulator direction.</p><a href="../case-workspace/">Open Workspace</a></div>
+    <div class="access-item"><h3>View Current Build</h3><p>Read the current Human OS build and runtime direction.</p><a href="../runtime-evidence/">View Current Build</a></div>
+    <div class="access-item"><h3>Contact for Testing</h3><p>Request review, external testing, or collaboration access.</p><a href="mailto:eidosan013135@hotmail.com">Contact for Testing</a></div>
   </div>
-  <p class="small">Runtime details live in Runtime Evidence. This page does not claim full Human OS v1.0 or full 1–104 integration.</p>
 </section>
 
 <section class="section">
-  <h2>Evidence Snapshot</h2>
-  <div class="metrics">
-    <article class="metric"><div class="label">Phase III-A</div><div class="value">53 wins / 1 loss</div><div class="note">Next-Δ Bias Prediction Benchmark</div></article>
-    <article class="metric"><div class="label">Phase IV-A</div><div class="value">47 wins / 0 losses</div><div class="note">Mechanism-Based Human-State Inference Benchmark</div></article>
-    <article class="metric"><div class="label">Protective Function</div><div class="value">1.35 → 1.97 / 2</div><div class="note">Identification improvement</div></article>
-    <article class="metric"><div class="label">Method</div><div class="value">Protocol-based</div><div class="note">No fine-tune. No extra training data.</div></article>
-  </div>
-  <p class="lead">Bounded benchmark evidence. Full reports live in Benchmark Evidence.</p>
-  <p><a href="../benchmark-evidence/">View Benchmark Evidence</a> · <a href="../runtime-evidence/">View Runtime Evidence</a></p>
+  <h2>Supporting Resources</h2>
+  <div class="resource-links"><a href="../benchmark-evidence/">Benchmark Reports</a><a href="../runtime-evidence/">Runtime Evidence</a><a href="../prototype-records.html">Model-Building Records</a><a href="../publications.html">Theory Archive</a><a href="../challenge-protocol/">Challenge Protocol</a></div>
+  <p class="boundary-line">Human OS provides bounded model outputs and does not claim whole-person simulation or clinical authority.</p>
 </section>
-
-<section class="section">
-  <h2>What Human OS Does Not Claim</h2>
-  <div class="boundary-pills"><span class="pill">No certainty prediction</span><span class="pill">No diagnosis</span><span class="pill">No whole-person simulation</span><span class="pill">No clinical authority claim</span><span class="pill">No universal proof</span><span class="pill">Bounded state-dynamics prediction only</span></div>
-</section>
-
-<section class="section challenge">
-  <h2>Do not accept the claim. Test the model.</h2>
-  <div class="challenge-lines">Challenge the map, the loop, the prediction, and the boundary.</div>
-  <p>Bring the messy cases. Bring the edge cases. Bring the failures.</p>
-  <div class="footer-ctas"><a class="btn primary" href="../challenge-protocol/">Open Challenge Protocol</a><a class="btn secondary" href="mailto:eidosan013135@hotmail.com">Contact for Review</a></div>
-</section>
-</main><footer>Symbolic Mechanics / Human OS · Human OS Model · 2026</footer>
+</main>
+<footer>Symbolic Mechanics / Human OS · Human OS Model · 2026</footer>
 </body>
 </html>
