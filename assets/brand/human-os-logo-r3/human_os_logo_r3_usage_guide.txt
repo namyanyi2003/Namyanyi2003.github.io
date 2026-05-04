@@ -1,0 +1,37 @@
+Human OS Logo R3 Asset Pack
+================================
+
+Approved logo version:
+R3 Primary Horizontal Lockup
+
+Brand lockup:
+[rounded navy triangular loop] Human OS
+
+Design freeze:
+- Wordmark style: rounded geometric sans, Avenir Next Rounded Demi Bold spirit.
+- Icon height: approximately 1.05x wordmark cap height.
+- Icon-to-wordmark spacing: approximately 0.22x icon width.
+- Tracking: slight positive tracking (+1% to +2%).
+- Color: deep navy triangular loop + dark navy wordmark.
+- Mood: compact, balanced, calm, premium.
+
+Recommended usage:
+1. Website topbar:
+   - Use the horizontal R3 header asset.
+
+2. Homepage / README / documents:
+   - Use the primary horizontal lockup.
+
+3. Social preview:
+   - Use the social preview version from the asset pack.
+
+4. Favicon / app icon / avatar:
+   - Use the icon-only version.
+
+Rules:
+- Do not stretch the logo.
+- Do not recolor the icon.
+- Do not add slogans inside the logo lockup.
+- Do not place the logo on noisy backgrounds.
+- Use icon-only for very small sizes.
+- Use horizontal lockup for website/header/document identity.
