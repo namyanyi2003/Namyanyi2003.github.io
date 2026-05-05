@@ -1,0 +1,64 @@
+name: Unify Existing Volume Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/unify-volume-pages.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  unify-volume-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Insert unified volume CSS link
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+
+          css_link = '<link rel="stylesheet" href="/assets/css/volume-unified.css">'
+          marker = 'volume-unified.css'
+          changed = []
+
+          for i in range(1, 41):
+              path = Path(f"volume-{i:02d}.html")
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding="utf-8")
+              if marker in text:
+                  continue
+
+              google_font_line = '</style>\n</head>'
+              if google_font_line in text:
+                  text = text.replace(google_font_line, f'</style>\n  {css_link}\n</head>', 1)
+              elif '</head>' in text:
+                  text = text.replace('</head>', f'  {css_link}\n</head>', 1)
+              else:
+                  continue
+
+              path.write_text(text, encoding="utf-8")
+              changed.append(str(path))
+
+          print("Changed files:")
+          for item in changed:
+              print(item)
+          PY
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No volume pages needed updating."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add volume-*.html
+          git commit -m "Apply unified style to existing volume pages"
+          git push
